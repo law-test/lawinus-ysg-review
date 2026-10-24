@@ -1,0 +1,8 @@
+.profile-row{overflow-wrap:anywhere}
+.profile-row.undated{grid-template-columns:1fr}
+.profile-row .profile-project-link>div{min-width:0}
+.profile-row .profile-project-link{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:44px;padding:8px 12px;border:1px solid #e3d6d9;border-radius:4px;color:inherit;text-decoration:none}
+.profile-row .profile-project-link b{color:#8b0029;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.profile-row .profile-project-link:hover{background:#f9f1f3;border-color:#b88998}
+.profile-row .profile-project-link:focus-visible{outline:2px solid #8b0029;outline-offset:3px}
+.profile-row .project-link-arrow{flex:0 0 auto;color:#8b0029;font-size:calc(18px * var(--review-font-scale,1.5))}

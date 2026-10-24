@@ -1,0 +1,23 @@
+:root{--review-font-scale:1.5}
+.text-size-control{display:flex;align-items:center;gap:8px;flex:0 0 auto;max-width:100%;color:var(--review-ink);font-size:calc(12px * var(--review-font-scale,1.5));line-height:1.4}
+.text-size-control>span{white-space:nowrap}
+.review-app .text-size-control select{font:inherit;padding:5px 8px;min-height:36px;max-width:100%;cursor:pointer}
+.basis-bar{height:auto;min-height:40px;flex-basis:auto;flex-wrap:wrap;padding-top:6px;padding-bottom:6px;gap:6px 14px}
+.basis-bar>span{min-width:0;overflow-wrap:anywhere}
+.sidebar-heading,.reference-heading{height:auto;min-height:48px;flex-basis:auto;gap:6px;padding-top:6px;padding-bottom:6px}
+.sidebar-menu button{overflow-wrap:anywhere}
+.sidebar-menu button>span{flex-shrink:0}
+.pager input{height:auto;min-height:32px;width:4.2em}
+.pdf-reading-tools,.manuscript-tools,.memo-actions,.filter-buttons{flex-wrap:wrap}
+.source-caption h2,.section-eyebrow{overflow-wrap:anywhere}
+.app-header{height:auto;min-height:92px;flex-basis:auto;padding-top:10px;padding-bottom:10px}
+@media screen and (max-width:899px){
+ .app-header{min-height:64px;padding-top:6px;padding-bottom:6px}
+ .basis-bar{display:flex;min-height:32px;padding:5px 10px}
+ .text-size-control{margin-left:auto}
+ .review-app .text-size-control select{min-height:40px}
+ .reference-heading{min-height:44px;flex-basis:auto;height:auto}
+ .mobile-navigation button>span{line-height:1.1}
+ .sidebar-heading{flex-basis:auto;height:auto}
+}
+@media print{.text-size-control{display:none!important}}

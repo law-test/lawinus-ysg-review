@@ -1,0 +1,16 @@
+.proposal-required{--proposal-color:#b42336;--proposal-tint:#fff0f2}
+.proposal-recommended{--proposal-color:#a64b08;--proposal-tint:#fff4e6}
+.proposal-optional{--proposal-color:#1b5eac;--proposal-tint:#edf5ff}
+.review-app .proposal-badge,.review-app .pdf-proposal-marker{color:var(--proposal-color);background:var(--proposal-tint);border:1px solid var(--proposal-color);font-family:inherit;font-weight:650;line-height:1.35;white-space:normal}
+.review-app .proposal-badge{display:inline-flex;margin:0 0 6px;padding:3px 7px;border-radius:4px;font-size:calc(10px * var(--review-font-scale,1.5));text-align:left;cursor:pointer}
+.manuscript-proposal-label{display:block;white-space:normal}
+.manuscript-paragraph.has-proposal{border-left-color:var(--proposal-color)}
+.manuscript-deleted-label{display:block;font-size:calc(11px * var(--review-font-scale,1.5));font-style:normal;color:#777}
+.pdf-proposal-region{position:absolute;box-sizing:border-box;border-left:2px solid var(--proposal-color);pointer-events:none;opacity:.8}
+.review-app .pdf-proposal-marker{position:absolute;z-index:4;padding:1px 3px;min-height:0;border-radius:3px;max-width:46px;font-size:calc(8px * var(--review-font-scale,1.5));cursor:pointer;pointer-events:auto;overflow:hidden}
+.pdf-proposal-marker:focus-visible,.proposal-badge:focus-visible{outline:2px solid var(--proposal-color);outline-offset:2px}
+.pdf-proposal-tooltip{position:absolute;z-index:7;max-width:78%;padding:5px 8px;border:1px solid var(--proposal-color);border-radius:4px;background:var(--proposal-tint);color:var(--proposal-color);font-size:calc(10px * var(--review-font-scale,1.5));line-height:1.4;pointer-events:none;box-shadow:0 2px 6px #0002}
+.pdf-proposal-legend{display:flex;align-items:center;flex-wrap:wrap;gap:4px 8px;padding:5px 10px;border-bottom:1px solid #ded8d0;background:#fff;font-size:calc(9px * var(--review-font-scale,1.5));line-height:1.4}
+.pdf-proposal-legend span{color:var(--proposal-color);font-weight:600}
+.review-app .pdf-proposal-legend button{font-size:inherit;padding:2px 5px;border:1px solid #bdb5aa;background:white}
+@media print{.pdf-proposal-marker,.pdf-proposal-tooltip,.pdf-proposal-legend,.manuscript-proposal-label{display:none!important}}

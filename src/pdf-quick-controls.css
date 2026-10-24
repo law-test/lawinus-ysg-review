@@ -1,0 +1,19 @@
+.pdf-reader{position:relative}
+.pdf-quick-controls{position:absolute;inset:0;z-index:20;pointer-events:none;font-size:calc(11px * var(--review-font-scale,1.5));line-height:1.4}
+.review-app .pdf-quick-controls button,.review-app .pdf-quick-controls input{min-height:44px;min-width:44px;margin:0;padding:6px 10px;font:inherit;border:1px solid #c5b6b9;border-radius:5px;background:#fffefb;color:#6f0926;overflow-wrap:anywhere;white-space:normal}
+.review-app .pdf-quick-controls button{cursor:pointer}
+.review-app .pdf-quick-controls button:disabled{opacity:.45;cursor:default}
+.review-app .pdf-quick-controls :is(button,input):focus-visible{outline:2px solid #8b0029;outline-offset:2px}
+.review-app .pdf-quick-trigger{position:absolute;bottom:calc(8px + env(safe-area-inset-bottom));left:8px;pointer-events:auto;display:flex;align-items:center;gap:7px;max-width:calc(100% - 16px);background:#fffefbea;box-shadow:0 2px 8px #34222b24}
+.pdf-quick-label-short{display:none}
+@media(max-width:480px){.pdf-quick-label-full{display:none}.pdf-quick-label-short{display:inline}}
+.pdf-quick-panel{position:absolute;bottom:calc(var(--pdf-quick-trigger-height,44px) + 14px + env(safe-area-inset-bottom));left:8px;box-sizing:border-box;pointer-events:auto;width:280px;max-width:calc(100% - 16px);max-height:calc(100% - var(--pdf-quick-trigger-height,44px) - 24px - env(safe-area-inset-bottom));overflow:auto;overscroll-behavior:contain;border:1px solid #c5b6b9;border-radius:7px;padding:10px;background:#fffefb;box-shadow:0 6px 22px #34222b29}
+.pdf-quick-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}.pdf-quick-heading b{min-width:0;overflow-wrap:anywhere}
+.pdf-quick-page{margin:0 0 6px}.pdf-quick-page>label{display:block;margin-bottom:5px;color:#655960}
+.pdf-quick-page-entry{display:flex;align-items:center;gap:6px;flex-wrap:wrap}.pdf-quick-page-entry input{width:6ch;max-width:100%;min-width:0!important;flex:1 1 5ch;color:#211d20!important}.pdf-quick-page-entry span{font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.pdf-quick-page-step,.pdf-quick-zoom,.pdf-quick-interaction{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
+.pdf-quick-page-step>button,.pdf-quick-interaction>button{flex:1 1 90px;min-width:0!important}
+.pdf-quick-zoom>button{flex:1 1 44px}.pdf-quick-zoom>button:nth-child(2){flex-grow:2}
+.review-app .pdf-quick-highlight{width:100%;margin-top:6px}
+.review-app .pdf-quick-controls button[aria-pressed="true"]{background:#8b0029;color:#fff;border-color:#8b0029}
+@media print{.pdf-quick-controls{display:none!important}}

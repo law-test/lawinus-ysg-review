@@ -1,0 +1,32 @@
+# YSG 저장소 준비
+
+사용자가 선택한 운영 방식은 기존 Supabase 프로젝트 안에 별도의 자료 묶음과 파일 저장소를 추가하는 방식이다.
+
+- 프로젝트: `cefaekvclooytgjkcqum`
+- 자료 묶음: `ysg-20261023`
+- 파일 저장소: `ysg-review-documents`
+- 원고·각주 등록은 기존 `paper_review_private.seed_shared_catalog` 함수를 사용한다.
+
+기존 사이트의 테이블, 함수, 권한, 인증 설정, 원고, 메모, 수정 이력은 교체하지 않는다. 새 프로젝트용으로 검토했던 SQL은 앱 밖의 `audit/backend-reference`에 보존되어 있으며 이번 운영 프로젝트에 적용할 파일이 아니다.
+
+## 입력과 생성
+
+검증된 원고 메타데이터 JSON은 `title`, `pdfSha256`, `sourceHwpxSha256`, `pageCount`, `footnoteCount`를 포함한다. 카탈로그 JSON은 원고에서 추출한 `kind`, `targetId`, `originalText`, `page`, 선택적인 `printedPage`, `label`의 배열이다. 실제 PDF가 만들어지고 쪽수·해시가 확정된 뒤 생성한다.
+
+```powershell
+node supabase/prepare-additive-seed.mjs metadata.json catalog.json output-directory
+```
+
+생성된 `ysg-provisioning.sql`은 새 자료 묶음과 저장소만 추가한다. 같은 식별자의 자료가 이미 있다면 모든 메타데이터가 같은 경우에만 통과한다. `ysg-catalog-seed.sql`은 기존 관리자 전용 등록 함수를 호출한다. 이미 등록된 원문을 다른 문안으로 덮어쓰지 않는다.
+
+실행 전에 운영 프로젝트가 위 프로젝트와 일치하는지 확인하고, 기존 사이트의 원문·현재수정·전체이력과 관련 설정을 별도 수집한다. 실행 뒤에는 기존 데이터가 그대로인지 대조하고, YSG 원문·각주 전체 개수와 해시를 생성 자료와 비교한다. 운영 메모나 공통 본문에 시험값을 저장하지 않는다.
+
+원문 PDF·자료·목록·프로필은 새 저장소의 `ysg-20261023/` 아래 업로드한다. 관리자 비밀키는 브라우저 설정이나 저장소에 넣지 않는다. 브라우저의 `config.json`은 기존 프로젝트의 공개키와 새 자료 묶음·저장소 식별자만 사용한다. 기존 프로젝트의 파일 크기 제한은 변경하지 않는다.
+
+## 로컬 검증
+
+```powershell
+node --test supabase/tests/backend.test.mjs
+```
+
+실제 기존 함수 본문을 PostgreSQL WASM에서 실행하여 두 합성 자료 묶음의 분리, 개인 메모 소유권, 공통 수정 충돌·복원, 전체 이력 내보내기, 기존 데이터·함수·권한 보존을 확인한다. 테스트 폴더의 SQL은 이 목적의 로컬 모형이며 운영 마이그레이션이 아니다. 실제 Supabase 인증·REST·파일 저장소 동작은 별도 확인해야 한다.

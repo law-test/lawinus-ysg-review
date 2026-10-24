@@ -1,0 +1,44 @@
+.shared-edit-editor { min-width: 0; padding: 18px 0; border-top: 1px solid var(--review-line,#dadada); color: var(--review-ink,#333); }
+.shared-edit-editor .shared-edit-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 12px; margin-bottom: 12px; }
+.shared-edit-editor .shared-edit-heading h3 { font-size: calc(15px * var(--review-font-scale,1.5)); font-weight: 700; }
+.shared-edit-heading > span { color: var(--review-muted,#666); font-size: calc(12px * var(--review-font-scale,1.5)); }
+.shared-edit-tools, .shared-edit-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.shared-edit-tools { margin-bottom: 12px; }
+.shared-edit-proposal-note { font-size: calc(12px * var(--review-font-scale,1.5)); line-height: 1.7; color: var(--review-muted,#666); margin: 10px 0; }
+.shared-edit-editor button { min-height: 40px; max-width: 100%; white-space: normal; overflow-wrap: anywhere; border: 1px solid var(--review-line,#dadada); background: white; padding: 8px 12px; }
+.shared-edit-editor .shared-edit-label { display: block; margin: 12px 0 5px; font-weight: 600; font-size: calc(12px * var(--review-font-scale,1.5)); }
+.shared-edit-label span { color: var(--review-muted,#666); font-weight: 400; }
+.shared-edit-editor textarea { display: block; box-sizing: border-box; width: 100%; min-width: 0; max-width: 100%; padding: 12px; line-height: 1.8; font-size: calc(14px * var(--review-font-scale,1.5)); resize: vertical; overflow-wrap: anywhere; tab-size: 4; }
+.shared-edit-editor .shared-edit-body { min-height: 240px; height: min(40dvh,420px); }
+.shared-edit-editor .shared-edit-reason { min-height: 78px; margin-bottom: 14px; }
+.shared-edit-conflict, .shared-edit-latest { min-width: 0; border: 1px solid #d6b96c; background: #fff9e8; padding: 12px; margin: 12px 0; border-radius: 6px; }
+.shared-edit-editor .shared-edit-conflict p { margin: 0 0 10px; }
+.shared-edit-editor .shared-edit-error { color: #9d2525; margin: 10px 0; overflow-wrap: anywhere; }
+.shared-edit-editor .shared-edit-status { color: #315d43; margin: 10px 0; overflow-wrap: anywhere; }
+.shared-edit-editor .shared-edit-actions { margin-top: 12px; }
+.shared-edit-editor .shared-edit-actions .primary { background: var(--review-maroon,#92232f); color: white; border-color: var(--review-maroon,#92232f); }
+.shared-edit-editor .shared-edit-actions .primary:hover:not(:disabled) { background: var(--review-maroon-dark,#70000c); }
+.shared-edit-editor .shared-edit-history { min-width: 0; margin-top: 20px; border-top: 1px solid var(--review-line,#dadada); padding-top: 14px; }
+.shared-edit-history-top, .shared-edit-revision-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 10px; }
+.shared-edit-history-top { margin-bottom: 10px; }
+.shared-edit-history-top h4 { margin: 0; font-size: calc(14px * var(--review-font-scale,1.5)); }
+.shared-edit-revision { min-width: 0; border: 1px solid var(--review-line,#dadada); border-radius: 6px; padding: 12px; margin: 10px 0; }
+.shared-edit-revision-heading b { font-size: calc(12px * var(--review-font-scale,1.5)); }
+.shared-edit-editor .shared-edit-byline { color: var(--review-muted,#666); font-size: calc(11px * var(--review-font-scale,1.5)); margin: 7px 0; overflow-wrap: anywhere; }
+.shared-edit-editor .shared-edit-revision-reason { font-size: calc(12px * var(--review-font-scale,1.5)); white-space: pre-wrap; overflow-wrap: anywhere; margin: 8px 0; }
+.shared-edit-editor details { min-width: 0; }
+.shared-edit-editor summary { cursor: pointer; min-height: 40px; padding: 9px 0; font-size: calc(12px * var(--review-font-scale,1.5)); overflow-wrap: anywhere; }
+.shared-edit-editor summary:focus-visible { outline: 2px solid var(--review-maroon,#92232f); outline-offset: 2px; }
+.shared-edit-editor pre { font-family: inherit; font-size: calc(13px * var(--review-font-scale,1.5)); line-height: 1.8; white-space: pre-wrap; overflow-wrap: anywhere; word-break: normal; max-height: 300px; overflow: auto; margin: 6px 0 12px; }
+.shared-edit-editor .shared-edit-more { width: 100%; }
+@media (max-width: 600px) {
+ .shared-edit-editor { padding-top: 16px; }
+ .shared-edit-editor button, .shared-edit-editor summary { min-height: 44px; }
+ .shared-edit-editor textarea { font-size: calc(16px * var(--review-font-scale,1.5)); padding: 10px; }
+ .shared-edit-editor .shared-edit-body { min-height: 220px; height: 34dvh; }
+ .shared-edit-editor .shared-edit-actions > button { flex: 1 1 auto; }
+ .shared-edit-editor .shared-edit-actions .primary { flex-basis: 100%; }
+ .shared-edit-revision, .shared-edit-conflict, .shared-edit-latest { padding: 10px; }
+}
+
+.shared-edit-editor .shared-edit-comparison{min-height:clamp(440px,65dvh,780px);white-space:pre-wrap;}

@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.npm-cache/
+work/
+.env*
+!.env.example
+*.private.json
+*.pem
+*.tsbuildinfo
+__pycache__/
+*.py[cod]
+public/config.json
+*.pdf
+*.hwp
+*.hwpx
+
+

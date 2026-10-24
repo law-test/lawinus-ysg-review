@@ -1,0 +1,25 @@
+.profile-panel .profile-portrait{display:block;width:112px;height:auto;aspect-ratio:5/7;border-radius:5px;margin:22px 0 18px;border:1px solid #e3d6d9}
+.profile-press-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.profile-press-link{display:flex;flex-direction:column;gap:7px;padding:13px 14px;border:1px solid #e3d6d9;border-radius:4px;min-height:44px;color:inherit;text-decoration:none;overflow-wrap:anywhere}
+.profile-press-link:hover{background:#f9f1f3;border-color:#b88998}
+.profile-press-link:focus-visible{outline:2px solid #8b0029;outline-offset:3px}
+.press-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:calc(11px * var(--review-font-scale,1.5));color:#70666a}
+.press-kind{border:1px solid #d9bec7;border-radius:3px;padding:0 5px;color:#8b0029}
+.press-title{font-size:calc(13px * var(--review-font-scale,1.5));line-height:1.65;font-weight:600;color:#8b0029;text-decoration:underline;text-underline-offset:3px}
+.press-summary{font-size:calc(12px * var(--review-font-scale,1.5));line-height:1.7;color:#61595b}
+.profile-patent{font-size:calc(12px * var(--review-font-scale,1.5));line-height:1.8;overflow-wrap:anywhere}
+.profile-patent dl{margin:8px 0 0;color:#70666a}
+.profile-patent dl>div{display:flex;gap:12px;flex-wrap:wrap}
+.profile-patent dt{min-width:48px}
+.profile-patent dd{margin:0}
+.research-group+.research-group{margin-top:23px}
+.research-group h4{font-size:calc(12px * var(--review-font-scale,1.5));color:#5c5348;margin:0 0 11px}
+.research-list{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+.research-list li{padding:10px 12px;border:1px solid #e3d6d9;border-radius:4px;overflow-wrap:anywhere}
+.research-title{display:block;font-size:calc(13px * var(--review-font-scale,1.5));line-height:1.7;font-weight:600;color:#5c5348}
+a.research-title{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:44px;color:#8b0029;text-decoration:underline;text-underline-offset:3px}
+a.research-title span{flex:0 0 auto}
+a.research-title:focus-visible{outline:2px solid #8b0029;outline-offset:3px}
+.research-list li:has(a:hover){background:#f9f1f3;border-color:#b88998}
+.research-list p{margin:3px 0 0;font-size:calc(11px * var(--review-font-scale,1.5));line-height:1.7;color:#70666a}
+@media(max-width:760px){.profile-panel .profile-portrait{width:96px}.profile-press-link{padding:12px}.press-title{font-size:calc(14px * var(--review-font-scale,1.5))}}
