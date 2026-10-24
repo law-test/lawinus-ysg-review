@@ -41,5 +41,7 @@ test('library includes unlinked sources and missing originals are disclosed',()=
   assert.match(text,/openLibrarySource\(s\.id\)/);
   assert.match(text,/source\.available!==false&&source\.kind!=='pdf'/);
   assert.match(text,/보유 원문 파일이 없는 자료입니다/);
-  assert.match(text,/원문 제공 사이트 열기/);
+  assert.match(text,/자료 제공·검색 페이지 열기/);
+  assert.match(text,/공식 사이트에서 판례 검색/);
+  assert.match(text,/공식 검색 · 판결문 전문 미확보/);
 });

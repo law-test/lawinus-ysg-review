@@ -1,0 +1,805 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "ysg-20261023",
+  "pdfSha256": "aaf680a1afc1d248e6982c8bfec0c161a084148776ec66283a0a0d0c103caea3",
+  "cases": [
+    {
+      "sourceId": "s-case-90daaafa1aba",
+      "caseNumber": "2022다233164",
+      "title": "대법원 2025. 2. 13. 선고 2022다233164 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=603535",
+      "assetPath": "official-cases/s-case-90daaafa1aba.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "c66644abd7e2b05067d20fce84893e921c060e9785b75e09f8ec2ba3574d8c9f",
+      "noteIds": [
+        "fn-004",
+        "fn-025",
+        "fn-028",
+        "fn-038",
+        "fn-047",
+        "fn-179"
+      ],
+      "paragraphIds": [
+        "P0852",
+        "P0868",
+        "P0880"
+      ]
+    },
+    {
+      "sourceId": "s-case-069ebbffd6bb",
+      "caseNumber": "2020헌가4",
+      "title": "헌법재판소 2024. 4. 25. 선고 2020헌가4 등 결정",
+      "officialUrl": "https://www.law.go.kr/LSW/detcInfoP.do?detcSeq=190071",
+      "assetPath": "official-cases/s-case-069ebbffd6bb.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "af0c3b07e8053ca5fb4d4e5edc6fda992dfb834d495ef52052f4ceb4384c7176",
+      "noteIds": [
+        "fn-007",
+        "fn-080",
+        "fn-124",
+        "fn-128"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-98fa35858f3a",
+      "caseNumber": "2000다17070",
+      "title": "대법원 2002. 7. 26. 선고 2000다17070 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=81742",
+      "assetPath": "official-cases/s-case-98fa35858f3a.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "92990af638e258ff6a167618280cb7b4df299e7a3a1a5c9df035e14d2411b269",
+      "noteIds": [
+        "fn-009",
+        "fn-050",
+        "fn-051",
+        "fn-074",
+        "fn-181"
+      ],
+      "paragraphIds": [
+        "P0850",
+        "P0870"
+      ]
+    },
+    {
+      "sourceId": "s-case-5c727d685ddd",
+      "caseNumber": "2017다273984",
+      "title": "대법원 2018. 9. 28. 선고 2017다273984 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=203783",
+      "assetPath": "official-cases/s-case-5c727d685ddd.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "705583c032254cec11c050f6b72173d90e6108cdd782671d3eb247b2513cc548",
+      "noteIds": [
+        "fn-008",
+        "fn-032",
+        "fn-033"
+      ],
+      "paragraphIds": [
+        "P0864"
+      ]
+    },
+    {
+      "sourceId": "s-case-fd8d2a7c37be",
+      "caseNumber": "2002마2754",
+      "title": "대법원 2002. 12. 6.자 2002마2754 결정",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=194723",
+      "assetPath": "official-cases/s-case-fd8d2a7c37be.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "839a4fca000d7c1ba1b3afb6e86799c23f25cf4e572d3914d13ab11318e2f923",
+      "noteIds": [
+        "fn-022"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-44d79251deb6",
+      "caseNumber": "2004다50235",
+      "title": "대법원 2006. 9. 22. 선고 2004다50235 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=194034",
+      "assetPath": "official-cases/s-case-44d79251deb6.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "183af90c73f6ab4d7632d88d66648020372d993c21cce1ebcba64a4cb0f3fd66",
+      "noteIds": [
+        "fn-023"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-2812c555a35f",
+      "caseNumber": "2011두24491",
+      "title": "대법원 2012. 4. 12. 선고 2011두24491 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=165605",
+      "assetPath": "official-cases/s-case-2812c555a35f.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "41e8277668469e06229f23160bde5099bb103451cf494fb22eb6dfb6dcd5a784",
+      "noteIds": [
+        "fn-024"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-2bd38a6fbf81",
+      "caseNumber": "86다545",
+      "title": "대법원 1987. 5. 12. 선고 86다545, 86다카2876 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?evtNo=86%EB%8B%A4545",
+      "assetPath": "official-cases/s-case-2bd38a6fbf81.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "6b4693d8c2acb58f917dd7193f8de3f1e72bd4f23b2024a07f0eb5b38857c880",
+      "noteIds": [
+        "fn-022",
+        "fn-024"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-372baae034e2",
+      "caseNumber": "96다17424",
+      "title": "대법원 1996. 10. 15. 선고 96다17424 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?evtNo=96%EB%8B%A417424",
+      "assetPath": "official-cases/s-case-372baae034e2.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "b1b596fabd77a16794d65d605853fc71fb676469deb5bf874d5f449d65705ce0",
+      "noteIds": [
+        "fn-024"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-852f0a8da08d",
+      "caseNumber": "2023다280945",
+      "title": "대법원 2026. 2. 26. 선고 2023다280945 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?evtNo=2023%EB%8B%A4280945",
+      "assetPath": "official-cases/s-case-852f0a8da08d.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "73ec09654bec541584d39fe518e9f828f07ff3f5fd20bb8c38b5a1f2735504e1",
+      "noteIds": [
+        "fn-036",
+        "fn-177"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-fb63c6190c76",
+      "caseNumber": "2023다299635",
+      "title": "대법원 2025. 7. 3. 선고 2023다299635 판결",
+      "officialUrl": "https://lx.scourt.go.kr/search/detail/precedent/0/2025000017939",
+      "assetPath": "official-cases/s-case-fb63c6190c76.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "e40ac2a68388e99d42fcd0c89c27ff2517d0d67b86fd7748536f4e4055ce7984",
+      "noteIds": [
+        "fn-036",
+        "fn-040",
+        "fn-176"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-4be1fe003d84",
+      "caseNumber": "2022다307294",
+      "title": "대법원 2024. 4. 16. 선고 2022다307294 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?evtNo=2022%EB%8B%A4307294",
+      "assetPath": "official-cases/s-case-4be1fe003d84.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "b4285f0c3417d8b60f2e1d3cfd8ddb899489fa485a91dc229f2748182db75f77",
+      "noteIds": [
+        "fn-039",
+        "fn-083",
+        "fn-085",
+        "fn-087",
+        "fn-118"
+      ],
+      "paragraphIds": [
+        "P0832",
+        "P0845",
+        "P0855",
+        "P0873"
+      ]
+    },
+    {
+      "sourceId": "s-case-c1d1a4cdd5db",
+      "caseNumber": "2016도18761",
+      "title": "대법원 2021. 2. 18. 선고 2016도18761 전원합의체 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?evtNo=2016%EB%8F%8418761",
+      "assetPath": "official-cases/s-case-c1d1a4cdd5db.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "42bd466d8c0fd1b60791eaa193ad2b5cdd6b4ac6c3330d43ccf1f83a8626f08e",
+      "noteIds": [
+        "fn-049"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-092dffe2b0ec",
+      "caseNumber": "95다43358",
+      "title": "대법원 1996. 1. 26. 선고 95다43358 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?evtNo=95%EB%8B%A443358",
+      "assetPath": "official-cases/s-case-092dffe2b0ec.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "50bab695268d4fdab76c40548972558d2b29661e29ac89f5b6a6ebc448405bf2",
+      "noteIds": [
+        "fn-083"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-5e808c99a4bd",
+      "caseNumber": "97다2177",
+      "title": "대법원 1997. 7. 8. 선고 97다2177 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?evtNo=97%EB%8B%A42177",
+      "assetPath": "official-cases/s-case-5e808c99a4bd.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "5c324b0b0e0d9446e11a7b2a5af27a90d2dd204c036bcebbdf61ecbb7e0eb1fc",
+      "noteIds": [
+        "fn-083"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-96ba82bb1a99",
+      "caseNumber": "2012다115120",
+      "title": "대법원 2013. 5. 9. 선고 2012다115120 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?evtNo=2012%EB%8B%A4115120",
+      "assetPath": "official-cases/s-case-96ba82bb1a99.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "a1c97c1cdacca216ad701e69cf8d26541a94406da042b1372dfd738d4f481eac",
+      "noteIds": [
+        "fn-089"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-6de9ce7ff723",
+      "caseNumber": "93다31191",
+      "title": "대법원 1994. 9. 9. 선고 93다31191 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?evtNo=93%EB%8B%A431191",
+      "assetPath": "official-cases/s-case-6de9ce7ff723.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "3754bf2b1ceb24852add749048a13f2952fc01250d63871e95ea8a680b28557f",
+      "noteIds": [
+        "fn-089"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-fe02e6538fbf",
+      "caseNumber": "2021다271183",
+      "title": "대법원 2022. 1. 14. 선고 2021다271183 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?evtNo=2021%EB%8B%A4271183",
+      "assetPath": "official-cases/s-case-fe02e6538fbf.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "55366015f3a6517a2ba2e7209f42563d62acd31b13fdbce1dc00108509cab0ec",
+      "noteIds": [
+        "fn-094"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-f61e4786d37e",
+      "caseNumber": "2011마1892",
+      "title": "대법원 2012. 2. 9.자 2011마1892 결정",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?evtNo=2011%EB%A7%881892",
+      "assetPath": "official-cases/s-case-f61e4786d37e.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "f8d34b7a106407408eb6f695d26ab786e22ade1adb8ced40a34843491fcd88cc",
+      "noteIds": [
+        "fn-099"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-ec9e0840e9b2",
+      "caseNumber": "2016다6309",
+      "title": "대법원 2017. 8. 18. 선고 2016다6309 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=210765",
+      "assetPath": "official-cases/s-case-ec9e0840e9b2.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "7c0098e623f2ce9fae4839043d063aa92db0e54f96f48e6386a6389f1e7694e5",
+      "noteIds": [
+        "fn-099"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-8d93f971f8a3",
+      "caseNumber": "78다481",
+      "title": "대법원 1979. 12. 11. 선고 78다481, 482 전원합의체 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?evtNo=78%EB%8B%A4481%2C%20482",
+      "assetPath": "official-cases/s-case-8d93f971f8a3.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "8ee6754ea5837eed41696383993d11d54e49b3837674dc0c11a32575b29d00ce",
+      "noteIds": [
+        "fn-133"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-3c126b67a46c",
+      "caseNumber": "2001다9267",
+      "title": "대법원 2001. 7. 13. 선고 2001다9267 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?evtNo=2001%EB%8B%A49267",
+      "assetPath": "official-cases/s-case-3c126b67a46c.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "51c8e72cc748e0b70e7caf452179d3c258868d1ee0c2c2f6ae2e3f1f730042d7",
+      "noteIds": [
+        "fn-144"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-85a4060e6534",
+      "caseNumber": "2003다18685",
+      "title": "대법원 2003. 5. 30. 선고 2003다18685 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=82610",
+      "assetPath": "official-cases/s-case-85a4060e6534.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "a7aaf89158e33c059d67c8e9c3b292cf4a314f640f438a51c4dc4b92a663a27a",
+      "noteIds": [
+        "fn-144"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-4b4f1c54cddf",
+      "caseNumber": "2015다47327",
+      "title": "대법원 2017. 11. 23. 선고 2015다47327 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=186279",
+      "assetPath": "official-cases/s-case-4b4f1c54cddf.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "fd39ca30d351b8badb285d4f45f94cd90438227213e189e0644e0d15b6aa02d5",
+      "noteIds": [
+        "fn-144"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-20d44f7303c3",
+      "caseNumber": "2024다208261",
+      "title": "대법원 2026. 5. 29. 선고 2024다208261 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=622261",
+      "assetPath": "official-cases/s-case-20d44f7303c3.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "198fadc494aeabb9e9f8de0eec34ac4199046b47351e6be9903219ec2727df6f",
+      "noteIds": [
+        "fn-104",
+        "fn-129"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-736fdf29a75a",
+      "caseNumber": "2025다219693",
+      "title": "대법원 2026. 6. 25. 선고 2025다219693 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=622969",
+      "assetPath": "official-cases/s-case-736fdf29a75a.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "959ab51e4d301c26863fd0528a0af7bb02929716a629b8541b44fb36d342c7ed",
+      "noteIds": [
+        "fn-104",
+        "fn-129"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-4e1e4600a340",
+      "caseNumber": "2024다296374",
+      "title": "대법원 2026. 5. 14. 선고 2024다296374 판결",
+      "officialUrl": "https://www.scourt.go.kr/sjudge/1779237195227_093315.pdf",
+      "assetPath": "official-cases/s-case-4e1e4600a340.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "36ee563f6ab8ed3c52adbe0bb50961d85236706dc79cd866ca78990326681b84",
+      "noteIds": [
+        "fn-105"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-4c44994c22a9",
+      "caseNumber": "2011다55092",
+      "title": "대법원 2015. 11. 12. 선고 2011다55092,55108 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=179850",
+      "assetPath": "official-cases/s-case-4c44994c22a9.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "f8d79d9af317ef99621e81cde4ae21067a612a46a74c9a1a06d6c597e1107496",
+      "noteIds": [
+        "fn-112"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-546ffc9f124e",
+      "caseNumber": "93다11715",
+      "title": "대법원 1995. 6. 30. 선고 93다11715 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=112075",
+      "assetPath": "official-cases/s-case-546ffc9f124e.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "4d725505480de7bd6314065fc5157b3b0f8ecbc909393d68042e04ea01ad1746",
+      "noteIds": [
+        "fn-112"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-e51704a747e3",
+      "caseNumber": "2010다66644",
+      "title": "대법원 2011. 12. 8. 선고 2010다66644 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=159941",
+      "assetPath": "official-cases/s-case-e51704a747e3.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "c3d82968459377ceba875212e5acd4b7ffd71ee287d147fa5e20be3a0e1eabf3",
+      "noteIds": [
+        "fn-122"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-fd00ac9cd66f",
+      "caseNumber": "2021다230083",
+      "title": "대법원 2022. 3. 17. 선고 2021다230083, 230090 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=227211",
+      "assetPath": "official-cases/s-case-fd00ac9cd66f.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "b1cf60aa7d7a79aa0d55ba13121c919e3a1b8592970849218a6c4298a2f54eea",
+      "noteIds": [
+        "fn-123",
+        "fn-124",
+        "fn-128"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-e5eed9ae08db",
+      "caseNumber": "2003도935",
+      "title": "대법원 2003. 6. 13. 선고 2003도935 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=82657",
+      "assetPath": "official-cases/s-case-e5eed9ae08db.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "b8594411b86126824399e2f75460f98bb4f39d1fe858605d12a4a597da6d637f",
+      "noteIds": [
+        "fn-172"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-958a66667e15",
+      "caseNumber": "2022다247750",
+      "title": "대법원 2022. 12. 15. 선고 2022다247750 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=232771",
+      "assetPath": "official-cases/s-case-958a66667e15.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "46f26cbf7ba1ec1e5247d14d9e209e525ee3ca49ddd622af12feac4de26f1b98",
+      "noteIds": [
+        "fn-183"
+      ],
+      "paragraphIds": [
+        "P0854"
+      ]
+    },
+    {
+      "sourceId": "s-case-913e74315f51",
+      "caseNumber": "2025두33790",
+      "title": "대법원 2025. 9. 25. 선고 2025두33790 판결",
+      "officialUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=609609",
+      "assetPath": "official-cases/s-case-913e74315f51.txt",
+      "coverage": "full",
+      "retrievedAt": "2026-10-24",
+      "sha256": "acea6692b60f423486c295b54553aa283df6091f69c8a7c8363436d3ce8aab86",
+      "noteIds": [
+        "fn-186"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-armitage-1997-ewca-civ-1279",
+      "caseNumber": "[1997] EWCA Civ 1279",
+      "title": "Armitage v. Nurse [1998] Ch 241 (CA); [1997] EWCA Civ 1279.",
+      "provenance": "mirror",
+      "providerName": "Rivista Trusts e Attività Fiduciarie",
+      "sourceUrl": "https://rivistataf.eu/documenti/Armitage_1997_CA_1630161050.pdf",
+      "assetPath": "official-cases/s-case-armitage-1997-ewca-civ-1279.txt",
+      "coverage": "full",
+      "coverageNote": "판결 이유와 주문을 수록했습니다. 원호스트의 현재 파일과는 대조하지 못했습니다.",
+      "retrievedAt": "2026-10-24",
+      "sha256": "d0698ea775db5706ca382127bfdbcef84bbc52ae26a7bc90d8a0bafc936dab38",
+      "noteIds": [
+        "fn-048"
+      ],
+      "paragraphIds": [
+        "P0304"
+      ],
+      "newSource": true
+    },
+    {
+      "sourceId": "s-a959a4cbba36842e",
+      "caseNumber": "[1991] FCA 344",
+      "title": "Re Australian Elizabethan Theatre Trust (1991) 102 ALR 681; [1991] FCA 344.",
+      "provenance": "mirror",
+      "providerName": "Associazione Il trust in Italia",
+      "sourceUrl": "https://www.trusts.it/admincp/UploadedPDF/201104141133180.jAustralia%20Re%20John%20Frederick%20Lord%20%5B1991%5D%20FCA%20344.pdf",
+      "assetPath": "official-cases/s-a959a4cbba36842e.txt",
+      "coverage": "full",
+      "coverageNote": "판결 이유와 주문을 수록했습니다. 원호스트의 현재 파일과는 대조하지 못했습니다.",
+      "retrievedAt": "2026-10-24",
+      "sha256": "814ba413911ec878de6fdb7accd06561244f7601c5c4cfb26ed4be58ae4aa6be",
+      "noteIds": [
+        "fn-146"
+      ],
+      "paragraphIds": [
+        "P0615"
+      ]
+    },
+    {
+      "sourceId": "s-f8aa6d8afb5dfcef",
+      "caseNumber": "[1994] 2 All ER 316",
+      "title": "R v. Clowes (No 2) [1994] 2 All ER 316.",
+      "provenance": "mirror",
+      "providerName": "uniset.ca 판결문 보존 자료",
+      "sourceUrl": "https://uniset.ca/microstates/clowes.html",
+      "assetPath": "official-cases/s-f8aa6d8afb5dfcef.txt",
+      "coverage": "full",
+      "coverageNote": "판결 이유와 주문을 수록했습니다. 원호스트의 현재 파일과는 대조하지 못했습니다.",
+      "retrievedAt": "2026-10-24",
+      "sha256": "e9520f4bce8b506b5a38f5e90c6170883ad0897f700b1610695b8c7b741fe701",
+      "noteIds": [
+        "fn-149"
+      ],
+      "paragraphIds": [
+        "P0615"
+      ]
+    },
+    {
+      "sourceId": "s-case-a38b765a44f7",
+      "caseNumber": "2017가합408489",
+      "title": "수원지방법원 성남지원 2020. 1. 10. 선고 2017가합408489 판결",
+      "provenance": "mirror",
+      "providerName": "법률사무소 치평 (박생환 변호사) 공개 판례 게시물",
+      "sourceUrl": "http://www.lawcafe24.com/bbs/board/38978",
+      "assetPath": "official-cases/s-case-a38b765a44f7.txt",
+      "coverage": "partial",
+      "coverageNote": "공식 법원 사이트에서 직접 받은 판결문이 아닌 법률사무소 공개 전재 페이지. 주문·이유·재판부 서명은 보존했으나, 본문의 표 이미지5개가 원 게시물에서404로 끊겨 확보되지 않음. 부분사본이며 전문 확보로 표시하지 않음. 본문에 언급된 별지 목록 별도 파일도 게시물에서 확인되지 않음.",
+      "retrievedAt": "2026-10-24",
+      "sha256": "102a21b9a34abcad6cea9f0ee2a05afac9fcb21f0c1c424591c58a212ffde252",
+      "noteIds": [
+        "fn-113"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-case-04a83141390e",
+      "caseNumber": "2023구합20417",
+      "title": "부산지방법원 2023. 9. 8. 선고 2023구합20417 판결",
+      "provenance": "mirror",
+      "providerName": "택스캔버스 공개 판례 전재",
+      "sourceUrl": "https://www.taxcanvas.kr/core/case/000000000000635270",
+      "assetPath": "official-cases/s-case-04a83141390e.txt",
+      "coverage": "partial",
+      "coverageNote": "공식 국가기관에서 직접 받은 판결문이 아닌 전문 서비스 전재임. 주문·당사자·판단이유·결론은 확인되지만 판사 서명과 별지 법령 전문은 보이지 않아 부분사본으로 분류. 전문 확보로 표시하지 않음.",
+      "retrievedAt": "2026-10-24",
+      "sha256": "76d7598c8b745fb9b67d6f490da3e394b0d10e46353c02f43b4180ca8a80b4d2",
+      "noteIds": [
+        "fn-135"
+      ],
+      "paragraphIds": []
+    }
+  ],
+  "confirmedExistingSourceRefs": [
+    {
+      "sourceId": "s-2c5dddcc9509b36c",
+      "noteIds": [
+        "fn-052",
+        "fn-074"
+      ],
+      "paragraphIds": [
+        "P0321",
+        "P0343",
+        "P0348"
+      ]
+    },
+    {
+      "sourceId": "s-d797f503e1f60dc0",
+      "noteIds": [
+        "fn-055"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-1797c793a23f1c76",
+      "noteIds": [
+        "fn-060"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-fec63d1c6cb3f6d0",
+      "noteIds": [
+        "fn-060"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-7c53138d1b7bf183",
+      "noteIds": [
+        "fn-062"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-5ba6bb055c87a80b",
+      "noteIds": [
+        "fn-062"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-1d537a9f97fe72a4",
+      "noteIds": [
+        "fn-062"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-cff7833ee4f2be30",
+      "noteIds": [
+        "fn-064",
+        "fn-065"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-3fb202eb49727047",
+      "noteIds": [
+        "fn-133"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-fa940a234b8bbacf",
+      "noteIds": [
+        "fn-137"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-e02ef6dd478978e3",
+      "noteIds": [
+        "fn-146",
+        "fn-147"
+      ],
+      "paragraphIds": [
+        "P0615"
+      ]
+    },
+    {
+      "sourceId": "s-d128c0a0cf68b2cd",
+      "noteIds": [
+        "fn-148"
+      ],
+      "paragraphIds": []
+    },
+    {
+      "sourceId": "s-75164cb5d2ec8468",
+      "noteIds": [],
+      "paragraphIds": [
+        "P0615"
+      ]
+    }
+  ],
+  "unavailableCaseRefs": [
+    {
+      "sourceId": "s-case-4d7244d1f09f",
+      "caseNumber": "2012다13590",
+      "title": "대법원 2012. 5. 9. 선고 2012다13590 판결",
+      "noteIds": [
+        "fn-031",
+        "fn-032"
+      ],
+      "paragraphIds": [],
+      "reason": "공식 공개 전문을 확보하지 못했습니다. 검색 결과나 다른 자료의 인용은 판결문 전문을 대신하지 않습니다.",
+      "searchUrl": "https://www.law.go.kr/"
+    },
+    {
+      "sourceId": "s-case-cff5879846c8",
+      "caseNumber": "97마1002",
+      "title": "대법원 1997. 6. 19.자 97마1002 결정",
+      "noteIds": [
+        "fn-091"
+      ],
+      "paragraphIds": [],
+      "reason": "공식 공개 전문을 확보하지 못했습니다. 검색 결과나 다른 자료의 인용은 판결문 전문을 대신하지 않습니다.",
+      "searchUrl": "https://www.law.go.kr/"
+    },
+    {
+      "sourceId": "s-case-562aed76af45",
+      "caseNumber": "2020나11380",
+      "title": "수원고등법원 2020. 10. 15. 선고 2020나11380 판결",
+      "noteIds": [
+        "fn-114"
+      ],
+      "paragraphIds": [],
+      "reason": "공식 공개 전문을 확보하지 못했습니다. 검색 결과나 다른 자료의 인용은 판결문 전문을 대신하지 않습니다.",
+      "searchUrl": "https://www.law.go.kr/"
+    },
+    {
+      "sourceId": "s-case-00cd1faa1bac",
+      "caseNumber": "2021가합547069",
+      "title": "서울중앙지방법원 2024. 7. 3. 선고 2021가합547069 판결",
+      "noteIds": [
+        "fn-117"
+      ],
+      "paragraphIds": [],
+      "reason": "공식 공개 전문을 확보하지 못했습니다. 검색 결과나 다른 자료의 인용은 판결문 전문을 대신하지 않습니다.",
+      "searchUrl": "https://www.law.go.kr/"
+    },
+    {
+      "sourceId": "s-case-unavailable-709aa3a54393",
+      "caseNumber": "2019다294466",
+      "title": "대법원 2024. 7. 11. 선고 2019다294466 판결",
+      "noteIds": [
+        "fn-006",
+        "fn-119"
+      ],
+      "paragraphIds": [],
+      "reason": "공식 공개 전문을 확보하지 못했습니다. 검색 결과나 다른 자료의 인용은 판결문 전문을 대신하지 않습니다.",
+      "searchUrl": "https://www.law.go.kr/",
+      "newSource": true
+    },
+    {
+      "sourceId": "s-case-unavailable-64ad5ba1e096",
+      "caseNumber": "2024나4585",
+      "title": "전주지방법원 2025. 1. 23. 선고 2024나4585 판결",
+      "noteIds": [
+        "fn-087"
+      ],
+      "paragraphIds": [],
+      "reason": "공식 공개 전문을 확보하지 못했습니다. 검색 결과나 다른 자료의 인용은 판결문 전문을 대신하지 않습니다.",
+      "searchUrl": "https://www.law.go.kr/",
+      "newSource": true
+    },
+    {
+      "sourceId": "s-case-tokyo-2018-09-12",
+      "caseNumber": "平成27年（ワ）第24934号",
+      "title": "東京地判 平成30(2018).9.12. 金融法務事情2104号78頁",
+      "newSource": true,
+      "noteIds": [
+        "fn-126"
+      ],
+      "paragraphIds": [
+        "P0529"
+      ],
+      "reason": "전문을 확보하지 못했습니다. 확인된 민간 전재에는 본문 중략과 별지 생략이 있어 원전으로 싣지 않았습니다.",
+      "searchUrl": "https://www.courts.go.jp/hanrei/search1/index.html"
+    }
+  ]
+}

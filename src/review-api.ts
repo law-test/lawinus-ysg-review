@@ -1,4 +1,8 @@
 import { createClient, type SupabaseClient } from '@supabase/supabase-js';
+import officialCaseData from './official-cases.json' with {type:'json'};
+import {mergeOfficialCases,officialCaseAssetUrl,validateOfficialCases} from './official-case-sources.ts';
+
+const officialCases=validateOfficialCases(officialCaseData);
 
 export type ReviewConfig = { supabaseUrl: string; supabasePublishableKey: string; storageBucket: string; datasetId: string };
 export type ReviewNote = { id: string; datasetId: string; anchorType: string; page: number|null; noteId: string|null; sourceId: string|null; x: number|null; y: number|null; quote: string; text: string; visibility: 'private'|'shared'; status: 'open'|'resolved'; revision: number; displayName: string; createdAt: string; updatedAt: string; editable: boolean };
@@ -82,6 +86,8 @@ export function initializeReviewSession(): Promise<SessionResult> {
 
 export function assetUrl(id: string): string {
   const { config, client } = connection();
+  const officialUrl=officialCaseAssetUrl(id,officialCases,document.baseURI);
+  if(officialUrl)return officialUrl;
   let key: string;
   if (id === 'human' || id === 'thesis') key = 'human.pdf';
   else if (id === 'manifest' || id === 'profile') key = `${id}.json`;
@@ -93,7 +99,8 @@ export function assetUrl(id: string): string {
 async function publicJson(id: 'manifest'|'profile') {
   const r = await fetch(assetUrl(id), { cache: 'no-cache', credentials: 'omit' });
   if (!r.ok) throw new Error('자료가 아직 등록되지 않았거나 불러올 수 없습니다.');
-  return r.json();
+  const value=await r.json();
+  return id==='manifest'?mergeOfficialCases(value,officialCases,connection().config.datasetId):value;
 }
 
 function requestBody(init?: RequestInit): Record<string, unknown> {

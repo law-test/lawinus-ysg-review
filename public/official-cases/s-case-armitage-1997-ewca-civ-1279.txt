@@ -1,0 +1,1347 @@
+판결문 보존 사본(미러)
+Armitage v Nurse [1997] EWCA Civ 1279; [1998] Ch 241
+Court of Appeal (Civil Division), 19 March 1997
+Crown Copyright ©1997
+원 저장소: https://www.bailii.org/ew/cases/EWCA/Civ/1997/1279.html
+수납 출처: https://rivistataf.eu/documenti/Armitage_1997_CA_1630161050.pdf
+BAILII 인쇄본의 판결문에서 반복 탐색 메뉴·머리말·꼬리말만 제외한 텍스트입니다. 공식 원호스트 현재 파일과 대조하지 못했습니다.
+
+ARMITAGE v. NURSEand OTHERS [1997] EWCA Civ 1279 (19th
+March, 1997)
+IN
+THE SUPREME COURT OF JUDICATURE
+CHANF 95/1318/B
+COURT
+OF APPEAL (CIVIL DIVISION)
+ON
+APPEAL FROM THE HIGH COURT OF JUSTICE
+CHANCERY
+DIVISION
+Royal
+Courts of Justice
+Wednesday,
+19th March 1997
+Before:
+LORD
+JUSTICE HIRST
+LORD
+JUSTICE MILLETT
+LORD
+JUSTICE HUTCHISON
+-
+- - - - - - -
+PAULA
+RACHEL ARMITAGE
+Plaintiff
+-v-
+(1)
+RICHARD NURSE
+(2)
+DUDLEY THOMAS BOWMAN STAMMERS AND
+BRIAN
+ARTHUR STAMMERS
+
+(the
+Personal Representatives of
+Arthur
+George Stammers, deceased)
+(3)
+MARGARET LAMBERT McLEOD FLATMAN
+(the
+Personal Representative of Keith
+Flatman,
+deceased, substituted by Order
+to
+carry on dated 20th September 1995)
+(4)
+JEFFREY REGINALD WRIGHT
+Defendants
+-
+- - - - - - -
+(Transcript
+of the Handed Down Judgment of Smith Bernal Reporting Limited, 180 Fleet
+Street, London, EC4A
+2HD. Telephone No:
+0171-831 3183. Shorthand Writers to the Court.)
+-
+- - - - - - -
+MR.
+B. WEATHERILL Q.C.
+(instructed by Messrs Royds Treadwell, 
+London,
+EC4) appeared on behalf of the Appellant/Plaintiff.
+MR.
+G. HILL
+(instructed by Messrs Hood Vores & Allwood) appeared on behalf of the First
+and Fourth
+Defendants, instructed by Messrs Greenland Houchen on behalf of the
+Second Defendant and instructed by
+Messrs Mills & Reeve on behalf of the
+Third Defendant.
+J
+U D G M E N T
+(As
+approved by the Court
+)
+
+Crown
+Copyright
+LORD
+JUSTICE MILLETT:
+The
+main questions which arise in this appeal are concerned with the true
+construction of a trustee exemption
+clause in a settlement and the legitimate
+scope of such clauses in English law.
+The
+Appellant (“Paula”) has brought an Action for breach of trust
+against the Respondents who are the trustees
+and the personal representatives
+of deceased trustees of a Settlement of which she is the principal beneficiary.
+The Settlement contains a trustee exemption clause (Clause 15) in very wide and
+general terms as well as a
+special and more limited exemption clause (Clause
+9). Jacob J was asked to decide three preliminary questions in
+the Action. They
+may be summarised as follows:
+(1)
+Whether Clause 15 of the Settlement operates to absolve the Respondents from
+liability for all or any of the
+breaches alleged in the Amended Statement of
+Claim;
+(2)
+Whether Clause 9(a) of the Settlement operates to similar effect;
+(3)
+Whether any of the Paula’s claims in respect of breaches of trust alleged
+to have been committed before 15th.
+June 1987 are statute-barred.
+The
+Judge decided Question (1) in the affirmative and Questions (2) and (3) in the
+negative. He awarded the
+Respondents 80% of their costs but deprived them of
+the right to reimburse themselves out of the trust fund to
+the extent of the
+remaining 20%. 
+Both
+parties appeal to this Court. Paula appeals against the Judge’s answer to
+Question (1) The Respondents
+appeal against his answers to Questions (2) and
+(3) and against his order depriving them of their right to
+reimburse themselves
+for their costs out of the trust fund. We have given leave to Paula to raise a
+further
+question which was not considered by the Judge. This is whether if, as
+the Judge ruled, Clause 15 on its true
+construction exempts each of the
+Respondents from all liability for breach of trust other than liability for his
+own
+dishonesty, the Clause is void for repugnancy or on grounds of public
+policy. 
+The
+facts.
+The
+Settlement was made on 11th. October 1984. It was the result of an application
+to the Court by the trustees
+of a Marriage Settlement made by Paula’s
+Grandfather for the variation of the trusts of the settlement under the
+Variation of Trusts Act 1958. Paula’s Mother was life tenant under the
+Marriage Settlement and Paula, who was
+then aged 17, was entitled in remainder.
+The settled property consisted largely of land which was farmed by a
+family
+company called G.W. Nurse & Co. Limited (“the Company”). The
+Company had farmed the land for
+many years and until March 1984 it had held a
+tenancy of the land. Paula’s Mother and Grandmother were the
+sole
+directors and shareholders of the Company.
+Under
+the terms of the variation the property subject to the trusts of the Marriage
+Settlement was partitioned
+between Paula and her Mother. Part of the land
+together with a sum of £230,000 was transferred to Paula’s
+Mother
+absolutely free and discharged from the trusts of the Marriage Settlement. The
+remainder of the land
+(“Paula’s land”) together with a sum of
+£30,000 was allocated to Paula. Since she was under age, her share was
+directed to be held on the trusts of a settlement prepared for her benefit. So
+the Settlement came into being.
+Under
+the trusts of the Settlement the trustees held the income upon trust to
+accumulate it until Paula attained 25
+
+with power to pay it to her or to apply
+it for her benefit. Thereafter and until Paula attained 40 they held the
+income
+upon trust to pay it to her. The capital was held in trust for Paula at 40 with
+trusts over in the event of her
+death under that age, and with provision for
+transferring the capital to Paula in instalments after she had attained
+25 but
+not 40. 
+The
+Settlement, which must be taken to have been made by Paula as well as by her
+Mother, appears to have been
+drawn by Counsel for the Marriage Settlement
+Trustees (Mr. P.W.E.Taylor Q.C. and Mr. Geoffrey Jaques) and
+approved on
+Paula’s behalf by Junior Counsel who appeared for her guardian ad litem.
+It was approved on her
+behalf by the High Court (H.H.Judge Fitzhugh Q.C.). 
+The
+pleadings.
+The
+Amended Statement of Claim pleads a number of breaches of trust in detail. The
+Judge summarised them
+under four heads. First, Paula complains that in breach
+of trust the trustees appointed the Company to farm
+Paula’s land as well
+as the land which had been transferred to her Mother. It is alleged that this
+was not merely
+grossly imprudent but was expressly forbidden by Clause 12 of
+the Settlement, inserted for fiscal reasons, which
+provides that no capital or
+income subject to the trusts of the Settlement shall in any circumstances
+whatsoever
+be paid or applied beneficially (save for full consideration) or be
+applied for the benefit whether directly or
+indirectly of Paula’s Mother
+or Grandmother. (The Respondents, of course, plead that the Company’s
+obligation
+to manage the farm constituted full consideration for the £500
+a quarter which it was paid for doing so. It is not
+alleged that the
+Company’s appointment had any adverse fiscal consequences.)
+Secondly, it is alleged that in breach of trust the trustees failed thereafter
+properly to supervise the Company’s
+management of Paula’s land.
+Thirdly, it is alleged that the trustees failed to make proper inquiry into the
+reasons
+why the value of Paula’s land apparently fell dramatically
+between the date on which it was valued for the
+purposes of the partition in
+1984 and the date when it was sold in 1987. Finally, it is alleged that the
+trustees
+failed to obtain proper payment of interest in respect of a loan made
+to Paula’s Mother.
+Before
+us Counsel for Paula has summarised the pleadings more generally. They allege,
+he says, not merely a
+failure to distinguish between Paula’s interests
+and those of her family but a deliberate course of conduct on the
+part of the
+trustees to disregard the interests of Paula and subordinate them to the
+interests of her Mother or other
+members of the family who were not objects of
+the trust; or at the very least a conscious indifference to Paula’s
+interests. 
+Before
+analysing the pleadings in more detail, it is convenient to consider the scope
+Clause 15 of the Settlement.
+Clause
+15 of the Settlement.
+Clause
+15 of the Settlement is in the following terms:
+“No
+Trustee shall be liable for any loss or damage which may happen to
+Paula’s fund or any part thereof or the
+income thereof at any time or
+from any cause whatsoever unless
+such loss or damage
+shall
+be caused by his own
+actual fraud
+”
+(my emphasis).
+The
+Clause was taken from Hallett’s Conveyancing Precedents (1965 ed.). A
+more prolix clause to the same
+effect may be found in Key &
+Elphinstone’s Conveyancing Precedents (15th.Ed.)(1953). In my judgment
+the
+meaning of the Clause is plain and unambiguous. No trustee can be made
+liable for loss or damage to the capital
+or income of the trust property caused
+otherwise than by his own actual fraud. “Actual fraud” means what
+it
+says. It does not mean “constructive fraud” or “equitable
+fraud”. The word “actual” is deliberately chosen to
+exclude
+them. 
+Counsel
+for Paula submits that in a settlement the context requires the word
+“fraud” to be given the extended
+meaning which the Courts of Equity
+came to give it. The distinction between fraud properly so-called and other
+cases to which the Court of Chancery, in his own words 
+“undoubtedly
+did apply the term “fraud”, although I think unfortunately”
+is
+expounded in the speech of Viscount Haldane in Nocton v Ashburton [1914] AC 932. As he explained
+“in Chancery the term “fraud” thus came to be used to describe what
+fell short of deceit, but imported breach of a
+duty to which equity had
+attached its sanction.” 
+It
+is worthy of note that he himself used the expression “actual
+fraud” throughout his speech to distinguish cases
+of common law fraud or
+deceit from these other cases. Lord Dunedin did the same when he said at p. 963 
+“...if
+based on fraud, then, in accordance with the decision in Derry v Peek (1889),
+14 AppCas 337, the fraud
+proved must be actual fraud, a mens rea, an
+intention to deceive.”
+Derry
+v Peek established that nothing short of a fraudulent intention in the strict
+sense will suffice for a case of
+
+deceit or fraud properly so called. It
+requires proof of dishonesty. Nothing less will do. Gross and culpable
+negligence is not enough. This was confirmed in Nocton v Ashburton, which also
+established that dishonesty is
+not a necessary factor in cases of so-called
+equitable fraud.
+In
+my judgment, therefore, Clause 15 is apt to exclude liability for breach of
+trust in the absence of a dishonest
+intention on the part of the trustee whose
+conduct is impugned. I would have added nothing further but for the
+confusion
+which appears to have been engendered in the attempt to apply the concept of
+actual fraud to an
+allegation of breach of trust. 
+The
+common law knows no generalised tort of fraud. Derry v Peek was an action for
+damages for deceit, that is
+to say, for fraudulent misrepresentation. In such a
+case fraud must be proved by showing that the false
+representation was made
+knowingly, that is to say, without an honest belief in its truth; or
+recklessly, that is to
+say, not caring whether it was true or false. Care needs
+to be taken when these concepts are applied not to a
+representation but to a
+breach of trust. Breaches of trust are of many different kinds. A breach of
+trust may be
+deliberate or inadvertent; it may consist of an actual
+misappropriation or misapplication of the trust property or
+merely of an
+investment or other dealing which is outside the trustees’ powers; it may
+consist of a failure to carry
+out a positive obligation of the trustees or
+merely of a want of skill and care on their part in the management of
+the trust
+property; it may be injurious to the interests of the beneficiaries or be
+actually to their benefit. By
+consciously acting beyond their powers (as, for
+example, by making an investment which they know to be
+unauthorised) the
+trustees may deliberately commit a breach of trust; but if they do so in good
+faith and in the
+honest belief that they are acting in the interest of the
+beneficiaries their conduct is not fraudulent. So a deliberate
+breach of trust
+is not necessarily fraudulent. Hence the remark famously attributed to Selwyn
+LJ by Sir Nathaniel
+Lindley MR in the course of argument in Perrins v Bellamy
+[1889] 1 Ch. 797, 798:
+“My
+old Master, the late Lord Justice Selwyn, used to say: "The main duty of a
+trustee is to commit judicious
+breaches of trust.""
+The
+expression “actual fraud” in Clause 15 is not used to describe the
+common law tort of deceit. As the Judge
+appreciated it simply means dishonesty.
+I accept the formulation put forward by Mr. Hill on behalf of the
+Respondents
+which ( as I have slightly modified it) is that it
+“...connotes
+at the minimum an intention on the part of the trustee to pursue a particular
+course of action, either
+knowing that it is contrary to the interests of the
+beneficiaries or being recklessly indifferent whether it is
+contrary to their
+interests or not”.
+It
+is the duty of a trustee to manage the trust property and deal with it in the
+interests of the beneficiaries. If he
+acts in a way which he does not honestly
+believe is in their interests then he is acting dishonestly. It does not
+matter
+whether he stands or thinks he stands to gain personally from his actions. A
+trustee who acts with the
+intention of benefiting persons who are not the
+objects of the trust is not the less dishonest because he does not
+intend to
+benefit himself.
+In
+my judgment Clause 15 exempts the trustee from liability for loss or damage to
+the trust property no matter
+how indolent, imprudent, lacking in diligence,
+negligent or wilful he may have been, so long as he has not acted
+dishonestly.
+The
+permitted scope of trustee exemption clauses.
+It
+is submitted on behalf of Paula that a trustee exemption clause which purports
+to exclude all liability except
+for actual fraud is void, either for repugnancy
+or as contrary to public policy. There is some academic support for
+the
+submission (notably an article by Professor Matthews in (1989) Conveyancer 42
+and Hanbury and Martin’s
+Modern Equity (14th. Ed.) pp. 473-4) that
+liability for gross negligence cannot be excluded, but this is not the
+view
+taken in Underhill & Hayton’s Law of Trusts and Trustees (15th. Ed.)
+(1995) pp. 560-1 (where it appears to
+be taken only because the editor
+confusingly uses the term “gross negligence” to mean reckless
+indifference to
+the interests of the beneficiaries.) In its Consultation Paper
+No. 214 the Law Commission states at para. 33.41:
+“Beyond
+this, trustees and fiduciaries cannot exempt themselves from liability for
+fraud, bad faith and wilful
+default. It is not, however, clear whether the
+prohibition on exclusion of liability for “fraud” in this context
+only
+prohibits the exclusion of common law fraud or extends to the much broader
+doctrine of equitable fraud. It is
+also not altogether clear whether the
+prohibition on the exclusion of liability for “wilful default” also
+prohibits
+exclusion of liability for gross negligence although we incline to
+the view that it does.”
+This
+passage calls for two comments. First, the expression wilful default is used in
+the cases in two senses. A
+trustee is said to be accountable on the footing of
+wilful default when he is accountable not only for money
+
+which he has in fact
+received but also for money which he could with reasonable diligence have
+received. It is
+sufficient that the trustee has been guilty of a want of
+ordinary prudence: see, for example, Re Chapman [1896] 2
+Ch 763. In the
+context of a trustee exclusion clause, however, such as Section 30 of the
+Trustee Act, 1925 it
+means a deliberate breach of trust: Re
+Vickery
+[1931]
+1 h. 572.
+The
+decision has been criticised, but it is in line
+with earlier authority: see
+Lewis v Great Western Railway Co. (1877( 3 QBD 195; Re Trusts of Leeds City
+Brewery Ltd.’s Debenture Stock Trust Deed [1925] Ch. 532n; Re City
+Equitable Fire Insurance Co. [1925] 1 Ch.
+407. Nothing less than conscious and
+wilful misconduct is sufficient. The trustee must be 
+"conscious
+that, in doing the act complained of or in omitting to do the act which it said
+he ought to have done,
+he is committing a breach of his duty, or is recklessly
+careless whether it is a breach of his duty or not " per
+Maugham
+J in Re Vickery (
+supra)
+at p. 583).
+A
+trustee who is guilty of such conduct either consciously takes a risk that loss
+will result, or is recklessly
+indifferent whether it will or not. If the risk
+eventuates he is personally liable. But if he consciously takes the risk
+in
+good faith and with the best intentions, honestly believing that the risk is
+one which ought to be taken in the
+interests of the beneficiaries, there is no
+reason why he should not be protected by an exemption clause which
+excludes
+liability for wilful default. 
+Secondly,
+the Law Commission was considering the position of fiduciaries as well as
+trustees, and in such a
+context it is sensible to consider the exclusion of
+liability for so-called equitable fraud. But it makes no sense in
+the present
+context. The nature of equitable fraud may be collected from the speech of
+Viscount Haldane in
+Nocton v Ashburton and Snell’s Equity (29th. Ed.) pp.
+550-1. It covers breach of fiduciary duty, undue
+influence, abuse of
+confidence, unconscionable bargains, and frauds on powers. With the sole
+exception of the
+last, which is a technical doctrine in which the word
+“fraud” merely connotes excess of vires,
+it involves some
+dealing by the fiduciary with his principal and the risk that
+the fiduciary may have exploited his position to his
+own advantage. In Earl of
+Aylesford v Morris (1873), 8 Ch.App.484 Lord Selborne LC said at p. 491:
+“Fraud
+does not here mean deceit or circumvention; it means an unconscientious use of
+the power arising out of
+these circumstances and conditions...”
+A
+trustee exemption clause such as Clause 15 of the Settlement does not purport
+to exclude the liability of the
+fiduciary in such cases. Suppose, for example,
+that one of the Respondents had purchased Paula's land at a
+proper price from
+his fellow trustees. The sale would be liable to be set aside. Clause 15 would
+not prevent this.
+This is not because the purchasing trustee would have been
+guilty of equitable fraud, but because by claiming to
+recover the trust
+property (or even equitable compensation) Paula would not be suing in respect
+of any “loss or
+damage” to the trust. Her right to recover the land
+would not depend on proof of loss or damage. Her claim
+would succeed even if
+the sale was at an overvalue; the purchasing trustee could never obtain more
+than a
+defeasible title from such a transaction. But Clause 15 would be
+effective to exempt his fellow trustees from
+liability for making good any loss
+which the sale had occasioned to the trust estate so long as they had acted in
+good faith and in what they honestly believed was Paula’s interests. 
+Accordingly,
+much of the argument before us which disputes the ability of a trustee
+exemption clause to exclude
+liability for equitable fraud or unconscionable
+behaviour is misplaced. But it is unnecessary to explore this
+further, for no
+such conduct is pleaded. What is pleaded is, at the very lowest, culpable and
+probably gross
+negligence. So the question reduces itself to this: can a
+trustee exemption clause validly exclude liability for
+gross negligence?
+It
+is a bold submission that a clause taken from one standard precedent book and
+to the same effect as a clause
+found in another, included in a settlement drawn
+by Chancery Counsel acting for an infant settlor and approved
+by the Court on
+her behalf, should be so repugnant to the trusts or contrary to public policy
+that it is liable to be
+set aside at her suit. But the submission has been made
+and we must consider it. In my judgment it is without
+foundation.
+There
+can be no question of the clause being repugnant to the trust. In Wilkins v
+Hogg ((1861) 31 L.J.Ch. 41 at
+p.42 Lord Westbury LC challenged counsel to cite
+a case where an indemnity clause protecting the trustee from
+his ordinary duty
+had been held so repugnant as to be rejected. Counsel was unable to do so. No
+such case has
+occurred in England or Scotland since.
+I
+accept the submission made on behalf of Paula that there is an irreducible core
+of obligations owed by the
+trustees to the beneficiaries and enforceable by
+them which is fundamental to the concept of a trust. If the
+beneficiaries have
+no rights enforceable against the trustees there are no trusts. But I do not
+accept the further
+submission that these core obligations include the duties of
+skill and care, prudence and diligence. The duty of
+the trustees to perform the
+trusts honestly and in good faith for the benefit of the beneficiaries is the
+minimum
+necessary to give substance to the trusts, but in my opinion it is
+sufficient. As Mr. Hill pertinently pointed out in
+
+his able argument, a trustee
+who relied on the presence of a trustee exemption clause to justify what he
+proposed
+to do would thereby lose its protection: he would be acting recklessly
+in the proper sense of the term.
+It
+is, of course, far too late to suggest that the exclusion in a contract of
+liability for ordinary negligence or want
+of care is contrary to public policy.
+What is true of a contract must be equally true of a settlement. It would be
+very surprising if our law drew the line between liability for ordinary
+negligence and liability for gross
+negligence. In this respect English law
+differs from civil law systems, for it has always drawn a sharp distinction
+between negligence, however gross, on the one hand and fraud, bad faith and
+wilful misconduct on the other.
+The doctrine of the common law is that 
+“gross
+negligence may be evidence of mala fides, but is not the same thing” 
+per
+Lord
+Denman CJ in Goodman v Harvey (1836) 4 A&E 870. 
+But
+while we regard the difference between fraud on the one hand and mere
+negligence, however gross, on the
+other as a difference in kind, we regard the
+difference between negligence and gross negligence as merely one of
+degree.
+English lawyers have always had a healthy disrespect for the latter
+distinction. In Hinton v Dibber (1842)
+2 QB 646 Lord Denman doubted whether any
+intelligible distinction exists; while in Grill v General Iron Screw
+Collier
+Co. (1866), 35 LJCP 321,330 Willes J famously observed that gross negligence is
+ordinary negligence
+with a vituperative epithet. But civilian systems draw the
+line in a different place. The doctrine is culpa
+lata dolo
+aequiparetur; and
+although the maxim itself is not Roman the principle is classical. There is no
+room for the
+maxim in the common law; it is not mentioned in Broom’s
+Legal Maxims. 
+The
+submission that it is contrary to public policy to exclude the liability of a
+trustee for gross negligence is not
+supported by any English or Scottish
+authority. The cases relied on are the English cases of Wilkins v Hogg
+(supra)
+and Pass v Dundas 1880), 43 LT 665; and the Scottish cases of Knox v Mackinnon
+(1888), 13 App.
+CAS. 753 and Rae v Meek (1889), 14 App.Cas 558; ; Wyman v
+Paterson [1900] AC 271; and Clarke v Clarke’s
+Trustees [1925] SC 693.
+These cases, together with two other Scottish cases Seton v Dawson (1841) 4 D
+310 13
+and Carruthers v Carruthers [1896]AC. 659 and cases from the
+Commonwealth and America, were reviewed by
+the Jersey Court of Appeal in
+Midland Bank Trustee (Jersey) Limited v Federated Pension Services Limited
+[1996] Pensions Law Reports 179 in a masterly judgment delivered by Sir Godfray
+Le Quesne QC. 
+In Wilkins v Hogg Lord Westbury LC accepted that no exemption clause could absolve a trustee from liability
+for knowingly participating in a fraudulent breach of trust by his co-trustee. But subject thereto he was clearly of
+opinion that a settlor could by appropriate words limit the scope of the trustee’s liability in any way he chose.
+The decision was followed in Pass v Dundas, where the relevant clause was held to absolve the trustee from
+liability. In
+the course of his judgment Bacon V.-C. stated the law in the terms in which
+counsel for the
+unsuccessful beneficiaries had stated it, viz. that the clause
+protected the trustee from liability unless gross
+negligence was established;
+but this was plainly obiter.
+Each
+of the Scottish cases contains dicta,
+especially in the speeches of the Scottish members of the House of
+Lords, which
+have been taken by academic writers to indicate that no trustee exemption
+clause in a Scottish
+settlement could exonerate a trustee from his own culpa
+lata
+.
+But in fact all the cases were merely decisions on
+the true construction of the
+particular clauses under consideration, which were in common form at the time.
+In
+Knox v Mackinnon, for example, it was unnecessary to consider the exemption
+clause since the transaction in
+question was outside its scope. Lord Watson,
+nevertheless, speaking of “a clause conceived in
+these or similar
+terms”, said
+that it was the settled law of Scotland that “
+such
+a clause”
+was ineffectual to protect a trustee
+against the consequences of culpa
+lata, or
+gross negligence on his part, and added that “clauses
+of this kind” did
+not protect against positive breaches of duty” (my emphasis). In Seton v
+Dawson the judges who were in the
+majority spoke to the same effect both of
+“the protecting clause which occurs in this particular deed” and of
+“the
+usual clauses framed for the same object.” In Rae v Meek Lord
+Herschell pointed out that the clause in question
+was a common one found in
+many trust deeds and did not come before the court for construction for the
+first
+time. He said that its effect had been considered in Seton v Dawson and
+adopted the passage in Lord Watson’s
+speech in Knox v Mackinnon to which
+I have already referred. In Carruthers v Carruthers the House was
+concerned
+with a standard trustee exemption clause which was to be treated as inserted
+into the trust deed. Their
+Lordships held that the terms of such a clause would
+not exempt trustees from liability for culpa
+lata. Wyman
+v
+Paterson was not a case of negligence at all, but of a plain failure to
+perform a positive obligation. It turned on
+the true construction of the
+particular clause under consideration. In Clarke v Clarke’s Trustees Lord
+President
+Clyde held that the clause in question did not protect the trustees
+from the consequence of their negligence. He
+added:
+“It
+is difficult to imagine that any clause of indemnity in a trust settlement
+could be capable of being construed to
+mean that the trustees might with
+impunity neglect to execute their duty as trustees, in other words, that they
+were licensed to perform their duty carelessly. There is at any rate no such
+clause in this settlement.”
+
+It
+is not easy to know what to make of this (save that it was obiter).
+Sir Godfray Le Quesne QC read the passage
+as directed to the construction of
+the indemnity clauses common in Scottish settlements at the time. I do not so
+read it. I tend to think that the Lord President was saying that it was
+difficult to conceive of a settlor permitting
+the inclusion of a clause which
+would have the effect stated. But I agree with Sir Godfray that the Lord
+President
+was emphasising the need to exclude liability for negligence by clear
+and unambiguous words, and was not
+purporting to exclude the possibility of
+such a clause on the grounds of public policy. 
+I
+agree with the conclusion of the Jersey Court of Appeal that all these cases
+are concerned with the true
+construction of the particular clauses under
+consideration or of similar clauses in standard form in the Nineteenth
+Century.
+None of them deals with the much wider form of clause which has become common
+in the present
+century, and none of them is authority for the proposition that
+it is contrary to public policy to exclude liability
+for gross negligence by an
+appropriate clause clearly worded to have that effect. 
+At
+the same time it must be acknowledged that the view is widely held that these
+clauses have gone too far, and
+that trustees who charge for their services and
+who, as professional men, would not dream of excluding liability
+for ordinary
+professional negligence, should not be able to rely on a trustee exemption
+clause excluding liability
+for gross negligence. Jersey introduced a law in
+1989 which denies effect to a trustee exemption clause which
+purports to
+absolve a trustee from liability for his own “fraud, wilful misconduct or
+gross negligence.” The
+subject is presently under consideration in this
+country by the Trust Law Committee under the chairmanship of
+Sir John Vinelott.
+If clauses such as Clause 15 of the Settlement are to be denied effect, then in
+my opinion this
+should be done by Parliament which will have the advantage of
+wide consultation with interested bodies and the
+advice of the Trust Law
+Committee.
+Do
+the pleadings allege fraud ?
+The
+position which I have reached so far, therefore, is that the Respondents are
+absolved by Clause 15 of the
+Settlement from liability for all loss or damage
+to the trust estate except loss or damage caused by their own
+dishonesty or the
+dishonesty of their deceased. The question which then arises is: does the
+Amended Statement
+of Claim allege dishonesty?
+In
+opening the appeal Counsel for Paula expressly disclaimed any intention to
+allege dishonesty. He did the same
+before the Judge. I would not myself hold
+him to this concession, from which he later resiled, because I think
+that he
+may have understood the word “dishonesty” more narrowly than is
+justified. I take his concession to
+mean only that it is not intended to allege
+that any of the trustees acted for their own personal benefit.
+The
+general principle is well known. Fraud must be distinctly alleged and as
+distinctly proved: Davy v Garrett
+(1878), 7 Ch.D. 473 at p. 489 per
+Thesiger
+LJ. It is not necessary to use the word “fraud” or
+“dishonesty” if the
+facts which make the conduct complained of
+fraudulent are pleaded; but if the facts pleaded are consistent with
+innocence,
+then it is not open to the Court to find fraud. As Buckley LJ said in Belmont
+Finance Ltd. v Williams
+Furniture Ltd. [1979[ Ch. 250 at p. 258:
+“An
+allegation of dishonesty must be pleaded clearly and with particularity. That
+is laid down by the rules: and it
+is a well-recognised rule of practice. This
+does not import that the word “fraud” or the word
+“dishonesty” must
+be used....The facts alleged may sufficiently
+demonstrate that dishonesty is allegedly involved, but where the
+facts are
+complicated this may not be so clear, and in such a case it is incumbent upon
+the pleader to make it
+clear when dishonesty is alleged. If he uses language
+which is equivocal, rendering it doubtful whether he is in
+fact relying on the
+alleged dishonesty of the transaction, this will be fatal; the allegation of
+its dishonesty will not
+have been pleaded with sufficient clarity.” 
+That
+case is authority for the proposition that an allegation that the defendant
+“knew or ought to have known” is
+not a clear and unequivocal
+allegation of actual knowledge and will not support a finding of fraud. It is
+not
+treated as making two alternative allegations, ie. an allegation (i) that
+the defendant actually knew with an
+alternative allegation (ii) that he ought
+to have known; but rather a single allegation that he ought to have known
+(and
+may even have known - though it is not necessary to allege this). 
+Before
+turning to the pleadings I would add one thing more. In order to allege fraud
+it is not sufficient to sprinkle
+a pleading with words like
+“wilfully” and “recklessly” (but not
+“fraudulently” or “dishonestly”). This may still
+leave
+it in doubt whether the words are being used in a technical sense or merely to
+give colour by way of
+pejorative emphasis to the complaint.
+I
+shall now consider the detailed allegations in the Amended Statement of Claim. 
+(1).The
+appointment of the Company. This is dealt with in Paragraphs 7 and 8. The
+substance of the complaint is
+that the appointment was ill-advised and that the
+trustees ought to have known this. It is not alleged that they had
+any improper
+object in making the appointment. Despite the repeated use of the words
+“in reckless and wilful
+breach of trust” the complaints to which
+they relate are complaints of omission. They are consistent with honest
+
+incompetence. If proved, they support a finding of negligence, even of gross
+negligence; but not of fraud. 
+(2).
+The failure to supervise the Company. This is dealt with in Paragraph 9 of the
+Amended Statement of Claim.
+The substance of the allegations in Paragraph
+9.1(1)-(5) and (8)-(11) is neglect of duty. The complaints are
+complaints of
+omission. They are consistent with honest incompetence. At best the charge is
+one of indolence, at
+worst of negligence. 
+Paragraph 9. 1(6) stands on a different footing. It alleges that the
+trustees "consciously determined" to limit the
+income of Paula’s fund to
+£15,000 “and/or to allow [the Company] to buy equipment or to build
+up its capital.”
+This is supported by particulars which refer to a note
+by one of the trustees (unfortunately now dead) which
+appears to show that the
+trustees considered that it was undesirable that Paula’s fund should have
+too much
+income. I am satisfied that, considered by itself, the subparagraph
+does not sufficiently allege fraud. It is
+equivocal. It is unclear whether it
+is alleged that the trustees had an improper purpose or what that purpose was.
+In particular, it does not distinctly allege (though it may hint) that the
+trustees deliberately decided to limit the
+income of Paula’s fund in
+order to benefit the Company or its shareholders (who were not objects of the
+trust);
+nor do I understand how the one was capable of achieving the other,
+given the nature of the contractual
+arrangements with the Company. The note
+referred to in the particulars plainly calls for an explanation, but it is
+not
+inconsistent with honesty. I can think of several possible explanations, all
+innocent and plausible. 
+In
+any case Paragraph 9.1(6) cannot support an independent allegation of breach of
+trust, since the note was
+apparently never acted on. It was written in
+connection with a contemplated transaction which in the event did
+not proceed,
+and in respect of which it is not alleged that failure to carry the transaction
+into effect was the fault
+of the trustees let alone amounted to a breach of
+trust on their part. At the most, therefore, the subparagraph
+could provide
+particulars of the matters relied on in support of an allegation of improper
+purpose made
+elsewhere.
+Paragraph
+9.1(7) complains that the trustees wrongly delegated certain of their powers to
+the Company. If such
+delegation was not authorised it constituted a breach of
+trust. But in the absence of an averment that the trustees
+delegated their
+powers in the knowledge that this would result in a misapplication of trust
+money and that it did
+so, this is not a charge of fraud. 
+The
+several complaints in Paragraph 9.1 (including Paragraph 9.1(6) are summarised
+in Paragraph 9.11(A) in
+terms which confirm that they are allegations of
+neglect of duty only, not allegations of fraud. Paragraphs 9.2
+contains the
+allegation that the trustees were guilty of "reckless and wilful breach of
+trust" but in its context this
+is a meaningless incantation. The purpose of
+Paragraphs 9.2 and 9.2A is to allege that the trustees' failure to
+supervise
+the Company or to manage Paula's land properly caused loss to the trust fund.
+(3)
+The value of Paula's land. This is dealt with by Paragraph 11. Paula's land was
+sold in 1987 for £299,000, ie.
+£175,000 less than the value assigned
+to it at the time of the partition. It was sold on the basis of professional
+advice and to a purchaser at arms-length, and it is not alleged that the sale
+was at an undervalue. The complaint
+is only that the trustees failed to inquire
+into the reasons for the apparent decline in the value of Paula's land, said
+to
+be all the more surprising given that the land appropriated to Paula's Mother
+(which was sold at the same time)
+had appreciated in value; and failed to
+investigate the possibility that they might have a cause of action against
+the
+valuers who had valued Paula's land at the time of the partition, or against
+the Company for the negligent
+management of Paula's land. These are charges of
+negligence, not fraud; and this is confirmed by the terms in
+which the
+complaints are summarised in Paragraph 11.6. 
+(4)
+Payment of interest. This is dealt with in Paragraphs 12 and 13. In order to
+assist Paula's Mother, the trustees
+agreed to purchase from her the house where
+Paula lived with her. The agreement was, it appears, subject to
+contract, and
+in the event Paula's Mother did not proceed. In the meantime, however, the
+trustees raised
+£200,000 from the capital of the Settlement and used it to
+pay off a legal charge which the bank had over the
+house, taking a deposit of
+the title deeds by way of security. In due course the house was sold, and the
+trustees
+were paid the sum of £200,000 with simple interest at 8% during
+the 16 month period of the loan. It is alleged
+that the transaction constituted
+a breach of trust, but the only relief claimed in respect of it is in respect
+of an
+alleged deficiency of interest. It is not alleged that 8% was below the
+commercial rate of interest properly
+chargeable in respect of the loan. 
+In
+the absence of Clause 15 the trustees would, I apprehend, be liable to account
+on the footing of wilful default
+(which in this context, it will be remembered,
+means lack of due diligence) for the difference between simple
+interest at 8%
+and compound interest at a commercial rate (if higher). Clause 15 exonerates
+the trustees from any
+liability to account on the footing of wilful default
+unless they have been dishonest. It is not alleged that the
+trustees
+deliberately undercharged or acted dishonestly in not obtaining a higher rate
+or compound interest. The
+pleading is consistent with innocence. It does not
+amount to a charge of fraud. 
+(5)
+The subordination of Paula's interests to those of her Mother. This appears
+only in Paragraph 9.3. So far as
+material it reads as follows:
+
+"It
+is averred that in
+the premises [the
+trustees] pursued a policy...which failed and neglected to give paramount
+consideration to the best interests of Paula and instead...pursued a policy designed
+to
+benefit [Paula's Mother and
+Grandmother] who were not objects of the trust" (my
+emphasis).
+In my judgment this pleading is embarrassing. It is difficult to know whether it alleges fraud or not. If the word
+"designed" means "intended" then it does. But the word may mean merely "calculated" (in the sense of "likely").
+If it were merely a matter of construing the Paragraph, I would be inclined to think that the word should be taken
+in its latter signification, so as not to involve a charge of fraud. I would say this for two reasons. First, the words
+"in the premises" show that Paragraph 9.3 does not contain a new allegation but rather a summary of the effect of
+the allegations previously made in Paragraph 9; and
+nothing in the earlier parts of the Paragraph (not even
+Paragraph 9.6) amounts
+to a charge of fraud. Secondly, the first part of Paragraph 9.3 alleges only
+that the
+trustees pursued a policy which was objectionable because it failed in
+fact to give paramount consideration to
+Paula's interests, not that it was
+their chosen policy not to do so. That is not a charge of fraud. Given the
+ambiguity in the word "designed", I would give it the meaning which makes the
+second part of the Paragraph
+mirror the first. Accordingly I read the Paragraph
+as alleging nothing more than a failure on the part of the
+trustees to
+distinguish properly between Paula’s interests and those of her Mother
+and Grandmother. That is not a
+charge of fraud.
+But
+it is not just a question of construction. The pleading is clearly equivocal.
+Without amendment it cannot
+support a finding of fraud.
+Question
+1.
+I
+am of opinion that, as at present drawn, the Amended Statement of Claim does
+not allege dishonesty or any
+breach of trust for which the trustees are not
+absolved from liability by Clause 15. Accordingly I would answer
+Question 1 in
+the affirmative as the Judge answered it. 
+Clause
+9(a) of the Settlement.
+Clause
+9(a) of the Settlement reads as follows:
+“...the
+Trustees...shall have power to carry on or join or assist in carrying on or
+directing any business of
+farming...with power for that purpose ...to employ or
+engage... any managers or agents ...and to delegate all or
+any of the powers
+vested in them in relation to the business...
+And
+the Trustees shall be free from all
+responsibility and be fully indemnified out
+of Paula’s fund in respect of any loss arising in relation to the
+business”
+(my emphasis).”
+In
+the absence of the Clause the trustees would have no power to carry on a
+farming business, whether
+themselves or through an agent. If they did so,
+however prudently, they would commit a breach of trust. The
+Clause confers the
+necessary powers. The Judge rightly held that the concluding words of the
+Clause confer
+upon the trustees a consequential exemption from liability for
+trading losses incurred in the carrying on of the
+farming business. It does not
+exonerate them from liability for imprudently investing in a farming business
+yielding poor returns or from failing to ensure that the business is properly
+managed. 
+Question
+2.
+Accordingly
+I would answer Question 2 in the negative as the Judge answered it.
+Limitation.
+Section
+21(1)(a) of the Limitation Act 1980 provides:
+"No
+period of limitation prescribed by this Act shall apply to an action by a
+beneficiary under a trust, being an
+action-
+(a)
+in respect of any fraud or fraudulent breach of trust to which the trustee was
+a party or privy"
+Section
+21(3) provides:
+"Subject
+to the preceding provisions of this section, an action by beneficiary....in
+respect of any breach of
+trust...shall not be brought after the expiration of
+six years from the date on which the right of action accrued.
+"For
+the purposes of this subsection, the right of action shall not be treated as
+having accrued to any beneficiary
+entitled to a future interest in the trust
+property until the interest fell into possession."
+Two
+questions have been argued. The first is whether Section 21(1)(a) is limited to
+cases of fraud or fraudulent
+
+breach of trust properly so called, that is to say
+to cases involving dishonesty. The Judge held that it is. In my
+judgment he was
+plainly right for the reasons which he gave. I have explained the meaning of
+the word fraud in a
+trustee exemption clause, and there is no reason to ascribe
+a different meaning to the word where it appears in
+Section 21(1)(a) of the
+Limitation Act 1980. Moreover, the meaning of the subsection is not free from
+authority.
+Its predecessor (Section 26 of the Limitation Act 1939) was held "to
+mean what it says" and to be limited to
+cases where fraud was an ingredient of
+the wrong: see Beaman v A.R.T.S. [1949] per
+Lord
+Greene MR at p. 538.
+The meaning of the words "fraud" and "fraudulent" in
+Section 21(1)(a) is not distorted by the meaning of the
+expression "concealed
+fraud" formerly used in Section of the 1939 Act and which was given a very
+special
+meaning but has been replaced in the 1980 Act by the more accurate
+expression "deliberate concealment". The
+result is that in the absence of
+deliberate concealment liability for an honest breach of trust is
+statute-barred after
+six years, but liability for a dishonest breach of trust
+endures without limitation of time.
+The
+second question is whether Paula had a present interest while she was under the
+age of 25 or whether she
+had only a future interest which fell into possession
+when she attained that age. The Judge held that she had
+merely a future
+interest. In my judgment he was right. Until Paula attained 25 the trustees
+held the trust fund
+upon trust to accumulate the income with power instead to
+pay it to Paula or to apply it for her benefit. She had
+no present right to
+capital or income but only the right to require the trustees to consider from
+time to time
+whether to accumulate the income or to exercise their power to pay
+or apply it for her benefit. That, in my
+judgment, is not an interest in
+possession. Paula was, of course, a beneficiary and as such was entitled to see
+the
+trust documents. The Respondents submit that this was sufficient to give
+her an interest in possession within the
+meaning of the Section, and cite
+Leedale v Lewis [1982] 3 All ER 808 in support.
+In
+my judgment that case does not assist the Respondents. As Lord Wilberforce
+pointed out at p. 816
+“The
+word “interest” is one of uncertain meaning and it remains to be
+decided on the terms of the applicable
+statute which, or possibly what other,
+meaning the word may bear.”
+The
+statutory language and context in that case compelled the conclusion that an
+object of a discretionary trust of
+capital and income had an interest in
+settled property. A-G v Heywood (1887), 19 QBD 326 was to similar
+effect. That
+decision was approved in Gartside v IRC [1968] AC 553 where, however, a
+different conclusion was
+reached because of the different context in which the
+word “interest” was used. 
+The
+meaning of the word must, therefore, be ascertained from the context in which
+it appears. As the tax cases
+show, the evident policy of a taxing Act may
+sometimes make it necessary that an object of a discretionary trust
+or power
+should be treated as having an interest and sometimes it may show the contrary.
+The question thus
+depends upon identifying the legislative purpose which
+Section 23 is intended to achieve. 
+The
+Respondents submit that the policy to which Section 23 of the Limitation Act
+1980 gives effect is that it
+would be unfair to bar a plaintiff from bringing a
+claim unless and until he is of full age and entitled to see the
+trust
+documents and so has the means of discovering the injury to his beneficial
+interest. The difficulty with this
+argument, in my judgment, is that it proves
+too much. Every beneficiary is entitled to see the trust accounts,
+whether his
+interest is in possession or not. The rationale of Section 23 appears to me to
+be different. It is not that
+a beneficiary with a future interest has not the
+means of discovery, but that he should not be compelled to litigate
+(at
+considerable personal expense) in respect of an injury to an interest which he
+may never live to enjoy. Similar
+reasoning would apply to exclude a person who
+is merely the object of a discretionary trust or power which may
+never be
+exercised in his favour. 
+Question
+3.
+Accordingly,
+I would answer Question 3 also in the negative, as did the Judge. 
+Costs.
+The
+Judge awarded the Respondents 80% of their costs, depriving them of the
+remaining 20% because they were
+unsuccessful on two of the points which had
+been argued. After hearing further argument, he directed that the
+Respondents
+should not be at liberty to reimburse themselves out of the trust fund to the
+extent of that 20%. He
+considered that the Respondents were defending
+themselves and, having taken points which cost money and in
+respect of which
+they were unsuccessful, ought to bear those costs themselves.
+The
+Judge recognised that there was long-standing authority to the contrary, but
+held that it was displaced by the
+terms of RSC Order 62 Rule 6.2. That Rule
+entitles a trustee to recoup his costs out of the trust fund and
+authorises the
+Court to order otherwise
+"only
+on the ground that he has acted unreasonably or, in the case of a trustee or
+personal representative has in
+substance acted for his own benefit rather than
+for the benefit of the fund."
+The
+Respondents cross-appeal from the Judge's ruling which, they claim, deprives
+them of their legal rights.
+They submit that trustees are entitled to a lien
+over the trust fund for their costs, and that this lien extends to the
+
+costs of
+litigation, including the costs of defending themselves against a charge of
+breach of trust: see Turner v
+Hancock (1882), 20 Ch.D. 303; Re Spurling's Will
+Trusts [1966] 1 WLR 920. The lien is only lost by
+misconduct.
+But
+the principle is in my opinion overstated. Trustees are entitled to a lien on
+the trust fund for the costs of
+successfully
+defending themselves against an action for breach of trust. That was the
+position in Re Spurling's
+Will Trusts as it was in Walters v Woodbridge 7 Ch.D.
+504 which it followed. But on what principle can one
+justify their right to
+recoup themselves out of the trust fund for the costs of unsuccessfully
+defending
+themselves
+against such an action? It offends all sense of justice. The
+Respondents rely on Turner v Hancock and submit
+that that was just such a case;
+but I do not think that it was. The action was an action for an account. On
+taking
+the accounts it was found that a sum was due from the trustee and not to
+him as he contended. It was therefore a
+case in which the trustee was
+unsuccessful; but it was not a case in which he was found to be guilty of
+misconduct or breach of trust. In the course of his judgment Sir George Jessel
+MR said at p. 304;
+"These
+rights can be lost or curtailed by such inequitable conduct on the part of a
+mortgagee or trustee as may
+amount to a violation or culpable neglect of his
+duty under the contract...It is not the course of the court in
+modern times to
+discourage persons from becoming trustees by inflicting costs upon them if they
+have done their
+duty, or even if they have committed an innocent breach of
+trust."
+As
+Ungoed-Thomas J pointed out in Re Spurling's Will Trusts, it is not enough to
+deprive trustees of their right
+to recoup their costs out of the trust fund
+that the claim is a claim to recover money from them for the benefit of
+the
+trust. If the trustees succeed, then the claim was not well founded, and they
+cannot be denied their right of
+recoupment. I would add that even if the claim
+succeeds, yet they may not have so conducted themselves as to
+lose their right
+of recoupment. 
+In
+the present case the Judge deprived the Respondents of 20% of their costs
+because they had put forward
+arguments on which they had been unsuccessful.
+That was a proper exercise of his discretion. But he also
+deprived them of
+their right to recoup themselves out of the trust fund to the extent of that
+20% on the ground
+that the claim was a hostile claim against them personally
+for breach of trust. In my opinion that was not a
+sufficient ground for denying
+them their contractual rights. As things stood at the conclusion of the Judge's
+judgment, he had held that the Respondents were absolved by Clause 15 from
+liability in respect of all the claims
+for breach of trust pleaded against
+them, with the result that the greater part of the Action was bound to fail
+(there is a claim to an account in respect of a separate matter which is not
+particularly contentious and which
+would survive). Accordingly, unless the
+pleadings were amended, the Action would be dismissed without any
+inquiry into
+the trustees' conduct. This would not provide any basis for depriving the
+Respondents of their rights.
+Accordingly,
+I would set aside this part of the Judge's order.
+Amendment
+of the pleadings.
+At
+the conclusion of Belmont Finance Ltd. v Williams Furniture Ltd.(
+supra)
+this Court granted the unsuccessful
+respondent leave to amend the pleadings. No
+such application is before us. Nevertheless I think that Paula should
+be given
+the opportunity to re-amend the Amended Statement of Claim if so advised. I
+express no view on
+whether there is material which would justify Counsel in
+advising such a course; and I would not wish to
+encourage it. They will no
+doubt bear in mind that at the material time the trustees of the settlement
+consisted of
+one professional man and two distant relatives; and that a charge
+of fraud against independent professional
+trustees is, in the absence of some
+financial or other incentive, inherently implausible. 
+The
+possibility of amendment affects the order for costs which ought to be
+substituted for the order which the
+Judge made. In my judgment, the Respondents
+should have the right to recoup themselves out of the trust fund
+but only if
+and when the Action against them is discontinued or dismissed. If the Action is
+repleaded and
+succeeds against any of them, then the unsuccessful Respondents
+should not recoup themselves out of the trust
+fund without the leave of the
+Court given after trial of the Action.
+Conclusion.
+It
+is our view that Paule should be given the maximum opportunity to see the
+trusts documents and to investigate
+the manner in which the trustees managed
+the affairs of the trust. We would wish to hear Counsel as to the terms
+of any
+order which we should make in this respect, in particular as to the appropriate
+tribunal to entertain such an
+application (whether the Master or the Judge in
+Chambers), the imposition of any time limits, and whether, prior
+to such
+application, Paula should have the right to have the trust documents produced
+to her: see Re Londonderry
+Settlement [1964] Ch. 594.
+Subject
+thereto, the appeal and cross-appeal will be dismissed. The Order of the Judge
+refusing the Respondents
+liberty to recoup their costs out of the trust fund
+will be set aside and an Order in the terms indicated above
+substituted. 
+LORD
+JUSTICE HUTCHISON: I agree.
+
+LORD
+JUSTICE HIRST:
+I also agree. 
+Orders:
+appeal and cross appeal dismissed; respondents to receive 80% of costs in the
+Court of Appeal; order
+made under section 18 of the Legal Aid Act;
+appellant's contribution assessed at nil
+-
+- - - - - -
+© 1997 Crown Copyright

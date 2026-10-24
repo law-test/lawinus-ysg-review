@@ -1,10 +1,13 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
+import officialCases from '../src/official-cases.json' with {type:'json'};
 
 test('Supabase client boundary: public reads, single anonymous initialization, owner writes and conflict errors', async () => {
   const originalFetch = globalThis.fetch;
   const originalDocument = globalThis.document;
   const calls = [];
+  const caseRefs=[...officialCases.cases,...officialCases.confirmedExistingSourceRefs||[],...officialCases.unavailableCaseRefs||[]];
+  const manifest={meta:{pdfSha256:officialCases.pdfSha256},sources:caseRefs.filter(item=>!item.newSource).map(item=>({id:item.sourceId,available:!officialCases.unavailableCaseRefs?.some(missing=>missing.sourceId===item.sourceId),kind:'text'})),notes:[...new Set(caseRefs.flatMap(item=>item.noteIds))].map(id=>({id,text:'각주 원문',sourceRefs:[]}))};
   let configReads = 0;
   let signups = 0;
   const uid = '10000000-0000-4000-8000-000000000001';
@@ -19,7 +22,7 @@ test('Supabase client boundary: public reads, single anonymous initialization, o
       configReads++;
       return Response.json({supabaseUrl:'https://abcdefghijklmnopqrst.supabase.co',supabasePublishableKey:'sb_publishable_fixture',storageBucket:'ysg-review-documents',datasetId:'ysg-20261023'});
     }
-    if (url.pathname.endsWith('/manifest.json')) return Response.json({footnotes:[],version:'ysg-20261023'});
+    if (url.pathname.endsWith('/manifest.json')) return Response.json(manifest);
     if (url.pathname === '/auth/v1/signup') {
       signups++;
       await new Promise(resolve=>setTimeout(resolve,15));
@@ -37,7 +40,12 @@ test('Supabase client boundary: public reads, single anonymous initialization, o
     assert.equal(configReads,1);
     await adapter.api('/api/notes');
     assert.equal(signups,0,'public list must not create identities');
-    await adapter.api('/api/manifest');
+    const merged=await adapter.api('/api/manifest');
+    assert.equal(merged.meta.pdfSha256,manifest.meta.pdfSha256);
+    for(const item of officialCases.cases){
+      assert.equal(merged.sources.find(s=>s.id===item.sourceId).available,true);
+      assert.equal(adapter.assetUrl(item.sourceId),'https://ysg.lawinus.org/'+item.assetPath);
+    }
     assert.equal(signups,0,'document lookup must not create identities');
     assert.equal(adapter.assetUrl('thesis'),'https://abcdefghijklmnopqrst.supabase.co/storage/v1/object/public/ysg-review-documents/ysg-20261023/human.pdf');
     assert.throws(()=>adapter.assetUrl('../private'));
