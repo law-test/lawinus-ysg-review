@@ -1,6 +1,6 @@
 import React,{useCallback,useEffect,useLayoutEffect,useMemo,useRef,useState} from 'react';
 import {assetUrl} from './review-api';
-import {createPdfRuntimeCache,measurableViewport,movedPointer,normalizedPoint,pendingPdfReflow,pageIndexAt,pageLayout,pdfCanvasSize,pdfLoadError,reflowScrollPosition,targetAt,visiblePageRange,watchDocumentInterruption,type PageSize,type PdfTarget} from './pdf-viewer-model';
+import {createPdfRuntimeCache,measurableViewport,movedPointer,normalizedPoint,pendingPdfReflow,pageIndexAt,pageLayout,pdfCanvasSize,pdfLoadError,reflowScrollPosition,reflowHorizontalPosition,targetAt,visiblePageRange,watchDocumentInterruption,type PageSize,type PdfTarget} from './pdf-viewer-model';
 import './pdf-viewer.css';
 import PdfQuickControls from './pdf-quick-controls';
 import {pageProposalMarkers,placeProposalMarkers,proposalLabel,type ProposalIndicator} from './proposal-indicators';
@@ -117,7 +117,8 @@ export default function PdfPane({id,page,total,zoom=1,onZoomChange,quickTools=fa
     if(!previous||previous.id!==id||page!==reported.current){const index=Math.min(layout.heights.length-1,Math.max(0,page-1));top=layout.offsets[index];reported.current=index+1;}
     else if(previous.layout!==layout){top=reflowScrollPosition(previous.layout,layout,readingTop-18);}
     else if(returning){top=readingTop-18;}
-    previousLayout.current={id,layout};resumeScroll.current=false;if(top!==undefined){el.scrollTop=top+18;if(returning)el.scrollLeft=savedScroll.current.left;savedScroll.current={top:el.scrollTop,left:el.scrollLeft};setViewport(v=>({...v,top:el.scrollTop}));cancelAnimationFrame(frame.current);frame.current=requestAnimationFrame(updateViewport);}
+    const left=reflowing?reflowHorizontalPosition(previous!.layout.width,layout.width,savedScroll.current.left):savedScroll.current.left;
+    previousLayout.current={id,layout};resumeScroll.current=false;if(top!==undefined){el.scrollTop=top+18;if(returning||reflowing)el.scrollLeft=left;savedScroll.current={top:el.scrollTop,left:el.scrollLeft};setViewport(v=>({...v,top:el.scrollTop}));cancelAnimationFrame(frame.current);frame.current=requestAnimationFrame(updateViewport);}
   },[page,id,layout,appearance,updateViewport]);
   const onSize=useCallback((p:number,size:PageSize)=>setMeasured(previous=>{const values=previous.id===id?previous.values:{};const old=values[p];return old&&Math.abs(old.width-size.width)<.01&&Math.abs(old.height-size.height)<.01?previous:{id,values:{...values,[p]:size}};}),[id]);
   const visible=renderable?visiblePageRange(layout.offsets,Math.max(0,viewport.top-18),viewport.height,1):[];

@@ -1,0 +1,21 @@
+/* Reserve the action row inside the visible viewport, independently of long memo content. */
+.four-pane-app .memo-modal.memo-dialog{display:flex;flex-direction:column;min-height:0;max-height:calc(var(--visible-height,100dvh) - 48px);overflow:hidden;padding:0}
+.memo-dialog .modal-heading{flex:0 0 auto;margin:0;padding:14px 20px 8px;gap:8px}
+.memo-dialog .modal-heading h2{min-width:0;overflow-wrap:anywhere}
+.memo-dialog .modal-heading button{flex:0 0 44px;min-width:44px;min-height:44px}
+.memo-dialog .memo-dialog-body{min-height:0;overflow:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:0 20px 16px;scroll-padding-block:12px}
+.memo-dialog .memo-dialog-body>textarea{scroll-margin-block:12px}
+.memo-dialog .memo-options{flex-wrap:wrap;gap:8px 16px}
+.memo-dialog .memo-options label{min-height:44px;overflow-wrap:anywhere}
+.four-pane-app .memo-dialog .modal-actions{flex:0 0 auto;position:static;bottom:auto;z-index:auto;flex-wrap:wrap;margin:0;padding:10px 16px max(10px,env(safe-area-inset-bottom));background:#fffdf7}
+.memo-dialog .modal-actions button{min-height:44px;min-width:44px}
+.memo-dialog .small-note,.memo-dialog .memo-error,.memo-dialog blockquote{overflow-wrap:anywhere}
+@media screen and (max-width:1199px){
+ .four-pane-app .memo-modal.memo-dialog{max-height:calc(var(--visible-height,100dvh) - 16px);padding:0}
+ .memo-dialog .modal-heading{padding:8px 12px 4px}
+ .memo-dialog .modal-heading h2{font-size:calc(16px * var(--review-font-scale,1.5));line-height:1.3}
+ .memo-dialog .memo-dialog-body{padding:0 12px 12px}
+ .memo-dialog .memo-dialog-body>textarea{height:clamp(100px,calc(var(--visible-height,100dvh) * .35),240px);min-height:100px;margin:10px 0;padding:10px;resize:vertical}
+ .four-pane-app .memo-dialog .modal-actions{gap:6px;padding:6px 8px max(6px,env(safe-area-inset-bottom))}
+ .memo-dialog .modal-actions>button{padding:6px 10px}
+}

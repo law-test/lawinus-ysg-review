@@ -64,6 +64,10 @@ export function reflowScrollPosition(previous:ReturnType<typeof pageLayout>,next
   const target=Math.min(index,next.heights.length-1);
   return next.offsets[target]+Math.max(0,Math.min(1,fraction))*next.heights[target];
 }
+export function reflowHorizontalPosition(previousWidth:number,nextWidth:number,position:number){
+  if(!Number.isFinite(previousWidth)||previousWidth<=0||!Number.isFinite(nextWidth)||nextWidth<=0)return Math.max(0,Number.isFinite(position)?position:0);
+  return Math.max(0,Number.isFinite(position)?position:0)*nextWidth/previousWidth;
+}
 export function pendingPdfReflow(committed:ReturnType<typeof pageLayout>|undefined,rendered:ReturnType<typeof pageLayout>,renderedWidth:number,measuredWidth:number){
   return committed!==rendered||Math.abs(renderedWidth-measuredWidth)>.5;
 }

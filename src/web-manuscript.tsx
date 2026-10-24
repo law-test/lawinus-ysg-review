@@ -6,6 +6,11 @@ import './proposal-indicators.css';
 
 export type ManuscriptParagraph={id:string;text:string;page:number;printed:string|number|null;kind:string;heading:boolean;order:number;rects:{page:number;rect:number[]}[]};
 type Note={id:string;number:number;page:number;text:string};
+// Keep every server head for optimistic revisions/history; only changed text affects reading display.
+export function effectiveManuscriptEdits<T extends {text:string}>(paragraphs:Pick<ManuscriptParagraph,'id'|'text'>[],notes:Pick<Note,'id'|'text'>[],heads:Record<string,T>):Record<string,T>{
+  const originals=new Map([...paragraphs,...notes].map(item=>[item.id,item.text]));
+  return Object.fromEntries(Object.entries(heads).filter(([id,edit])=>!originals.has(id)||edit.text!==originals.get(id)));
+}
 export function manuscriptModeAfterRefresh(current:'pdf'|'body',userChoseView:boolean,overrideCount:number):'pdf'|'body'{
   return !userChoseView&&overrideCount>0?'body':current;
 }

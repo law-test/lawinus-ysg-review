@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {test} from 'node:test';
-import {footnoteTargets,targetAt,normalizedPoint,pageLayout,pageIndexAt,visiblePageRange,reflowScrollPosition,pendingPdfReflow,movedPointer,watchDocumentInterruption,measurableViewport,pdfCanvasSize,pdfLoadError} from '../src/pdf-viewer-model.ts';
+import {footnoteTargets,targetAt,normalizedPoint,pageLayout,pageIndexAt,visiblePageRange,reflowScrollPosition,reflowHorizontalPosition,pendingPdfReflow,movedPointer,watchDocumentInterruption,measurableViewport,pdfCanvasSize,pdfLoadError} from '../src/pdf-viewer-model.ts';
 
 // Actual fn-001 coordinates from the unchanged human-1021-1559 manifest.
 const first={id:'fn-001',number:1,clickTargets:[{page:20,rect:[117.16,390.416,124.53,398.69],kind:'body-marker'},{page:20,rect:[56.543,546.952,62.47,553.667],kind:'footnote-marker'}],noteHighlights:[{page:20,rect:[62.533,547.048,464.014,556.041],kind:'footnote-text'},{page:20,rect:[69.601,563.716,170.157,572.709],kind:'footnote-text'}]};
@@ -62,6 +62,29 @@ test('transitional resize and stale frames cannot report a clamped page before l
   assert.equal(pendingPdfReflow(old,next,570,570),true,'new DOM rendered but saved position not committed yet');
   assert.equal(pendingPdfReflow(next,next,570,570),false,'restoration has committed and genuine scrolling can report again');
   assert.equal(pendingPdfReflow(undefined,next,570,570),true,'first layout must establish a position before reporting');
+});
+test('a zoomed document preserves horizontal reading position through orientation and pane hiding',()=>{
+  const wide=pageLayout(211,820,2,{}),narrow=pageLayout(211,366,2,{}),savedLeft=700;
+  const clampedLeft=Math.min(savedLeft,narrow.width-366);
+  assert.equal(clampedLeft,366,'a narrow browser scroll range loses the old horizontal position');
+  assert.notEqual(clampedLeft/wide.width,savedLeft/wide.width);
+  const portraitLeft=reflowHorizontalPosition(wide.width,narrow.width,savedLeft);
+  assert.ok(portraitLeft<=narrow.width-366,'the preserved position is reachable in the narrower pane');
+  assert.ok(Math.abs(portraitLeft/narrow.width-savedLeft/wide.width)<1e-12);
+  assert.ok(Math.abs(reflowHorizontalPosition(narrow.width,wide.width,portraitLeft)-savedLeft)<1e-10);
+  const sameWidth=reflowHorizontalPosition(narrow.width,narrow.width,portraitLeft);
+  assert.equal(sameWidth,portraitLeft,'tab hide/show and keyboard-height-only changes retain horizontal position');
+});
+test('thesis and reference retain independent page fractions and horizontal positions after hidden resize',()=>{
+  const thesis=pageLayout(211,820,2,{}),reference=pageLayout(11,820,1.3,{});
+  const thesisNarrow=pageLayout(211,366,2,{}),referenceNarrow=pageLayout(11,366,1.3,{});
+  const thesisTop=thesis.offsets[190]+thesis.heights[190]*.37,sourceTop=reference.offsets[8]+reference.heights[8]*.63;
+  const nextThesis=reflowScrollPosition(thesis,thesisNarrow,thesisTop),nextSource=reflowScrollPosition(reference,referenceNarrow,sourceTop);
+  assert.equal(pageIndexAt(thesisNarrow.offsets,nextThesis),190);assert.equal(pageIndexAt(referenceNarrow.offsets,nextSource),8);
+  assert.ok(Math.abs(reflowScrollPosition(thesisNarrow,thesis,nextThesis)-thesisTop)<1e-8);
+  assert.ok(Math.abs(reflowScrollPosition(referenceNarrow,reference,nextSource)-sourceTop)<1e-8);
+  assert.ok(Math.abs(reflowHorizontalPosition(thesisNarrow.width,thesis.width,reflowHorizontalPosition(thesis.width,thesisNarrow.width,700))-700)<1e-10);
+  assert.ok(Math.abs(reflowHorizontalPosition(referenceNarrow.width,reference.width,reflowHorizontalPosition(reference.width,referenceNarrow.width,200))-200)<1e-10);
 });
 test('mixed page sizes use their measured height without merging left/right document navigation',()=>{
   const thesis=pageLayout(279,515,1,{}),source=pageLayout(3,600,1,{2:{width:800,height:400}},{width:600,height:900});
