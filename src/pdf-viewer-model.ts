@@ -41,6 +41,27 @@ export function targetAt(targets:PdfTarget[],x:number,y:number):PdfTarget|undefi
   return targets.filter(t=>x>=t.rect[0]&&x<=t.rect[2]&&y>=t.rect[1]&&y<=t.rect[3])
     .sort((a,b)=>(a.rect[2]-a.rect[0])*(a.rect[3]-a.rect[1])-(b.rect[2]-b.rect[0])*(b.rect[3]-b.rect[1]))[0];
 }
+// Only a direct touch/pen tap may reach a nearby tiny footnote number. Distances
+// are measured on screen, so zoom never turns the allowance into a larger one.
+export function pointerTargetAt(targets:PdfTarget[],x:number,y:number,pointerType:string,scaleX:number,scaleY:number):PdfTarget|undefined{
+  const exact=targetAt(targets,x,y);
+  if(!['touch','pen'].includes(pointerType))return exact;
+  const exactNote=targetAt(targets.filter(target=>target.kind!=='paragraph'),x,y);
+  if(exactNote)return exactNote;
+  if(!Number.isFinite(scaleX)||!Number.isFinite(scaleY)||scaleX<=0||scaleY<=0)return exact;
+  const nearest=new Map<string,{target:PdfTarget;distance:number}>();
+  for(const target of targets){
+    if(target.kind!=='body-marker'&&target.kind!=='footnote-marker')continue;
+    const r=target.rect,dx=Math.max(r[0]-x,0,x-r[2])*scaleX,dy=Math.max(r[1]-y,0,y-r[3])*scaleY;
+    const distance=Math.hypot(dx,dy);if(distance>8)continue;
+    const previous=nearest.get(target.noteId);if(!previous||distance<previous.distance)nearest.set(target.noteId,{target,distance});
+  }
+  const candidates=[...nearest.values()].sort((a,b)=>a.distance-b.distance);
+  if(!candidates.length)return exact;
+  // A subpixel tie between different notes is ambiguous; do not guess.
+  if(candidates[1]&&candidates[1].distance-candidates[0].distance<=.5)return undefined;
+  return candidates[0].target;
+}
 export function normalizedPoint(clientX:number,clientY:number,box:{left:number;top:number;width:number;height:number}){
   return {x:Math.max(0,Math.min(1,(clientX-box.left)/box.width)),y:Math.max(0,Math.min(1,(clientY-box.top)/box.height))};
 }

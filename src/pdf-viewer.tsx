@@ -1,6 +1,6 @@
 import React,{useCallback,useEffect,useLayoutEffect,useMemo,useRef,useState} from 'react';
 import {assetUrl} from './review-api';
-import {createPdfRuntimeCache,measurableViewport,movedPointer,normalizedPoint,pendingPdfReflow,pageIndexAt,pageLayout,pdfCanvasSize,pdfLoadError,reflowScrollPosition,reflowHorizontalPosition,targetAt,visiblePageRange,watchDocumentInterruption,type PageSize,type PdfTarget} from './pdf-viewer-model';
+import {createPdfRuntimeCache,measurableViewport,movedPointer,normalizedPoint,pendingPdfReflow,pageIndexAt,pageLayout,pdfCanvasSize,pdfLoadError,reflowScrollPosition,reflowHorizontalPosition,pointerTargetAt,visiblePageRange,watchDocumentInterruption,type PageSize,type PdfTarget} from './pdf-viewer-model';
 import './pdf-viewer.css';
 import PdfQuickControls from './pdf-quick-controls';
 import {pageProposalMarkers,placeProposalMarkers,proposalLabel,type ProposalIndicator} from './proposal-indicators';
@@ -23,7 +23,7 @@ type Props={id:string;page:number;total:number;zoom?:number;onZoomChange?:(zoom:
 function PdfPage({doc,runtime,page,width,height,highlights,targets,pins,onTarget,onPin,onPlace,placing,onSize,proposalIndicators,bibliographyIds,onProposal}:{doc:any;runtime:any;page:number;width:number;height:number;highlights:Obj[];targets:PdfTarget[];pins:Pin[];onTarget?:Props['onTarget'];onPin?:Props['onPin'];onPlace?:Props['onPlace'];placing:boolean;onSize:(page:number,size:PageSize)=>void;proposalIndicators:Record<string,ProposalIndicator>;bibliographyIds:ReadonlySet<string>;onProposal?:Props['onProposal']}){
   const sheet=useRef<HTMLDivElement>(null),canvas=useRef<HTMLCanvasElement>(null),textLayer=useRef<HTMLDivElement>(null);
   const canvasJob=useRef(0),renderSettled=useRef<Promise<unknown>>(Promise.resolve());
-  const gesture=useRef<{x:number;y:number}|null>(null);
+  const gesture=useRef<{x:number;y:number;pointerType:string;moved:boolean}|null>(null);
   const [dims,setDims]=useState<PageSize>({width:515,height:728}),[loading,setLoading]=useState(true),[error,setError]=useState('');
   const [hover,setHover]=useState<PdfTarget|null>(null),[focused,setFocused]=useState<string|null>(null);
   const [proposalHover,setProposalHover]=useState<string|null>(null);
@@ -56,7 +56,7 @@ function PdfPage({doc,runtime,page,width,height,highlights,targets,pins,onTarget
     };
   },[doc,runtime,page,width,onSize,retry]);
   const rectStyle=(r:number[])=>({left:r[0]/dims.width*100+'%',top:r[1]/dims.height*100+'%',width:(r[2]-r[0])/dims.width*100+'%',height:(r[3]-r[1])/dims.height*100+'%'});
-  function targetFromEvent(e:React.PointerEvent|React.MouseEvent){const box=sheet.current!.getBoundingClientRect(),p=normalizedPoint(e.clientX,e.clientY,box);return targetAt(targets,p.x*dims.width,p.y*dims.height);}
+  function targetFromEvent(e:React.PointerEvent|React.MouseEvent,pointerType='mouse'){const box=sheet.current!.getBoundingClientRect(),p=normalizedPoint(e.clientX,e.clientY,box);return pointerTargetAt(targets,p.x*dims.width,p.y*dims.height,pointerType,box.width/dims.width,box.height/dims.height);}
   const selectedNote=focused||hover?.noteId;
   const proposalMarkers=useMemo(()=>pageProposalMarkers(targets,proposalIndicators),[targets,proposalIndicators]);
   const markerHeight=Math.ceil(8*labelScale*1.35+5),placedMarkers=placeProposalMarkers(proposalMarkers,height,dims.height,markerHeight);
@@ -65,14 +65,15 @@ function PdfPage({doc,runtime,page,width,height,highlights,targets,pins,onTarget
   const keyboardTargets=useMemo(()=>{const rows=new Map<string,PdfTarget>();for(const t of targets){const old=rows.get(t.noteId);if(!old||old.kind==='body-marker'&&t.kind!=='body-marker')rows.set(t.noteId,t);}return [...rows.values()];},[targets]);
   return <div className={'pdf-sheet continuous-pdf-page'+(hover&&!placing?' has-citation-hover':'')} ref={sheet} data-pdf-page={page} style={{width,height}}
     title={!placing&&hover?(hover.kind==='paragraph'?(bibliographyIds.has(hover.noteId)?'클릭하면 참고문헌 원전':'클릭하면 수정안'):'클릭하면 이동'):undefined}
-    onPointerDown={e=>{gesture.current={x:e.clientX,y:e.clientY};}}
-    onPointerMove={e=>{if(!placing&&e.pointerType==='mouse'){const next=targetFromEvent(e);setHover(old=>old?.noteId===next?.noteId&&old?.rect===next?.rect?old:next||null);}}}
+    onPointerDown={e=>{gesture.current={x:e.clientX,y:e.clientY,pointerType:e.pointerType,moved:false};}}
+    onPointerMove={e=>{if(gesture.current&&movedPointer(gesture.current,e.clientX,e.clientY))gesture.current.moved=true;if(!placing&&e.pointerType==='mouse'){const next=targetFromEvent(e);setHover(old=>old?.noteId===next?.noteId&&old?.rect===next?.rect?old:next||null);}}}
+    onPointerCancel={()=>{if(gesture.current)gesture.current.moved=true;}}
     onPointerLeave={()=>setHover(null)} onClick={e=>{
       if((e.target as HTMLElement).closest('button,a'))return;
-      if(movedPointer(gesture.current,e.clientX,e.clientY)||e.shiftKey)return;
+      if(gesture.current?.moved||movedPointer(gesture.current,e.clientX,e.clientY)||e.shiftKey)return;
       if(placing){const point=normalizedPoint(e.clientX,e.clientY,e.currentTarget.getBoundingClientRect());onPlace?.(point.x,point.y,page);return;}
       const selection=window.getSelection();if(selection&&!selection.isCollapsed&&(sheet.current?.contains(selection.anchorNode)||sheet.current?.contains(selection.focusNode)))return;
-      const target=targetFromEvent(e);if(target)openTarget(target);
+      const target=targetFromEvent(e,gesture.current?.pointerType||'mouse');if(target)openTarget(target);
     }}>
     <canvas ref={canvas}/><div className="textLayer" ref={textLayer}/>
     {(loading||error)&&<div className="pdf-page-state" role="status">{error||`PDF ${page}쪽 불러오는 중…`}{error&&<button onClick={()=>setRetry(value=>value+1)}>다시 불러오기</button>}</div>}
