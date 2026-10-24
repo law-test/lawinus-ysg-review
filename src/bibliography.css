@@ -1,0 +1,5 @@
+.bibliography-card{overflow-wrap:anywhere}
+.bibliography-card>button,.bibliography-card .source-chips>button{min-height:44px;white-space:normal;text-align:left}
+.bibliography-card>button{padding:8px 12px;border:1px solid var(--review-line);border-radius:4px;margin-top:8px}
+.source-caption h2 a,.citation-card h2 a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.source-caption h2 a:focus-visible,.citation-card h2 a:focus-visible{outline:2px solid currentColor;outline-offset:3px}

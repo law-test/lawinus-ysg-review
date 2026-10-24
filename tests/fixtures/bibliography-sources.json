@@ -1,0 +1,860 @@
+{
+  "description": "Public bibliography source metadata snapshot for self-contained tests. Live deployment validation is separate.",
+  "sources": [
+    {
+      "id": "s-02de952c4a2d3b29",
+      "title": "구정진·김제완, “관리처분신탁된 집합건물에 대한 공용부분 관리비의 부담과 승계”, 『안암법학』 제60호, 안암법학회, 2020.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 42,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-03ef38072079054b",
+      "title": "여의주, “고령자 노후생활 보장을 위한 유언대용신탁 ― 유언대용신탁의 활성화를 위한 제언을 중심으로 ―”, 『재산법연구』 제41권 제4호, 한국재산법학회, 2025.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 32,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-0813684e068fe7bc",
+      "title": "성희활, “신탁법과 자본시장법의 바람직한 관계 설정에 대한 연구”, 『비교사법』 제20권 제3호, 한국비교사법학회, 2013.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 38,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-0a007505dd7e983b",
+      "title": "최현태, “福祉型信託 導入을 통한 民事信託의 活性化 ― 受益者連續信託을 中心으로 ―”, 『재산법연구』 제27권 제1호, 한국재산법학회, 2010.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 26,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-0e3d0767a2401dc4",
+      "title": "Scott, Austin Wakeman, and William Franklin Fratcher, The Law of Trusts, 4th ed., Boston: Little, Brown & Co., 1989.",
+      "kind": "text",
+      "available": false,
+      "pages": null,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-106fc65346912cdd",
+      "title": "유명수, “수탁자·사후수익자가 동일인인 유언대용신탁, 허용해야”, 『법무사』, 대한법무사협회, 2019.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 6,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-10d29e51be035e37",
+      "title": "여성곤, “민사신탁의 활성화 방안에 관한 연구 ― 금융규제법과의 정합적 규율 필요성을 중심으로 ―”, 『고려법학』 제122호, 고려대학교 법학연구원, 2026.",
+      "kind": "text",
+      "available": true,
+      "pages": null,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-114cbe40626cf301",
+      "title": "정순섭, “社債元利金 支給代行契約의 法的 性質論”, 『증권법연구』 제5권 제1호, 한국증권법학회, 2004.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 23,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-13f75cea1f846abf",
+      "title": "竹中悟人, 信託目的の再構成 (2026, 研究叢書105)",
+      "kind": "pdf",
+      "available": true,
+      "pages": 34,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-16eb263a0d0c42c9",
+      "title": "임채웅, “黙示信託과 擬制信託의 硏究 ― 대법원 2002. 7. 26. 선고 2000다17070 판결 ―”, 『저스티스』 통권 제105호, 한국법학원, 2008.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 26,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-1bb8382bd4d7688b",
+      "title": "佐久間毅, 信託の効力に関する一考察 東京地判平成30.9.12 (2019, 研究叢書84)",
+      "kind": "pdf",
+      "available": true,
+      "pages": 24,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-1cc0812e0e1d0260",
+      "title": "Oakley, A. J., The Modern Law of Trusts, 9th ed., London: Sweet & Maxwell, 2008.",
+      "kind": "text",
+      "available": false,
+      "pages": null,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-1fd53aae6deb8088",
+      "title": "島田雄左, 『家族信託の敎科書』(第3版), 稅務經理協會, 2022.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 242,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-22b89d2d8192bd85",
+      "title": "이계정, 『신탁의 기본 법리에 관한 연구 ― 본질과 독립재산성』, 경인문화사, 2017.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 333,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-25307025815d5dee",
+      "title": "中野正俊, 『信託法判例硏究(新訂版)』, 酒井書店, 2005.",
+      "kind": "text",
+      "available": false,
+      "pages": null,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-263fac37dee59605",
+      "title": "이전오, “2020년 개정 신탁세제에 대한 평가와 향후 과제”, 『세무와 회계 연구』 제12권 제3호(통권 제34호), 한국조세연구소, 2023.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 54,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-267cf9721b25ea52",
+      "title": "菊永将浩, 「超高齢社会に対応した親族間での信託の活用による柔軟な資産管理の推進 ― 民事信託の実状と課題 ―」, 内閣府 規制改革推進会議 デジタル・ＡＩワーキング・グループ 第2回 会議資料, 2025. 3. 13.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 17,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-27865036fdb2224c",
+      "title": "김현진, “수익자연속신탁과 Dead Hand Rule”, 『가족법연구』 제31권 제2호, 한국가족법학회, 2017.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 36,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-2829fba91cd5824e",
+      "title": "Sitkoff Dukeminier, Wills Trusts and Estates 11th ed. [2022] 인용면 발췌",
+      "kind": "pdf",
+      "available": true,
+      "pages": 31,
+      "displayMode": "excerpt"
+    },
+    {
+      "id": "s-29a114977ef5750e",
+      "title": "오상민, “부동산등기법상 신탁등기의 대항력에 대한 검토”, 『저스티스』 통권 제154호, 한국법학원, 2016.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 22,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-2c67a208cb6f890e",
+      "title": "김상훈, “유언대용신탁의 현황과 과제: 유류분과의 관계를 중심으로”, 『가족법연구』 제35권 제1호, 한국가족법학회, 2021.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 22,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-2f4a26a222b895d6",
+      "title": "Mennell, Robert L., Wills and Trusts, 2nd ed., St. Paul: West Group, 1994.",
+      "kind": "text",
+      "available": false,
+      "pages": null,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-3273a2f0bdd7102e",
+      "title": "[미확보] 임채웅, “유언신탁 및 유언대용신탁의 연구”, 『신탁법연구 2』, 박영사, 2011.",
+      "kind": "text",
+      "available": false,
+      "pages": null,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-3592190f25cc7c3d",
+      "title": "최현태, “재산관리수단으로서의 자기신탁의 활용에 관한 연구”, 『한양법학』 제27권 제1집(통권 제53집), 한양법학회, 2016.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 28,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-395947a53b8e4e96",
+      "title": "Hansmann, Henry, and Reinier Kraakman, “The Essential Role of Organizational Law,” Yale Law Journal 110, 2000.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 32,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-39ad4ba877f30ada",
+      "title": "보건복지부, 「2023년 치매역학·실태조사」 결과 발표, 2025. 3. 12.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 24,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-3f8a8de9e40fb179",
+      "title": "조웅규, “유언대용신탁의 현황과 과제”, 『BFL』 제119호, 서울대학교 금융법센터, 2023.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 13,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-4283e8d426ed0c25",
+      "title": "신동현, “유언대용신탁과 유류분반환청구”, 『자율과 정의의 민법학: 양창수 교수 고희 기념 논문집』, 박영사, 2021.",
+      "kind": "text",
+      "available": false,
+      "pages": null,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-486f214076c1e2e3",
+      "title": "一般社団法人 信託協会, 「信託の受託概況(令和6年9月末現在)」, 보도자료, 2024. 12. 25.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 8,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-4cbb10423c54d7ab",
+      "title": "최현태, “信託의 基礎的變更에 관한 小考 ― 英·美信託法과의 比較考察을 中心으로 ―”, 『한양법학』 제17집, 한양법학회, 2005.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 24,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-4de57f0427c42b38",
+      "title": "여성곤·김유진, “부동산 담보신탁의 종료와 소유권이전등기청구권의 압류: 중간생략등기의 합의 법리와의 관계 ― 대상판결: 대법원 2022. 12. 15. 선고 2022다247750 판결 ―”, 『재산법연구』 제43권 제2호, 한국재산법학회, 2026.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 38,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-5ae50ca9da4cd26e",
+      "title": "최수정, 『신탁법(제4판)』, 박영사, 2026.",
+      "kind": "text",
+      "available": false,
+      "pages": null,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-5ebe060a54acd816",
+      "title": "이정선, “유언대용신탁과 유류분의 관계 재론: 영미법상 ‘철회가능신탁’과의 비교를 통한 시론적 고찰”, 『비교사법』 제29권 제3호, 한국비교사법학회, 2022.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 28,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-5ed65dea9df2e21d",
+      "title": "佐久間毅, 信託契約の成立―金銭の預託の場合 (2016, 研究叢書79)",
+      "kind": "pdf",
+      "available": true,
+      "pages": 36,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-5f2938c4752e28cb",
+      "title": "Penner, J. E., The Law of Trusts, 6th ed., Oxford: Oxford University Press, 2008.",
+      "kind": "text",
+      "available": false,
+      "pages": null,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-605609c5b9814944",
+      "title": "황인규, “부동산 민사신탁의 과세에 대한 연구 ― 유언대용신탁을 중심으로 ―”, 『중앙법학』 제23집 제1호, 중앙법학회, 2021.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 32,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-613b986663d71daf",
+      "title": "溜箭将之, 遺言代替信託と遺留分 Sullivan v. Burkin (2023, 研究叢書94)",
+      "kind": "pdf",
+      "available": true,
+      "pages": 24,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-6143fefd58a70088",
+      "title": "Smith, Lionel D., “Constructive Trusts and Constructive Trustees,” Cambridge Law Journal 58, no. 2, 1999.",
+      "kind": "text",
+      "available": false,
+      "pages": null,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-629a9c607c16a3e8",
+      "title": "최수정, “수탁자를 수익자로 하는 유언대용신탁의 효력”, 『비교사법』 제31권 제4호, 한국비교사법학회, 2024.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 23,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-632565f45621cc15",
+      "title": "角紀代惠, “公共工事の請負人が保證事業會社の保證のもとに地方公共團體から支拂を受けた前拂金について地方公共團體と請負人との間に信託契約の成立が認められた事例”, 『金融法務事情』 第1684號, 2003.",
+      "kind": "text",
+      "available": false,
+      "pages": null,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-6331fb0184cf600f",
+      "title": "김제완, “辯護士의 金品保管義務에 대한 比較法的 考察 ― 미국·캐나다 등의 변호사 신탁계좌(attorney trust account) 제도를 중심으로 ―”, 『인권과 정의』 제411호, 대한변호사협회, 2010.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 26,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-6445ff519b8a4c5d",
+      "title": "海原文雄, 『英米信託法槪論』, 有信堂, 1998.",
+      "kind": "text",
+      "available": false,
+      "pages": null,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-659c7091ffd25d01",
+      "title": "김제완, “변호사 신탁계좌 제도(attorney trust account)의 도입 논의와 제도화 방안”, 『법과사회』 통권 제42호, 법과사회이론학회, 2012.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 32,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-66bb7449afc4f413",
+      "title": "木村仁, 遺言代用信託をめぐる法的諸問題の研究 (2024, 研究報告書)",
+      "kind": "pdf",
+      "available": true,
+      "pages": 23,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-68ba45085004b2e3",
+      "title": "노흥순, “신탁선언에 의한 유언대용신탁 등기 사례”, 『법무사』 2017년 12월호, 대한법무사협회, 2017.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 4,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-6f57445115d95429",
+      "title": "여성곤, “신탁공시제도의 본질과 신탁원부 기재사항의 제3자 대항력 ― 대법원 2025. 2. 13. 선고 2022다233164 판결 평석 ―”, 『법학연구』 제36권 제2호, 연세대학교 법학연구원, 2026.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 49,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-701d3d066823ef9e",
+      "title": "이영경, “상사신탁의 개념과 유형에 관한 연구”, 『증권법연구』 제21권 제3호, 한국증권법학회, 2020.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 36,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-71a81c24c20e9d1f",
+      "title": "여성곤, “신탁선언(자기신탁)의 법적 구조와 민사신탁에서의 활용 ― 권리이전 없는 재산분리의 행위론적 재구성을 중심으로 ―”, 『경희법학』 제61권 제2호, 경희대학교 법학연구소, 2026.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 46,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-7236775726c1bd86",
+      "title": "기노성, “디지털 자산(가상자산)의 신탁 ― 디지털 자산의 물권성 내지 재산성, 묵시적 의사에 의한 신탁 ―”, 『금융법연구』 제19권 제2호, 한국금융법학회, 2022.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 45,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-72f56bb315708992",
+      "title": "角紀代惠, 再論 信託と遺留分 (2024, 研究叢書99)",
+      "kind": "pdf",
+      "available": true,
+      "pages": 20,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-75fb3e6c37120740",
+      "title": "이창배·김제완, “신탁등기에서 신탁원부 기재사항의 제3자에 대한 효력 ― 대상판결: 대법원 2025. 2. 13. 선고 2022다233164 판결 ―”, 『외법논집』 제50권 제2호, 한국외국어대학교 법학연구소, 2026.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 32,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-76bdc32f69d080e8",
+      "title": "김상훈, “새로운 재산승계수단으로서의 보험금청구권신탁”, 『사법』 제41호, 사법발전재단, 2017.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 42,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-77a0dd3983e5db5a",
+      "title": "오영걸, “수익자연속신탁의 영속성 제한에 관하여: 영국법상 영구구속금지원칙의 역사, 개혁, 그리고 시사점”, 『비교사법』 제28권 제2호, 한국비교사법학회, 2021.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 34,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-790b60c73475f063",
+      "title": "정순섭, 『신탁법(제2판)』, 지원출판사, 2021.",
+      "kind": "text",
+      "available": false,
+      "pages": null,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-7bd0201329dbd465",
+      "title": "道垣内弘人, “信託の設定または信託の存在認定”, 『信託取引と民法法理』, 有斐閣, 2003.",
+      "kind": "text",
+      "available": false,
+      "pages": null,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-7d7523205e099284",
+      "title": "여성곤, “초고령사회의 재산승계와 민사신탁 활성화의 장애요인 ― 수익자연속·세대계속신탁의 유효성·신탁과세와 그 젠더 함의 ―”, 『이화젠더법학』 제18권 제2호, 이화여자대학교 젠더법학연구소, 2026.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 52,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-81aadb065d87d9d5",
+      "title": "오영걸, “의제신탁(擬制信託, Constructive Trusts)의 이해”, 『비교사법』 제18권 제4호(통권 제55호), 한국비교사법학회, 2011.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 46,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-81ffdb0b62395a65",
+      "title": "Virgo, Graham, The Principles of Equity & Trusts, 4th ed., Oxford: Oxford University Press, 2020.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 11,
+      "displayMode": "excerpt"
+    },
+    {
+      "id": "s-83e2d33291e3c7e3",
+      "title": "임채웅, “倒産隔離의 硏究”, 『민사소송』 제12권 제1호, 한국민사소송법학회, 2008.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 42,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-87e0278cecf07be4",
+      "title": "허준석, “신탁 성립에 관한 연구 ― 성립 요건과 범위를 중심으로 ―”, 서울대학교 대학원 법학박사학위논문, 2019.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 447,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-8b83a9222f453a59",
+      "title": "여성곤·김제완, “유언대용신탁에 의한 부양 및 재산승계의 법리분석 ― 대법원 2024. 4. 16. 선고 2022다307294 판결을 중심으로 ―”, 『중앙법학』 제28집 제1호(통권 제99호), 중앙법학회, 2026.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 50,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-8da9c1a74c3ea3dc",
+      "title": "이연갑, 『신탁법상 수익자 보호의 법리』, 경인문화사, 2014.",
+      "kind": "text",
+      "available": false,
+      "pages": null,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-8eb8ce14ff2857c1",
+      "title": "髙秀成, 信託法29条2項ただし書の意義 (2026, 研究叢書105)",
+      "kind": "pdf",
+      "available": true,
+      "pages": 18,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-927706c29d58a507",
+      "title": "최은순, “예금채권에 대한 신탁법의 적용과 문제점 ― 민사신탁의 기반확대를 위한 관점에서 ―”, 『비교사법』 제17권 제2호(통권 제49호), 한국비교사법학회, 2010.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 34,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-93349ebd8209b682",
+      "title": "김종해·김병일, “상속세 및 증여세법상 신탁이익에 관한 평가문제 ― 유언대용신탁 및 수익자연속신탁을 중심으로 ―”, 『조세연구』 제16권 제4집, 한국조세연구포럼, 2016.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 34,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-9720c2845193256c",
+      "title": "[미확보] 道垣内弘人―, 『信託法(第2版)』, 有斐閣, 2022(장명 譯, 『신탁법』, 정독, 2024).",
+      "kind": "text",
+      "available": false,
+      "pages": null,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-9879ed03e9be6218",
+      "title": "권재문, “연이은 유증과 수익자연속 신탁의 관계: 유류분 반환의 법률관계를 중심으로”, 『입법과 정책』 제7권 제2호, 국회입법조사처, 2015.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 26,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-9bb39485930518e2",
+      "title": "오영표, “新신탁법 시행에 따른 자본시장법상의 법적 쟁점 ― 신탁법과 자본시장법의 조화로운 共存을 모색하며 ―”, 『은행법연구』 제5권 제1호, 은행법학회, 2012.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 42,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-9cf9e455f785ff57",
+      "title": "久保淳一, 家族信託について (2024, 研究叢書99)",
+      "kind": "pdf",
+      "available": true,
+      "pages": 14,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-9f9f698135db3f53",
+      "title": "장보은, “신탁등기의 대항력에 관한 소고 ― 판례의 태도와 이에 대한 비판을 중심으로 ―”, 『서울대학교 法學』 제64권 제2호, 서울대학교 법학연구소, 2023.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 42,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-a6b81b8f8e4ec538",
+      "title": "Swadling, William, “Orthodoxy,” in The Quistclose Trust: Critical Essays, edited by William Swadling, Oxford: Hart Publishing, 2004.",
+      "kind": "text",
+      "available": false,
+      "pages": null,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-a6fe525d268b5b91",
+      "title": "김태진, “주식신탁 사례연구 ― 상사신탁·민사신탁의 경계를 넘어 신탁법과 회사법의 교차 ―”, 『법학논총』 제39권 제4호, 전남대학교 법학연구소, 2019.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 47,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-a8659198f573e998",
+      "title": "윤진수, “담보신탁의 도산절연론 비판”, 『비교사법』 제25권 제2호(통권 제81호), 한국비교사법학회, 2018.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 52,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-ab12b4a273cde286",
+      "title": "이연갑, “신탁등기의 대항력 ― 대법원 2018. 9. 28. 선고 2017다273984 판결에 대한 평석 ―”, 『서울법학』 제27권 제3호, 서울시립대학교 법학연구소, 2019.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 23,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-b1549166e562deb3",
+      "title": "최은순, “자기신탁에 관한 고찰 ― 『신탁법』 개정안을 중심으로 ―”, 『안암법학』 제32호, 안암법학회, 2010.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 35,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-b1dfb67e561ef15f",
+      "title": "정홍주, “신탁회사의 관리비 납부의무 인정 여부를 통해 고찰해 본 부동산 신탁등기의 대항력 범위 ― 대법원 2025. 2. 13. 선고 2022다233164 판결 ―”, 『재산법연구』 제42권 제3호, 한국재산법학회, 2025.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 40,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-be204835915474b8",
+      "title": "조재헌, “신탁법 제4조 제1항(2011. 7. 25. 법률 제10924호로 전부 개정되어 2012. 7. 26. 시행)의 의미와 신탁등기의 대항력 범위”, 『사법』 제73호, 사법발전재단, 2025.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 50,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-bfafbe9502dd7500",
+      "title": "문혜영, “유언대용신탁과 위탁자 사후의 수익자 및 잔여재산의 귀속 ― 대법원 2024. 4. 16. 선고 2022다307294 판결 ―”, 『법조』 제74권 제4호, 법조협회, 2025.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 31,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-bff38d4134a45fb0",
+      "title": "최준규, “금전의 이동(移動)과 물권적청구권 ― 가치 소유권 및 의제신탁으로부터의 시사 ―”, 『법조』 통권 제638호, 법조협회, 2009.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 68,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-c23f67c14f387053",
+      "title": "道垣内弘人, 信託と遺留分をめぐる研究動向 (2025, 研究叢書100)",
+      "kind": "pdf",
+      "available": true,
+      "pages": 8,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-c7508c0c739285e1",
+      "title": "이계정·이연갑·최수정 외 집필, 「온주 신탁법」, 로앤비, 2021.",
+      "kind": "text",
+      "available": true,
+      "pages": null,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-cb6ed465605d7793",
+      "title": "이혜리, “미국법상 의제신탁의 의미 ― 제3차 부당이득법 리스테이트먼트를 중심으로 ―”, 『성균관법학』 제27권 제2호, 성균관대학교 법학연구원, 2015.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 27,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-cfe15f6768e85665",
+      "title": "김종원, “민사신탁 수탁자의 신탁위반에 대한 정상화 절차 ― 수익자 보호를 중심으로 ―”, 『부동산법학』 제21집 제2호, 한국부동산법학회, 2017.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 28,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-cff3fff232821ed4",
+      "title": "이계정, “부동산 신탁등기의 대항력과 개선방안”, 『사법』 제73호, 사법발전재단, 2025.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 51,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-d0cd291b60418514",
+      "title": "무궁화신탁법연구회·광장신탁법연구회, 『주석 신탁법(제3판)』, 박영사, 2021.",
+      "kind": "text",
+      "available": false,
+      "pages": null,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-d29e9aa9065a775d",
+      "title": "조웅규, “유언대용신탁의 활성화 방안 ― 신탁선언에 의한 유언대용신탁 ―”, 『가족법연구』 제36권 제1호, 한국가족법학회, 2022.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 26,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-d69f9c5366e9d277",
+      "title": "여성곤, “묵시신탁과 의제신탁의 재정립 ― 한·일 2002년 판결의 비교와 대법원 2000다17070 판결의 ‘제3의 경로’ ―”, 『동북아법연구』 제20권 제1호, 전북대학교 동북아법연구소, 2026.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 52,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-d720c64e7b87e9a2",
+      "title": "新井誠, 『信託法(第4版)』, 有斐閣, 2014.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 9,
+      "displayMode": "excerpt"
+    },
+    {
+      "id": "s-daafc339d5da944d",
+      "title": "장명, “유언대용신탁에서 생전수익자를 위탁자로, 사후 유일한 수익자를 수탁자로 정한 경우의 효력 ― 대법원 2024. 4. 16. 선고 2022다307294 판결을 중심으로 ―”, 『가천법학』 제17권 제3호, 가천대학교 법학연구소, 2024.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 38,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-db364a27bbcf49a6",
+      "title": "정우영, “재산관리수단으로서의 민사신탁의 가능성과 규율”, 『법학연구』 제24집 제4호, 인하대학교 법학연구소, 2021.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 27,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-db9697f779e9e457",
+      "title": "Martin, Jill E., Hanbury and Martin: Modern Equity, 18th ed., London: Sweet & Maxwell, 2009.",
+      "kind": "text",
+      "available": false,
+      "pages": null,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-e1102adef67407e3",
+      "title": "최진솔·윤지훈·김제완, “고령자의 후견을 위한 가족 간 공동명의 예금계좌의 법적 쟁점”, 『가족법연구』 제35권 제3호, 한국가족법학회, 2021.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 50,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-e375e1c2bbfea7c8",
+      "title": "안성포, “기업유형으로서 상사신탁의 법적 쟁점”, 『상사법연구』 제32권 제2호, 한국상사법학회, 2013.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 34,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-e40bb435bf6f1471",
+      "title": "법무부, 『신탁법 개정안 해설』, 2010. 2. (보유 PDF 표지 확인)",
+      "kind": "pdf",
+      "available": true,
+      "pages": 4,
+      "displayMode": "excerpt"
+    },
+    {
+      "id": "s-efbb97135f386e04",
+      "title": "정소민, “개정 신탁법의 실무상 쟁점: 신탁제도를 통한 재산승계”, 『BFL』 제62호, 서울대학교 금융법센터, 2013.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 15,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-efe5eba47506b8a8",
+      "title": "권병철, “수탁자를 유일한 귀속권리자로 하는 유언대용신탁의 실무적 쟁점과 제도적 개선 방안 ― 대법원 2024. 4. 16. 선고 2022다307294 판결을 중심으로 ―”, 『저스티스』 통권 제207호, 한국법학원, 2025.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 25,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-f2966b005d5a3b8e",
+      "title": "伊庭潔·西片和代, 弁護士から見た民事信託の利用状況と課題 (2024, 研究叢書99)",
+      "kind": "pdf",
+      "available": true,
+      "pages": 24,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-f2c466534549d88d",
+      "title": "遠藤英嗣, 『家族信託の実務 信託の変更と実務裁判例』, 日本加除出版, 2021.",
+      "kind": "text",
+      "available": false,
+      "pages": null,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-f31b6b5fb35bbc4b",
+      "title": "오영표, 『가족신탁 이론과 실무(제3판)』, 조세통람, 2025.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 849,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-f8e5e5a6b7c98d80",
+      "title": "최은순, “민사신탁에 관한 연구 ― 유용성과 적용범위를 중심으로 ―”, 고려대학교 대학원 법학박사학위논문, 2010.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 359,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-f99632a1e8d9ce18",
+      "title": "Hansmann, Henry, and Ugo Mattei, “The Functions of Trust Law: A Comparative Legal and Economic Analysis,” New York University Law Review 73, 1998.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 46,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-f9f6f15f5d173ff5",
+      "title": "정구태, “신탁제도를 통한 재산승계 ― 유류분과의 관계를 중심으로 ―”, 『인문사회 21』 제9권 제1호, 아시아문화학술원, 2018.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 10,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-fa4aee8b5238c8ff",
+      "title": "新井誠, 成年後見制度の新たな展開 (2021, 研究叢書88)",
+      "kind": "pdf",
+      "available": true,
+      "pages": 26,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-fa89ffd0e503fe88",
+      "title": "能見善久, 遺言代用信託 (2021, 研究叢書89)",
+      "kind": "pdf",
+      "available": true,
+      "pages": 36,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-fae31d2790ef3f8e",
+      "title": "허현, “신탁원부와 신탁공시의 대항력”, 『BFL』 제94호, 서울대학교 금융법센터, 2019.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 10,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-fff1c077e490cde2",
+      "title": "전장헌, “영미 신탁법제와 대륙법 체계에서의 신탁법의 융합가능성 ― 신탁과 물권과의 관계를 중심으로 ―”, 『동북아법연구』 제15권 제1호, 전북대학교 동북아법연구소, 2021.",
+      "kind": "pdf",
+      "available": true,
+      "pages": 30,
+      "displayMode": "full"
+    },
+    {
+      "id": "s-unavailable-justice2012",
+      "title": "법무부(김상용 감수), 『신탁법 해설』, 법조협회, 2012.",
+      "kind": "text",
+      "available": false,
+      "pages": null
+    }
+  ]
+}

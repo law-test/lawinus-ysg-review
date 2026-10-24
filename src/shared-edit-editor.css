@@ -42,3 +42,19 @@
 }
 
 .shared-edit-editor .shared-edit-comparison{min-height:clamp(440px,65dvh,780px);white-space:pre-wrap;}
+.shared-edit-shell,.shared-edit-scroll-body{min-width:0}
+.shared-edit-editor .shared-edit-expand{display:none}
+@media screen and (max-width:1199px){
+ .shared-edit-editor .shared-edit-expand{display:block;min-height:44px}
+ .shared-edit-editor button,.shared-edit-editor summary{min-height:44px}
+ .shared-edit-editor .shared-edit-body.shared-edit-comparison{min-height:96px;max-height:320px;overflow:auto;resize:vertical}
+ .shared-edit-editor.shared-edit-mobile-expanded{position:fixed;z-index:120;top:var(--visible-top,0px);left:0;right:0;height:var(--visible-height,100dvh);max-height:var(--visible-height,100dvh);margin:0;padding:0;border:0;display:flex;flex-direction:column;min-height:0;background:#fffdf7;box-shadow:0 0 0 100vmax #201b236b}
+ .shared-edit-mobile-expanded .shared-edit-heading{flex:0 0 auto;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:0 8px;margin:0;padding:8px 12px;border-bottom:1px solid var(--review-line,#dadada)}
+ .shared-edit-mobile-expanded .shared-edit-heading h3{grid-column:1;grid-row:1;line-height:1.3;overflow-wrap:anywhere}
+ .shared-edit-mobile-expanded .shared-edit-heading>span{grid-column:1;grid-row:2;font-size:calc(11px * var(--review-font-scale,1.5));line-height:1.3}
+ .shared-edit-mobile-expanded .shared-edit-expand{grid-column:2;grid-row:1 / 3;padding:6px 10px;font-size:calc(12px * var(--review-font-scale,1.5))}
+ .shared-edit-mobile-expanded .shared-edit-scroll-body{flex:1 1 0;min-height:0;overflow:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:8px 12px;scroll-padding-block:10px}
+ .shared-edit-mobile-expanded .shared-edit-scroll-body textarea{scroll-margin-block:10px}
+ .shared-edit-editor.shared-edit-mobile-expanded .shared-edit-actions{flex:0 0 auto;flex-wrap:nowrap;gap:6px;min-height:56px;margin:0;padding:6px 8px max(6px,env(safe-area-inset-bottom));border-top:1px solid var(--review-line,#dadada);background:#fffdf7;overflow-x:auto;overscroll-behavior-x:contain}
+ .shared-edit-editor.shared-edit-mobile-expanded .shared-edit-actions>button{flex:0 0 auto;min-height:44px;white-space:nowrap;max-width:none;padding:6px 10px}
+}

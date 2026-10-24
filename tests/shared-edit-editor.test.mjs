@@ -270,3 +270,72 @@ test('resetting uses the newest already-read history and keeps a conflict when i
  assert.equal(missing.revision,4);assert.equal(missing.conflict,true);
  assert.equal(reset(state,{originalText:'원문',current:edit(4,'네 번째 문안')}).conflict,true);
 });
+
+function mobileSession(width=390,propsExtra={}){
+ const slots=[],requests=[],saved=[],module={exports:{}};let cursor=0;
+ const useState=initial=>{const i=cursor++;if(!(i in slots))slots[i]=typeof initial==='function'?initial():initial;return [slots[i],value=>{slots[i]=typeof value==='function'?value(slots[i]):value;}];};
+ const useReducer=(reducer,initial)=>{const [state,set]=useState(initial);return [state,action=>set(old=>reducer(old,action))];};
+ const useRef=initial=>{const i=cursor++;return slots[i]??(slots[i]={current:initial});};
+ const window={innerWidth:width,sessionStorage:memoryStorage(),confirm:()=>true};
+ vm.runInNewContext(compiled,{module,exports:module.exports,window,requestAnimationFrame:fn=>{fn();return 1;},require:id=>{
+  if(id==='react')return {...React,useState,useReducer,useRef,useEffect:()=>{},useId:()=>':mobile-test:'};
+  if(id.endsWith('.css'))return {};
+  if(id==='./shared-edits')return {saveSharedEdit:async request=>{requests.push(request);return {...edit(request.expectedRevision+1,request.text),kind:request.kind,targetId:request.targetId};}};
+  if(id==='./revision-copy')return copyModule.exports;
+  if(id==='./revision-composite')return compositeModule.exports;
+  return require(id);
+ }});
+ const props={kind:'footnote',targetId:'fn-001',originalText:'원래 각주',proposalBeforeText:'Before 원문',proposalReason:'근거 대조',current:{...edit(3,'저장된 각주'),kind:'footnote',targetId:'fn-001'},onSaved:value=>saved.push(value),...propsExtra};
+ function render(){cursor=0;const wrapper=module.exports.SharedEditEditor(props),tree=wrapper.type(wrapper.props),nodes=[];function walk(n){if(!n||typeof n!=='object')return;nodes.push(n);React.Children.forEach(n.props?.children,walk);}walk(tree);return {tree,nodes};}
+ return {render,requests,saved};
+}
+test('mobile expansion keeps the same comparison draft and revision through collapse',()=>{
+ const session=mobileSession();let view=session.render();
+ const before=view.nodes.find(n=>n.type==='textarea'&&n.props.className.includes('shared-edit-comparison'));
+ const changed=formatComparison({before:'Before 원문',after:'입력한 각주\n둘째 줄',reason:'근거 대조'});
+ before.props.onChange({target:{value:changed}});before.props.onFocus();view=session.render();
+ assert.equal(view.nodes.find(n=>n.type==='section').props['aria-modal'],true);
+ assert.equal(view.nodes.find(n=>n.type==='textarea'&&n.props.className.includes('shared-edit-comparison')).props.value,changed);
+ view.nodes.find(n=>n.props.className==='shared-edit-expand').props.onClick();view=session.render();
+ assert.equal(view.nodes.find(n=>n.type==='section').props['aria-modal'],undefined);
+ assert.equal(view.nodes.find(n=>n.type==='textarea'&&n.props.className.includes('shared-edit-comparison')).props.value,changed);
+ assert.equal(session.requests.length,0);assert.equal(session.saved.length,0);
+});
+test('expanded footnote save still sends only After and the existing expected revision',async()=>{
+ const session=mobileSession();let view=session.render();
+ const input=view.nodes.find(n=>n.type==='textarea'&&n.props.className.includes('shared-edit-comparison'));
+ input.props.onChange({target:{value:formatComparison({before:'Before 원문',after:'저장할 각주',reason:'근거 대조'})}});input.props.onFocus();view=session.render();
+ const actions=view.nodes.find(n=>n.props.className==='shared-edit-actions'),scrollBody=view.nodes.find(n=>n.props.className==='shared-edit-scroll-body');
+ assert.ok(actions);assert.ok(scrollBody);assert.ok(!React.Children.toArray(scrollBody.props.children).includes(actions));
+ view.nodes.find(n=>n.type==='button'&&n.props.className==='primary').props.onClick();await new Promise(resolve=>setTimeout(resolve,0));
+ assert.equal(session.requests.length,1);assert.equal(session.requests[0].kind,'footnote');assert.equal(session.requests[0].targetId,'fn-001');
+ assert.equal(session.requests[0].expectedRevision,3);assert.equal(session.requests[0].text,'저장할 각주');assert.equal(session.saved[0].revision,4);
+});
+test('desktop focusing does not expand or replace the existing editor',()=>{
+ const session=mobileSession(1400);let view=session.render();
+ view.nodes.find(n=>n.type==='textarea'&&n.props.className.includes('shared-edit-comparison')).props.onFocus();view=session.render();
+ assert.equal(view.nodes.find(n=>n.type==='section').props.className,'shared-edit-editor');assert.equal(session.requests.length,0);
+});
+test('mobile edit layout reserves one action row and bounds the input at keyboard-sized heights',()=>{
+ assert.equal(module.exports.sharedMobileInputHeight(300),126);assert.equal(module.exports.sharedMobileInputHeight(160),96);assert.equal(module.exports.sharedMobileInputHeight(844),320);
+ const css=readFileSync(new URL('../src/shared-edit-editor.css',import.meta.url),'utf8');
+ assert.match(css,/\.shared-edit-editor\.shared-edit-mobile-expanded\{[^}]*position:fixed[^}]*height:var\(--visible-height,100dvh\)/);
+ assert.match(css,/\.shared-edit-mobile-expanded \.shared-edit-scroll-body\{[^}]*min-height:0[^}]*overflow:auto/);
+ assert.match(css,/\.shared-edit-editor\.shared-edit-mobile-expanded \.shared-edit-actions\{[^}]*flex:0 0 auto[^}]*flex-wrap:nowrap/);
+ assert.match(source,/expandButton\.current\?\.focus\(\{preventScroll:true\}\)/);
+});
+
+test('the mobile input fits the actual scroll body after large text increases header and save-row heights',()=>{
+ const size=module.exports.sharedMobileInputHeight;
+ // CUA reproduced 390×300 at 200%: the viewport-based 126px input exceeded a 105px body.
+ assert.equal(size(300,105,16),89);
+ assert.equal(size(844,105,16),89);
+ assert.equal(size(300,180,16),126);
+ assert.equal(size(300,70,16),54);
+ assert.equal(size(300,50,16),44);
+ assert.equal(size(300,undefined,16),126);
+ assert.equal(size(300,0,16),126);
+ for(const body of [70,90,105,120,180,500])assert.ok(size(300,body,16)<=body-16);
+ assert.match(source,/resize\.observe\(body\)/);
+ assert.match(source,/field\.style\.maxHeight=bounded/);
+});

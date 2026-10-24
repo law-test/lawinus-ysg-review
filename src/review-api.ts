@@ -161,15 +161,35 @@ export function renderNotesExport(notes: ReviewNote[], format: 'md'|'csv'|'json'
   return { mime: 'text/markdown;charset=utf-8', text: '# 논문 검토 메모\n\n' + rows.join('\n') };
 }
 
-export async function exportNotes(format: 'md'|'csv'|'json'): Promise<void> {
+export type PreparedNotesExport = {
+  url: string;
+  fileName: string;
+  mime: string;
+  format: 'md'|'csv'|'json';
+  count: number;
+  dispose: () => void;
+};
+
+// Keep this URL alive while a visible download link is available. Preparing the
+// file does not mean the browser has saved it; the user activates the link.
+export function prepareNotesExport(notes: ReviewNote[], format: 'md'|'csv'|'json', datasetId: string): PreparedNotesExport {
+  const output = renderNotesExport(notes, format, datasetId);
+  const url = URL.createObjectURL(new Blob([output.text], { type: output.mime }));
+  let disposed = false;
+  return {
+    url, fileName: `paper-review-${datasetId}.${format}`, mime: output.mime, format, count: notes.length,
+    dispose() {
+      if (disposed) return;
+      disposed = true;
+      URL.revokeObjectURL(url);
+    },
+  };
+}
+
+export async function exportNotes(format: 'md'|'csv'|'json'): Promise<PreparedNotesExport> {
   await loadReviewConfig();
   const { config } = connection();
   const result = await rpc<NoteResult>('paper_review_list_notes', { p_dataset_id: config.datasetId, p_status: null, p_export: true });
   if (result.truncated) throw new Error('메모 전체를 확보하지 못했으므로 내보내지 않았습니다.');
-  const output = renderNotesExport(result.notes, format, config.datasetId);
-  const objectUrl = URL.createObjectURL(new Blob([output.text], { type: output.mime }));
-  const link = document.createElement('a');
-  link.href = objectUrl; link.download = `paper-review-${config.datasetId}.${format}`;
-  document.body.append(link); link.click(); link.remove();
-  setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+  return prepareNotesExport(result.notes, format, config.datasetId);
 }

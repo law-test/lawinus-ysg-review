@@ -26,6 +26,11 @@ type EditorAction =
 
 export function hasSharedUserDraft(state:EditorState):boolean {return !!state.comparisonEdited||!!state.reason||(!state.autoProposal&&state.draft!==state.baseText);}
 
+export function sharedMobileInputHeight(visibleHeight:number,bodyHeight?:number,padding=0):number {
+ const preferred=Math.max(96,Math.min(320,(Number.isFinite(visibleHeight)&&visibleHeight>0?visibleHeight:600)*.42));
+ return bodyHeight!==undefined&&Number.isFinite(bodyHeight)&&bodyHeight>0?Math.min(preferred,Math.max(44,bodyHeight-Math.max(0,padding))):preferred;
+}
+
 type DraftStorage = Pick<Storage,'getItem'|'setItem'|'removeItem'>;
 export function sharedDraftKey(kind:SharedEditKind,targetId:string){
  return `lawinus.shared-edit-draft.v1:${kind}:${targetId}`;
@@ -138,6 +143,8 @@ function SharedEditEditorSession({kind,targetId,originalText,proposalBeforeText,
  const [notice,setNotice]=useState(boot.recovered?'입력 중이던 문안을 불러왔습니다.':''),[error,setError]=useState('');
  const [showLatest,setShowLatest]=useState(false);
  const [resetUndo,setResetUndo]=useState<EditorState|null>(null);
+ const [mobileExpanded,setMobileExpanded]=useState(false),[inlineHeight,setInlineHeight]=useState(0);
+ const editorRoot=useRef<HTMLElement>(null),editorBody=useRef<HTMLDivElement>(null),expandButton=useRef<HTMLButtonElement>(null);
  const comparisonInput=useRef<HTMLTextAreaElement>(null);
  const alive=useRef(true),saving=useRef(false),loading=useRef(false),epoch=useRef(0);
  const ids=useId(),bodyId=`${ids}-body`,reasonId=`${ids}-reason`,historyId=`${ids}-history`;
@@ -148,14 +155,57 @@ function SharedEditEditorSession({kind,targetId,originalText,proposalBeforeText,
  const saveBlocked=comparisonInvalid||!!state.manualLocked;
  const tooLong=Array.from(state.draft).length>100000||Array.from(state.reason).length>2000;
 
+ function expandEditor(){
+  if(window.innerWidth>=1200||mobileExpanded)return;
+  setInlineHeight(editorRoot.current?.getBoundingClientRect().height||0);setMobileExpanded(true);
+ }
+ function closeEditor(){
+  if(busy)return;setMobileExpanded(false);
+  requestAnimationFrame(()=>expandButton.current?.focus({preventScroll:true}));
+ }
+ function revealActiveInput(){
+  const body=editorBody.current,active=document.activeElement;if(!body||!(active instanceof HTMLTextAreaElement)||!body.contains(active))return;
+  const box=body.getBoundingClientRect(),field=active.getBoundingClientRect(),top=field.top-box.top;
+  if(top<0)body.scrollTop+=top;
+  else if(field.bottom>box.bottom)body.scrollTop+=Math.min(top,field.bottom-box.bottom);
+ }
+
+ useEffect(()=>{
+  if(!mobileExpanded)return;
+  let frame=0;
+  const schedule=()=>{cancelAnimationFrame(frame);frame=requestAnimationFrame(revealActiveInput);};schedule();
+  const viewport=window.visualViewport;viewport?.addEventListener('resize',schedule);
+  const onKey=(event:KeyboardEvent)=>{
+   if(event.key==='Escape'){event.preventDefault();closeEditor();return;}
+   if(event.key!=='Tab')return;
+   const items=Array.from(editorRoot.current?.querySelectorAll<HTMLElement>('button:not(:disabled),textarea:not(:disabled),input:not(:disabled),summary,a[href]')||[]).filter(item=>item.getClientRects().length>0);
+   const first=items[0],last=items[items.length-1];if(!first){event.preventDefault();return;}
+   if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus({preventScroll:true});}
+   else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus({preventScroll:true});}
+  };
+  document.addEventListener('keydown',onKey);
+  return()=>{viewport?.removeEventListener('resize',schedule);document.removeEventListener('keydown',onKey);cancelAnimationFrame(frame);};
+ },[mobileExpanded,busy]);
+ useEffect(()=>{const media=window.matchMedia('(min-width:1200px)');const change=()=>{if(media.matches)setMobileExpanded(false);};media.addEventListener('change',change);return()=>media.removeEventListener('change',change);},[]);
+
  useEffect(()=>{
   const input=comparisonInput.current;if(!input)return;
-  const fit=()=>{input.style.height='0px';input.style.height=`${Math.max(320,input.scrollHeight+2)}px`;};
+  const body=editorBody.current,reason=editorRoot.current?.querySelector<HTMLTextAreaElement>('.shared-edit-reason');let frame=0;
+  const fit=()=>{
+   const bounded=window.innerWidth<1200&&mobileExpanded&&body,style=bounded?getComputedStyle(body):null;
+   const padding=style?(parseFloat(style.paddingTop)||0)+(parseFloat(style.paddingBottom)||0):0;
+   const height=sharedMobileInputHeight(window.visualViewport?.height||window.innerHeight,bounded?body.clientHeight:undefined,padding);
+   for(const field of [input,reason])if(field){field.style.minHeight=bounded?`${Math.min(field===input?96:78,height)}px`:'';field.style.maxHeight=bounded?`${height}px`:'';}
+   if(window.innerWidth<1200)input.style.height=`${height}px`;
+   else {input.style.height='0px';input.style.height=`${Math.max(320,input.scrollHeight+2)}px`;}
+   if(bounded){cancelAnimationFrame(frame);frame=requestAnimationFrame(revealActiveInput);}
+  };
   fit();let lastWidth=input.getBoundingClientRect().width;
-  const resize=new ResizeObserver(()=>{const width=input.getBoundingClientRect().width;if(Math.abs(width-lastWidth)>1){lastWidth=width;fit();}});resize.observe(input);
+  const resize=new ResizeObserver(entries=>{const width=input.getBoundingClientRect().width;if(entries.some(entry=>entry.target===body)||Math.abs(width-lastWidth)>1){lastWidth=width;fit();}});resize.observe(input);if(mobileExpanded&&body)resize.observe(body);
   const fonts=new MutationObserver(fit);fonts.observe(document.documentElement,{attributes:true,attributeFilter:['data-text-size']});
-  return()=>{resize.disconnect();fonts.disconnect();};
- },[state.comparison]);
+  const viewport=window.visualViewport;viewport?.addEventListener('resize',fit);window.addEventListener('resize',fit);
+  return()=>{resize.disconnect();fonts.disconnect();viewport?.removeEventListener('resize',fit);window.removeEventListener('resize',fit);cancelAnimationFrame(frame);};
+ },[state.comparison,mobileExpanded]);
  useEffect(()=>{alive.current=true;return()=>{alive.current=false;epoch.current++;};},[]);
  useEffect(()=>{
   if(validCurrent)dispatch({type:'incoming',revision:validCurrent.revision,text:validCurrent.text});
@@ -264,8 +314,9 @@ function SharedEditEditorSession({kind,targetId,originalText,proposalBeforeText,
   if(open&&!history)void readHistory('first');
  }
 
- return <section className="shared-edit-editor" aria-label={`${label} 수정`} aria-busy={busy}>
-  <div className="shared-edit-heading"><h3>{label} 수정</h3><span>{state.revision===0?'원문':`수정 ${state.revision}`}{dirty?' · 저장 전':''}</span></div>
+ return <div className="shared-edit-shell" style={mobileExpanded?{height:inlineHeight}:undefined}><section ref={editorRoot} className={'shared-edit-editor'+(mobileExpanded?' shared-edit-mobile-expanded':'')} aria-label={`${label} 수정`} aria-busy={busy} role={mobileExpanded?'dialog':undefined} aria-modal={mobileExpanded?true:undefined}>
+  <div className="shared-edit-heading"><h3>{label} 수정</h3><span>{state.revision===0?'원문':`수정 ${state.revision}`}{dirty?' · 저장 전':''}</span><button ref={expandButton} type="button" className="shared-edit-expand" disabled={busy} aria-expanded={mobileExpanded} onClick={()=>mobileExpanded?closeEditor():expandEditor()}>{mobileExpanded?'편집창 접기':'편집창 크게 보기'}</button></div>
+  <div ref={editorBody} className="shared-edit-scroll-body">
   <div className="shared-edit-tools">
    <RevisionCopyButton text={proposalBeforeText??originalText} label="Before 복사"/>
    {proposalDisplayText!==undefined&&<RevisionCopyButton text={proposalDisplayText} label="After 복사"/>}
@@ -279,11 +330,11 @@ function SharedEditEditorSession({kind,targetId,originalText,proposalBeforeText,
   {state.manualLocked&&<div className="shared-edit-proposal-note"><p>이 수정안은 여러 문단·각주 또는 조판을 함께 다뤄야 하므로 그대로 반영할 수 없습니다.</p><button type="button" disabled={busy||historyBusy} onClick={()=>putText(state.baseText)}>원문으로 직접 편집 시작</button></div>}
   <label className="shared-edit-label" htmlFor={bodyId}>수정할 문안</label>
   <p className="shared-edit-proposal-note">After 부분만 본문에 반영됩니다. Before와 상세이유는 함께 확인할 내용입니다.</p>
-  <textarea ref={comparisonInput} id={bodyId} className="shared-edit-body shared-edit-comparison" value={state.comparison??''} disabled={busy} onChange={event=>{setResetUndo(null);dispatch({type:'comparison',value:event.target.value});}} spellCheck={false}/>
+  <textarea ref={comparisonInput} id={bodyId} className="shared-edit-body shared-edit-comparison" value={state.comparison??''} disabled={busy} onFocus={expandEditor} onChange={event=>{setResetUndo(null);dispatch({type:'comparison',value:event.target.value});}} spellCheck={false}/>
   {comparisonInvalid&&<p className="shared-edit-error" role="alert">{parsedComparison.message}</p>}
   {dirty&&state.draft.trim()===''&&<p className="shared-edit-proposal-note">저장하면 {label} 내용이 삭제됩니다. 원문과 변경 이력은 유지됩니다.</p>}
   <label className="shared-edit-label" htmlFor={reasonId}>수정 이유 <span>(선택)</span></label>
-  <textarea id={reasonId} className="shared-edit-reason" value={state.reason} disabled={busy} onChange={event=>{setResetUndo(null);dispatch({type:'reason',value:event.target.value});}} rows={2}/>
+  <textarea id={reasonId} className="shared-edit-reason" value={state.reason} disabled={busy} onFocus={expandEditor} onChange={event=>{setResetUndo(null);dispatch({type:'reason',value:event.target.value});}} rows={2}/>
   {storageFailed&&(dirty||state.reason)&&<p className="shared-edit-error" role="alert">이 브라우저에서 초안을 보관하지 못했습니다. 다른 화면으로 이동하기 전에 저장하거나 메모로 남겨 주세요.</p>}
   {tooLong&&<p className="shared-edit-error" role="alert">수정 내용은 100,000자, 수정 이유는 2,000자 이내로 입력해 주세요.</p>}
   {state.conflict&&<div className="shared-edit-conflict" role="alert">
@@ -297,11 +348,6 @@ function SharedEditEditorSession({kind,targetId,originalText,proposalBeforeText,
   {error&&!state.conflict&&<p className="shared-edit-error" role="alert">{error}</p>}
   {state.conflict&&error&&!isGenericConflictMessage(error)&&<p className="shared-edit-error" role="alert">{error}</p>}
   {notice&&<p className="shared-edit-status" role="status">{notice}</p>}
-  <div className="shared-edit-actions">
-   <button type="button" className="primary" disabled={busy||historyBusy||state.conflict||!dirty||tooLong||saveBlocked} onClick={()=>void save()}>{busy?'저장 중…':`${label} ${dirty&&state.draft.trim()===''?'삭제':'수정'}하기`}</button>
-   {onMemo&&<button type="button" disabled={busy||saveBlocked||!state.draft.trim()} onClick={()=>onMemo(state.draft)}>이 문안으로 메모</button>}
-   <button type="button" aria-expanded={showHistory} aria-controls={historyId} disabled={busy} onClick={toggleHistory}>{showHistory?'변경 이력 접기':'변경 이력 보기'}</button>
-  </div>
   {showHistory&&<div className="shared-edit-history" id={historyId}>
    <div className="shared-edit-history-top"><h4>변경 이력</h4><button type="button" disabled={busy||historyBusy} onClick={()=>void readHistory('latest')}>최신 내용 불러오기</button></div>
    {historyBusy&&<p role="status">이력을 불러오는 중…</p>}
@@ -318,7 +364,13 @@ function SharedEditEditorSession({kind,targetId,originalText,proposalBeforeText,
    </article>}
    {!history&&!historyBusy&&<button type="button" onClick={()=>void readHistory('first')}>이력 다시 불러오기</button>}
   </div>}
- </section>;
+  </div>
+  <div className="shared-edit-actions">
+   <button type="button" className="primary" disabled={busy||historyBusy||state.conflict||!dirty||tooLong||saveBlocked} onClick={()=>void save()}>{busy?'저장 중…':`${label} ${dirty&&state.draft.trim()===''?'삭제':'수정'}하기`}</button>
+   {onMemo&&<button type="button" disabled={busy||saveBlocked||!state.draft.trim()} onClick={()=>{if(mobileExpanded)setMobileExpanded(false);onMemo(state.draft);}}>이 문안으로 메모</button>}
+   <button type="button" aria-expanded={showHistory} aria-controls={historyId} disabled={busy} onClick={toggleHistory}>{showHistory?'변경 이력 접기':'변경 이력 보기'}</button>
+  </div>
+ </section></div>;
 }
 
 function isGenericConflictMessage(message:string){return message.startsWith('다른 방문자가 먼저 수정했습니다.');}

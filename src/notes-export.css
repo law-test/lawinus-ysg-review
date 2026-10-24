@@ -1,0 +1,4 @@
+.notes-export-state{flex:1 0 100%;order:1;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:12px;border:1px solid var(--review-line,#ddd);border-radius:4px;background:#faf8f4;line-height:1.6;overflow-wrap:anywhere}
+.memo-actions .notes-export-download{display:inline-flex;align-items:center;justify-content:center;min-height:44px;max-width:100%;padding:7px 12px;border:1px solid currentColor;border-radius:4px;color:#7e2537;background:#fff;white-space:normal;text-decoration:underline;text-underline-offset:3px}
+.notes-export-state small{font-size:.9em;color:#6a625c}
+.notes-export-error{color:#9c2537;background:#fff7f7}
