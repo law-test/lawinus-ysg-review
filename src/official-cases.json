@@ -581,37 +581,76 @@
     },
     {
       "sourceId": "s-case-a38b765a44f7",
-      "caseNumber": "2017가합408489",
-      "title": "수원지방법원 성남지원 2020. 1. 10. 선고 2017가합408489 판결",
-      "provenance": "mirror",
-      "providerName": "법률사무소 치평 (박생환 변호사) 공개 판례 게시물",
-      "sourceUrl": "http://www.lawcafe24.com/bbs/board/38978",
-      "assetPath": "official-cases/s-case-a38b765a44f7.txt",
-      "coverage": "partial",
-      "coverageNote": "공식 법원 사이트에서 직접 받은 판결문이 아닌 법률사무소 공개 전재 페이지. 주문·이유·재판부 서명은 보존했으나, 본문의 표 이미지5개가 원 게시물에서404로 끊겨 확보되지 않음. 부분사본이며 전문 확보로 표시하지 않음. 본문에 언급된 별지 목록 별도 파일도 게시물에서 확인되지 않음.",
-      "retrievedAt": "2026-10-24",
-      "sha256": "102a21b9a34abcad6cea9f0ee2a05afac9fcb21f0c1c424591c58a212ffde252",
       "noteIds": [
         "fn-113"
       ],
-      "paragraphIds": []
+      "paragraphIds": [],
+      "caseNumber": "2017가합408489",
+      "title": "수원지방법원 성남지원 2020. 1. 10. 선고 2017가합408489 판결",
+      "provenance": "mirror",
+      "providerName": "케이스노트 공개 판결문 전재",
+      "sourceUrl": "https://casenote.kr/수원지방법원성남지원/2017가합408489",
+      "assetPath": "official-cases/s-case-a38b765a44f7.pdf",
+      "coverage": "partial",
+      "coverageNote": "공개 전재문의 주문·이유·재판부 서명·표 5개·각주 5개를 수록했습니다. 원출처가 별지 생략을 명시하여 부분 사본으로 표시합니다. 법원 발급 PDF 원본은 아닙니다.",
+      "retrievedAt": "2026-10-24",
+      "sha256": "bdd30f7d3f8e42d841e58ee26b79f09d296ece2e41c7d4df2c7de3dc71793254",
+      "kind": "pdf",
+      "pages": 8
     },
     {
       "sourceId": "s-case-04a83141390e",
       "caseNumber": "2023구합20417",
       "title": "부산지방법원 2023. 9. 8. 선고 2023구합20417 판결",
-      "provenance": "mirror",
-      "providerName": "택스캔버스 공개 판례 전재",
-      "sourceUrl": "https://www.taxcanvas.kr/core/case/000000000000635270",
+      "provenance": "official",
+      "providerName": "국세청 국세법령정보시스템",
       "assetPath": "official-cases/s-case-04a83141390e.txt",
       "coverage": "partial",
-      "coverageNote": "공식 국가기관에서 직접 받은 판결문이 아닌 전문 서비스 전재임. 주문·당사자·판단이유·결론은 확인되지만 판사 서명과 별지 법령 전문은 보이지 않아 부분사본으로 분류. 전문 확보로 표시하지 않음.",
+      "coverageNote": "국세청 공개본의 주문·이유·결론을 수록했습니다. 공개 HWP와 HTML에는 재판부 서명 및 별지가 없어 전문으로 표시하지 않습니다.",
       "retrievedAt": "2026-10-24",
-      "sha256": "76d7598c8b745fb9b67d6f490da3e394b0d10e46353c02f43b4180ca8a80b4d2",
+      "sha256": "bbfc90c73bbe30e0f01d15a5b74c16926c22f4b66776f4308cc8eb97ca74876d",
       "noteIds": [
         "fn-135"
       ],
-      "paragraphIds": []
+      "paragraphIds": [],
+      "officialUrl": "https://taxlaw.nts.go.kr/pd/USEPDA002P.do?ntstDcmId=000000000000635270"
+    },
+    {
+      "sourceId": "s-case-00cd1faa1bac",
+      "noteIds": [
+        "fn-117"
+      ],
+      "paragraphIds": [],
+      "caseNumber": "2021가합547069",
+      "title": "서울중앙지방법원 2024. 7. 3. 선고 2021가합547069 판결",
+      "provenance": "mirror",
+      "providerName": "LBOX 공개 판결문 전재 페이지",
+      "sourceUrl": "https://lbox.kr/case/서울중앙지방법원/2021가합547069",
+      "assetPath": "official-cases/s-case-00cd1faa1bac.pdf",
+      "coverage": "full",
+      "coverageNote": "공개 판결문의 본문·표·별지 이미지 33개를 함께 수록한 열람용 PDF입니다. 법원 발급 PDF 원본은 아닙니다.",
+      "retrievedAt": "2026-10-24",
+      "sha256": "3cdf985fead4d9fb625387c0dce64711681fe4979d4f54b79adbfc494d658c87",
+      "kind": "pdf",
+      "pages": 40
+    },
+    {
+      "sourceId": "s-case-4d7244d1f09f",
+      "noteIds": [
+        "fn-031",
+        "fn-032"
+      ],
+      "paragraphIds": [],
+      "caseNumber": "2012다13590",
+      "title": "대법원 2012. 5. 9. 선고 2012다13590 판결",
+      "provenance": "mirror",
+      "providerName": "케이스노트 공개 판결문 전재",
+      "sourceUrl": "https://casenote.kr/대법원/2012다13590",
+      "assetPath": "official-cases/s-case-4d7244d1f09f.txt",
+      "coverage": "full",
+      "coverageNote": "공개 전재문의 주문·이유·재판부 서명을 수록했습니다. 법원 발급 원본과의 대조는 하지 못했습니다.",
+      "retrievedAt": "2026-10-24",
+      "sha256": "54381873519a3ea683b6a52b6d066bdbc92d3bdcaaefc5261790743f39ed0bf7"
     }
   ],
   "confirmedExistingSourceRefs": [
@@ -718,18 +757,6 @@
   ],
   "unavailableCaseRefs": [
     {
-      "sourceId": "s-case-4d7244d1f09f",
-      "caseNumber": "2012다13590",
-      "title": "대법원 2012. 5. 9. 선고 2012다13590 판결",
-      "noteIds": [
-        "fn-031",
-        "fn-032"
-      ],
-      "paragraphIds": [],
-      "reason": "공식 공개 전문을 확보하지 못했습니다. 검색 결과나 다른 자료의 인용은 판결문 전문을 대신하지 않습니다.",
-      "searchUrl": "https://www.law.go.kr/"
-    },
-    {
       "sourceId": "s-case-cff5879846c8",
       "caseNumber": "97마1002",
       "title": "대법원 1997. 6. 19.자 97마1002 결정",
@@ -746,17 +773,6 @@
       "title": "수원고등법원 2020. 10. 15. 선고 2020나11380 판결",
       "noteIds": [
         "fn-114"
-      ],
-      "paragraphIds": [],
-      "reason": "공식 공개 전문을 확보하지 못했습니다. 검색 결과나 다른 자료의 인용은 판결문 전문을 대신하지 않습니다.",
-      "searchUrl": "https://www.law.go.kr/"
-    },
-    {
-      "sourceId": "s-case-00cd1faa1bac",
-      "caseNumber": "2021가합547069",
-      "title": "서울중앙지방법원 2024. 7. 3. 선고 2021가합547069 판결",
-      "noteIds": [
-        "fn-117"
       ],
       "paragraphIds": [],
       "reason": "공식 공개 전문을 확보하지 못했습니다. 검색 결과나 다른 자료의 인용은 판결문 전문을 대신하지 않습니다.",

@@ -121,15 +121,57 @@ test('local asset selection covers only the reviewed IDs and respects same-origi
   assert.throws(()=>officialCaseAssetUrl(first.sourceId,supplement,'file:///C:/private/'));
 });
 
-test('every bundled judgment file matches the reviewed hash and contains the cited case number',()=>{
+test('every bundled judgment file matches the reviewed hash and text copies contain the cited case number',()=>{
   const inventory=validateOfficialCases(JSON.parse(readFileSync(new URL('../src/official-cases.json',import.meta.url),'utf8')));
   const paragraphIds=new Set(JSON.parse(readFileSync(new URL('../src/paragraph-catalog.json',import.meta.url),'utf8')).paragraphs.map(p=>p.id));
   for(const item of [...inventory.cases,...inventory.confirmedExistingSourceRefs||[],...inventory.unavailableCaseRefs||[]])for(const id of item.paragraphIds||[])assert.ok(paragraphIds.has(id),id+' is a paragraph in this manuscript');
   for(const item of inventory.cases){
     const data=readFileSync(new URL('../public/'+item.assetPath,import.meta.url)),text=data.toString('utf8');
     assert.equal(createHash('sha256').update(data).digest('hex'),item.sha256,item.sourceId);
+    if(item.kind==='pdf'){assert.equal(data.subarray(0,5).toString(),'%PDF-');continue;}
     assert.ok(text.length>100,item.sourceId+' must contain judgment text');
     assert.ok(text.replace(/\s/g,'').includes(item.caseNumber.replace(/\s/g,'')),item.sourceId+' case identity');
     assert.doesNotMatch(text,/^\s*(?:<!doctype html|<html)/i,'reader stores extracted text, not executable HTML');
+  }
+});
+
+test('reviewed PDFs preserve source identity and pages while rejecting wrong extensions, page counts, and unreviewed hosts',()=>{
+  const pdf={...first,kind:'pdf',pages:40,assetPath:'official-cases/s-case-existing.pdf',provenance:'mirror',providerName:'LBOX 공개 판결문',officialUrl:undefined,sourceUrl:'https://lbox.kr/case/court/2021가합547069'};
+  const inventory={...supplement,cases:[pdf]},merged=mergeOfficialCases(manifest,inventory,'ysg-20261023');
+  assert.equal(merged.sources[1].kind,'pdf');assert.equal(merged.sources[1].pages,40);
+  assert.equal(merged.sources[1].id,'s-case-existing');assert.deepEqual(merged.sources[1].cards,manifest.sources[1].cards);
+  assert.equal(merged.notes[0].sourceRefs[1].locatorStatus,'exact-page-unconfirmed');
+  assert.doesNotMatch(merged.notes[0].sourceRefs[1].locatorMessage,/텍스트/);
+  assert.equal(officialCaseAssetUrl(pdf.sourceId,inventory,'https://ysg.lawinus.org/'),'https://ysg.lawinus.org/official-cases/s-case-existing.pdf');
+  assert.equal(officialCaseUrl('https://taxlaw.nts.go.kr/pd/USEPDA002P.do'),'https://taxlaw.nts.go.kr/pd/USEPDA002P.do');
+  for(const url of ['https://taxlaw.nts.go.kr.evil.test/','https://other.nts.go.kr/','http://taxlaw.nts.go.kr/'])assert.equal(officialCaseUrl(url),null);
+  for(const change of [{kind:'image'},{pages:undefined},{pages:0},{pages:1.5},{pages:5001},{assetPath:'official-cases/s-case-other.pdf'},{assetPath:'official-cases/s-case-existing.txt'},{sourceUrl:'https://lbox.kr.evil.test/case'},{sourceUrl:'http://lbox.kr/case'}])assert.throws(()=>validateOfficialCases({...inventory,cases:[{...pdf,...change}]}));
+  assert.throws(()=>validateOfficialCases({...supplement,cases:[{...first,pages:40}]}));
+  assert.equal(judgmentSourceUrl({...pdf,sourceUrl:'https://casenote.kr/court/case'}),'https://casenote.kr/court/case');
+});
+
+test('published PDF reader opens both reviewed reproductions with all pages and embedded judgment images',async()=>{
+  const legacy=new URL('../public/vendor/pdfjs/legacy-6.4.299/',import.meta.url);
+  await import(new URL('pdf.compat.mjs',legacy));
+  const pdfjs=await import(new URL('pdf.mjs',legacy));
+  pdfjs.GlobalWorkerOptions.workerSrc=new URL('pdf.worker.bootstrap.mjs',legacy).href;
+  const inventory=JSON.parse(readFileSync(new URL('../src/official-cases.json',import.meta.url),'utf8'));
+  const expected={'2021가합547069':{pages:40,images:33,judgePage:20,judge:'최규연',coverage:'full'},'2017가합408489':{pages:8,images:5,judgePage:7,judge:'김수경',coverage:'partial'}};
+  for(const item of inventory.cases.filter(x=>x.kind==='pdf')){
+    const e=expected[item.caseNumber];assert.ok(e,'PDF must have independent case review');
+    const task=pdfjs.getDocument({data:new Uint8Array(readFileSync(new URL('../public/'+item.assetPath,import.meta.url)))});
+    try {
+      const doc=await task.promise;assert.equal(doc.numPages,e.pages);assert.equal(item.pages,e.pages);assert.equal(item.coverage,e.coverage);
+      let images=0,allText='';
+      for(let n=1;n<=doc.numPages;n++){
+        const page=await doc.getPage(n),text=(await page.getTextContent()).items.map(x=>x.str||'').join('');
+        if(n===1)assert.ok(text.includes(item.caseNumber));
+        if(n===e.judgePage)assert.ok(text.includes(e.judge));
+        const ops=await page.getOperatorList();images+=ops.fnArray.filter(fn=>fn===pdfjs.OPS.paintImageXObject||fn===pdfjs.OPS.paintInlineImageXObject).length;
+        allText+=text;
+      }
+      assert.equal(images,e.images);assert.match(allText,/각주/);
+      if(item.coverage==='partial')assert.match(allText,/별지\s*생략/);
+    } finally {await task.destroy();}
   }
 });

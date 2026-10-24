@@ -7,6 +7,8 @@ export type OfficialCase = {
   provenance?: 'official'|'mirror';
   providerName?: string;
   assetPath: string;
+  kind?: 'text'|'pdf';
+  pages?: number;
   coverage: 'full'|'partial';
   coverageNote?: string;
   retrievedAt: string;
@@ -36,7 +38,7 @@ export function officialCaseUrl(value:unknown):string|null {
   if(typeof value!=='string')return null;
   try {
     const url=new URL(value);
-    const official=['law.go.kr','scourt.go.kr','ccourt.go.kr'].some(host=>url.hostname===host||url.hostname.endsWith('.'+host));
+    const official=url.hostname==='taxlaw.nts.go.kr'||['law.go.kr','scourt.go.kr','ccourt.go.kr'].some(host=>url.hostname===host||url.hostname.endsWith('.'+host));
     return official&&url.protocol==='https:'&&!url.username&&!url.password&&!url.port?url.href:null;
   } catch { return null; }
 }
@@ -47,7 +49,7 @@ export function judgmentSourceUrl(item:OfficialCase):string|null {
   try {
     const url=new URL(item.sourceUrl);
     // These specific archives were checked while acquiring the judgment copies.
-    const archive=['rivistataf.eu','www.rivistataf.eu','trusts.it','www.trusts.it','uniset.ca','www.uniset.ca','taxcanvas.kr','www.taxcanvas.kr','lawcafe24.com','www.lawcafe24.com'].includes(url.hostname);
+    const archive=['rivistataf.eu','www.rivistataf.eu','trusts.it','www.trusts.it','uniset.ca','www.uniset.ca','taxcanvas.kr','www.taxcanvas.kr','lawcafe24.com','www.lawcafe24.com','lbox.kr','casenote.kr'].includes(url.hostname);
     const protocol=url.protocol==='https:'||url.protocol==='http:'&&['lawcafe24.com','www.lawcafe24.com'].includes(url.hostname);
     return archive&&protocol&&!url.username&&!url.password&&!url.port?url.href:null;
   } catch {return null;}
@@ -65,7 +67,9 @@ export function validateOfficialCases(value:unknown):OfficialCaseSupplement {
   const ids=new Set<string>();
   for(const item of v.cases) {
     if(!item||!sourceIdPattern.test(item.sourceId)||ids.has(item.sourceId)
-      ||item.assetPath!==`official-cases/${item.sourceId}.txt`
+      ||item.assetPath!==`official-cases/${item.sourceId}.${item.kind==='pdf'?'pdf':'txt'}`
+      ||item.kind!==undefined&&!['text','pdf'].includes(item.kind)
+      ||(item.kind==='pdf'?(!Number.isInteger(item.pages)||item.pages!<1||item.pages!>5000):item.pages!==undefined)
       ||typeof item.caseNumber!=='string'||!item.caseNumber.trim()||item.caseNumber.length>100
       ||typeof item.title!=='string'||!item.title.trim()
       ||!judgmentSourceUrl(item)||!shaPattern.test(item.sha256)
@@ -98,12 +102,12 @@ export function validateOfficialCases(value:unknown):OfficialCaseSupplement {
   return v;
 }
 
-// Only exact, reviewed text paths in the bundled inventory can bypass Storage.
+// Only exact, reviewed document paths in the bundled inventory can bypass Storage.
 // The source ID is unchanged, so existing source memos retain their anchors.
 export function officialCaseAssetUrl(id:string,supplement:OfficialCaseSupplement,baseUrl:string):string|null {
   const item=supplement.cases.find(entry=>entry.sourceId===id);
   if(!item)return null;
-  if(!sourceIdPattern.test(id)||item.assetPath!==`official-cases/${id}.txt`)throw new Error('허용되지 않은 판례 파일 경로입니다.');
+  if(!sourceIdPattern.test(id)||item.kind!==undefined&&!['text','pdf'].includes(item.kind)||item.assetPath!==`official-cases/${id}.${item.kind==='pdf'?'pdf':'txt'}`)throw new Error('허용되지 않은 판례 파일 경로입니다.');
   const base=new URL(baseUrl),url=new URL('./'+item.assetPath,base);
   if(!['https:','http:'].includes(base.protocol)||url.origin!==base.origin)throw new Error('허용되지 않은 판례 파일 주소입니다.');
   return url.href;
@@ -144,7 +148,7 @@ export function mergeOfficialCases<T extends Manifest>(manifest:T,supplement:Off
   }
   const byId=new Map(supplement.cases.map(item=>[item.sourceId,item]));
   const withCase=(source:Source,item:OfficialCase):Source=>({
-    ...source,title:item.title,kind:'text',available:true,pages:null,officialUrl:judgmentSourceUrl(item),
+    ...source,title:item.title,kind:item.kind||'text',available:true,pages:item.kind==='pdf'?item.pages:null,officialUrl:judgmentSourceUrl(item),
     displayMode:item.coverage==='full'?'fulltext':'excerpt',displayNotice:officialCaseNotice(item),
     noteIds:[...new Set([...(source.noteIds||[]),...item.noteIds])],
     verifiedParagraphIds:[...new Set([...(source.verifiedParagraphIds||[]),...(item.paragraphIds||[])])],
@@ -173,7 +177,7 @@ export function mergeOfficialCases<T extends Manifest>(manifest:T,supplement:Off
       const index=sourceRefs.findIndex(ref=>ref.sourceId===item.sourceId);
       const verified={officialCaseVerified:item.provenance!=='mirror',caseIdentityVerified:true,caseSourceUrl:judgmentSourceUrl(item),officialCaseNumber:item.caseNumber,
         scope:'각주에 인용된 판례',finding:item.provenance==='mirror'?'인용된 판례와 사건 정보가 일치하는 판결문 보존 사본을 연결했습니다.':'사건번호가 일치하는 공식 판결문을 연결했습니다.',
-        limit:item.coverage==='partial'?item.coverageNote:'정확한 인용 대목은 판결문 본문에서 확인해 주세요.',evidenceStatus:item.provenance==='mirror'?'judgment-mirror-identity':'official-case-identity',locatorStatus:'not-paginated',locatorMessage:'텍스트로 수록한 판결문입니다. 인용된 대목을 본문에서 확인해 주세요.'};
+        limit:item.coverage==='partial'?item.coverageNote:'정확한 인용 대목은 판결문 본문에서 확인해 주세요.',evidenceStatus:item.provenance==='mirror'?'judgment-mirror-identity':'official-case-identity',locatorStatus:item.kind==='pdf'?'exact-page-unconfirmed':'not-paginated',locatorMessage:item.kind==='pdf'?'판결문 열람용 PDF입니다. 정확한 인용면은 본문에서 확인해 주세요.':'텍스트로 수록한 판결문입니다. 인용된 대목을 본문에서 확인해 주세요.'};
       if(index>=0)sourceRefs[index]={...sourceRefs[index],...(sourceRefs[index].caseIdentityVerified?{}:{originalEvidence:preserveEvidence(sourceRefs[index])}),...verified};
       else sourceRefs.push({sourceId:item.sourceId,...verified,highlightIds:[]});
     }
