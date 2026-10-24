@@ -2,5 +2,7 @@
   "supabaseUrl": "",
   "supabasePublishableKey": "",
   "storageBucket": "ysg-review-documents",
-  "datasetId": "ysg-20261023"
+  "datasetId": "ysg-20261024",
+  "authDatasetId": "ysg-20261023",
+  "sourceDatasetId": "ysg-20261023"
 }

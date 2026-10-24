@@ -80,6 +80,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .basis-bar { height: 40px; flex: 0 0 40px; display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 0 25px; background: #f5f1e9; border-bottom: 1px solid var(--review-line); font-size: calc(10px * var(--review-font-scale,1.5)); color: #766c61; }
 .basis-bar b { color: #4c443f; margin-right: 7px; font-weight: 700; }
 .basis-bar i { display: inline-block; width: 1px; height: 10px; background: #d5cabe; margin: 0 12px; vertical-align: middle; }
+.basis-bar .edition-summary { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 10px; }
+.basis-bar .edition-summary > b { color: var(--review-maroon-dark); margin-right: 0; }
+.basis-bar .previous-edition { padding: 3px 8px; border: 1px solid #c9b7b0; border-radius: 4px; background: #fff; white-space: nowrap; }
+@media (max-width:700px) { .basis-bar .edition-details { display: none; } }
 .app-error { flex: 0 0 auto; background: #fff0e7; color: #8a3f24; border-bottom: 1px solid #eac4ad; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; font-size: calc(12px * var(--review-font-scale,1.5)); }
 .app-error button { margin-left: 20px; flex: 0 0 auto; font-size: calc(20px * var(--review-font-scale,1.5)); line-height: 1; }
 .loading-screen { flex: 1; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 18px; text-align: center; padding: 40px; }

@@ -77,6 +77,18 @@ test('mismatched manuscript, absent note IDs and accidental new source IDs fail 
   assert.throws(()=>mergeOfficialCases(manifest,{...supplement,cases:[{...added,newSource:false}]},'ysg-20261023'));
 });
 
+test('reviewed manuscript editions are accepted while cross-edition overlays remain rejected',()=>{
+  const current={...supplement,datasetId:'ysg-20261024'};
+  assert.equal(validateOfficialCases(current),current);
+  assert.equal(validateOfficialCases(supplement),supplement);
+  assert.equal(mergeOfficialCases(manifest,current,'ysg-20261024').sources[1].available,true);
+  assert.throws(()=>mergeOfficialCases(manifest,current,'ysg-20261023'));
+  assert.throws(()=>mergeOfficialCases(manifest,supplement,'ysg-20261024'));
+  for(const datasetId of ['ysg-20261025','paper-20261024','ysg-20261024/../ysg-20261023','']){
+    assert.throws(()=>validateOfficialCases({...supplement,datasetId}));
+  }
+});
+
 test('only reviewed official hosts, exact local filenames and unique source/note IDs are accepted',()=>{
   assert.equal(validateOfficialCases(supplement),supplement);
   for(const officialUrl of ['https://law.go.kr.evil.example/a','https://evil.example/law.go.kr','http://www.law.go.kr/a','https://user:pass@www.law.go.kr/a','https://www.law.go.kr:8443/a','javascript:alert(1)','https://google.com/search']){

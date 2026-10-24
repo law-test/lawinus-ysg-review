@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "datasetId": "ysg-20261023",
-  "pdfSha256": "aaf680a1afc1d248e6982c8bfec0c161a084148776ec66283a0a0d0c103caea3",
+  "datasetId": "ysg-20261024",
+  "pdfSha256": "3bcb015317ea7a87c4bde08e40479ad2e570b1f6bf0def4efc362dde35e70fb1",
   "cases": [
     {
       "sourceId": "s-case-90daaafa1aba",
@@ -18,12 +18,12 @@
         "fn-028",
         "fn-038",
         "fn-047",
-        "fn-179"
+        "fn-180"
       ],
       "paragraphIds": [
-        "P0852",
-        "P0868",
-        "P0880"
+        "P0863",
+        "P0879",
+        "P0891"
       ]
     },
     {
@@ -39,7 +39,7 @@
         "fn-007",
         "fn-080",
         "fn-124",
-        "fn-128"
+        "fn-129"
       ],
       "paragraphIds": []
     },
@@ -57,11 +57,11 @@
         "fn-050",
         "fn-051",
         "fn-074",
-        "fn-181"
+        "fn-182"
       ],
       "paragraphIds": [
-        "P0850",
-        "P0870"
+        "P0861",
+        "P0881"
       ]
     },
     {
@@ -79,7 +79,7 @@
         "fn-033"
       ],
       "paragraphIds": [
-        "P0864"
+        "P0875"
       ]
     },
     {
@@ -164,7 +164,7 @@
       "sha256": "73ec09654bec541584d39fe518e9f828f07ff3f5fd20bb8c38b5a1f2735504e1",
       "noteIds": [
         "fn-036",
-        "fn-177"
+        "fn-178"
       ],
       "paragraphIds": []
     },
@@ -180,7 +180,7 @@
       "noteIds": [
         "fn-036",
         "fn-040",
-        "fn-176"
+        "fn-177"
       ],
       "paragraphIds": []
     },
@@ -201,10 +201,10 @@
         "fn-118"
       ],
       "paragraphIds": [
-        "P0832",
-        "P0845",
-        "P0855",
-        "P0873"
+        "P0843",
+        "P0856",
+        "P0866",
+        "P0884"
       ]
     },
     {
@@ -329,7 +329,7 @@
       "retrievedAt": "2026-10-24",
       "sha256": "8ee6754ea5837eed41696383993d11d54e49b3837674dc0c11a32575b29d00ce",
       "noteIds": [
-        "fn-133"
+        "fn-134"
       ],
       "paragraphIds": []
     },
@@ -343,7 +343,7 @@
       "retrievedAt": "2026-10-24",
       "sha256": "51c8e72cc748e0b70e7caf452179d3c258868d1ee0c2c2f6ae2e3f1f730042d7",
       "noteIds": [
-        "fn-144"
+        "fn-145"
       ],
       "paragraphIds": []
     },
@@ -357,7 +357,7 @@
       "retrievedAt": "2026-10-24",
       "sha256": "a7aaf89158e33c059d67c8e9c3b292cf4a314f640f438a51c4dc4b92a663a27a",
       "noteIds": [
-        "fn-144"
+        "fn-145"
       ],
       "paragraphIds": []
     },
@@ -371,7 +371,7 @@
       "retrievedAt": "2026-10-24",
       "sha256": "fd39ca30d351b8badb285d4f45f94cd90438227213e189e0644e0d15b6aa02d5",
       "noteIds": [
-        "fn-144"
+        "fn-145"
       ],
       "paragraphIds": []
     },
@@ -386,7 +386,7 @@
       "sha256": "198fadc494aeabb9e9f8de0eec34ac4199046b47351e6be9903219ec2727df6f",
       "noteIds": [
         "fn-104",
-        "fn-129"
+        "fn-130"
       ],
       "paragraphIds": []
     },
@@ -401,7 +401,7 @@
       "sha256": "959ab51e4d301c26863fd0528a0af7bb02929716a629b8541b44fb36d342c7ed",
       "noteIds": [
         "fn-104",
-        "fn-129"
+        "fn-130"
       ],
       "paragraphIds": []
     },
@@ -443,7 +443,8 @@
       "retrievedAt": "2026-10-24",
       "sha256": "4d725505480de7bd6314065fc5157b3b0f8ecbc909393d68042e04ea01ad1746",
       "noteIds": [
-        "fn-112"
+        "fn-112",
+        "fn-127"
       ],
       "paragraphIds": []
     },
@@ -473,7 +474,7 @@
       "noteIds": [
         "fn-123",
         "fn-124",
-        "fn-128"
+        "fn-129"
       ],
       "paragraphIds": []
     },
@@ -487,7 +488,7 @@
       "retrievedAt": "2026-10-24",
       "sha256": "b8594411b86126824399e2f75460f98bb4f39d1fe858605d12a4a597da6d637f",
       "noteIds": [
-        "fn-172"
+        "fn-173"
       ],
       "paragraphIds": []
     },
@@ -501,10 +502,10 @@
       "retrievedAt": "2026-10-24",
       "sha256": "46f26cbf7ba1ec1e5247d14d9e209e525ee3ca49ddd622af12feac4de26f1b98",
       "noteIds": [
-        "fn-183"
+        "fn-184"
       ],
       "paragraphIds": [
-        "P0854"
+        "P0865"
       ]
     },
     {
@@ -517,7 +518,7 @@
       "retrievedAt": "2026-10-24",
       "sha256": "acea6692b60f423486c295b54553aa283df6091f69c8a7c8363436d3ce8aab86",
       "noteIds": [
-        "fn-186"
+        "fn-187"
       ],
       "paragraphIds": []
     },
@@ -554,7 +555,7 @@
       "retrievedAt": "2026-10-24",
       "sha256": "814ba413911ec878de6fdb7accd06561244f7601c5c4cfb26ed4be58ae4aa6be",
       "noteIds": [
-        "fn-146"
+        "fn-147"
       ],
       "paragraphIds": [
         "P0615"
@@ -573,7 +574,7 @@
       "retrievedAt": "2026-10-24",
       "sha256": "e9520f4bce8b506b5a38f5e90c6170883ad0897f700b1610695b8c7b741fe701",
       "noteIds": [
-        "fn-149"
+        "fn-150"
       ],
       "paragraphIds": [
         "P0615"
@@ -610,7 +611,7 @@
       "retrievedAt": "2026-10-24",
       "sha256": "bbfc90c73bbe30e0f01d15a5b74c16926c22f4b66776f4308cc8eb97ca74876d",
       "noteIds": [
-        "fn-135"
+        "fn-136"
       ],
       "paragraphIds": [],
       "officialUrl": "https://taxlaw.nts.go.kr/pd/USEPDA002P.do?ntstDcmId=000000000000635270"
@@ -719,22 +720,22 @@
     {
       "sourceId": "s-3fb202eb49727047",
       "noteIds": [
-        "fn-133"
+        "fn-134"
       ],
       "paragraphIds": []
     },
     {
       "sourceId": "s-fa940a234b8bbacf",
       "noteIds": [
-        "fn-137"
+        "fn-138"
       ],
       "paragraphIds": []
     },
     {
       "sourceId": "s-e02ef6dd478978e3",
       "noteIds": [
-        "fn-146",
-        "fn-147"
+        "fn-147",
+        "fn-148"
       ],
       "paragraphIds": [
         "P0615"
@@ -743,7 +744,7 @@
     {
       "sourceId": "s-d128c0a0cf68b2cd",
       "noteIds": [
-        "fn-148"
+        "fn-149"
       ],
       "paragraphIds": []
     },

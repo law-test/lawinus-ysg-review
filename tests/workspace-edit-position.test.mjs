@@ -16,7 +16,7 @@ const bibliographyData=JSON.parse(readFileSync(new URL('../src/bibliography-link
 const realParagraphs=JSON.parse(readFileSync(new URL('../src/paragraph-catalog.json',import.meta.url),'utf8')).paragraphs;
 const realSources=JSON.parse(readFileSync(new URL('./fixtures/bibliography-sources.json',import.meta.url),'utf8')).sources;
 const paragraphs=[{id:'P0283',text:'원문[^1]',page:20,printed:1,heading:false,kind:'paragraph',rects:[],order:283}];
-paragraphs.push(...realParagraphs.filter(p=>['P0825','P0823','P0843','P0901'].includes(p.id)));
+paragraphs.push(...realParagraphs.filter(p=>['P0836','P0834','P0854','P0912'].includes(p.id)));
 const proposal={id:'P0283',page:20,page_end:86,priority:'권고',before:'원문[^1]',after:'수정문[^1]',reason:'수정 이유',applyText:'수정문[^1]'};
 const fixture={meta:{pageCount:211},pages:[],sources:[{id:'source-1',kind:'pdf',title:'원전',pages:220}],notes:[{id:'fn-001',number:1,page:20,text:'각주 원문',sourceRefs:[{sourceId:'source-1'}],clickTargets:[],noteHighlights:[]}]};
 const bibliographySourceIds=Object.values(bibliographyData.entries).flatMap(e=>[...e.sourceIds,...e.candidateSourceIds]);
@@ -82,29 +82,29 @@ test('restoring an original footnote keeps its revision for future saves without
 
 test('bibliography targets open the available original in both manuscript views and retain a separate editor',()=>{
  for(const mode of ['pdf','body']){
-  const h=harness(mode),sourceId=bibliographyData.entries.P0825.sourceIds[0];
-  const view=h.pdf()||h.body();(mode==='pdf'?view.props.onTarget:view.props.onParagraph)('P0825');h.render();
+  const h=harness(mode),sourceId=bibliographyData.entries.P0836.sourceIds[0];
+  const view=h.pdf()||h.body();(mode==='pdf'?view.props.onTarget:view.props.onParagraph)('P0836');h.render();
   assert.ok(h.nodes().some(n=>n.type===PdfPane&&n.props.id===sourceId));
   assert.match(h.render().props.className,/mobile-show-source/);
   assert.equal((h.pdf()||h.body()).props.page,86);
   const editButton=h.nodes().find(n=>n.type==='button'&&h.label(n)==='참고문헌 문안 수정');assert.ok(editButton);
-  editButton.props.onClick();h.render();assert.equal(h.editor('paragraph').props.targetId,'P0825');
+  editButton.props.onClick();h.render();assert.equal(h.editor('paragraph').props.targetId,'P0836');
  }
 });
 test('missing bibliography originals are explained and uncertain candidates are never automatically selected',()=>{
- for(const id of ['P0823','P0843','P0901']){
+ for(const id of ['P0834','P0854','P0912']){
   const h=harness();h.pdf().props.onTarget(id);h.render();
   assert.match(h.render().props.className,/mobile-show-metadata/);
   assert.equal(h.nodes().filter(n=>n.type===PdfPane&&n.props.id!=='thesis').length,0);
   assert.ok(h.nodes().some(n=>n.type==='button'&&h.label(n)==='참고문헌 문안 수정'));
   const content=h.label(h.render());
-  assert.match(content,id==='P0901'?/동일 문헌인지는 확인이 필요/:/원문 파일/);
-  if(id==='P0901')assert.ok(h.nodes().some(n=>n.type==='button'&&h.label(n).startsWith('연결 후보: ')));
+  assert.match(content,id==='P0912'?/동일 문헌인지는 확인이 필요/:/원문 파일/);
+  if(id==='P0912')assert.ok(h.nodes().some(n=>n.type==='button'&&h.label(n).startsWith('연결 후보: ')));
  }
 });
 
 test('opening an unrelated source memo clears the previous bibliography citation and edit target',()=>{
- const h=harness();h.pdf().props.onTarget('P0825');h.render();
+ const h=harness();h.pdf().props.onTarget('P0836');h.render();
  assert.ok(h.nodes().some(n=>n.props?.className==='citation-card bibliography-card'));
  h.pdf().props.onPin({id:'memo-source-other',anchorType:'source',noteId:null,sourceId:'source-1',page:42,x:null,y:null,text:'다른 원전의 메모',quote:'',visibility:'private',status:'open',revision:1,displayName:'검수',createdAt:'2026-10-24T00:00:00Z',editable:true});h.render();
  const source=h.nodes().find(n=>n.type===PdfPane&&n.props.id==='source-1');assert.ok(source);assert.equal(source.props.page,42);

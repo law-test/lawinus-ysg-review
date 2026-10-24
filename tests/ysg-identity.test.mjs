@@ -31,7 +31,7 @@ test('template profile and document assets are excluded from public bundle',()=>
 
 test('runtime config defaults isolate new review dataset and bucket',()=>{
   const config=validateReviewConfig({supabaseUrl:'https://exampleproject.supabase.co',supabasePublishableKey:'sb_publishable_fixture'});
-  assert.equal(config.datasetId,'ysg-20261023');assert.equal(config.storageBucket,'ysg-review-documents');
+  assert.equal(config.datasetId,'ysg-20261024');assert.equal(config.storageBucket,'ysg-review-documents');
 });
 
 test('library includes unlinked sources and missing originals are disclosed',()=>{

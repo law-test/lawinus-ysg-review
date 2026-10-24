@@ -32,6 +32,7 @@ type Note = {id:string;sourceRefs?:{sourceId:string;[key:string]:any}[];[key:str
 type Manifest = {meta:{pdfSha256?:string;[key:string]:any};sources:Source[];notes:Note[];[key:string]:any};
 const sourceIdPattern = /^s-[A-Za-z0-9_-]{1,100}$/;
 const shaPattern = /^[a-f0-9]{64}$/;
+const supportedDatasets = new Set(['ysg-20261023', 'ysg-20261024']);
 const validIds=(ids:unknown,pattern:RegExp):ids is string[]=>Array.isArray(ids)&&ids.every(id=>typeof id==='string'&&pattern.test(id))&&new Set(ids).size===ids.length;
 
 export function officialCaseUrl(value:unknown):string|null {
@@ -63,7 +64,7 @@ function officialSearchUrl(value:unknown):string|null {
 
 export function validateOfficialCases(value:unknown):OfficialCaseSupplement {
   const v=value as OfficialCaseSupplement;
-  if(!v||v.schemaVersion!==1||v.datasetId!=='ysg-20261023'||!shaPattern.test(v.pdfSha256)||!Array.isArray(v.cases))throw new Error('공식 판례 목록의 기준본이 올바르지 않습니다.');
+  if(!v||v.schemaVersion!==1||!supportedDatasets.has(v.datasetId)||!shaPattern.test(v.pdfSha256)||!Array.isArray(v.cases))throw new Error('공식 판례 목록의 기준본이 올바르지 않습니다.');
   const ids=new Set<string>();
   for(const item of v.cases) {
     if(!item||!sourceIdPattern.test(item.sourceId)||ids.has(item.sourceId)

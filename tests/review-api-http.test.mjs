@@ -20,7 +20,7 @@ test('Supabase client boundary: public reads, single anonymous initialization, o
     calls.push({url:url.href,method:init.method||'GET',body,headers:new Headers(init.headers)});
     if (url.pathname === '/config.json') {
       configReads++;
-      return Response.json({supabaseUrl:'https://abcdefghijklmnopqrst.supabase.co',supabasePublishableKey:'sb_publishable_fixture',storageBucket:'ysg-review-documents',datasetId:'ysg-20261023'});
+      return Response.json({supabaseUrl:'https://abcdefghijklmnopqrst.supabase.co',supabasePublishableKey:'sb_publishable_fixture',storageBucket:'ysg-review-documents',datasetId:officialCases.datasetId,authDatasetId:'ysg-20261023',sourceDatasetId:'ysg-20261023'});
     }
     if (url.pathname.endsWith('/manifest.json')) return Response.json(manifest);
     if (url.pathname === '/auth/v1/signup') {
@@ -47,7 +47,8 @@ test('Supabase client boundary: public reads, single anonymous initialization, o
       assert.equal(adapter.assetUrl(item.sourceId),'https://ysg.lawinus.org/'+item.assetPath);
     }
     assert.equal(signups,0,'document lookup must not create identities');
-    assert.equal(adapter.assetUrl('thesis'),'https://abcdefghijklmnopqrst.supabase.co/storage/v1/object/public/ysg-review-documents/ysg-20261023/human.pdf');
+    assert.equal(adapter.assetUrl('thesis'),`https://abcdefghijklmnopqrst.supabase.co/storage/v1/object/public/ysg-review-documents/${officialCases.datasetId}/human.pdf`);
+    assert.equal(adapter.assetUrl('s-existing'),'https://abcdefghijklmnopqrst.supabase.co/storage/v1/object/public/ysg-review-documents/ysg-20261023/assets/s-existing');
     assert.throws(()=>adapter.assetUrl('../private'));
     const sessions=await Promise.all([adapter.initializeReviewSession(),adapter.initializeReviewSession(),adapter.initializeReviewSession()]);
     assert.equal(signups,1,'concurrent initialization must create one identity');
@@ -58,7 +59,7 @@ test('Supabase client boundary: public reads, single anonymous initialization, o
     assert.equal(signups,1,'existing session must be reused');
     await adapter.api('/api/notes',{method:'POST',body:JSON.stringify({text:'메모'})});
     const create=calls.find(c=>c.url.endsWith('/paper_review_create_note'));
-    assert.equal(create.body.p_dataset_id,'ysg-20261023');
+    assert.equal(create.body.p_dataset_id,officialCases.datasetId);
     assert.equal(create.headers.get('authorization'),`Bearer ${token}`);
     assert.deepEqual(create.body.p_input,{text:'메모'});
     await assert.rejects(()=>adapter.api(`/api/notes/${uid}`,{method:'PATCH',body:JSON.stringify({revision:1,text:'변경'})}),/다른 화면/);

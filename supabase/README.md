@@ -3,7 +3,8 @@
 사용자가 선택한 운영 방식은 기존 Supabase 프로젝트 안에 별도의 자료 묶음과 파일 저장소를 추가하는 방식이다.
 
 - 프로젝트: `cefaekvclooytgjkcqum`
-- 자료 묶음: `ysg-20261023`
+- 최신 자료 묶음: `ysg-20261024` (215쪽·각주189개)
+- 이전 자료 묶음: `ysg-20261023` (211쪽·각주188개, 원문·메모·수정 이력 보존)
 - 파일 저장소: `ysg-review-documents`
 - 원고·각주 등록은 기존 `paper_review_private.seed_shared_catalog` 함수를 사용한다.
 
@@ -11,7 +12,11 @@
 
 ## 입력과 생성
 
+판본별로 원문 카탈로그를 구분한다. 이미 등록된 카탈로그는 변경·삭제하지 않으며, 이전판 복원 이력이 새 제출본을 덮어쓰지 않도록 새 판본에 이전 시험 이력을 복제하지 않는다. 이전판은 `/editions/20261023/`에서 접근한다.
+
 검증된 원고 메타데이터 JSON은 `title`, `pdfSha256`, `sourceHwpxSha256`, `pageCount`, `footnoteCount`를 포함한다. 카탈로그 JSON은 원고에서 추출한 `kind`, `targetId`, `originalText`, `page`, 선택적인 `printedPage`, `label`의 배열이다. 실제 PDF가 만들어지고 쪽수·해시가 확정된 뒤 생성한다.
+
+아래 도구는 `ysg-20261023` 최초 등록용이다. 새 판본용 SQL은 새 식별자·검증된 메타데이터·전체 원문을 사용하도록 별도로 준비하고, 이 명령을 최신본에 그대로 재실행하지 않는다.
 
 ```powershell
 node supabase/prepare-additive-seed.mjs metadata.json catalog.json output-directory
@@ -21,7 +26,7 @@ node supabase/prepare-additive-seed.mjs metadata.json catalog.json output-direct
 
 실행 전에 운영 프로젝트가 위 프로젝트와 일치하는지 확인하고, 기존 사이트의 원문·현재수정·전체이력과 관련 설정을 별도 수집한다. 실행 뒤에는 기존 데이터가 그대로인지 대조하고, YSG 원문·각주 전체 개수와 해시를 생성 자료와 비교한다. 운영 메모나 공통 본문에 시험값을 저장하지 않는다.
 
-원문 PDF·자료·목록·프로필은 새 저장소의 `ysg-20261023/` 아래 업로드한다. 관리자 비밀키는 브라우저 설정이나 저장소에 넣지 않는다. 브라우저의 `config.json`은 기존 프로젝트의 공개키와 새 자료 묶음·저장소 식별자만 사용한다. 기존 프로젝트의 파일 크기 제한은 변경하지 않는다.
+최신 원문 PDF·목록·프로필은 기존 저장소의 `ysg-20261024/` 아래 업로드한다. 기존 참고문헌 파일은 `ysg-20261023/assets/`에 보존하고 `sourceDatasetId: "ysg-20261023"` 설정으로 재사용한다. `authDatasetId: "ysg-20261023"`은 기존 브라우저의 SDK 방문자 연결을 그대로 이용하며 인증정보를 추출·복사하지 않는다. `datasetId: "ysg-20261024"`는 최신 원고와 공통 편집의 기준본이다. 관리자 비밀키는 브라우저 설정이나 저장소에 넣지 않는다. 기존 프로젝트의 파일 크기 제한은 변경하지 않는다.
 
 ## 로컬 검증
 

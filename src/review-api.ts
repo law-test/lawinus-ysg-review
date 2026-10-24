@@ -4,7 +4,7 @@ import {mergeOfficialCases,officialCaseAssetUrl,validateOfficialCases} from './o
 
 const officialCases=validateOfficialCases(officialCaseData);
 
-export type ReviewConfig = { supabaseUrl: string; supabasePublishableKey: string; storageBucket: string; datasetId: string };
+export type ReviewConfig = { supabaseUrl: string; supabasePublishableKey: string; storageBucket: string; datasetId: string; authDatasetId?: string; sourceDatasetId?: string };
 export type ReviewNote = { id: string; datasetId: string; anchorType: string; page: number|null; noteId: string|null; sourceId: string|null; x: number|null; y: number|null; quote: string; text: string; visibility: 'private'|'shared'; status: 'open'|'resolved'; revision: number; displayName: string; createdAt: string; updatedAt: string; editable: boolean };
 type NoteResult = { notes: ReviewNote[]; truncated: boolean };
 type SessionResult = { user: { displayName: string; mode: 'guest'|'account' } };
@@ -28,9 +28,29 @@ export function validateReviewConfig(value: unknown): ReviewConfig {
     } catch { throw new Error('공개용 Supabase publishable 또는 anon 키를 설정해 주세요.'); }
   }
   const storageBucket = typeof v.storageBucket === 'string' ? v.storageBucket : 'ysg-review-documents';
-  const datasetId = typeof v.datasetId === 'string' ? v.datasetId : 'ysg-20261023';
+  const datasetId = typeof v.datasetId === 'string' ? v.datasetId : 'ysg-20261024';
   if (!/^[a-z0-9][a-z0-9-]{0,62}$/.test(storageBucket) || !/^[a-z0-9][a-z0-9-]{0,79}$/.test(datasetId)) throw new Error('자료 저장소·기준본 식별자가 올바르지 않습니다.');
-  return { supabaseUrl: url, supabasePublishableKey: key, storageBucket, datasetId };
+  const editionOptions: Pick<ReviewConfig, 'authDatasetId'|'sourceDatasetId'> = {};
+  for (const field of ['authDatasetId', 'sourceDatasetId'] as const) {
+    if (v[field] !== undefined) {
+      if (typeof v[field] !== 'string' || !/^[a-z0-9][a-z0-9-]{0,79}$/.test(v[field])) throw new Error('이전 기준본 연결 식별자가 올바르지 않습니다.');
+      editionOptions[field] = v[field];
+    }
+  }
+  return { supabaseUrl: url, supabasePublishableKey: key, storageBucket, datasetId, ...editionOptions };
+}
+
+// Keep the original visitor identity when a new manuscript gets its own catalog.
+// The SDK continues to own session storage; no token is read or copied here.
+export function reviewAuthStorageKey(config: ReviewConfig): string {
+  return `paper-review-${new URL(config.supabaseUrl).hostname}-${config.authDatasetId || config.datasetId}`;
+}
+
+export function reviewAssetStorageKey(config: ReviewConfig, id: string): string {
+  if (id === 'human' || id === 'thesis') return `${config.datasetId}/human.pdf`;
+  if (id === 'manifest' || id === 'profile') return `${config.datasetId}/${id}.json`;
+  if (/^s-[a-zA-Z0-9_-]{1,100}$/.test(id)) return `${config.sourceDatasetId || config.datasetId}/assets/${id}`;
+  throw new Error('허용되지 않은 자료 식별자입니다.');
 }
 
 export function loadReviewConfig(): Promise<ReviewConfig> {
@@ -41,7 +61,7 @@ export function loadReviewConfig(): Promise<ReviewConfig> {
     config = validateReviewConfig(await response.json());
     client = createClient(config.supabaseUrl, config.supabasePublishableKey, {
       auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false,
-        storageKey: `paper-review-${new URL(config.supabaseUrl).hostname}-${config.datasetId}` },
+        storageKey: reviewAuthStorageKey(config) },
     });
     return config;
   })().catch(error => { config = undefined; configPromise = undefined; throw error; });
@@ -88,12 +108,7 @@ export function assetUrl(id: string): string {
   const { config, client } = connection();
   const officialUrl=officialCaseAssetUrl(id,officialCases,document.baseURI);
   if(officialUrl)return officialUrl;
-  let key: string;
-  if (id === 'human' || id === 'thesis') key = 'human.pdf';
-  else if (id === 'manifest' || id === 'profile') key = `${id}.json`;
-  else if (/^s-[a-zA-Z0-9_-]{1,100}$/.test(id)) key = `assets/${id}`;
-  else throw new Error('허용되지 않은 자료 식별자입니다.');
-  return client.storage.from(config.storageBucket).getPublicUrl(`${config.datasetId}/${key}`).data.publicUrl;
+  return client.storage.from(config.storageBucket).getPublicUrl(reviewAssetStorageKey(config,id)).data.publicUrl;
 }
 
 async function publicJson(id: 'manifest'|'profile') {
