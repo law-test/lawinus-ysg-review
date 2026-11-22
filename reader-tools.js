@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const dictionaryURL = new URL('/tools/glossary/index.html', location.origin).href;
+  const dictionaryURL = new URL('/tools/glossary/index.html?v=ysg-20261121-005', location.origin).href;
   const explicit = new URLSearchParams(location.search);
   if (explicit.get('view') === 'glossary' && explicit.get('dictionary') === '1') {
     location.replace(dictionaryURL);

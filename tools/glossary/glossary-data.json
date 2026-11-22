@@ -1,0 +1,2491 @@
+{
+  "edition": "ysg-20261121",
+  "title": "여성곤 논문 핵심용어사전",
+  "sourceTitle": "여성곤, 민사신탁의 법리에 관한 연구 · 2차심사 수정본 · 2026. 11. 21.",
+  "scope": "최신 논문의 본문·각주·영문초록에 실제 등장하는 핵심 외국어 용어를 선별했습니다. 모든 외국어 단어를 수록한 사전은 아닙니다.",
+  "meaningScope": "뜻과 설명은 이 논문에서 사용하는 문맥을 간략하게 정리한 것입니다. 별도의 학습 예문이나 발음 표기는 만들지 않았습니다.",
+  "entries": [
+    {
+      "id": "ysg-term-001",
+      "term": "trust",
+      "language": "en",
+      "meaning": "신탁",
+      "contextMeaning": "재산을 정해진 목적에 묶어 그 목적에 따라 관리하게 하는 관계.",
+      "category": "신탁의 기본구조",
+      "forms": [
+        "trust",
+        "trusts"
+      ],
+      "frequency": 96,
+      "occurrences": [
+        {
+          "page": 16,
+          "printed": "7",
+          "kind": "body",
+          "paragraphId": "P0155"
+        },
+        {
+          "page": 18,
+          "printed": "9",
+          "kind": "body",
+          "paragraphId": "P0162"
+        },
+        {
+          "page": 79,
+          "printed": "70",
+          "kind": "body",
+          "paragraphId": "P0401"
+        },
+        {
+          "page": 80,
+          "printed": "71",
+          "kind": "body",
+          "paragraphId": "P0401"
+        },
+        {
+          "page": 88,
+          "printed": "79",
+          "kind": "body",
+          "paragraphId": "P0422"
+        },
+        {
+          "page": 94,
+          "printed": "85",
+          "kind": "body",
+          "paragraphId": "P0438"
+        },
+        {
+          "page": 130,
+          "printed": "121",
+          "kind": "body",
+          "paragraphId": "P0554"
+        },
+        {
+          "page": 136,
+          "printed": "127",
+          "kind": "body",
+          "paragraphId": "P0566"
+        },
+        {
+          "page": 140,
+          "printed": "131",
+          "kind": "body",
+          "paragraphId": "P0580"
+        },
+        {
+          "page": 150,
+          "printed": "141",
+          "kind": "body",
+          "paragraphId": "P0617"
+        },
+        {
+          "page": 201,
+          "printed": "192",
+          "kind": "abstract",
+          "paragraphId": "P0863"
+        },
+        {
+          "page": 201,
+          "printed": "192",
+          "kind": "abstract",
+          "paragraphId": "P0864"
+        },
+        {
+          "page": 201,
+          "printed": "192",
+          "kind": "abstract",
+          "paragraphId": "P0870"
+        },
+        {
+          "page": 202,
+          "printed": "193",
+          "kind": "abstract",
+          "paragraphId": "P0870"
+        },
+        {
+          "page": 202,
+          "printed": "193",
+          "kind": "abstract",
+          "paragraphId": "P0871"
+        },
+        {
+          "page": 202,
+          "printed": "193",
+          "kind": "abstract",
+          "paragraphId": "P0872"
+        },
+        {
+          "page": 203,
+          "printed": "194",
+          "kind": "abstract",
+          "paragraphId": "P0872"
+        },
+        {
+          "page": 203,
+          "printed": "194",
+          "kind": "abstract",
+          "paragraphId": "P0873"
+        },
+        {
+          "page": 203,
+          "printed": "194",
+          "kind": "abstract",
+          "paragraphId": "P0874"
+        },
+        {
+          "page": 204,
+          "printed": "195",
+          "kind": "abstract",
+          "paragraphId": "P0874"
+        },
+        {
+          "page": 204,
+          "printed": "195",
+          "kind": "abstract",
+          "paragraphId": "P0875"
+        },
+        {
+          "page": 205,
+          "printed": "196",
+          "kind": "abstract",
+          "paragraphId": "P0875"
+        },
+        {
+          "page": 205,
+          "printed": "196",
+          "kind": "abstract",
+          "paragraphId": "P0876"
+        },
+        {
+          "page": 26,
+          "printed": "17",
+          "kind": "note",
+          "noteNumber": 28
+        },
+        {
+          "page": 30,
+          "printed": "21",
+          "kind": "note",
+          "noteNumber": 31
+        },
+        {
+          "page": 47,
+          "printed": "38",
+          "kind": "note",
+          "noteNumber": 55
+        },
+        {
+          "page": 80,
+          "printed": "71",
+          "kind": "note",
+          "noteNumber": 90
+        },
+        {
+          "page": 86,
+          "printed": "77",
+          "kind": "note",
+          "noteNumber": 104
+        },
+        {
+          "page": 94,
+          "printed": "85",
+          "kind": "note",
+          "noteNumber": 122
+        },
+        {
+          "page": 97,
+          "printed": "88",
+          "kind": "note",
+          "noteNumber": 123
+        },
+        {
+          "page": 97,
+          "printed": "88",
+          "kind": "note",
+          "noteNumber": 124
+        },
+        {
+          "page": 140,
+          "printed": "131",
+          "kind": "note",
+          "noteNumber": 183
+        },
+        {
+          "page": 150,
+          "printed": "141",
+          "kind": "note",
+          "noteNumber": 199
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-002",
+      "term": "civil trust",
+      "language": "en",
+      "meaning": "민사신탁",
+      "contextMeaning": "이 논문에서는 신탁을 영업으로 하지 않는 수탁자가 맡는 신탁을 뜻한다.",
+      "category": "신탁의 기본구조",
+      "forms": [
+        "civil trust",
+        "civil trusts"
+      ],
+      "frequency": 8,
+      "occurrences": [
+        {
+          "page": 201,
+          "printed": "192",
+          "kind": "abstract",
+          "paragraphId": "P0863"
+        },
+        {
+          "page": 201,
+          "printed": "192",
+          "kind": "abstract",
+          "paragraphId": "P0870"
+        },
+        {
+          "page": 202,
+          "printed": "193",
+          "kind": "abstract",
+          "paragraphId": "P0871"
+        },
+        {
+          "page": 203,
+          "printed": "194",
+          "kind": "abstract",
+          "paragraphId": "P0873"
+        },
+        {
+          "page": 203,
+          "printed": "194",
+          "kind": "abstract",
+          "paragraphId": "P0874"
+        },
+        {
+          "page": 205,
+          "printed": "196",
+          "kind": "abstract",
+          "paragraphId": "P0875"
+        },
+        {
+          "page": 205,
+          "printed": "196",
+          "kind": "abstract",
+          "paragraphId": "P0876"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-003",
+      "term": "private trust",
+      "language": "en",
+      "meaning": "사익신탁",
+      "contextMeaning": "영미에서 공익신탁과 구별되는 사적 목적의 신탁. 논문의 민사신탁과 분류 기준이 다르다.",
+      "category": "신탁의 기본구조",
+      "forms": [
+        "private trust"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 16,
+          "printed": "7",
+          "kind": "body",
+          "paragraphId": "P0155"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-004",
+      "term": "settlor",
+      "language": "en",
+      "meaning": "위탁자",
+      "contextMeaning": "신탁을 설정하고 수익자와 신탁 목적 등을 정하는 사람.",
+      "category": "신탁의 당사자",
+      "forms": [
+        "settlor",
+        "settlors"
+      ],
+      "frequency": 5,
+      "occurrences": [
+        {
+          "page": 201,
+          "printed": "192",
+          "kind": "abstract",
+          "paragraphId": "P0870"
+        },
+        {
+          "page": 203,
+          "printed": "194",
+          "kind": "abstract",
+          "paragraphId": "P0873"
+        },
+        {
+          "page": 204,
+          "printed": "195",
+          "kind": "abstract",
+          "paragraphId": "P0874"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-005",
+      "term": "trustee",
+      "language": "en",
+      "meaning": "수탁자",
+      "contextMeaning": "신탁재산을 정해진 목적에 따라 관리하는 신탁의 당사자.",
+      "category": "신탁의 당사자",
+      "forms": [
+        "trustee",
+        "trustees"
+      ],
+      "frequency": 26,
+      "occurrences": [
+        {
+          "page": 89,
+          "printed": "80",
+          "kind": "body",
+          "paragraphId": "P0424"
+        },
+        {
+          "page": 93,
+          "printed": "84",
+          "kind": "body",
+          "paragraphId": "P0435"
+        },
+        {
+          "page": 201,
+          "printed": "192",
+          "kind": "abstract",
+          "paragraphId": "P0870"
+        },
+        {
+          "page": 202,
+          "printed": "193",
+          "kind": "abstract",
+          "paragraphId": "P0870"
+        },
+        {
+          "page": 202,
+          "printed": "193",
+          "kind": "abstract",
+          "paragraphId": "P0871"
+        },
+        {
+          "page": 202,
+          "printed": "193",
+          "kind": "abstract",
+          "paragraphId": "P0872"
+        },
+        {
+          "page": 203,
+          "printed": "194",
+          "kind": "abstract",
+          "paragraphId": "P0872"
+        },
+        {
+          "page": 203,
+          "printed": "194",
+          "kind": "abstract",
+          "paragraphId": "P0873"
+        },
+        {
+          "page": 204,
+          "printed": "195",
+          "kind": "abstract",
+          "paragraphId": "P0874"
+        },
+        {
+          "page": 204,
+          "printed": "195",
+          "kind": "abstract",
+          "paragraphId": "P0875"
+        },
+        {
+          "page": 205,
+          "printed": "196",
+          "kind": "abstract",
+          "paragraphId": "P0875"
+        },
+        {
+          "page": 205,
+          "printed": "196",
+          "kind": "abstract",
+          "paragraphId": "P0876"
+        },
+        {
+          "page": 93,
+          "printed": "84",
+          "kind": "note",
+          "noteNumber": 120
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-006",
+      "term": "beneficiary",
+      "language": "en",
+      "meaning": "수익자",
+      "contextMeaning": "위탁자가 정한 신탁의 이익을 받는 사람.",
+      "category": "신탁의 당사자",
+      "forms": [
+        "beneficiary",
+        "beneficiaries"
+      ],
+      "frequency": 8,
+      "occurrences": [
+        {
+          "page": 201,
+          "printed": "192",
+          "kind": "abstract",
+          "paragraphId": "P0870"
+        },
+        {
+          "page": 202,
+          "printed": "193",
+          "kind": "abstract",
+          "paragraphId": "P0872"
+        },
+        {
+          "page": 204,
+          "printed": "195",
+          "kind": "abstract",
+          "paragraphId": "P0874"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-007",
+      "term": "trust property",
+      "language": "en",
+      "meaning": "신탁재산",
+      "contextMeaning": "수탁자에게 귀속하면서 신탁 목적에 따라 관리되는 재산.",
+      "category": "신탁의 기본구조",
+      "forms": [
+        "trust property"
+      ],
+      "frequency": 11,
+      "occurrences": [
+        {
+          "page": 201,
+          "printed": "192",
+          "kind": "abstract",
+          "paragraphId": "P0864"
+        },
+        {
+          "page": 202,
+          "printed": "193",
+          "kind": "abstract",
+          "paragraphId": "P0870"
+        },
+        {
+          "page": 202,
+          "printed": "193",
+          "kind": "abstract",
+          "paragraphId": "P0871"
+        },
+        {
+          "page": 202,
+          "printed": "193",
+          "kind": "abstract",
+          "paragraphId": "P0872"
+        },
+        {
+          "page": 203,
+          "printed": "194",
+          "kind": "abstract",
+          "paragraphId": "P0873"
+        },
+        {
+          "page": 204,
+          "printed": "195",
+          "kind": "abstract",
+          "paragraphId": "P0874"
+        },
+        {
+          "page": 204,
+          "printed": "195",
+          "kind": "abstract",
+          "paragraphId": "P0875"
+        },
+        {
+          "page": 205,
+          "printed": "196",
+          "kind": "abstract",
+          "paragraphId": "P0875"
+        },
+        {
+          "page": 205,
+          "printed": "196",
+          "kind": "abstract",
+          "paragraphId": "P0876"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-008",
+      "term": "trust business",
+      "language": "en",
+      "meaning": "신탁업·영업으로 하는 신탁",
+      "contextMeaning": "민사신탁의 범위를 비영업수탁자를 기준으로 정할 때 대비하는 표현.",
+      "category": "신탁의 기본구조",
+      "forms": [
+        "trust business"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 201,
+          "printed": "192",
+          "kind": "abstract",
+          "paragraphId": "P0870"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-009",
+      "term": "self-declared trust",
+      "language": "en",
+      "meaning": "자기신탁",
+      "contextMeaning": "위탁자가 스스로 수탁자가 되어 재산을 신탁 목적에 구속하는 신탁.",
+      "category": "신탁의 성립",
+      "forms": [
+        "self-declared trust",
+        "self-declared trusts"
+      ],
+      "frequency": 4,
+      "occurrences": [
+        {
+          "page": 201,
+          "printed": "192",
+          "kind": "abstract",
+          "paragraphId": "P0870"
+        },
+        {
+          "page": 203,
+          "printed": "194",
+          "kind": "abstract",
+          "paragraphId": "P0872"
+        },
+        {
+          "page": 203,
+          "printed": "194",
+          "kind": "abstract",
+          "paragraphId": "P0874"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-010",
+      "term": "will-substitute trust",
+      "language": "en",
+      "meaning": "유언대용신탁",
+      "contextMeaning": "생전의 설정과 사후의 이익 승계를 결합하여 유언을 대신하는 신탁.",
+      "category": "가족신탁과 승계",
+      "forms": [
+        "will-substitute trust",
+        "will-substitute trusts"
+      ],
+      "frequency": 4,
+      "occurrences": [
+        {
+          "page": 201,
+          "printed": "192",
+          "kind": "abstract",
+          "paragraphId": "P0870"
+        },
+        {
+          "page": 204,
+          "printed": "195",
+          "kind": "abstract",
+          "paragraphId": "P0874"
+        },
+        {
+          "page": 205,
+          "printed": "196",
+          "kind": "abstract",
+          "paragraphId": "P0875"
+        },
+        {
+          "page": 205,
+          "printed": "196",
+          "kind": "abstract",
+          "paragraphId": "P0876"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-011",
+      "term": "successive-beneficiary trust",
+      "language": "en",
+      "meaning": "수익자연속신탁",
+      "contextMeaning": "앞선 수익자의 사망 뒤 다음 수익자가 이익을 받도록 정하는 신탁.",
+      "category": "가족신탁과 승계",
+      "forms": [
+        "successive-beneficiary trust",
+        "successive-beneficiary trusts"
+      ],
+      "frequency": 2,
+      "occurrences": [
+        {
+          "page": 201,
+          "printed": "192",
+          "kind": "abstract",
+          "paragraphId": "P0870"
+        },
+        {
+          "page": 204,
+          "printed": "195",
+          "kind": "abstract",
+          "paragraphId": "P0874"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-012",
+      "term": "implied trust",
+      "language": "en",
+      "meaning": "묵시신탁",
+      "contextMeaning": "이 논문에서는 객관적 사정에서 당사자의 묵시적 신탁계약이 인정되는 경우를 다룬다.",
+      "category": "신탁의 성립",
+      "forms": [
+        "implied trust",
+        "implied trusts"
+      ],
+      "frequency": 2,
+      "occurrences": [
+        {
+          "page": 202,
+          "printed": "193",
+          "kind": "abstract",
+          "paragraphId": "P0870"
+        },
+        {
+          "page": 204,
+          "printed": "195",
+          "kind": "abstract",
+          "paragraphId": "P0875"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-013",
+      "term": "title trust",
+      "language": "en",
+      "meaning": "명의신탁",
+      "contextMeaning": "신탁법상 신탁과 구별하는 우리 법의 명의신탁을 가리킨다.",
+      "category": "신탁의 성립",
+      "forms": [
+        "title trust",
+        "title trusts"
+      ],
+      "frequency": 4,
+      "occurrences": [
+        {
+          "page": 202,
+          "printed": "193",
+          "kind": "abstract",
+          "paragraphId": "P0870"
+        },
+        {
+          "page": 203,
+          "printed": "194",
+          "kind": "abstract",
+          "paragraphId": "P0873"
+        },
+        {
+          "page": 204,
+          "printed": "195",
+          "kind": "abstract",
+          "paragraphId": "P0875"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-014",
+      "term": "legal reserve",
+      "language": "en",
+      "meaning": "유류분",
+      "contextMeaning": "신탁을 통한 재산 승계와의 관계에서 다루는 우리 법의 유류분.",
+      "category": "가족신탁과 승계",
+      "forms": [
+        "legal reserve"
+      ],
+      "frequency": 6,
+      "occurrences": [
+        {
+          "page": 202,
+          "printed": "193",
+          "kind": "abstract",
+          "paragraphId": "P0870"
+        },
+        {
+          "page": 204,
+          "printed": "195",
+          "kind": "abstract",
+          "paragraphId": "P0874"
+        },
+        {
+          "page": 204,
+          "printed": "195",
+          "kind": "abstract",
+          "paragraphId": "P0875"
+        },
+        {
+          "page": 205,
+          "printed": "196",
+          "kind": "abstract",
+          "paragraphId": "P0875"
+        },
+        {
+          "page": 205,
+          "printed": "196",
+          "kind": "abstract",
+          "paragraphId": "P0876"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-015",
+      "term": "purpose-bound nature of trust property",
+      "language": "en",
+      "meaning": "신탁재산의 목적구속성",
+      "contextMeaning": "수탁자에게 귀속한 재산이 신탁 목적에 따른 보유·관리에 법적으로 구속되는 성질.",
+      "category": "신탁의 기본구조",
+      "forms": [
+        "purpose-bound nature of trust property"
+      ],
+      "frequency": 3,
+      "occurrences": [
+        {
+          "page": 201,
+          "printed": "192",
+          "kind": "abstract",
+          "paragraphId": "P0864"
+        },
+        {
+          "page": 202,
+          "printed": "193",
+          "kind": "abstract",
+          "paragraphId": "P0870"
+        },
+        {
+          "page": 205,
+          "printed": "196",
+          "kind": "abstract",
+          "paragraphId": "P0876"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-016",
+      "term": "purpose-binding",
+      "language": "en",
+      "meaning": "목적구속",
+      "contextMeaning": "목적구속성을 줄여 부르는 영문초록의 표현.",
+      "category": "신탁의 기본구조",
+      "forms": [
+        "purpose-binding"
+      ],
+      "frequency": 5,
+      "occurrences": [
+        {
+          "page": 202,
+          "printed": "193",
+          "kind": "abstract",
+          "paragraphId": "P0871"
+        },
+        {
+          "page": 202,
+          "printed": "193",
+          "kind": "abstract",
+          "paragraphId": "P0872"
+        },
+        {
+          "page": 203,
+          "printed": "194",
+          "kind": "abstract",
+          "paragraphId": "P0873"
+        },
+        {
+          "page": 204,
+          "printed": "195",
+          "kind": "abstract",
+          "paragraphId": "P0875"
+        },
+        {
+          "page": 205,
+          "printed": "196",
+          "kind": "abstract",
+          "paragraphId": "P0876"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-017",
+      "term": "act creating a trust",
+      "language": "en",
+      "meaning": "신탁행위",
+      "contextMeaning": "목적구속을 형성하고 당사자의 권리·의무와 책임재산을 정하는 행위.",
+      "category": "신탁의 성립",
+      "forms": [
+        "act creating a trust"
+      ],
+      "frequency": 2,
+      "occurrences": [
+        {
+          "page": 202,
+          "printed": "193",
+          "kind": "abstract",
+          "paragraphId": "P0872"
+        },
+        {
+          "page": 205,
+          "printed": "196",
+          "kind": "abstract",
+          "paragraphId": "P0876"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-018",
+      "term": "independence of trust property",
+      "language": "en",
+      "meaning": "신탁재산의 독립성",
+      "contextMeaning": "수탁자의 고유재산 및 그 채권자와 신탁재산을 구별하는 법적 효과.",
+      "category": "재산의 독립성과 채권자",
+      "forms": [
+        "independence of trust property"
+      ],
+      "frequency": 2,
+      "occurrences": [
+        {
+          "page": 203,
+          "printed": "194",
+          "kind": "abstract",
+          "paragraphId": "P0873"
+        },
+        {
+          "page": 205,
+          "printed": "196",
+          "kind": "abstract",
+          "paragraphId": "P0876"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-019",
+      "term": "trust publicity",
+      "language": "en",
+      "meaning": "신탁공시",
+      "contextMeaning": "그 재산이 신탁재산임을 대외적으로 드러내는 공시.",
+      "category": "신탁공시와 구제",
+      "forms": [
+        "trust publicity"
+      ],
+      "frequency": 2,
+      "occurrences": [
+        {
+          "page": 204,
+          "printed": "195",
+          "kind": "abstract",
+          "paragraphId": "P0875"
+        },
+        {
+          "page": 205,
+          "printed": "196",
+          "kind": "abstract",
+          "paragraphId": "P0876"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-020",
+      "term": "trust registration",
+      "language": "en",
+      "meaning": "신탁등기",
+      "contextMeaning": "신탁공시의 효력과 신탁원부 기재 약정의 대항력을 구별하는 문맥에서 사용된다.",
+      "category": "신탁공시와 구제",
+      "forms": [
+        "trust registration"
+      ],
+      "frequency": 2,
+      "occurrences": [
+        {
+          "page": 202,
+          "printed": "193",
+          "kind": "abstract",
+          "paragraphId": "P0870"
+        },
+        {
+          "page": 204,
+          "printed": "195",
+          "kind": "abstract",
+          "paragraphId": "P0875"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-021",
+      "term": "trust register",
+      "language": "en",
+      "meaning": "신탁원부",
+      "contextMeaning": "내부 약정의 기재와 제3자에 대한 효력을 구별하여 다루는 등기 자료.",
+      "category": "신탁공시와 구제",
+      "forms": [
+        "trust register"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 203,
+          "printed": "194",
+          "kind": "abstract",
+          "paragraphId": "P0873"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-022",
+      "term": "adult guardianship",
+      "language": "en",
+      "meaning": "성년후견",
+      "contextMeaning": "고령자 재산관리에서 신탁과의 역할 분담·보완 관계를 검토하는 제도.",
+      "category": "가족신탁과 승계",
+      "forms": [
+        "adult guardianship"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 203,
+          "printed": "194",
+          "kind": "abstract",
+          "paragraphId": "P0874"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-023",
+      "term": "beneficial interests",
+      "language": "en",
+      "meaning": "수익권·수익상의 이익",
+      "contextMeaning": "가족부양신탁에서 보호 범위를 검토하는 수익자의 이익.",
+      "category": "신탁의 당사자",
+      "forms": [
+        "beneficial interests"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 203,
+          "printed": "194",
+          "kind": "abstract",
+          "paragraphId": "P0874"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-024",
+      "term": "non-business trustees",
+      "language": "en",
+      "meaning": "비영업수탁자",
+      "contextMeaning": "가족 등 신탁을 영업으로 하지 않는 수탁자.",
+      "category": "신탁의 당사자",
+      "forms": [
+        "non-business trustees"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 204,
+          "printed": "195",
+          "kind": "abstract",
+          "paragraphId": "P0874"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-025",
+      "term": "forced heirship",
+      "language": "en",
+      "meaning": "유류분에 의한 상속의 제한",
+      "contextMeaning": "영문초록에서 우리 유류분 제도를 설명하기 위하여 덧붙인 표현.",
+      "category": "가족신탁과 승계",
+      "forms": [
+        "forced heirship",
+        "forced-heirship"
+      ],
+      "frequency": 2,
+      "occurrences": [
+        {
+          "page": 204,
+          "printed": "195",
+          "kind": "abstract",
+          "paragraphId": "P0874"
+        },
+        {
+          "page": 205,
+          "printed": "196",
+          "kind": "abstract",
+          "paragraphId": "P0876"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-026",
+      "term": "bankruptcy estate",
+      "language": "en",
+      "meaning": "파산재단",
+      "contextMeaning": "신탁재산이 수탁자의 파산재단에서 제외되는 독립성의 문맥.",
+      "category": "재산의 독립성과 채권자",
+      "forms": [
+        "bankruptcy estate"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 202,
+          "printed": "193",
+          "kind": "abstract",
+          "paragraphId": "P0872"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-027",
+      "term": "personal creditors",
+      "language": "en",
+      "meaning": "고유채권자",
+      "contextMeaning": "신탁재산과 구별되는 수탁자의 고유재산에 관한 채권자.",
+      "category": "재산의 독립성과 채권자",
+      "forms": [
+        "personal creditors"
+      ],
+      "frequency": 2,
+      "occurrences": [
+        {
+          "page": 202,
+          "printed": "193",
+          "kind": "abstract",
+          "paragraphId": "P0872"
+        },
+        {
+          "page": 203,
+          "printed": "194",
+          "kind": "abstract",
+          "paragraphId": "P0873"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-028",
+      "term": "trust creditors",
+      "language": "en",
+      "meaning": "신탁채권자",
+      "contextMeaning": "신탁사무 등에 관한 채권자로서 수탁자의 고유채권자와 구별한다.",
+      "category": "재산의 독립성과 채권자",
+      "forms": [
+        "trust creditors"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 203,
+          "printed": "194",
+          "kind": "abstract",
+          "paragraphId": "P0873"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-029",
+      "term": "trustee’s duties",
+      "language": "en",
+      "meaning": "수탁자의 의무",
+      "contextMeaning": "수탁자의 주의·충실·분별관리 의무 등을 묶어 부르는 표현.",
+      "category": "수탁자의 의무와 책임",
+      "forms": [
+        "trustee’s duties",
+        "trustees’ duties"
+      ],
+      "frequency": 3,
+      "occurrences": [
+        {
+          "page": 203,
+          "printed": "194",
+          "kind": "abstract",
+          "paragraphId": "P0873"
+        },
+        {
+          "page": 204,
+          "printed": "195",
+          "kind": "abstract",
+          "paragraphId": "P0875"
+        },
+        {
+          "page": 205,
+          "printed": "196",
+          "kind": "abstract",
+          "paragraphId": "P0876"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-030",
+      "term": "duties of care, loyalty and segregation",
+      "language": "en",
+      "meaning": "주의의무·충실의무·분별관리의무",
+      "contextMeaning": "영문초록에서 목적구속의 내용을 수탁자의 의무로 표현한 세 가지 의무.",
+      "category": "수탁자의 의무와 책임",
+      "forms": [
+        "duties of care, loyalty and segregation"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 203,
+          "printed": "194",
+          "kind": "abstract",
+          "paragraphId": "P0873"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-031",
+      "term": "mandate",
+      "language": "en",
+      "meaning": "위임",
+      "contextMeaning": "신탁을 인접 제도와 구별하는 문맥에서 위임을 뜻한다.",
+      "category": "신탁의 성립",
+      "forms": [
+        "mandate"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 203,
+          "printed": "194",
+          "kind": "abstract",
+          "paragraphId": "P0873"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-032",
+      "term": "deposit",
+      "language": "en",
+      "meaning": "임치",
+      "contextMeaning": "신탁을 인접 제도와 구별하는 문맥에서 임치를 뜻한다.",
+      "category": "신탁의 성립",
+      "forms": [
+        "deposit"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 203,
+          "printed": "194",
+          "kind": "abstract",
+          "paragraphId": "P0873"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-033",
+      "term": "separate fund",
+      "language": "en",
+      "meaning": "구별된 책임재산",
+      "contextMeaning": "수탁자의 고유재산과 구별하여 편성되는 신탁재산을 가리킨다.",
+      "category": "재산의 독립성과 채권자",
+      "forms": [
+        "separate fund"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 202,
+          "printed": "193",
+          "kind": "abstract",
+          "paragraphId": "P0872",
+          "endPage": 203,
+          "endPrinted": "194"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-034",
+      "term": "support trusts",
+      "language": "en",
+      "meaning": "부양 목적 신탁",
+      "contextMeaning": "가족의 부양을 위한 급부와 압류로부터의 보호를 다루는 문맥.",
+      "category": "가족신탁과 승계",
+      "forms": [
+        "support trusts"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 205,
+          "printed": "196",
+          "kind": "abstract",
+          "paragraphId": "P0875"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-035",
+      "term": "attachment",
+      "language": "en",
+      "meaning": "압류",
+      "contextMeaning": "부양 목적 신탁의 보호를 해석만으로 완성하기 어려운 한계로 다룬다.",
+      "category": "재산의 독립성과 채권자",
+      "forms": [
+        "attachment"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 205,
+          "printed": "196",
+          "kind": "abstract",
+          "paragraphId": "P0875"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-036",
+      "term": "legal title",
+      "language": "en",
+      "meaning": "보통법상의 권원",
+      "contextMeaning": "영미법에서 수탁자에게 귀속하는 권원으로 설명된다.",
+      "category": "신탁의 기본구조",
+      "forms": [
+        "legal title"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 22,
+          "printed": "13",
+          "kind": "body",
+          "paragraphId": "P0183"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-037",
+      "term": "equitable title",
+      "language": "en",
+      "meaning": "형평법상의 권원",
+      "contextMeaning": "영미법에서 수익자에게 귀속하는 권원으로 설명된다.",
+      "category": "신탁의 기본구조",
+      "forms": [
+        "equitable title"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 22,
+          "printed": "13",
+          "kind": "body",
+          "paragraphId": "P0183"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-038",
+      "term": "dual ownership",
+      "language": "en",
+      "meaning": "이중 소유권",
+      "contextMeaning": "보통법상 권원과 형평법상 권원을 함께 설명하는 영미법상의 구조.",
+      "category": "신탁의 기본구조",
+      "forms": [
+        "dual ownership"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 22,
+          "printed": "13",
+          "kind": "body",
+          "paragraphId": "P0183"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-039",
+      "term": "right in personam",
+      "language": "en",
+      "meaning": "대인적 권리",
+      "contextMeaning": "수익권을 수탁자에 대한 권리로 보는 견해의 표현.",
+      "category": "신탁의 기본구조",
+      "forms": [
+        "right in personam"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 22,
+          "printed": "13",
+          "kind": "body",
+          "paragraphId": "P0183"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-040",
+      "term": "right in rem",
+      "language": "en",
+      "meaning": "대물적 권리",
+      "contextMeaning": "수익권을 신탁재산에 대한 권리로 보는 견해의 표현.",
+      "category": "신탁의 기본구조",
+      "forms": [
+        "right in rem"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 22,
+          "printed": "13",
+          "kind": "body",
+          "paragraphId": "P0183"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-041",
+      "term": "power without right",
+      "language": "en",
+      "meaning": "권한은 있으나 권리는 없음",
+      "contextMeaning": "수탁자의 대외적 권한과 목적에 따른 대내적 의무를 구별하는 표현.",
+      "category": "신탁의 기본구조",
+      "forms": [
+        "power without right"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 43,
+          "printed": "34",
+          "kind": "body",
+          "paragraphId": "P0272"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-042",
+      "term": "asset partitioning",
+      "language": "en",
+      "meaning": "자산분할",
+      "contextMeaning": "재산을 여러 책임재산 단위로 나누는 관념으로 신탁재산의 독립성을 설명한다.",
+      "category": "재산의 독립성과 채권자",
+      "forms": [
+        "asset partitioning"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 47,
+          "printed": "38",
+          "kind": "body",
+          "paragraphId": "P0288"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-043",
+      "term": "express trust",
+      "language": "en",
+      "meaning": "설정신탁",
+      "contextMeaning": "당사자의 표시된 설정의사에 기초하는 신탁. 명시적인 말만으로 성립하는 신탁이라는 뜻은 아니다.",
+      "category": "신탁의 성립",
+      "forms": [
+        "express trust"
+      ],
+      "frequency": 3,
+      "occurrences": [
+        {
+          "page": 79,
+          "printed": "70",
+          "kind": "body",
+          "paragraphId": "P0401"
+        },
+        {
+          "page": 80,
+          "printed": "71",
+          "kind": "body",
+          "paragraphId": "P0401"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-044",
+      "term": "resulting trust",
+      "language": "en",
+      "meaning": "복귀신탁",
+      "contextMeaning": "추정된 의사에 기초하는 신탁으로, Quistclose 신탁의 성질 논의에도 등장한다.",
+      "category": "신탁의 성립",
+      "forms": [
+        "resulting trust"
+      ],
+      "frequency": 2,
+      "occurrences": [
+        {
+          "page": 80,
+          "printed": "71",
+          "kind": "body",
+          "paragraphId": "P0401"
+        },
+        {
+          "page": 86,
+          "printed": "77",
+          "kind": "note",
+          "noteNumber": 104
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-045",
+      "term": "constructive trust",
+      "language": "en",
+      "meaning": "의제신탁",
+      "contextMeaning": "당사자의 설정의사와 관계없이 인정되는 신탁으로 비교법상 유형과 우리 법의 대응을 나누어 살핀다.",
+      "category": "신탁의 성립",
+      "forms": [
+        "constructive trust",
+        "constructive trusts"
+      ],
+      "frequency": 4,
+      "occurrences": [
+        {
+          "page": 80,
+          "printed": "71",
+          "kind": "body",
+          "paragraphId": "P0401"
+        },
+        {
+          "page": 88,
+          "printed": "79",
+          "kind": "body",
+          "paragraphId": "P0422"
+        },
+        {
+          "page": 80,
+          "printed": "71",
+          "kind": "note",
+          "noteNumber": 90
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-046",
+      "term": "institutional constructive trust",
+      "language": "en",
+      "meaning": "제도적 의제신탁",
+      "contextMeaning": "잉글랜드법에서 일정 사실관계가 갖추어지면 발생하고 법원이 그 관계를 확인하는 의제신탁.",
+      "category": "신탁의 성립",
+      "forms": [
+        "institutional constructive trust"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 88,
+          "printed": "79",
+          "kind": "body",
+          "paragraphId": "P0422"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-047",
+      "term": "dishonest assistance",
+      "language": "en",
+      "meaning": "부정직한 조력",
+      "contextMeaning": "다른 사람의 신탁위반을 부정직하게 돕는 경우의 인적 책임을 다룬다.",
+      "category": "신탁공시와 구제",
+      "forms": [
+        "dishonest assistance"
+      ],
+      "frequency": 2,
+      "occurrences": [
+        {
+          "page": 89,
+          "printed": "80",
+          "kind": "body",
+          "paragraphId": "P0424"
+        },
+        {
+          "page": 89,
+          "printed": "80",
+          "kind": "note",
+          "noteNumber": 113
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-048",
+      "term": "knowing receipt",
+      "language": "en",
+      "meaning": "사정을 알고 신탁재산을 받은 자의 책임",
+      "contextMeaning": "수령 당시의 인식과 수익자의 재산적 권리 존속이 문제되는 수령자 책임.",
+      "category": "신탁공시와 구제",
+      "forms": [
+        "knowing receipt"
+      ],
+      "frequency": 2,
+      "occurrences": [
+        {
+          "page": 89,
+          "printed": "80",
+          "kind": "body",
+          "paragraphId": "P0424"
+        },
+        {
+          "page": 89,
+          "printed": "80",
+          "kind": "note",
+          "noteNumber": 113
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-049",
+      "term": "constructive trustee",
+      "language": "en",
+      "meaning": "의제수탁자",
+      "contextMeaning": "신탁위반에 대한 조력·수령자 책임을 설명할 때 사용되는 표현.",
+      "category": "신탁공시와 구제",
+      "forms": [
+        "constructive trustee"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 89,
+          "printed": "80",
+          "kind": "body",
+          "paragraphId": "P0424"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-050",
+      "term": "irreducible core",
+      "language": "en",
+      "meaning": "배제할 수 없는 의무의 핵심",
+      "contextMeaning": "Armitage 판결의 면책조항 한계를 설명하는 표현.",
+      "category": "수탁자의 의무와 책임",
+      "forms": [
+        "irreducible core"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 94,
+          "printed": "85",
+          "kind": "body",
+          "paragraphId": "P0438"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-051",
+      "term": "constructive notice",
+      "language": "en",
+      "meaning": "의제된 인지",
+      "contextMeaning": "합리적 주의를 기울였다면 알 수 있었다는 사정으로, 약정을 실제로 안 것과 구별한다.",
+      "category": "신탁공시와 구제",
+      "forms": [
+        "constructive notice"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 117,
+          "printed": "108",
+          "kind": "body",
+          "paragraphId": "P0512"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-052",
+      "term": "revocable living trust",
+      "language": "en",
+      "meaning": "철회가능생전신탁",
+      "contextMeaning": "위탁자가 생전에 철회할 수 있는 미국의 신탁으로 후견·유언 대체 기능을 설명한다.",
+      "category": "가족신탁과 승계",
+      "forms": [
+        "revocable living trust"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 130,
+          "printed": "121",
+          "kind": "body",
+          "paragraphId": "P0554"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-053",
+      "term": "supplemental needs trust",
+      "language": "en",
+      "meaning": "보충적 필요 신탁",
+      "contextMeaning": "장애인의 생활에서 공적 급여로 충당되지 않는 필요를 보완하는 신탁.",
+      "category": "가족신탁과 승계",
+      "forms": [
+        "supplemental needs trust"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 136,
+          "printed": "127",
+          "kind": "body",
+          "paragraphId": "P0566"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-054",
+      "term": "spendthrift",
+      "language": "en",
+      "meaning": "수익권의 처분·압류 제한",
+      "contextMeaning": "미국 신탁에서 수익자의 자발적 양도와 채권자의 강제집행을 함께 제한하는 조항의 문맥.",
+      "category": "가족신탁과 승계",
+      "forms": [
+        "spendthrift"
+      ],
+      "frequency": 3,
+      "occurrences": [
+        {
+          "page": 140,
+          "printed": "131",
+          "kind": "body",
+          "paragraphId": "P0580"
+        },
+        {
+          "page": 186,
+          "printed": "177",
+          "kind": "body",
+          "paragraphId": "P0742"
+        },
+        {
+          "page": 140,
+          "printed": "131",
+          "kind": "note",
+          "noteNumber": 183
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-055",
+      "term": "protective trust",
+      "language": "en",
+      "meaning": "보호신탁",
+      "contextMeaning": "미국의 spendthrift 조항과 비교하는 영국의 신탁.",
+      "category": "가족신탁과 승계",
+      "forms": [
+        "protective trust"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 140,
+          "printed": "131",
+          "kind": "note",
+          "noteNumber": 183
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-056",
+      "term": "care and skill",
+      "language": "en",
+      "meaning": "주의와 기량",
+      "contextMeaning": "영국 수탁자법의 합리적인 주의·기량 기준을 설명하는 표현.",
+      "category": "수탁자의 의무와 책임",
+      "forms": [
+        "care and skill"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 93,
+          "printed": "84",
+          "kind": "note",
+          "noteNumber": 120
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-057",
+      "term": "actual fraud",
+      "language": "en",
+      "meaning": "수탁자 자신의 사기",
+      "contextMeaning": "Armitage 판결에서 면책할 수 없는 행위의 범위를 설명한다.",
+      "category": "수탁자의 의무와 책임",
+      "forms": [
+        "actual fraud"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 94,
+          "printed": "85",
+          "kind": "note",
+          "noteNumber": 121
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-058",
+      "term": "bad faith",
+      "language": "en",
+      "meaning": "악의",
+      "contextMeaning": "미국 통일신탁법전의 면책 제한 사유로 인용된다.",
+      "category": "수탁자의 의무와 책임",
+      "forms": [
+        "bad faith"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 94,
+          "printed": "85",
+          "kind": "note",
+          "noteNumber": 122
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-059",
+      "term": "reckless indifference",
+      "language": "en",
+      "meaning": "무모한 무관심",
+      "contextMeaning": "신탁 목적이나 수익자 이익을 무모하게 도외시한 경우의 면책 제한을 설명한다.",
+      "category": "수탁자의 의무와 책임",
+      "forms": [
+        "reckless indifference"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 94,
+          "printed": "85",
+          "kind": "note",
+          "noteNumber": 122
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-060",
+      "term": "attorney trust account",
+      "language": "en",
+      "meaning": "변호사 신탁계좌",
+      "contextMeaning": "분별관리와 신탁 전용 계좌의 필요성을 다루는 문헌에서 사용된다.",
+      "category": "수탁자의 의무와 책임",
+      "forms": [
+        "attorney trust account"
+      ],
+      "frequency": 2,
+      "occurrences": [
+        {
+          "page": 97,
+          "printed": "88",
+          "kind": "note",
+          "noteNumber": 123
+        },
+        {
+          "page": 97,
+          "printed": "88",
+          "kind": "note",
+          "noteNumber": 124
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-061",
+      "term": "conservatorship",
+      "language": "en",
+      "meaning": "후견",
+      "contextMeaning": "미국의 철회가능신탁이 대신할 수 있는 재산관리 후견의 문맥.",
+      "category": "가족신탁과 승계",
+      "forms": [
+        "conservatorship"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 130,
+          "printed": "121",
+          "kind": "note",
+          "noteNumber": 171
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-062",
+      "term": "merger",
+      "language": "en",
+      "meaning": "혼동",
+      "contextMeaning": "단독수탁자와 단독수익자가 같은 사람이 될 때의 영미법상 설명.",
+      "category": "신탁의 당사자",
+      "forms": [
+        "merger"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 150,
+          "printed": "141",
+          "kind": "note",
+          "noteNumber": 199
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-063",
+      "term": "Uniform Trust Code",
+      "language": "en",
+      "meaning": "통일신탁법전",
+      "contextMeaning": "UTC로 줄여 부른다. 미국 각 주의 입법을 위한 모범법으로 인용한다.",
+      "category": "비교법 자료",
+      "forms": [
+        "Uniform Trust Code",
+        "UTC"
+      ],
+      "frequency": 11,
+      "occurrences": [
+        {
+          "page": 18,
+          "printed": "9",
+          "kind": "body",
+          "paragraphId": "P0162"
+        },
+        {
+          "page": 94,
+          "printed": "85",
+          "kind": "body",
+          "paragraphId": "P0438"
+        },
+        {
+          "page": 140,
+          "printed": "131",
+          "kind": "body",
+          "paragraphId": "P0580"
+        },
+        {
+          "page": 150,
+          "printed": "141",
+          "kind": "body",
+          "paragraphId": "P0617"
+        },
+        {
+          "page": 94,
+          "printed": "85",
+          "kind": "note",
+          "noteNumber": 122
+        },
+        {
+          "page": 130,
+          "printed": "121",
+          "kind": "note",
+          "noteNumber": 171
+        },
+        {
+          "page": 140,
+          "printed": "131",
+          "kind": "note",
+          "noteNumber": 183
+        },
+        {
+          "page": 150,
+          "printed": "141",
+          "kind": "note",
+          "noteNumber": 199
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-064",
+      "term": "Uniform Prudent Investor Act",
+      "language": "en",
+      "meaning": "통일신중투자자법",
+      "contextMeaning": "특별한 기량·전문성이 있는 수탁자의 의무를 비교하는 미국의 입법 자료.",
+      "category": "비교법 자료",
+      "forms": [
+        "Uniform Prudent Investor Act"
+      ],
+      "frequency": 2,
+      "occurrences": [
+        {
+          "page": 93,
+          "printed": "84",
+          "kind": "body",
+          "paragraphId": "P0435"
+        },
+        {
+          "page": 93,
+          "printed": "84",
+          "kind": "note",
+          "noteNumber": 120
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-065",
+      "term": "Trustee Act 2000",
+      "language": "en",
+      "meaning": "2000년 수탁자법",
+      "contextMeaning": "수탁자의 주의와 기량을 정한 영국법으로 인용한다.",
+      "category": "비교법 자료",
+      "forms": [
+        "Trustee Act 2000"
+      ],
+      "frequency": 2,
+      "occurrences": [
+        {
+          "page": 93,
+          "printed": "84",
+          "kind": "body",
+          "paragraphId": "P0435"
+        },
+        {
+          "page": 93,
+          "printed": "84",
+          "kind": "note",
+          "noteNumber": 120
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-066",
+      "term": "Restatement (Third) of Trusts",
+      "language": "en",
+      "meaning": "신탁법 제3차 리스테이트먼트",
+      "contextMeaning": "수탁자·수익자 지위의 혼동 등 미국 신탁법의 설명 자료로 인용한다.",
+      "category": "비교법 자료",
+      "forms": [
+        "Restatement (Third) of Trusts"
+      ],
+      "frequency": 2,
+      "occurrences": [
+        {
+          "page": 150,
+          "printed": "141",
+          "kind": "body",
+          "paragraphId": "P0617"
+        },
+        {
+          "page": 150,
+          "printed": "141",
+          "kind": "note",
+          "noteNumber": 199
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-067",
+      "term": "Quistclose 신탁",
+      "language": "en",
+      "meaning": "특정 목적에 구속하여 교부한 금전에 관한 신탁",
+      "contextMeaning": "자유로운 처분의 배제와 목적 사용을 기준으로 우리 법의 묵시신탁과 비교한다.",
+      "category": "신탁의 성립",
+      "forms": [
+        "Quistclose 신탁"
+      ],
+      "frequency": 7,
+      "occurrences": [
+        {
+          "page": 85,
+          "printed": "76",
+          "kind": "body",
+          "paragraphId": "P0415"
+        },
+        {
+          "page": 85,
+          "printed": "76",
+          "kind": "body",
+          "paragraphId": "P0416"
+        },
+        {
+          "page": 86,
+          "printed": "77",
+          "kind": "body",
+          "paragraphId": "P0417"
+        },
+        {
+          "page": 87,
+          "printed": "78",
+          "kind": "body",
+          "paragraphId": "P0419"
+        },
+        {
+          "page": 120,
+          "printed": "111",
+          "kind": "body",
+          "paragraphId": "P0522"
+        },
+        {
+          "page": 184,
+          "printed": "175",
+          "kind": "body",
+          "paragraphId": "P0730"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-068",
+      "term": "Medicaid",
+      "language": "en",
+      "meaning": "미국의 저소득층 등 의료보장제도",
+      "contextMeaning": "연방·주가 공동 운영하는 제도로 장애인 신탁의 자산심사와 관련하여 구별한다.",
+      "category": "가족신탁과 승계",
+      "forms": [
+        "Medicaid"
+      ],
+      "frequency": 3,
+      "occurrences": [
+        {
+          "page": 136,
+          "printed": "127",
+          "kind": "note",
+          "noteNumber": 180
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-069",
+      "term": "Medicare",
+      "language": "en",
+      "meaning": "미국의 연방 의료보험",
+      "contextMeaning": "주로 고령자와 일정한 장애 등이 있는 사람을 대상으로 하며 Medicaid와 구별한다.",
+      "category": "가족신탁과 승계",
+      "forms": [
+        "Medicare"
+      ],
+      "frequency": 2,
+      "occurrences": [
+        {
+          "page": 136,
+          "printed": "127",
+          "kind": "note",
+          "noteNumber": 180
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-070",
+      "term": "causa",
+      "language": "la",
+      "meaning": "원인",
+      "contextMeaning": "신탁과 증여의 구별 및 의사 해석에 쓰는 분석 도구로 제시한다.",
+      "category": "신탁의 성립",
+      "forms": [
+        "causa"
+      ],
+      "frequency": 2,
+      "occurrences": [
+        {
+          "page": 53,
+          "printed": "44",
+          "kind": "body",
+          "paragraphId": "P0315"
+        },
+        {
+          "page": 156,
+          "printed": "147",
+          "kind": "body",
+          "paragraphId": "P0635"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-071",
+      "term": "patrimoine d’affectation",
+      "language": "fr",
+      "meaning": "목적에 충당된 재산·충당재산",
+      "contextMeaning": "영문초록에서 목적구속성의 연원을 설명하는 프랑스어 표현.",
+      "category": "신탁의 기본구조",
+      "forms": [
+        "patrimoine d’affectation"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 202,
+          "printed": "193",
+          "kind": "abstract",
+          "paragraphId": "P0871"
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-072",
+      "term": "家族信託",
+      "language": "ja",
+      "meaning": "가족신탁",
+      "contextMeaning": "가족이 수탁자가 되는 신탁을 가리키는 일본의 용어.",
+      "category": "가족신탁과 승계",
+      "forms": [
+        "家族信託"
+      ],
+      "frequency": 2,
+      "occurrences": [
+        {
+          "page": 16,
+          "printed": "7",
+          "kind": "body",
+          "paragraphId": "P0155"
+        },
+        {
+          "page": 125,
+          "printed": "116",
+          "kind": "note",
+          "noteNumber": 160
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-073",
+      "term": "民事信託",
+      "language": "ja",
+      "meaning": "민사신탁",
+      "contextMeaning": "일본의 친족 간 신탁 활용·실무를 다루는 자료의 표현.",
+      "category": "가족신탁과 승계",
+      "forms": [
+        "民事信託"
+      ],
+      "frequency": 3,
+      "occurrences": [
+        {
+          "page": 11,
+          "printed": "2",
+          "kind": "note",
+          "noteNumber": 3
+        },
+        {
+          "page": 131,
+          "printed": "122",
+          "kind": "note",
+          "noteNumber": 173
+        },
+        {
+          "page": 135,
+          "printed": "126",
+          "kind": "note",
+          "noteNumber": 179
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-074",
+      "term": "受益権",
+      "language": "ja",
+      "meaning": "수익권",
+      "contextMeaning": "일본 신탁법 제2조 제7항의 원문 인용에서 수익채권과 그 확보 권한을 포괄한다.",
+      "category": "신탁의 당사자",
+      "forms": [
+        "受益権"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 25,
+          "printed": "16",
+          "kind": "note",
+          "noteNumber": 26
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-075",
+      "term": "受益債権",
+      "language": "ja",
+      "meaning": "수익채권",
+      "contextMeaning": "신탁재산의 인도 등 급부를 목적으로 하는 채권을 가리키는 일본법 용어.",
+      "category": "신탁의 당사자",
+      "forms": [
+        "受益債権"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 25,
+          "printed": "16",
+          "kind": "note",
+          "noteNumber": 26
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-076",
+      "term": "信託行為",
+      "language": "ja",
+      "meaning": "신탁행위",
+      "contextMeaning": "수익권 정의를 인용한 일본 신탁법 원문에 등장한다.",
+      "category": "신탁의 성립",
+      "forms": [
+        "信託行為"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 25,
+          "printed": "16",
+          "kind": "note",
+          "noteNumber": 26
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-077",
+      "term": "受託者",
+      "language": "ja",
+      "meaning": "수탁자",
+      "contextMeaning": "신탁재산 급부의 채무와 수익자의 권한을 설명하는 일본법 원문의 당사자.",
+      "category": "신탁의 당사자",
+      "forms": [
+        "受託者"
+      ],
+      "frequency": 3,
+      "occurrences": [
+        {
+          "page": 25,
+          "printed": "16",
+          "kind": "note",
+          "noteNumber": 26
+        },
+        {
+          "page": 31,
+          "printed": "22",
+          "kind": "note",
+          "noteNumber": 36
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-078",
+      "term": "受益者",
+      "language": "ja",
+      "meaning": "수익자",
+      "contextMeaning": "일본 신탁법 수익권 정의에서 급부를 받는 당사자.",
+      "category": "신탁의 당사자",
+      "forms": [
+        "受益者"
+      ],
+      "frequency": 2,
+      "occurrences": [
+        {
+          "page": 25,
+          "printed": "16",
+          "kind": "note",
+          "noteNumber": 26
+        },
+        {
+          "page": 135,
+          "printed": "126",
+          "kind": "note",
+          "noteNumber": 179
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-079",
+      "term": "信託財産",
+      "language": "ja",
+      "meaning": "신탁재산",
+      "contextMeaning": "일본 신탁법 수익권 정의에서 급부의 대상과 관련되는 재산.",
+      "category": "신탁의 기본구조",
+      "forms": [
+        "信託財産"
+      ],
+      "frequency": 2,
+      "occurrences": [
+        {
+          "page": 25,
+          "printed": "16",
+          "kind": "note",
+          "noteNumber": 26
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-080",
+      "term": "信託の本旨",
+      "language": "ja",
+      "meaning": "신탁의 본지",
+      "contextMeaning": "수탁자의 사무처리가 따라야 하는 목적을 설명하는 일본법 표현.",
+      "category": "수탁자의 의무와 책임",
+      "forms": [
+        "信託の本旨"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 33,
+          "printed": "24",
+          "kind": "note",
+          "noteNumber": 38
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-081",
+      "term": "目的拘束の合意",
+      "language": "ja",
+      "meaning": "목적구속의 합의",
+      "contextMeaning": "수탁자의 관리·처분이 목적에 구속된다는 합의를 신탁계약의 성립과 연결하는 표현.",
+      "category": "신탁의 성립",
+      "forms": [
+        "目的拘束の合意"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 55,
+          "printed": "46",
+          "kind": "note",
+          "noteNumber": 64
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-082",
+      "term": "信託契約",
+      "language": "ja",
+      "meaning": "신탁계약",
+      "contextMeaning": "금전의 예탁에서 계약의 성립을 검토하는 일본 문헌의 핵심 용어.",
+      "category": "신탁의 성립",
+      "forms": [
+        "信託契約"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 31,
+          "printed": "22",
+          "kind": "note",
+          "noteNumber": 36
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-083",
+      "term": "信託目的",
+      "language": "ja",
+      "meaning": "신탁 목적",
+      "contextMeaning": "신탁설정의사와 목적구속의 합의를 검토하는 일본 문헌의 표제어.",
+      "category": "신탁의 성립",
+      "forms": [
+        "信託目的"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 81,
+          "printed": "72",
+          "kind": "note",
+          "noteNumber": 93
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-084",
+      "term": "成年後見",
+      "language": "ja",
+      "meaning": "성년후견",
+      "contextMeaning": "신탁과의 분업·협동을 설명하는 일본 문헌의 표현.",
+      "category": "가족신탁과 승계",
+      "forms": [
+        "成年後見"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 126,
+          "printed": "117",
+          "kind": "note",
+          "noteNumber": 164
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-085",
+      "term": "任意後見",
+      "language": "ja",
+      "meaning": "임의후견",
+      "contextMeaning": "재산관리 신탁과 신상보호 후견의 결합을 다루는 일본 문헌의 표현.",
+      "category": "가족신탁과 승계",
+      "forms": [
+        "任意後見"
+      ],
+      "frequency": 2,
+      "occurrences": [
+        {
+          "page": 126,
+          "printed": "117",
+          "kind": "note",
+          "noteNumber": 164
+        },
+        {
+          "page": 127,
+          "printed": "118",
+          "kind": "note",
+          "noteNumber": 164
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-086",
+      "term": "後見制度支援信託",
+      "language": "ja",
+      "meaning": "후견제도지원신탁",
+      "contextMeaning": "일본의 후견인 재산관리와 부정행위 방지를 다루는 공식 안내의 표현.",
+      "category": "가족신탁과 승계",
+      "forms": [
+        "後見制度支援信託"
+      ],
+      "frequency": 1,
+      "occurrences": [
+        {
+          "page": 127,
+          "printed": "118",
+          "kind": "note",
+          "noteNumber": 165
+        }
+      ]
+    },
+    {
+      "id": "ysg-term-087",
+      "term": "遺留分",
+      "language": "ja",
+      "meaning": "유류분",
+      "contextMeaning": "신탁과 유류분의 관계에 관한 일본 문헌의 핵심 용어.",
+      "category": "가족신탁과 승계",
+      "forms": [
+        "遺留分"
+      ],
+      "frequency": 2,
+      "occurrences": [
+        {
+          "page": 158,
+          "printed": "149",
+          "kind": "note",
+          "noteNumber": 215
+        },
+        {
+          "page": 163,
+          "printed": "154",
+          "kind": "note",
+          "noteNumber": 224
+        }
+      ]
+    }
+  ]
+}
