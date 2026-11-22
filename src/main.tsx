@@ -16,6 +16,7 @@ import {folioLabel,folioDescription,lastPrintedFolio,sheetForFolio} from './thes
 import './reader.css';
 import {commentaryLocation} from './commentary-locations';
 import {preserveReadingPosition} from './reading-position';
+import {initialPaperPage} from './initial-page';
 
 function Photo({session,query,label,active=true,onReady}:{session:Session;query:string;label:string;active?:boolean;onReady?:()=>void}){
   const [picture,setPicture]=useState<{query:string;url:string;token:string}|null>(null),[error,setError]=useState(''),[retry,setRetry]=useState(0);
@@ -88,7 +89,7 @@ function DocumentPane({session,start,count,notes,onPage,onTarget,compactFolio,fo
 }
 
 function Workspace({session,catalog,notes:originalNotes}:{session:Session;catalog:Catalog;notes:Note[]}){
-  const initial=Math.max(1,Math.min(catalog.bodyStartPage||1,catalog.pageCount));
+  const initial=initialPaperPage(location.search,catalog.bodyStartPage||1,catalog.pageCount);
   const [legal,setLegal]=useState<PageTarget|null>(null);
   const [caseTarget,setCaseTarget]=useState<PageTarget|null>(null);
   const [referenceFocus,setReferenceFocus]=useState(0);
