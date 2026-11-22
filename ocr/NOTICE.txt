@@ -1,0 +1,1 @@
+Tesseract.js v6.0.1 and Tesseract.js-core v6.0.0, Apache License 2.0. Korean and English Tesseract trained language models as installed with Tesseract OCR, Apache License 2.0. No document or page content is included.
