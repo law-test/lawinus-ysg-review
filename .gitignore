@@ -1,17 +1,8 @@
 node_modules/
 dist/
-.npm-cache/
-work/
+*.log
 .env*
-!.env.example
-*.private.json
-*.pem
-*.tsbuildinfo
-__pycache__/
-*.py[cod]
-public/config.json
-*.pdf
-*.hwp
-*.hwpx
 
-
+review-source/node_modules/
+review-source/dist/
+review-source/src/paragraph-catalog.json

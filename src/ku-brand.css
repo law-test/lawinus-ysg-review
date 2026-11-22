@@ -1,0 +1,56 @@
+.examiner-app .examiner-header {
+  border-top: 3px solid #92232f;
+  border-bottom-color: #e6e6e6;
+}
+
+.examiner-identity {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.ku-brand {
+  display: flex;
+  align-items: center;
+  flex: none;
+  width: 142px;
+  min-height: 44px;
+}
+
+.ku-brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.examiner-header .ku-brand:focus-visible {
+  outline: 3px solid #92232f;
+  outline-offset: 4px;
+}
+
+.examiner-title {
+  min-width: 0;
+  padding-inline-start: 22px;
+  border-inline-start: 1px solid #dadada;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1100px) {
+  .ku-brand { width: 120px; }
+  .examiner-identity { gap: 16px; }
+  .examiner-title { padding-inline-start: 16px; }
+}
+
+@media (max-width: 700px) {
+  .ku-brand { width: 104px; }
+  .examiner-identity { gap: 12px; }
+  .examiner-title { padding-inline-start: 12px; }
+}
+
+@media (max-width: 380px) {
+  .ku-brand { width: 94px; }
+  .examiner-identity { gap: 8px; }
+  .examiner-title { padding-inline-start: 8px; }
+}

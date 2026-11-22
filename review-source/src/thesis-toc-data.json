@@ -1,0 +1,718 @@
+{
+  "pdfSha256": "1d2625010b9cc5507b67d038293c6df7bd650b18b551f30762af09a377991cb1",
+  "pageCount": 209,
+  "entries": [
+    {
+      "id": "toc-001",
+      "title": "표지",
+      "page": 1,
+      "printedPage": null,
+      "level": 1,
+      "kind": "front"
+    },
+    {
+      "id": "toc-002",
+      "title": "국 문 초 록",
+      "page": 2,
+      "printedPage": "i",
+      "level": 1,
+      "kind": "front"
+    },
+    {
+      "id": "toc-003",
+      "title": "대 목 차",
+      "page": 5,
+      "printedPage": "iv",
+      "level": 1,
+      "kind": "front"
+    },
+    {
+      "id": "toc-004",
+      "title": "세 부 목 차",
+      "page": 7,
+      "printedPage": "vi",
+      "level": 1,
+      "kind": "front"
+    },
+    {
+      "id": "toc-005",
+      "title": "제1장 서 론",
+      "page": 10,
+      "printedPage": "1",
+      "level": 1,
+      "kind": "body"
+    },
+    {
+      "id": "toc-006",
+      "title": "제1절 문제의 제기",
+      "page": 10,
+      "printedPage": "1",
+      "level": 2,
+      "kind": "body"
+    },
+    {
+      "id": "toc-007",
+      "title": "Ⅰ. 민사신탁의 이용 현황",
+      "page": 10,
+      "printedPage": "1",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-008",
+      "title": "Ⅱ. 연구의 목적",
+      "page": 13,
+      "printedPage": "4",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-009",
+      "title": "제2절 연구의 범위와 한계",
+      "page": 15,
+      "printedPage": "6",
+      "level": 2,
+      "kind": "body"
+    },
+    {
+      "id": "toc-010",
+      "title": "Ⅰ. 연구의 대상",
+      "page": 15,
+      "printedPage": "6",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-011",
+      "title": "Ⅱ. 시간적·비교법적 범위",
+      "page": 17,
+      "printedPage": "8",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-012",
+      "title": "Ⅲ. 연구의 한계",
+      "page": 18,
+      "printedPage": "9",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-013",
+      "title": "제3절 연구의 방법",
+      "page": 19,
+      "printedPage": "10",
+      "level": 2,
+      "kind": "body"
+    },
+    {
+      "id": "toc-014",
+      "title": "Ⅰ. 연구의 방법",
+      "page": 19,
+      "printedPage": "10",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-015",
+      "title": "Ⅱ. 논문의 구성",
+      "page": 19,
+      "printedPage": "10",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-016",
+      "title": "제2장 신탁재산의 목적구속성과 민사신탁의 기본구조",
+      "page": 21,
+      "printedPage": "12",
+      "level": 1,
+      "kind": "body"
+    },
+    {
+      "id": "toc-017",
+      "title": "제1절 신탁의 기본구조에 관한 종래의 논의",
+      "page": 22,
+      "printedPage": "13",
+      "level": 2,
+      "kind": "body"
+    },
+    {
+      "id": "toc-018",
+      "title": "Ⅰ. 채권설과 물권설",
+      "page": 22,
+      "printedPage": "13",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-019",
+      "title": "Ⅱ. 실질적 법주체성설",
+      "page": 26,
+      "printedPage": "17",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-020",
+      "title": "Ⅲ. 개정 신탁법과 종래 논의의 한계",
+      "page": 27,
+      "printedPage": "18",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-021",
+      "title": "제2절 목적구속성의 의의",
+      "page": 29,
+      "printedPage": "20",
+      "level": 2,
+      "kind": "body"
+    },
+    {
+      "id": "toc-022",
+      "title": "Ⅰ. 목적구속성 논의의 연혁",
+      "page": 29,
+      "printedPage": "20",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-023",
+      "title": "Ⅱ. 목적구속성의 개념과 인정 표지",
+      "page": 31,
+      "printedPage": "22",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-024",
+      "title": "Ⅲ. 신탁법의 규정과 목적구속성",
+      "page": 35,
+      "printedPage": "26",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-025",
+      "title": "Ⅳ. 해석의 지침과 한계",
+      "page": 39,
+      "printedPage": "30",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-026",
+      "title": "제3절 목적구속성에 의한 기본구조의 검토",
+      "page": 41,
+      "printedPage": "32",
+      "level": 2,
+      "kind": "body"
+    },
+    {
+      "id": "toc-027",
+      "title": "Ⅰ. 신탁재산의 귀속과 수탁자의 소유권",
+      "page": 41,
+      "printedPage": "32",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-028",
+      "title": "Ⅱ. 신탁재산 독립성의 근거",
+      "page": 45,
+      "printedPage": "36",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-029",
+      "title": "Ⅲ. 수익권의 법적 성질",
+      "page": 48,
+      "printedPage": "39",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-030",
+      "title": "제4절 신탁행위",
+      "page": 51,
+      "printedPage": "42",
+      "level": 2,
+      "kind": "body"
+    },
+    {
+      "id": "toc-031",
+      "title": "Ⅰ. 신탁행위의 의의와 성질",
+      "page": 52,
+      "printedPage": "43",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-032",
+      "title": "Ⅱ. 신탁행위의 효과: 목적구속의 발생, 권리·의무의 형성, 책임재산의 편성",
+      "page": 54,
+      "printedPage": "45",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-033",
+      "title": "Ⅲ. 신탁계약과 유언신탁",
+      "page": 58,
+      "printedPage": "49",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-034",
+      "title": "Ⅳ. 신탁선언(자기신탁)",
+      "page": 61,
+      "printedPage": "52",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-035",
+      "title": "제5절 소결",
+      "page": 63,
+      "printedPage": "54",
+      "level": 2,
+      "kind": "body"
+    },
+    {
+      "id": "toc-036",
+      "title": "제3장 목적구속성과 민사신탁의 성립과 효력",
+      "page": 66,
+      "printedPage": "57",
+      "level": 1,
+      "kind": "body"
+    },
+    {
+      "id": "toc-037",
+      "title": "제1절 신탁과 인접 제도의 구별",
+      "page": 67,
+      "printedPage": "58",
+      "level": 2,
+      "kind": "body"
+    },
+    {
+      "id": "toc-038",
+      "title": "Ⅰ. 위임·임치·사무관리와의 구별",
+      "page": 67,
+      "printedPage": "58",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-039",
+      "title": "Ⅱ. 명의신탁과의 구별",
+      "page": 72,
+      "printedPage": "63",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-040",
+      "title": "제2절 묵시신탁과 의제신탁",
+      "page": 79,
+      "printedPage": "70",
+      "level": 2,
+      "kind": "body"
+    },
+    {
+      "id": "toc-041",
+      "title": "Ⅰ. 신탁설정의사와 묵시신탁의 인정 기준",
+      "page": 79,
+      "printedPage": "70",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-042",
+      "title": "Ⅱ. 목적을 정하여 교부한 금전과 신탁",
+      "page": 84,
+      "printedPage": "75",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-043",
+      "title": "Ⅲ. 의제신탁과 우리 법",
+      "page": 88,
+      "printedPage": "79",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-044",
+      "title": "제3절 수탁자의 의무",
+      "page": 92,
+      "printedPage": "83",
+      "level": 2,
+      "kind": "body"
+    },
+    {
+      "id": "toc-045",
+      "title": "Ⅰ. 선관주의의무",
+      "page": 92,
+      "printedPage": "83",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-046",
+      "title": "Ⅱ. 충실의무와 분별관리의무",
+      "page": 95,
+      "printedPage": "86",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-047",
+      "title": "Ⅲ. 수탁자의 변경과 신탁의 존속",
+      "page": 98,
+      "printedPage": "89",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-048",
+      "title": "제4절 신탁재산의 독립성과 채권자",
+      "page": 102,
+      "printedPage": "93",
+      "level": 2,
+      "kind": "body"
+    },
+    {
+      "id": "toc-049",
+      "title": "Ⅰ. 수탁자의 고유채권자",
+      "page": 102,
+      "printedPage": "93",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-050",
+      "title": "Ⅱ. 위탁자의 채권자와 사해신탁",
+      "page": 104,
+      "printedPage": "95",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-051",
+      "title": "Ⅲ. 신탁채권자와 책임한정특약",
+      "page": 107,
+      "printedPage": "98",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-052",
+      "title": "제5절 신탁의 공시와 제3자",
+      "page": 111,
+      "printedPage": "102",
+      "level": 2,
+      "kind": "body"
+    },
+    {
+      "id": "toc-053",
+      "title": "Ⅰ. 신탁등기와 신탁원부",
+      "page": 111,
+      "printedPage": "102",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-054",
+      "title": "Ⅱ. 신탁원부 기재사항의 대항력에 관한 판례",
+      "page": 113,
+      "printedPage": "104",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-055",
+      "title": "Ⅲ. 목적구속성의 관점에서 본 대항력의 범위",
+      "page": 115,
+      "printedPage": "106",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-056",
+      "title": "제6절 소결",
+      "page": 119,
+      "printedPage": "110",
+      "level": 2,
+      "kind": "body"
+    },
+    {
+      "id": "toc-057",
+      "title": "제4장 목적구속성과 민사신탁의 활용",
+      "page": 123,
+      "printedPage": "114",
+      "level": 1,
+      "kind": "body"
+    },
+    {
+      "id": "toc-058",
+      "title": "제1절 고령자 재산관리신탁",
+      "page": 124,
+      "printedPage": "115",
+      "level": 2,
+      "kind": "body"
+    },
+    {
+      "id": "toc-059",
+      "title": "Ⅰ. 고령자의 재산관리와 성년후견",
+      "page": 124,
+      "printedPage": "115",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-060",
+      "title": "Ⅱ. 신탁선언(자기신탁)에 의한 재산관리",
+      "page": 128,
+      "printedPage": "119",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-061",
+      "title": "제2절 가족부양신탁",
+      "page": 135,
+      "printedPage": "126",
+      "level": 2,
+      "kind": "body"
+    },
+    {
+      "id": "toc-062",
+      "title": "Ⅰ. 장애인 등 가족을 위한 신탁",
+      "page": 135,
+      "printedPage": "126",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-063",
+      "title": "Ⅱ. 수익권의 양도·압류 제한",
+      "page": 140,
+      "printedPage": "131",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-064",
+      "title": "제3절 상속신탁",
+      "page": 143,
+      "printedPage": "134",
+      "level": 2,
+      "kind": "body"
+    },
+    {
+      "id": "toc-065",
+      "title": "Ⅰ. 유언대용신탁의 구조와 활용",
+      "page": 144,
+      "printedPage": "135",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-066",
+      "title": "Ⅱ. 수탁자를 사후수익자로 정한 유언대용신탁",
+      "page": 147,
+      "printedPage": "138",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-067",
+      "title": "Ⅲ. 수익자연속신탁",
+      "page": 153,
+      "printedPage": "144",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-068",
+      "title": "제4절 상속신탁과 유류분",
+      "page": 155,
+      "printedPage": "146",
+      "level": 2,
+      "kind": "body"
+    },
+    {
+      "id": "toc-069",
+      "title": "Ⅰ. 유류분 제도의 개정",
+      "page": 156,
+      "printedPage": "147",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-070",
+      "title": "Ⅱ. 유언대용신탁재산의 유류분 산정 기초재산 산입",
+      "page": 158,
+      "printedPage": "149",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-071",
+      "title": "Ⅲ. 유류분의 반환: 반환의무자와 반환 방법",
+      "page": 167,
+      "printedPage": "158",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-072",
+      "title": "Ⅳ. 수익자연속신탁과 유류분",
+      "page": 173,
+      "printedPage": "164",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-073",
+      "title": "Ⅴ. 특별수익 제외 규정(민법 제1008조 단서)의 유추 적용",
+      "page": 175,
+      "printedPage": "166",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-074",
+      "title": "제5절 소결",
+      "page": 178,
+      "printedPage": "169",
+      "level": 2,
+      "kind": "body"
+    },
+    {
+      "id": "toc-075",
+      "title": "제5장 결 론",
+      "page": 181,
+      "printedPage": "172",
+      "level": 1,
+      "kind": "body"
+    },
+    {
+      "id": "toc-076",
+      "title": "제1절 연구의 요약",
+      "page": 181,
+      "printedPage": "172",
+      "level": 2,
+      "kind": "body"
+    },
+    {
+      "id": "toc-077",
+      "title": "제2절 목적구속성과 민사신탁의 기본구조·성립·효력",
+      "page": 183,
+      "printedPage": "174",
+      "level": 2,
+      "kind": "body"
+    },
+    {
+      "id": "toc-078",
+      "title": "제3절 목적구속성과 민사신탁의 활용",
+      "page": 186,
+      "printedPage": "177",
+      "level": 2,
+      "kind": "body"
+    },
+    {
+      "id": "toc-079",
+      "title": "제4절 해석의 한계와 제도 개선의 방향",
+      "page": 188,
+      "printedPage": "179",
+      "level": 2,
+      "kind": "body"
+    },
+    {
+      "id": "toc-080",
+      "title": "참고문헌",
+      "page": 192,
+      "printedPage": "183",
+      "level": 1,
+      "kind": "back"
+    },
+    {
+      "id": "toc-081",
+      "title": "Ⅰ. 국내 단행본",
+      "page": 192,
+      "printedPage": "183",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-082",
+      "title": "Ⅱ. 국내 논문",
+      "page": 192,
+      "printedPage": "183",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-083",
+      "title": "Ⅲ. 외국 문헌",
+      "page": 198,
+      "printedPage": "189",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-084",
+      "title": "Ⅳ. 기타 자료",
+      "page": 200,
+      "printedPage": "191",
+      "level": 3,
+      "kind": "body"
+    },
+    {
+      "id": "toc-085",
+      "title": "Abstract",
+      "page": 201,
+      "printedPage": "192",
+      "level": 1,
+      "kind": "back"
+    },
+    {
+      "id": "toc-086",
+      "title": "부록 1  민사신탁의 신탁계약 조항례",
+      "page": 206,
+      "printedPage": "197",
+      "level": 1,
+      "kind": "back"
+    },
+    {
+      "id": "toc-087",
+      "title": "부록 2  가족부양신탁의 지급·감독 조항례",
+      "page": 207,
+      "printedPage": "198",
+      "level": 1,
+      "kind": "back"
+    },
+    {
+      "id": "toc-088",
+      "title": "부록 3  수탁자의 교체와 사후승계 선택조항",
+      "page": 208,
+      "printedPage": "199",
+      "level": 1,
+      "kind": "back"
+    },
+    {
+      "id": "toc-089",
+      "title": "부록 4  부양 필요·지급·기여 기록 서식",
+      "page": 209,
+      "printedPage": "200",
+      "level": 1,
+      "kind": "back"
+    }
+  ]
+}

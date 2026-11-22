@@ -1,0 +1,865 @@
+판결문 보존 사본(미러)
+Federal Court of Australia, Gummow J, 2 August 1991
+Re Australian Elizabethan Theatre Trust (1991) 102 ALR 681; [1991] FCA 344
+원 저장소: https://www.austlii.edu.au/au/cases/cth/FCA/1991/344.html
+수납 출처: https://www.trusts.it/admincp/UploadedPDF/201104141133180.jAustralia%20Re%20John%20Frederick%20Lord%20%5B1991%5D%20FCA%20344.pdf
+AustLII 판결문 보존 사본에서 사이트 꼬리말만 제외한 텍스트입니다. 공식 원호스트 현재 파일과 대조하지 못했습니다.
+
+Re John Frederick Lord v the Australian Elizabethan Theatre 
+Trust; Commonwealth Bank of Australia; the Australian 
+Opera; the Australian Ballet Foundation and Victorian 
+Tapestry Workshop [1991] FCA 344; 438 Equity 102 ALR 681 
+5 ACSR 587 30 FCR (2 August 1991)  
+FEDERAL COURT OF AUSTRALIA 
+Re: JOHN FREDERICK LORD  
+And: THE AUSTRALIAN ELIZABETHAN THEATRE TRUST; COMMONWEALTH BANK 
+OF AUSTRALIA;  
+THE AUSTRALIAN OPERA; THE AUSTRALIAN BALLET FOUNDATION and VICTORIAN 
+TAPESTRY  
+WORKSHOP  
+No. G3017 of 1991  
+FED No. 438  
+Equity  
+[1991] FCA 344; 102 ALR 681  
+5 ACSR 587  
+30 FCR 491  
+COURT 
+IN THE FEDERAL COURT OF AUSTRALIA  
+NEW SOUTH WALES DISTRICT REGISTRY  
+GENERAL DIVISION  
+Gummow J.(1)  
+CATCHWORDS 
+Equity - trusts - gifts to The Australian Elizabethan Theatre Trust attracting deduction under para. 
+78 (1) (a) (xiii) of the Income Tax Assessment Act 1936 - gifts stated to be "unconditional" but with 
+"preference" for "allocation" to particular arts organisation - moneys banked in overdrawn operating 
+account - no "allocation" yet made - provisional liquidator appointed - whether express or 
+constructive trust - nature of Quistclose trust.  
+Income Tax Assessment Act 1936  
+Bankruptcy Act 1966  
+Trade Practices Act 1974  
+The Corporations Law  
+The Companies Ordinance 1931-1949 (A.C.T.)  
+Companies Act 1948 (U.K.)  
+
+The Commissioner of Taxation of the Commonwealth of Australia v McPhail [1968] HCA 13; 
+(1968) 117 CLR 111  
+Bray v The Commissioner of Taxation of the Commonwealth of Australia [1978] HCA 18; (1978) 
+140 CLR 560  
+Australasian Conference Association Limited v Mainline Constructions Proprietary Limited (In 
+Liquidation) [1978] HCA 45; (1978) 141 CLR 335  
+Re Associated Securities Ltd and the Companies Act (1981) 1 NSWLR 742  
+Re Multi Guarantee Co. Ltd (1987) BCLC 257  
+Walker v Corboy (1990) 19 NSWLR 382  
+Barclays Bank Ltd v Quistclose Investments Ltd (1970) AC 567  
+Rose v Rose (1986) 7 NSWLR 679  
+Re Veli; Ex parte AE Developments Pty Ltd v Scott (1988) 18 FCR 204  
+Re Miles [1988] FCA 409; (1988) 20 FCR 194  
+Ausintel Investments Australia Pty Ltd v Lam (1990) 19 NSWLR 637  
+General Communications Ltd v Development Finance Corporation of New Zealand Ltd (1990) 3 
+NZLR 406  
+Commissioner for Stamp Duties of New South Wales v Perpetual Trustee Company, Limited 
+(1943) AC 425  
+In re Vandervell's Trusts (No. 2) (1974) Ch 269  
+Carreras Rothmans Ltd v Freeman Mathews Treasure Ltd (1985) Ch 207  
+Tidex v The Trustees Executors and Agency Company Ltd (1971) 2 NSWLR 453  
+Re Wall (1979) 25 ALR 615  
+Trident General Insurance Co. Limited v McNiece Bros Proprietary Limited [1988] HCA 44; 
+(1988) 165 CLR 107  
+Bahr v Nicolay (No. 2) [1988] HCA 16; (1988) 164 CLR 604  
+The Countess of Bective v The Federal Commissioner of Taxation [1932] HCA 22; (1932) 47 CLR 
+417  
+Perpetual Trustee Co. Ltd v Godsall (1979) 2 NSWLR 785  
+Muschinski v Dodds [1985] HCA 78; (1985) 160 CLR 583  
+
+Re EVTR (1987) BCLC 646  
+Dean v Cole (1921) 30 CLR 1  
+Stephens Travel Service International Pty Ltd v Qantas Airways Ltd (1988) 13 NSWLR 331  
+Barnes v Addy (1874) 9 Ch App 244  
+British America Elevator Company, Limited v Bank of British North America (1919) AC 658  
+Baumgartner v Baumgartner [1987] HCA 59; (1987) 164 CLR 137  
+Australia and New Zealand Banking Group Limited v Westpac Banking Corporation [1988] HCA 
+17; (1988) 164 CLR 662  
+Lipkin Gorman v Karpnale Ltd (1991) 3 WLR 10  
+Le Compte v Public Trustee (1983) 2 NSWLR 109  
+Re Crest Realty Pty Ltd (In Liq) and the Companies Act (1977) 1 NSWLR 664  
+Re Sharpe (a bankrupt), ex parte the trustee of the bankrupt v Sharpe (1980) 1 All ER 198  
+HEARING 
+SYDNEY  
+2:8:1991  
+Counsel and solicitors for the Mr Dermot Ryan instructed by  
+Provisional Liquidator and for Messrs Allen Allen and Hemsley  
+The Australian Elizabethan  
+Theatre Trust (In Provisional  
+Liquidation):  
+Counsel and solicitors for Mr S.D. Rares instructed by  
+The Australian Opera, Messrs Mallesons Stephen Jaques  
+The Australian Ballet Foundation  
+and Victorian Tapestry Workshop:  
+Counsel and solicitors for Mr R.A. Conti QC,  
+Commonwealth Bank of Australia: Mr G.O'L. Reynolds, instructed by  
+Mr L.E. Taylor.  
+ORDER 
+The Court declares that the moneys received by The Australian Elizabethan Theatre Trust ("the 
+AETT"), in respect of which the donor expressed a preference for allocation in favour of The 
+Australian Opera ("The Opera"), The Australian Ballet Foundation ("The Ballet") and Victorian 
+Tapestry Workshop ("the Workshop") being the moneys identified in Annexure B to the affidavit of 
+the provisional liquidator, sworn 5 June 1991 and filed herein, do not constitute moneys held by the 
+AETT or the Commonwealth Bank of Australia upon trust for The Opera, The Ballet, the Workshop 
+or any of them.  
+
+The Court orders that the proceeding stand over further directions and orders.  
+Note: Settlement and entry of orders is dealt with by Order 36 of the Federal Court Rules.  
+DECISION 
+The Australian Elizabethan Theatre Trust and the Tax Deductibility Program  
+The Australian Elizabethan Theatre Trust ("AETT") was incorporated on 29 September 1954 under 
+The Companies Ordinance 1931-1949 (A.C.T.). It is a company limited by guarantee, and was 
+established to commemorate the visit to this country in 1954 of H.M. The Queen and H.R.H. The 
+Duke of Edinburgh. The AETT had the object, inter alia, of promoting in Australia drama, opera, 
+ballet and any other art of the theatre. In 1980, the objects of the AETT were expanded so as to 
+extend to the promotion and fostering of all the arts in Australia. The powers and duties of the 
+Board of Directors include, as provided by Article 52 (i), the power:  
+"To make gifts and donations of cash to such  
+person or persons, bodies of persons, Company or  
+Companies, Corporation or Corporations as the  
+Directors may think fit, and to receive gifts  
+and donations of cash or real or personal  
+property from such person or persons, bodies of  
+persons, Company or Companies, Corporation or  
+Corporations as the Directors may think fit to accept."  
+2. At all material times, para. 78 (1) (a) (xiii) of the Income Tax Assessment Act 1936 ("the Tax 
+Act") has provided for certain gifts to the AETT to be allowable deductions. The gifts in question 
+are gifts made by the taxpayer in the year of income, not being testamentary gifts, of the value of $2 
+and upwards of money or of property other than money which was purchased by the taxpayer 
+within twelve months immediately preceding the making of the gift. The section makes provision to 
+like effect in respect of a number of other institutions, but a number of well known arts bodies are 
+not given this special treatment. Hence, as will become apparent, the utility to donors of deductible 
+gifts to the AETT which would or might be passed on by the AETT to one or more of these other 
+bodies.  
+3. In 1972, the AETT had discussions with the Commissioner of Taxation concerning an appeal 
+then being made by the AETT for funds to support opera in this country. In that year, the 
+Commissioner ruled that he would accept as deductable under para. 78 (1) (a) (xiii) of the Tax Act 
+donations received by the AETT in support of the performing arts only where they were received by 
+the AETT unconditionally. However, the Commissioner accepted that where the donor indicated a 
+"preference", the "wishes" of the donor might be taken into account by the AETT when the 
+Directors, pursuant to Article 52 (i), made grants to various bodies associated with the performing 
+arts. Further, in The Commissioner of Taxation of the Commonwealth of Australia v McPhail 
+[1968] HCA 13; (1968) 117 CLR 111 at 116, Owen J. had held that to constitute a "gift" within the 
+meaning of para. 78 (1) (a) of the Tax Act, it must appear that the property transferred was 
+transferred voluntarily and not as the result of a contractual obligation to transfer it and that no 
+advantage of a material character was received by the transferor by way of return. The importance 
+of that decision was stressed by a further ruling issued by the Commissioner on 13 August 1987. (I 
+should add that counsel also referred me to Bray v The Commissioner of Taxation of the 
+Commonwealth of Australia [1978] HCA 18; (1978) 140 CLR 560 at 564-565, 574-575, but what is 
+there said throws little light upon the issues in the present case.)  
+4. The evidence indicates that at all material times the AETT has endeavoured so to act as to 
+encourage the making of donations to it which would attract the deduction to the donor provided for 
+
+in para. 78 (1) (a) (xiii) of the Tax Act. A practice arose whereby gifts would be made to the AETT 
+with a request by the donor that the gift be allocated by the AETT to an arts organisation indicated 
+by the donor. To that end, the AETT approved over the years a large number of bodies as what it 
+described as "preferred arts organisations". In giving approval to such a body, the AETT required 
+(in accordance with the stipulations of the Commissioner) that the constituent documents of the 
+body provide that its funds be applicable only for or in support of one or more of the arts, and that 
+on dissolution the assets of the organisation not be distributed to members but be passed over to 
+another such organisation. On 1 March 1989, the Commissioner reaffirmed to the AETT that:  
+"To constitute a gift within the meaning of  
+section 78 (1) (a) of the (Tax Act), it must  
+appear that the property was transferred  
+voluntarily and no advantage of a material  
+character was received by the transferor by way  
+of return. 'Preference' donations are tax  
+deductible provided the AETT receives them in  
+its own right and has an unfettered discretion  
+whether to apply money in accordance with the  
+preference expressed by the donor. Such a  
+payment would not be accepted as a gift for  
+income tax purposes if it was apparent that the  
+AETT had guaranteed or promised that the donor's  
+preference would be honoured. The payment would  
+not be an unfettered gift."  
+As late as 20 March 1991, the AETT received a ruling by the Commissioner as to what changes 
+needed to be made by the Australian Chamber Orchestra in its advertising if certain donations to the 
+AETT were to be deductible under para. 78 (1) (a) (xiii).  
+5. The AETT identified the activities I have described as its "Tax Deductibility Program". In 1976, 
+it "processed" about $95,000 in donations, and the program grew to large proportions. Under the 
+above heading, the following appears in the 1989 Annual Report of the AETT:  
+"This service has enabled over 700 arts bodies  
+to solicit donations from individuals and  
+corporations by offering tax deductibility when  
+the donations are processed through The Trust.  
+The size of donations processed in 1989 fell by  
+4% from the all time high in 1988, the  
+Bicentennial Year. However, at $6,330,990, this  
+remains a significant part of arts funding."  
+6. The evidence includes examples of forms used for the making of gifts to the AETT, in respect of 
+which a deduction would be claimed by the donor pursuant to para. 78 (1) (a) (xiii) of the Tax Act. 
+One such form, issued by the AETT, is headed, in large print, "Tax Deductibility Program" and 
+states that a donation of $2 or more given unconditionally to the AETT is tax deductable. The form 
+("the AETT standard form") is drafted as a statement addressed to the AETT by the donor and 
+provides for the stipulation of a sum as "representing my donation to The Australian Elizabethan 
+Theatre Trust". It goes on to state:  
+"This donation is given unconditionally,  
+however, it would be appreciated if, when  
+considering your appropriations to the  
+
+performing companies, preference in the  
+allocation of this donation could be given to . . ."  
+The evidence also includes material whereby gifts were solicited by such bodies as the Australian 
+Opera ("the Opera") and the Victoria State Opera. The form used by the Opera is headed "Tax 
+Deductibility for your Contribution" and states:  
+"The Australian Opera welcomes contributions  
+from corporations of $1000 and over. Support  
+given to The Australian Opera is tax deductable  
+if it falls into either of the following categories:  
+Promotions and Advertising expenditure:  
+Support may be claimed as a deduction under  
+Section 51 (1) of the Income Tax Act  
+'expenditure necessarily incurred for the  
+production of assessable income'.  
+Donations:  
+Donations made unconditionally through The  
+Australian Elizabethan Theatre Trust are  
+allowable deductions in Terms of Section  
+78(1)(a)(xiii) of the Income Tax Act. No  
+benefit can accrue to the donor other than  
+acknowledgement in programmes.  
+Donations through the Trust must be accompanied  
+by the form provided."  
+The form in question is addressed to the General Manager of the AETT and includes words taken 
+from the AETT standard form:  
+"This donation is given unconditionally.  
+However, it would be appreciated if, when  
+considering your appropriations to the  
+performing companies, preference in the  
+allocation of this donation could be given to  
+The Australian Opera."  
+The Present Proceeding  
+7. By order made 28 March 1991, this Court appointed the applicant as provisional liquidator of the 
+AETT. The appointment was made on the application of the AETT. The provisional liquidator is 
+considering propounding a scheme of arrangement between the AETT and its creditors. The Report 
+as to Affairs of the AETT submitted pursuant to sub-s. 475 (7) of the Corporations Law on 19 April 
+1991 shows, as at 28 March 1991, total realisable assets of $2,115,650, and preferential claims of 
+$3,625,693 (being a deficiency to preferential creditors of $1,510,043); unsecured creditors are 
+reported at $815,114, leaving a total deficiency of $2,325,157.  
+8. The AETT had conducted at least four accounts at the Goulburn Street, Sydney branch of the 
+Commonwealth Bank of Australia ("the Bank"). One of them was styled "Australian Elizabethan 
+Trust Trustee Account", but the moneys in question in this proceeding were not paid into that 
+account. The Bank had been banker to the AETT since its incorporation. It is the principal 
+preferential creditor shown in the Report as to Affairs, and holds, inter alia, a charge over the assets 
+and undertaking of the AETT.  
+9. The Opera, The Australian Ballet Foundation ("the Ballet") and the Victorian Tapestry Workshop 
+("the Workshop") are all incorporated bodies. The Opera and the Ballet are well known throughout 
+the country. The Workshop is a company incorporated in the State of Victoria and limited by 
+
+guarantee. It has as one of its primary objects the encouragement of the production and marketing 
+of tapestries, and the fostering of interest in the community in tapestry as an art form.  
+10. In the period between 14 February 1991 and 7 March 1991, the AETT had banked moneys 
+totalling $28,407 received from donors who, in accordance with the procedures I have described 
+above, had indicated a preference for appropriation of the their gift in favour of the Ballet. These 
+moneys had been deposited by the AETT with the Bank in its account No. 2013 0011 0152. This 
+was a cheque account used as the operating account of the AETT. On 28 March 1991, when the 
+provisional liquidator was appointed, that account stood in debit in the sum of $929,856.05. At all 
+material prior times the account had been in overdraft, in a fluctuating amount. The practice was for 
+moneys comprising these donations, together with other moneys received by the AETT in respect of 
+its activities, to be banked using deposit slips which did not differentiate between these donations 
+and other moneys. These included receipts from the AETT's commercial activities and gifts outside 
+the Tax Deductibility Program. All went into the operating account. A cheque in the sum of $500 
+from a donor indicating a wish for preference to be given to the Ballet had been received but not 
+banked before 28 March. It was later placed in an account operated by the provisional liquidator. In 
+respect of none of these moneys had there been, before the appointment of the provisional 
+liquidator, any appropriation or purported appropriation by the AETT in favour of the Ballet or any 
+other body.  
+11. A similar situation applied in respect of the Opera although larger sums were involved. Between 
+18 February 1991 and 11 March 1991, a total of $53,467 was paid by the AETT into the operating 
+account. The value of cheques held by the AETT and later placed in the provisional liquidator's 
+account was $22,725, giving a total of "unallocated" gifts of $76,192.  
+12. The Workshop is in a somewhat different position. On 25 January 1991, the Elisabeth Murdoch 
+Trust drew a cheque for $100,000 upon its account with National Australia Bank Limited, in favour 
+of the AETT. The cheque was accompanied by a completed AETT standard form stating a 
+"preference" for allocation to the Workshop. On 29 January 1991, the AETT wrote to the donor 
+enclosing a receipt, referring to the provisions for a deduction under s. 78 of the Tax Act, and also 
+stating that the AETT might be assured that its preference "will be taken into account" when the 
+Board of the AETT made its appropriations to assist the arts in Australia. On 22 February 1991, the 
+Administration Manager of the AETT wrote to the Director of the Workshop stating:  
+"We write to advise that the Board of the Trust  
+has approved payment of $100000.00 being  
+donations received and made available to the  
+Victorian Tapestry Workshop.  
+Accordingly, our cheque for $99365.00 is  
+enclosed, representing the approved payment less  
+the levy of $635.00 which is used to partially  
+offset the costs directly associated with the  
+donations processing scheme operated by the  
+Trust. Please note that this levy may be  
+adjusted should it prove to be in excess of the  
+direct costs incurred, or should funding for the  
+scheme be forthcoming from another source."  
+It will be necessary to refer later in these reasons and in more detail to the "levy" in respect of the 
+"donations processing scheme" operated by the AETT. The point of immediate importance is that 
+payment of the cheque was stopped before it had been honoured. The AETT took this course 
+because it became aware that the Memorandum and Articles of Association of the Workshop had 
+
+not been altered so as to comply with guidelines approved by the Commissioner, something which 
+would be necessary for it to become a preferred arts organisation in the sense I have earlier 
+described. Steps then were taken by the Workshop to make the necessary changes to its constituent 
+documents, but the appointment of the provisional liquidator intervened before any decision was 
+taken by the AETT to issue a fresh cheque in favour of the Workshop. No question arises in the 
+present proceeding as to any action in damages which the Workshop might have upon the cheque 
+enclosed with the AETT's letter of 22 February 1991.  
+13. In the Report as to Affairs, the provisional liquidator has included in the $815,114 for unsecured 
+creditors the sum of $386,274 for donations received by the AETT but not "allocated" to preferred 
+arts organisations before his appointment. Further, the value of cheques held by the AETT and later 
+banked by the provisional liquidator amounted to $67,038. These sums have been included in his 
+statement of the total deficiency of $2,325,157. This judgment concerns claims as to the existence 
+or otherwise of trusts in respect of the "unallocated" donations where a preference had been 
+expressed by the donor, in the manner I have described, in favour of the Opera, the Ballet or the 
+Workshop.  
+14. The provisional liquidator seeks a declaration that the moneys I have described received by the 
+AETT pursuant to a donation on a form in which the donor stated a preference that such donation be 
+allocated by way of grant to the Opera, the Ballet or the Workshop, did not constitute moneys held 
+by the AETT upon trust for those parties or any of them. The Bank supports the making of that 
+declaration.  
+15. The three arts organisations seek relief to contrary effect, but in terms that are somewhat lacking 
+in clarity. The nature of the relief sought was further explained in their submissions. They seek 
+declarations that in the events that have happened, the AETT and the Bank hold respectively the 
+sum of $76,192 for the Opera, $28,907 for the Ballet and $100,000 for the Workshop, these moneys 
+being held on express trust or constructive trust. The constructive trust binding the AETT is said to 
+have arisen upon receipt of the payments or the making by the AETT of an "allocation" in favour of 
+the relevant preferred arts organisation, and the terms of that trust are said to provide for payment to 
+that organisation. The three organisations also seek a declaration that if for any reason, in the events 
+which have happened, the AETT is unable to pay any of the three sums in question, as sought in the 
+earlier declaration, the AETT and the Bank hold that sum on a resulting trust for the respective 
+donors. Implicit in this approach to the matter is the contention that when the Bank received from 
+the AETT payments representing the donations I have described and applied them in reduction of 
+the overdraft in the operating account, it dealt with trust moneys and remains accountable in respect 
+of them to the Opera, the Ballet and the Workshop.  
+16. On 11 July 1991, I ordered, pursuant to Order 29 of the Rules, that the issues as to which, if any, 
+of the above declarations should be made, be tried separately. However, it should be noted that the 
+issues as so isolated did not embrace certain other issues. I have mentioned the action the Workshop 
+might have upon the cheque. Other issues are whether, even if there is no proprietary claim in 
+respect of the relevant unallocated donations, nevertheless (i) the donors have a money claim 
+against the AETT for recovery of their gifts (with or without an adjustment in respect of any income 
+tax deductions already allowed in respect of the gifts), thereby qualifying them as unsecured 
+creditors as mentioned in the Report as to Affairs, (cf. Australasian Conference Association Limited 
+v Mainline Constructions Proprietary Limited (In Liquidation) [1978] HCA 45; (1978) 141 CLR 
+335 at 349-350), or (ii) the preferred arts organisations have money claims against the AETT in 
+respect of unallocated donations where the "preference" indicated by a donor identified the 
+organisation in question, thereby qualifying the organisation as an unsecured creditor of the AETT. 
+Those questions remain open for subsequent decision, if need be. I express no views upon those 
+
+questions. I should also add that counsel for the three arts organisations outlined a claim of 
+contravention of s. 52 of the Trade Practices Act 1974 ("the TP Act") against the AETT and the 
+Bank. He sought to introduce this claim only in opening at the hearing and I indicated that the trial 
+of any such issue would have to be held over. However, certain evidence was admitted on the 
+footing that, as between the parties concerned, it could be read at any trial of the s. 52 claim.  
+17. The making of one or other of the declarations sought will have the effect of declaring the 
+proprietary rights of the immediate parties rather than merely leaving the provisional liquidator in 
+the position where he has received no more than judicial advice given on an application under s. 
+479 of the Corporations Law, not in inter partes litigation. But as I have said, in the period before 
+the appointment of the provisional liquidator, the AETT had received (but not "allocated") other 
+donations under the Tax Deductibility Program with an expression of preference for allocation, in 
+the sense I have described, to organisations other than the Ballet, the Opera and the Workshop. 
+However, only the three preferred arts organisations I have mentioned are parties to the present 
+proceeding. I am conscious also that no representative order has been made in respect of donors to 
+the AETT. However, the practical effect of the declarations I will make and reasons for making 
+them will be to assist the provisional liquidator to decide what is to be done in other cases. I should 
+add that directions were given, and complied with, for the notification of the present proceeding to 
+be given to a number of other preferred arts organisations and donors, together with certain 
+unsecured creditors. But the only appearances were by those who have become parties to the 
+present proceeding. However, Mr Jack Kennedy, who swore an affidavit filed for the Workshop, is 
+both a director of the Workshop and a trustee of the Elisabeth Murdoch Trust, a donor. As will 
+appear, the Bank, in the past, has been a donor.  
+18. The first submission of the Opera, the Ballet and the Workshop was that before the appointment 
+of the provisional liquidator, each had become a beneficiary of a fully constituted express trust of 
+the respective sums I have mentioned, and that insofar as moneys had been paid by the AETT into 
+its operating account with the Bank those moneys nevertheless were ear-marked as trust moneys 
+and the Bank took with notice of those trusts. On this footing, there are thus two questions, the first 
+whether express trusts arose and the second, if so, whether the Bank took subject to those trusts.  
+Express Trust and "Purpose" Trust  
+19. I turn to consider the first question. It is plain that conditions precedent or subsequent may be 
+attached to a gift: "Halsbury's Laws of England", 4th Ed., Vol. 20, pp 29-32. Property may also be 
+transferred without consideration to be held by the transferee upon trust; supra pp 23-24. In neither 
+case is the gift unfettered. But in the present case it is to be observed that the donations were 
+expressed by the donors as being given "unconditionally" to the AETT. There was also a statement 
+that the donor would appreciate a particular "preference" being given by the AETT in its allocation 
+of the donation. But the system which had operated for some years had been posited upon the 
+obtaining by donors of the deduction provided for in para. 78 (1) (a) (xiii) of the Tax Act, and 
+therefore, in a practical sense, upon observance of rulings given from time to time by the 
+Commissioner as to what he regarded as requisite for the obtaining of such a deduction. It was not 
+for nothing that the AETT standard form was headed in bold letters "Tax Deductibility Program". 
+The essence of the attitude consistently taken by the Commissioner was that in order to qualify, a 
+donation must be "unconditional", and "unfettered".  
+20. Further, the donations were not received on terms that they be ear-marked by the AETT and, for 
+example, kept separate from its other funds and placed in an account kept for the particular purpose. 
+Nor, in practice, did the AETT segregate the donations by placing them in a separate bank account. 
+This is a significant factor tending against the conclusion that a trust arose: see Re Associated 
+Securities Ltd and the Companies Act (1981) 1 NSWLR 742 at 749; Re Multi Guarantee Co. Ltd 
+
+(1987) BCLC 257 at 266; Walker v Corboy (1990) 19 NSWLR 382 at 385, 389, 397-398. What 
+was done was to show in the balance sheets of the AETT as "Current Liabilities", "Donations 
+received in advance". In a note to the accounts, the accounting method was described as follows:  
+"Donations received for the support of  
+activities carried out in the financial period  
+are included as income in the Profit and Loss  
+Account whereas donations received in support of  
+future activities are deferred until such time  
+as expended."  
+Gifts under the Tax Deductibility Program which had been received by the AETT but not 
+"processed" and "allocated" were included (with other moneys) as "Donations received in advance".  
+21. There was discussion in submissions of the conclusions to be drawn from Barclays Bank Ltd v 
+Quistclose Investments Ltd (1970) AC 567. Recent Australasian decisions, in which the House of 
+Lords decision is considered and applied, include Re Associated Securities Ltd and the Companies 
+Act, supra; Rose v Rose (1986) 7 NSWLR 679; Re Veli; Ex parte AE Developments Pty Ltd v 
+Scott (1988) 18 FCR 204; Re Miles [1988] FCA 409; (1988) 20 FCR 194; Ausintel Investments 
+Australia Pty Ltd v Lam (1990) 19 NSWLR 637 and General Communications Ltd v Development 
+Finance Corporation of New Zealand Ltd (1990) 3 NZLR 406, a decision of the New Zealand Court 
+of Appeal. Reference may also be made to the extra-judicial writings of Mr Justice Priestley, "The 
+Romalpa Clause and the Quistclose Trust" Chapter 8 in Finn, Ed., Equity and Commercial 
+Relationships, and of Sir Peter Millett, "The Quistclose Trust: Who Can Enforce It?", (1985), 101 
+LQR 269.  
+22. It will be recalled that in Quistclose, as part of its endeavours to deal with its acute financial 
+difficulties, Rolls Razor had borrowed money from Quistclose to enable payment of a dividend 
+which Rolls Razor had declared on 2 July. The directors of Rolls Razor contemplated payment of 
+the dividend on 24 July. The declaration of the dividend had given rise to a debt owed by Rolls 
+Razor to its shareholders. As Lord Wilberforce put it, the "mutual intention" of Quistclose and Rolls 
+Razor and "the essence of their bargain" was that the sum advanced should not become part of the 
+assets of Rolls Razor but should be used exclusively for payment of a particular class of creditors, 
+namely those entitled to the dividend: (1970) AC at 580. The liquidation of Rolls Razor supervened. 
+The directors resolved on 17 July to put the company into voluntary liquidation and an effective 
+resolution for liquidation was passed on 27 August. The dividend could not then have been paid 
+since the shareholders had now been postponed to ordinary creditors. The cheque drawn by 
+Quistclose in favour of Rolls Razor and representing the moneys borrowed by Rolls Razor had been 
+paid into a special account with Barclays Bank Limited. The bank had been informed by Rolls 
+Razor that the money in the account was to be used only for the purpose of meeting the dividend. 
+After the company went into liquidation, the bank claimed to set-off the sum in the dividend 
+account against other indebtedness to it of Rolls Razor. Three issues arose - (a) whether the 
+arrangement between Quistclose and Rolls Razor produced the result that Rolls Razor was a trustee 
+in respect of the money advanced to it by Quistclose, (b) if so, whether it now being impossible to 
+pay the dividend, the money was part of the free assets of Rolls Razor and Quistclose was left 
+merely as a general creditor in respect of the amount lent, and (c) if Rolls Razor had been 
+constituted a trustee and remained such even after the commencement of the liquidation, whether 
+the rights of Rolls Razor against the bank in respect of the credit in the special account were held on 
+trust for Quistclose, and whether the bank had notice of that trust such that it could not now effect a 
+set-off.  
+
+23. Before Plowman J. (1967) Ch 910, the parties to the action were Quistclose as plaintiff, Rolls 
+Razor as first defendant and Barclays Bank as second defendant. There was a third defendant 
+representative of the shareholders, but the third defendant played no active part in the proceeding: 
+(1967) Ch at 912. The liquidator of Rolls Razor opposed the claim of Quistclose on the footing that 
+the Bank was allowed the set-off it sought to make, the debt of Rolls Razor to the bank would 
+accordingly be decreased.  
+24. Plowman J. was prepared to assume issue (a) in favour of Quistclose, but held against it on issue 
+(b) and therefore did not deal with issue (c). An appeal to the Court of Appeal was allowed: (1968) 
+Ch 540. Issues (a) and (b) were decided in favour of Quistclose, but as to issue (c) it was held that 
+the bank on the facts had taken the cheque from Rolls Razor with knowledge of the circumstances 
+which made the money represented by the cheque in law trust money, so that the bank could not 
+effect a set-off. That decision was affirmed by the House of Lords. The gravamen of Plowman J.'s 
+decision had been that since Rolls Razor had had a contractual obligation to repay the loan to 
+Quistclose, there was no need to find a trust, his Lordship saying, ((1967) Ch at 930) that he did not 
+see why if a lender pays money to a borrower for a specific purpose which fails, the borrower's 
+contractual obligation to repay the money should have engrafted upon it some additional equitable 
+obligation.  
+25. It is that proposition which the Court of Appeal was particularly concerned to refute. This then 
+made it necessary to consider the position of the bank, issue (c). Reference was made in the Court 
+of Appeal (per Sachs L.J., supra at 567) and in argument of successful counsel before the House of 
+Lords ((1970) AC at 574) to the undoubted proposition that a resulting trust in favour of the settlor 
+arises as to that part of the beneficial interest of the property in question which has not been 
+disposed of by the express trust created by the settlement. Authority for this basic proposition was 
+found in the citation of Commissioner for Stamp Duties of New South Wales v Perpetual Trustee 
+Company, Limited (1943) AC 425 at 441, a passage in which their Lordships had spoken to similar 
+effect as had the High Court in the same case[1941] HCA 15; , (1941) 64 CLR 492 at 507, 511, 
+513. The outcome of the Vandervell litigation is a celebrated illustration of that proposition; see In 
+re Vandervell's Trusts (No. 2) (1974) Ch 269.  
+26. However, in the House of Lords, Lord Wilberforce said (supra at 580, 582) that a necessary 
+consequence of the mutual intention of Quistclose and Rolls Razor to create arrangements which 
+gave rise to a "primary" trust in favour of those entitled to the dividend was that if the dividend 
+could not be paid for any reason, the money, as a "secondary" trust, was to be returned to 
+Quistclose; the intention was clear to create the secondary trust for the benefit of the lender, to arise 
+if the primary trust, to pay the dividend, could not be carried out. This characterisation of what 
+occurred is indicative of an express trust with two limbs rather than an express trust in favour of the 
+shareholders and a resulting trust in favour of Quistclose which arose by reason of an incomplete 
+disposition by Quistclose of the whole of its interest in the money lent to Rolls Razor. But on either 
+characterisation, Quistclose had a beneficial interest (although not at all relevant times an exclusive 
+beneficial interest) in the money in question. Thus, it was not merely in the position of a lender with 
+the benefit of a promise to repay. Nor was Quistclose a settlor who had fully settled a fund upon 
+other parties and did so not retain for itself a beneficial interest sufficient for it to ensure 
+performance of the trust.  
+27. Of course, the effect of the transaction, on either footing, was that the only benefit Rolls Razor 
+could obtain from the loan would be that received from the use of the funds lent to discharge the 
+particular indebtedness of Rolls Razor to the shareholders in respect of the dividend. The suggestion 
+has been made by Professor Finn (as set out in footnote 58 to Mr Justice Priestley's paper) that in 
+substance the trust was a security device operating for the benefit of the lender ("borrower" appears 
+
+to be a mis-type); the device safeguarded its position vis-a-vis the other creditors of the financially 
+embattled borrower, unless and until the money was applied by the borrower in the authorised 
+manner, by payment of the dividend. Sir Peter Millett makes a related point in his article (supra at 
+290-291). Hence, perhaps, the force in the caution by counsel for the bank in address to the House 
+(supra at 572) that if Quistclose succeeded (as proved to be the case) there would be revealed a gap 
+in the protection given general creditors by s. 95 of the Companies Act 1948 (U.K.), which 
+provided that unregistered charges were void against any liquidator or creditor (cf. Corporations 
+Law, s. 266). As Mr Justice Priestley pointed out in his paper (supra at 224-225) similar concerns 
+have attended the development of Romalpa clauses. See also the observations by Pincus J. in Re 
+Miles [1988] FCA 409; (1988) 20 FCR 194 at 199.  
+28. But the essential reason why the insolvency law did not strike at the transaction in question in 
+Quistclose was that the moneys represented by the cheque drawn by Quistclose in favour of Rolls 
+Razor and banked in the special account of Rolls Razor never at any stage became the beneficial 
+property of Rolls Razor. It acquired no more than what Dixon J. called a dry legal interest (see 
+Commissioner for Stamp Duties of New South Wales v Perpetual Trustee Company, Limited, supra 
+at 510). On its part, Quistclose had both contractual right to repayment out of the general assets of 
+Rolls Razor, as a general creditor, and the beneficial interest in a fund, whether by way of resulting 
+trust or as the second limb of an express trust.  
+29. A somewhat different situation is presented by Carreras Rothmans Ltd v Freeman Mathews 
+Treasure Ltd (1985) Ch 207. This decision supports the proposition that a debtor of company A can 
+discharge the debt by paying the amount to A on terms that A hold it on trust for payment to 
+creditors of A nominated by that debtor. This trust is enforceable by the debtor despite the 
+supervening winding-up of A. It was held that A never acquired any beneficial interest in the 
+moneys paid to it by A. But A had bargained away any discharge for full value of the debt owed to 
+it, in return for an arrangement whereby one class of its creditors was to be satisfied from the 
+moneys received from the debtor. In Australia, as Mr Justice Priestley has pointed out (supra at 235-
+236) such an arrangement would encounter the operation of the preference provision in the 
+Bankruptcy Act 1966, s. 122.  
+30. The Quistclose decision has been the subject of criticism as a departure from basic trust law 
+and, on the other hand, seen as providing the welcome foundation for a new species of trust. The 
+range of responses is surveyed by Mr Rickett in his forthcoming article, "Different Views on the 
+Scope of the Quistclose Analysis: English and Antipodean Insights" to be published (1991) 107 
+LQR, Part 3. Some of these doctrinal tensions were apparent in counsel's submissions in this case. 
+Thus, it was suggested that the donations were given to the AETT with a purpose in mind, and that 
+this "purpose" characterised the trusts which allegedly arose in favour of the Opera, the Ballet and 
+the Workshop.  
+31. However, in my view, it would be an error to treat the references by Lord Wilberforce in 
+Quistclose (and by Gibbs A.C.J. in Australasian Conference Association Limited v Mainline 
+Constructions Proprietary Limited (In Liquidation), supra at 353) to "purpose" as characterising an 
+express trust which did not have to satisfy the ordinary requirements for any private (as distinct 
+from public) trust. There was, on Lord Wilberforce's analysis of the facts, a trust fund held by a 
+trustee on certain terms for a class of ascertained beneficiaries, with a limitation (whether as an 
+express or resulting trust) back to the settlor in specified circumstances. The expression "purpose" 
+was apt to describe the end sought to be achieved by the settlor, Quistclose, and accepted by the 
+trustee, Rolls Razor. This was formulated in the terms stipulating the conditions upon which the 
+shareholders might take a beneficial interest in the fund. The use of the expression "purpose" should 
+not be read as heralding a new era for the non-charitable purpose trust. This is a concept which has 
+
+not struck deep roots in this country; see, for example, Tidex v The Trustees Executors and Agency 
+Company Ltd (1971) 2 NSWLR 453 at 465-466.  
+32. In Quistclose, it appears to have been a condition of the primary trust that the shareholders 
+acquire and retain vested equitable rights in the fund only to the extent to which they had a present 
+right to payment of the dividend by Quistclose in the ordinary course, that is to say before 24 July. 
+That condition to their entitlement could not be fulfilled after the company went into liquidation. 
+The gift over, the "secondary" trust, then operated in favour of Quistclose. Hence, Hodgson J.'s 
+comment in relation to the conditions attaching to the primary trust that to speak of the trust as one 
+for a specific "purpose" may be merely another way of putting the same thing: Rose v Rose (1986) 
+7 NSWLR 679 at 685-686. Interestingly enough, the letters outlining the arrangement in Quistclose 
+used the term "conditions"; see the text set out (1968) Ch at 549-551.  
+33. The striking feature of the Quistclose litigation was that whilst previously it might have been 
+thought that debt and trust were distinct and disparate norms, it was thereafter clear that in a given 
+case the transaction under analysis might bear a dual character.  
+34. The question as to the existence of any express trust will always have to be answered by 
+reference to intention. An example of that basic proposition at work in this Court is the decision of 
+Lockhart J. in Re Wall (1979) 25 ALR 615 at 624-625. Ordinarily, the relevant intention is that of 
+the alleged settlor, but where the subject matter of the trust is contractual rights against the settlor, 
+conferred by the settlor upon the alleged trustee, the objective (or "purpose") of the transaction 
+being to benefit third parties, it may be appropriate to look to the mutual intention of settlor and 
+trustee. This is consistent with the approach by Deane J. to a similar question in Trident General 
+Insurance Co. Limited v McNiece Bros Proprietary Limited [1988] HCA 44; (1988) 165 CLR 107 
+at 149, but cf. Mason C.J., Wilson J. at 121. At all events, and as I have said, in Quistclose, supra at 
+580, Lord Wilberforce looked to "the mutual intention" of Quistclose and Rolls Razor and to "the 
+essence" of their bargain.  
+35. The relevant intention is to be inferred from the language employed by the parties in question 
+and to that end the Court may look also to the nature of the transaction and the relevant 
+circumstances attending the relationship between them: Walker v Corboy (1990) 19 NSWLR 382; 
+Scott, "The Law of Trusts", 4th Ed, 1987, 25.2. There is no need for particular caution in drawing 
+the inference that a trust was intended: Bahr v Nicolay (No. 2) [1988] HCA 16; (1988) 164 CLR 
+604 at 618-619. However, it also is important to appreciate both the flexibility of the institution of 
+the express trust and the range of equitable institutions which fall short of but have some of the 
+characteristics of a trust.  
+36. In Quistclose, the debate was whether that material disclosed a trust with the terms I have 
+described or merely a loan; no other result was suggested. But the facts in such cases are susceptible 
+of infinite variation and the trust is a supple instrument. Hence, the suggestion by Professor Finn 
+(supra) that if the facts disclosed no contractual obligation by the borrower to the lender to pay the 
+creditors, there could hardly be present a concurrent intention to create a trust in their favour; rather, 
+the borrower would hold the moneys borrowed as trustee of an express trust for the lender, subject 
+to a mandate for the lender to use the fund to pay the creditors. On that footing, there would be but 
+one trust, created to give the lender security for its rescue operation of the financially unhealthy 
+borrower, but not to render the creditors beneficiaries under any trust. Hence, also the suggestions 
+by Sir Peter Millett, supra at 290-291, now accepted by the New Zealand Court of Appeal in 
+General Communications Ltd v Development Finance Corporation of New Zealand Ltd (1990) 3 
+NZLR 406 at 432-433. One of these is that where the lender has a distinct interest of his own in 
+seeing that the money is applied to pay the creditors of the borrower, the borrower will be obliged, 
+
+at the suit of the lender, to make these payments; if the creditors are notified by the lenders of the 
+arrangements between the lender and the borrower, this may amount to an assignment to them of 
+the lender's rights against the borrower, thereby giving the creditors an equitable interest in the 
+fund, in place of that of the lender.  
+37. It also is to be borne in mind, as I have said, that dealings between two parties may give rise to 
+equitable rights in a third party, falling short of those of a beneficiary against a trustee. Some 
+examples are given by Dixon J. in the judgment to which counsel for the Bank relied, The Countess 
+of Bective v The Federal Commissioner of Taxation [1932] HCA 22; (1932) 47 CLR 417 at 418-
+419. They include equitable charges and liens and equitable personal obligations, the latter being 
+considered in such recent authorities as Perpetual Trustee Co. Ltd v Godsall (1979) 2 NSWLR 785 
+at 792 and Muschinski v Dodds [1985] HCA 78; (1985) 160 CLR 583 at 605-606, 624-625. In this 
+field, the legal system in truth teems with established norms, and there is scarcely the need for 
+another, dignified as the Quistclose trust.  
+38. To speak of a Quistclose trust as if it were a new legal institution rather than an example of the 
+particular operation of principle upon the facts as found, is to set the listener or reader off on a false 
+path. So it is that one sees what in truth are pointless debates in some of the commentaries as to 
+whether a Quistclose trust may arise where the money is lent not to pay the borrower's debts, but to 
+buy equipment (as in Re EVTR (1987) BCLC 646), or not lent but paid to subscribe for shares, as 
+in Re Associated Securities Ltd and the Companies Act (supra).  
+No Express Trust or Other Equitable Obligation  
+39. In the present case, counsel for the Opera, the Ballet and the Workshop first submitted that on 
+the facts, the AETT received the relevant donations in circumstances such that it was an express 
+trustee "for the purposes of" what was called the Tax Deductibility Program in favour of "preferred 
+arts organisations". The terms of the trusts were, as I understood the primary submission in its final 
+formulation, that upon receipt by the AETT the beneficial interest would vest forthwith in the 
+organisation specified by the donor on the AETT standard form, to be payable after "allocation" and 
+other "processing" by the AETT. It was said that in a sense the AETT was the conduit through 
+which the gifts passed to the specified organisations; cf. Re Veli; Ex parte AE Developments Pty 
+Ltd v Scott, supra at 209. Alternatively, it was submitted, as I understood it, that the property in the 
+donation would remain in the donor until "allocation" by the AETT, when it would be held for the 
+arts organisation to which it was so allocated; if the AETT was no longer able in law to make and 
+apply such an allocation, the donation would be held upon trust for the donor. Upon the first 
+submission, the three arts organisations should have declarations made by the Court as to trusts in 
+their favour; and upon the second, as to trusts in favour of the donor. Further, it was contended that 
+the events I have described had the consequence that there had been an allocation actually made by 
+the AETT in favour of the Workshop, before the appointment of the provisional liquidator, thereby 
+strengthening its case that there was a vested trust in its favour.  
+40. In addition, and in the alternative, it was submitted that the facts showed not unfettered gifts but 
+the creation, by the expression of preference by donors and the receipt of donations by the AETT, 
+of a trust power in the AETT, which the provisional liquidator should now be obliged to exercise; 
+the objects of the power were said to be the preferred arts organisations (semble as the list stood 
+when the provisional liquidator was appointed) but with the power to be exercised having regard to 
+the particular donor's expression of preference; it was said that this expression should be seen as a 
+precatory not a mandatory statement, even though the power was a trust power.  
+41. Then it was submitted by counsel for the three arts organisations that the Bank was obliged to 
+make funds available for the exercise of any of the equitable proprietary rights found to exist upon 
+
+acceptance of one or other of the above submissions. This was because the Bank took the donations 
+banked by the AETT with sufficient notice of these equitable rights, and because to deny the 
+proprietary claims made against it would be unjustly to enrich the Bank. On this branch of the case, 
+counsel for the provisional liquidator took the position that if, contrary to his (and the Bank's) 
+submission, the moneys were received by the AETT on trust, then the Bank had sufficient notice of 
+that trust or other equitable rights.  
+42. The fundamental issue is whether the donations in question in this proceeding were received by 
+the AETT and banked by it, impressed with any of the equitable proprietary obligations contended 
+for by counsel for the three organisations. As I have indicated, each case is to be determined in 
+accordance with the language used as interpreted in the light of the circumstances. It is well settled 
+that formal words are not necessary for the creation of a trust. But if the statement of "preference" 
+by the donors upon the AETT standard form or its adaptations were but a statement of the donor's 
+motive or expectation, then the AETT bore no legal or equitable obligation to fulfil that expectation; 
+see The Countess of Bective v The Federal Commissioner of Taxation, supra; Dean v Cole (1921) 
+30 CLR 1 at 8; Scott, "The Law of Trusts", supra.  
+43. Mr Salzer, the Chief Executive of the AETT since July 1988, gave evidence of various meetings 
+with the Bank in the period before the provisional liquidator was appointed. It was after such a 
+meeting on 12 March 1991 that the AETT deferred depositing cheques received from donors under 
+the Tax Deductibility Program, and these later came into possession of the provisional liquidator. 
+Mr Salzer said that at the meeting on 12 March between himself, other officers of the AETT and 
+officers of the Bank, it was said on behalf of the representatives of the AETT that at no stage "did 
+we consider (the donations) to be part of the (Trust's general) funds". But that statement cannot of 
+itself resolve the issue.  
+44. The procedures followed by the AETT involved the sorting of donations to the Tax 
+Deductibility Scheme and the entry of details into the AETT's computer system as to show both the 
+donor and the preferred arts organisation indicated by the donor. Periodically, a consolidated report 
+was submitted to the Board of the AETT and cheques drawn in favour of the various organisations 
+to be released upon Board approval. The Board usually questioned the Financial Controller "as to 
+whether all donations met the requirements of the Australian Taxation Office regulations"; 
+resolutions would be passed ratifying grants approved for payment by the Board, acting apparently 
+under Article 52 (i). The Financial Controller would then direct release of the cheques. It will be 
+apparent from the above that the Board was most anxious to ensure that matters were so 
+administered as to ensure the availability of the income tax deduction for donors.  
+45. In March 1988, the AETT introduced a "levy" for this "processing" of donations under the Tax 
+Deductible Scheme. The "levy" was fixed at 2% against all donations in the tax deductibility 
+scheme (with a maximum of $150 per donation in excess of $7,500) and this was described by the 
+Chairman of the AETT as "a user pays basis". By September 1989, the AETT was "processing" up 
+to 5,000 individual donations each week. The levy was then increased, and the changes notified by 
+a press release on 27 September 1989. Counsel for the provisional liquidator stressed that a trustee 
+would ordinarily act gratuitously. But the AETT publicised the existence of and reasons for the levy 
+from a time before the making of the donations here in question. I would place little weight upon 
+the existence of the levy as tending against acceptance of the submissions by counsel for the three 
+arts organisations.  
+46. On the other hand, it is, in accordance with the authorities to which I have earlier referred, of 
+considerable significance that the donations were placed in the operating account of the AETT 
+(which was overdrawn) and that cheques for grants were then drawn upon that account, not upon 
+
+any ear-marked account. Counsel sought to lessen the force of that circumstance by referring to 
+what was said in Stephens Travel Service International Pty Ltd v Qantas Airways Ltd (1988) 13 
+NSWLR 331 at 349, 365-366. But Hope J.A. was there dealing with a situation where initially there 
+had been an express trust, the question being whether that trust had been revoked by subsequent 
+conduct, and this, as Meagher J.A. pointed out in Walker v Corboy, supra at 397-398, makes what 
+his Honour said of limited use when the question, as here, is whether any trust arose at all.  
+47. I have referred to the treatment given in the accounts of the AETT to donations received under 
+the Tax Deductibility Program but in respect of which no "allocation" had been made. They were 
+included as "Current liabilities" under the sub-heading "Donations received in advance". If held on 
+trust, one would have expected an indication to that effect in the accounts of the AETT. But so to 
+treat these donations would have been to act inconsistently with and so to imperil the whole system 
+based upon the availability of a deduction under para. 78 (1) (a) (xiii). And this the AETT was 
+scrupulous to avoid.  
+48. Counsel for the three arts organisations said that no donor would have made a gift to the AETT 
+if told "not only could the expressed preference be ignored but the AETT could use the money to 
+pay its own debts". But this puts the case somewhat out of focus.  
+49. The present proceeding arises not because the AETT has chosen to ignore the expressed 
+preferences of donors. The parties are before the Court because the AETT is insolvent, a provisional 
+liquidator has been appointed and it is necessary to ascertain the rights of the parties as a step to 
+formulating one or other form of insolvent administration under the aegis of the Court and the 
+Corporations Law. It is a reasonable assumption that donors did not turn their minds to the 
+possibility of a supervening insolvent administration of the affairs of the AETT. It is not the correct 
+approach to reason that because, if they had foreseen what has come to pass, donors may have 
+decided to retain their money, the donors should be held to have made their gifts upon trust for one 
+or other of the preferred arts organisations. Would they have made their gifts if told that because 
+they were made on trust there would be no deduction under para. 78 (1) (a) (xiii)? That is the more 
+pertinent question. The evidence as to the manner in which the Tax Deductibility Program was 
+promoted to prospective donors suggests that the availability of the deduction was of great concern 
+to donors.  
+50. In Quistclose, supra, Lord Wilberforce emphasised that the form of words used indicated that 
+the loan moneys were to be used "exclusively" or "only" in a particular way. Here, the word 
+"unconditionally" as used in the AETT standard form has a primary meaning calculated to lead to 
+the opposite result. It suggests an absence of qualification or obligation. The promotion and use of 
+the Tax Deductibility Program was premised upon donors obtaining the income tax deduction and 
+that required gifts to be made outright. The most that was permissible if the deduction was not to be 
+imperilled was a statement of "preference". In the circumstances, this was to indicate motive or 
+expectation, in the light perhaps of past experience of the handling of gifts by the AETT, but not to 
+impose a legal or equitable obligation. Likewise, the phrase in the AETT standard form "it would be 
+appreciated" is precatory rather than imperative. Even then, the obtaining of the deduction was not 
+assured because the Commissioner had certain requirements as to the characteristics to be possessed 
+by an arts organisation before it might be considered "preferred arts organisation" within the ambit 
+of the Tax Deductibility Program. As I have indicated, the manner of administration and handling 
+by the AETT of donations when received is suggestive also that no trust came into being.  
+51. Nor, in my view, would funds be given to the AETT "unconditionally" if subjected to a trust 
+power exercisable by the AETT in favour of one or other of the preferred arts organisations. 
+
+Likewise, a gift would not have been made unconditionally to the AETT if made on terms that the 
+money in question be held by the AETT on trust for the AETT until "allocated" by the AETT.  
+52. The position of the Workshop requires further consideration. It was told on 22 February 1991 
+that the Board of the AETT had "approved payment of $100,000 being donations received and 
+made available to (it)". A "levy" of $635.00 was deducted and a cheque for the balance drawn and 
+sent off by the AETT. Upon the hypothesis that the gift by the Elisabeth Murdoch Trust of 
+$100,000 to the AETT was unconditional, and no trust was created in respect of the receipt by the 
+AETT, was there nevertheless a trust created by the AETT, of its own volition, subsequently, that is 
+to say, when the Board approved payment of $100,000 and the letter of 22 February 1991 and 
+enclosed cheque were sent off to the Workshop? I have set out the text of Article 52 (i) which 
+conferred the power upon the Board to make the necessary grant to the Workshop. In my view, it 
+would be a fanciful interpretation of the procedures of the AETT to treat them as involving the 
+creation at that stage of any trust. The AETT was not constituting itself as trustee of any rights it 
+had against the Bank for the Bank to honour a cheque drawn upon the overdrawn operating account. 
+It was making a grant by drawing and sending the cheque and the payee of the cheque had whatever 
+rights it acquired from the drawing and delivery of the cheque.  
+53. It follows that upon none of the bases propounded did there arise any of the express trusts or 
+kindred rights contended for by the three arts organisations. Therefore, there is no footing upon 
+which the Bank is to be held accountable as constructive trustee by reason of it taking trust moneys 
+with notice of the beneficial rights of the three arts organisations, or otherwise within the first limb 
+of Barnes v Addy (1874) 9 Ch App 244. Nor is the Bank to be regarded as a constructive trustee 
+within the second limb as an assistant with knowledge in a dishonest and fraudulent design on the 
+part of the AETT as a trustee; cf. British America Elevator Company, Limited v Bank of British 
+North America (1919) AC 658 at 663.  
+Constructive Trust  
+54. But that is not the end of the matter. It was further submitted that constructive trusts in favour of 
+the three arts organisations should be imposed upon the AETT and the Bank "to prevent the 
+(AETT) and the Bank retaining, as a windfall, the donations (other than the levy) and not dealing 
+with them as in the past", and that having encouraged organisations such as the Opera to solicit 
+payments to the Tax Deductibility Program operated by the AETT, it could not be just and equitable 
+for the AETT to "ignore the donees so that it and the Bank retain the benefit on the basis of an 
+asserted 'unconditional' entitlement to the money". The present facts illustrated, so it was submitted, 
+the payment of money on the basis of a consensual joint relationship or endeavour between donors, 
+the AETT and the three arts organisations which had failed without attributable blame. Therefore, it 
+was said, there were brought into play equitable principles regulating the proprietary rights of the 
+parties inter se upon the premature collapse of a joint enterprise: Muschinski v Dodds [1985] HCA 
+78; (1985) 160 CLR 583 at 618-623 per Deane J.; Baumgartner v Baumgartner [1987] HCA 59; 
+(1987) 164 CLR 137 at 149 per Deane J.  
+55. It should be observed that in both the authorities referred to, Deane J. was not dealing with a 
+collapse brought upon by a financial failure for which statute had for long provided by specifying 
+an insolvent administration. Nor, it should be emphasised, does it necessarily follow that to deny 
+the existence of a constructive trust such as that propounded for, is to leave the claimants without 
+any remedy against the AETT or the Bank. That, as I have indicated, may be a question yet to be 
+resolved. What the denial does mean is that the claimants are not to be advanced to the position, in 
+substance, of secured creditors of AETT and the Bank.  
+
+56. Nor was Deane J. dealing with a case where, as here, there are manifold equitable principles 
+whereby consensual arrangements may give rise to proprietary interests. There is force in the 
+submission that constructive trusts should not readily be imposed in favour of parties which have 
+failed in their attempts to show the necessary facts for a consensual arrangement by way of express 
+trust binding the AETT.  
+57. It was also submitted in support of the imposition of constructive trusts that this would produce 
+a result which reflected the role of the AETT as "merely a conduit through which the public passed 
+donations". I have endeavoured earlier to show that this was not the legal complexion borne by the 
+facts. It may be said that in substance, as a practical matter, that is what occurred. But to impose 
+constructive trusts for such a reason would have the consequence of leaving the donors with their 
+income tax deductions and the preferred arts organisations with legally enforceable rights in respect 
+of the gifts, when the availability of the deductions had been pre-conditioned upon the absence of 
+such rights.  
+58. Counsel for the Opera, the Ballet and the Workshop referred to what was said in Australia and 
+New Zealand Banking Group Limited v Westpac Banking Corporation [1988] HCA 17; (1988) 164 
+CLR 662 at 673. The High Court was there discussing the basis of the common law action of 
+money had and received, for recovery of an amount paid under fundamental mistake of fact. It 
+emphasised that the action was a common law action for recovery of the value of the unjust 
+enrichment, not one for the enforcement of a trust or for tracing or for the recovery of specific 
+money or property, as is the case with the relief now sought against the Bank. Likewise, the action 
+with which the House of Lords dealt in Lipkin Gorman v Karpnale Ltd (1991) 3 WLR 10 was one 
+for money had and received, something made clear by Lord Goff at 25. It was held that the 
+gambling club, being a volunteer, had been unjustly enriched at the expense of the solicitors from 
+whom the money had been stolen by one of their partners and that the claim for money had and 
+received lay accordingly. In fact the moneys misappropriated had been taken from the clients' trust 
+account, but no equitable tracing claim was advanced and the plaintiffs were "content to proceed at 
+law by a personal action" (supra at 27). It is idle to speculate upon the reasons why no tracing claim 
+was advanced in what, at this distance, appears a clear case.  
+59. As to the position of the Bank, on the facts, the Bank did not take the deposits in the operating 
+account knowing of and accepting an obligation to be bound by any later "allocation" by the AETT; 
+still less did it accept any obligation to be answerable itself to whomever it might transpire were the 
+"preferred" arts organisations, if the AETT were disabled by supervening events from making any 
+further allocations; cf. Bahr v Nicolay (No. 2), supra at 637-638, 654. As is indicated by these 
+judgments of Wilson and Toohey JJ. and Brennan J. respectively, in such circumstances grounds 
+might exist for the imposition of a constructive trust. The facts are not in this realm of discourse.  
+60. As I have said, there was one account of the AETT with the Bank which was styled as a Trustee 
+Account. At all material times this was in credit. But the evidence is that it was not used for any 
+purposes related to the Tax Deductibility Scheme. Between July 1987 and October 1990, the Bank 
+made, through its head office in Sydney, at least eleven donations using that Scheme. Only one of 
+the forms used by the Bank is in evidence, but I would infer from the other material that use was 
+made of the expressions set out in the AETT standard form, in all cases. The practice of the Chief 
+Executive of the AETT, Mr Salzer, and its Director of Finance, Mr Cottam, was to have monthly 
+meetings with an officer of the Bank to review the monthly financial and cash flow statements of 
+the AETT. These meetings followed a proposal put to the Bank in October 1989. It is clear enough 
+that at least as a result of the written material provided in support of that proposal that the Bank is to 
+be treated as having known that in addition to its other activities, the AETT operated the Tax 
+
+Deductibility Scheme as I have described it. But to say that is to stop far short of accepting any case 
+for the imposition of a constructive trust as sought in this proceeding.  
+61. I have referred to the meeting between officers of the Bank and the AETT on 12 March 1991. It 
+was submitted that even if it had none before, the Bank thereafter had sufficient notice "of how it 
+came to have received the donations in suit". But all such moneys which were deposited to the 
+current account by the AETT had been deposited before 11 March 1991 and had gone, quite 
+properly and in accordance with long practice, to reduce the amount of the overdraft. Further, the 
+statement at the meeting to the effect that the AETT had not considered the donations to be part of 
+its general funds was both contrary to the legal premise upon which the Tax Deductibility Program 
+had been allowed by the Commissioner to operate and inconsistent with the conduct of the AETT's 
+operating account, in debit. The deeper significance of the meeting of 12 March was that the AETT 
+then, for the first time, sought approval of the Bank to the opening of a new account, to keep 
+separate from its other activities, donations received by the AETT. The Bank did not agree, and the 
+AETT stopped banking donations, whether received as part of the Tax Deductibility Program or 
+otherwise. The appointment of the provisional liquidator came 16 days later.  
+62. It would be quite misleading to describe the situation as one in which the Bank was engaged in a 
+joint enterprise with other donors, and with the AETT and the preferred arts organisations, in the 
+sense I have discussed in dealing with the authorities upon which reliance was placed. It was the 
+banker to the AETT and from time to time a donor. The position of the provisional liquidator is, in a 
+sense, even stronger because to impose upon the AETT a constructive trust would be to cut across 
+the ordinary principles as to pari passu ranking of claims in insolvency administrations.  
+63. What is said above is not to deny the proposition that in certain limited circumstances a 
+constructive trust may be imposed to perfect what otherwise would be an imperfect gift: Le Compte 
+v Public Trustee (1983) 2 NSWLR 109. Nor is it to deny that, in general, property held as a trustee 
+by an insolvent party stands outside an insolvent administration; cf. Re Crest Realty Pty Ltd (In 
+Liq) and the Companies Act (1977) 1 NSWLR 664. Nor does property subjected to such an 
+administration include property impressed with a constructive trust: Re Sharpe (a bankrupt), ex 
+parte the trustee of the bankrupt v Sharpe (1980) 1 All ER 198. To impose such a constructive trust 
+may not be forbidden by statute. Nevertheless, in the present case the reasons advanced in favour of 
+the imposition of such a trust undercut the well settled principles founding insolvency law. It is not 
+a question, in the events that have happened, of imposing a constructive trust where the AETT as a 
+going concern seeks to retain the benefit that flows from the application of moneys received by it to 
+reduce the amount of the overdraft on the operating account for the Bank.  
+64. Whilst it is indubitably correct that the law as to constructive trusts is not to be forced into 
+closed categories, in the present case there is in my view no sufficient footing made out for 
+equitable intervention of this kind.  
+Conclusion  
+65. I should determine the separate questions by declaring that the moneys received by The 
+Australian Elizabethan Theatre Trust ("the AETT"), in respect of which the donor expressed a 
+preference for allocation in favour of The Australian Opera ("The Opera"), The Australian Ballet 
+Foundation ("The Ballet") and Victorian Tapestry Workshop ("the Workshop") being the moneys 
+identified in Annexure B to the affidavit of the provisional liquidator, sworn 5 June 1991 and filed 
+herein, do not constitute moneys held by the AETT or the Commonwealth Bank of Australia upon 
+trust for The Opera, The Ballet, the Workshop or any of them.  
+66. I will hear the parties on costs.

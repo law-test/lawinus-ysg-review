@@ -1,0 +1,237 @@
+import React, {useEffect,useRef,useState,useMemo} from 'react';
+import './review.css';
+import {api, assetUrl, initializeReviewSession} from './review-api';
+import NotesExportControls from './notes-export';
+import PdfPane from './pdf-viewer';
+import MemoDialog from './memo-dialog';
+import {preferredSourceRef,sourceDocumentUrl,sourceExternalUrl,excerptPageLabel} from './source-navigation';
+import {footnoteTargets} from './pdf-viewer-model';
+import PaneResizer from './pane-resizer';
+import {clampPaneSize} from './pane-size';
+import {moveFourPaneBoundary,fourPaneColumns,normalizeCollapsedSplit,collapsedPaneColumns,DEFAULT_COLLAPSED_SPLIT,equalDocumentCuts,readPaneLayout,savePaneLayout} from './four-pane-size';
+import {buildProposalIndicators} from './proposal-indicators';
+import {useDocumentAlignment} from './document-alignment';
+import ReadingControls from './reading-controls';
+import {DEFAULT_READING_VIEW,readingVisibility,readingPane,withReadingSurface,type ReadingView} from './reading-view';
+import {mobileReadingView} from './mobile-menu-swipe';
+import ThesisContents from './thesis-contents';
+import ParallelSourceReader,{translationEntries} from './parallel-source-reader';
+import './review-mobile.css';
+import ProfileSections from './profile-sections';
+import citationExplanations from './citation-explanations.json';
+import citationPageData from './citation-pages.json';
+import {citedSourceRefs, citedPages, citationStartPage, citationHighlights, citedPageLabel, type CitationMap} from './citation-model';
+import CitedTextSource from './cited-text-source';
+import WebManuscript,{type ManuscriptParagraph,manuscriptModeAfterRefresh,citationContextWasEdited,effectiveManuscriptEdits} from './web-manuscript';
+import bibliographyData from './bibliography-links.json';
+import './bibliography.css';
+import thesisContents from './thesis-toc-data.json';
+import revisionProposals from './revision-proposals.json';
+import SharedEditEditor from './shared-edit-editor';
+import {RevisionComparison} from './revision-copy';
+import {TextSizeControl} from './text-size-control';
+import {loadSharedEdits,prepareSharedEditsExport,type PreparedSharedExport,type SharedEdit} from './shared-edits';
+import type {PdfTarget} from './pdf-viewer-model';
+import {protectedReferenceText} from './protected-thesis';
+import './four-pane.css';
+import './reading-controls.css';
+type BibliographyLink={text:string;page:number;sourceIds:string[];candidateSourceIds:string[];status:string;basis:string};
+const bibliographyLinks=(bibliographyData.entries||{}) as Record<string,BibliographyLink>;
+const bibliographyIds=new Set(Object.keys(bibliographyLinks));
+const initialPage=thesisContents.entries?.find(entry=>entry.kind==='body')?.page||1;
+type RevisionProposal={id:string;order?:number;page:number;page_end:number;printed?:string|null;before:string;after:string;reason:string;priority:string;anchorId?:string;paragraphIds?:string[];applyText?:string;applyUnsupportedReason?:string};
+const proposals=revisionProposals.items as RevisionProposal[];
+
+
+type Obj = Record<string,any>;
+const citationPageMap = citationPageData as CitationMap;
+type Memo = {id:string;anchorType:string;page:number|null;noteId:string|null;sourceId:string|null;x:number|null;y:number|null;text:string;quote:string;visibility:string;status:string;revision:number;displayName:string;createdAt:string;editable:boolean};
+function asText(value:any):string{if(typeof value==='string')return value;if(value==null)return '';if(Array.isArray(value))return value.map(asText).join('\n');return Object.entries(value).map(([k,v])=>`${k}: ${asText(v)}`).join('\n');}
+function Pager({page,total,onChange}:{page:number;total:number;onChange:(n:number)=>void}){return <div className="pager"><button aria-label="이전 쪽" disabled={page<=1} onClick={()=>onChange(page-1)}>‹</button><input aria-label="PDF 쪽수" type="number" min={1} max={total} key={page} defaultValue={page} onKeyDown={e=>{if(e.key==='Enter')onChange(Math.min(total,Math.max(1,Number(e.currentTarget.value)||1)));}} onBlur={e=>onChange(Math.min(total,Math.max(1,Number(e.currentTarget.value)||1)))}/><span>/ {total}</span><button aria-label="다음 쪽" disabled={page>=total} onClick={()=>onChange(page+1)}>›</button></div>;}
+
+export default function ReviewWorkspace(){
+  const [reviewer,setReviewer]=useState({name:'방문자',mode:'guest' as 'guest'|'account'}),[memoError,setMemoError]=useState('');
+  const [sessionReady,setSessionReady]=useState(false),[sessionConnecting,setSessionConnecting]=useState(false);
+  const [data,setData]=useState<Obj|null>(null),[profile,setProfile]=useState<Obj|null>(null),[error,setError]=useState(''),[loadError,setLoadError]=useState(''),[memos,setMemos]=useState<Memo[]>([]);
+  const manuscript=(data?.paragraphs||[]) as ManuscriptParagraph[];
+  const proposalIndicators=useMemo(()=>buildProposalIndicators(proposals,manuscript),[data]);
+  const [page,setPage]=useState(initialPage),[zoom,setZoom]=useState(1),[tab,setTab]=useState('source'),[outline,setOutline]=useState(true),[active,setActive]=useState('fn-001'),[sourceId,setSourceId]=useState(''),[sourcePage,setSourcePage]=useState(1),[query,setQuery]=useState(''),[filter,setFilter]=useState('all'),[placing,setPlacing]=useState<false|'thesis'|'source'>(false),[composer,setComposer]=useState<Obj|null>(null),[saving,setSaving]=useState(false),[textSource,setTextSource]=useState('');
+  const [sidebarOpen,setSidebarOpen]=useState(()=>window.innerWidth>=1200);
+  const [initialPaneLayout]=useState(()=>{try{return readPaneLayout(window.localStorage);}catch{return readPaneLayout();}});
+  const [paneCuts,setPaneCuts]=useState(initialPaneLayout.cuts);
+  const [metadataOpen,setMetadataOpen]=useState(true),[collapsedSplit,setCollapsedSplit]=useState(initialPaneLayout.collapsedSplit);
+  const metadataOpener=useRef<HTMLButtonElement>(null);
+  const [regularReadingView,setRegularReadingView]=useState(DEFAULT_READING_VIEW);
+  const [shortReadingView,setShortReadingView]=useState<ReadingView|null>(null);
+  const [shortScreen,setShortScreen]=useState(()=>window.innerWidth<1200&&window.innerHeight<=500);
+  const readingView=mobileReadingView(shortScreen,regularReadingView,shortReadingView);
+  function setReadingView(next:React.SetStateAction<ReadingView>){if(shortScreen)setShortReadingView(old=>typeof next==='function'?next(mobileReadingView(true,regularReadingView,old)):next);else setRegularReadingView(next);}
+  const [compact,setCompact]=useState(()=>window.innerWidth<1200);
+  const [sidebarWidth,setSidebarWidth]=useState(208);
+  const [composerError,setComposerError]=useState('');
+  const [mobilePane,setMobilePane]=useState<'contents'|'thesis'|'source'|'metadata'>('thesis'),[sourceZoom,setSourceZoom]=useState(1);
+  const [textTranslation,setTextTranslation]=useState('');
+  const visibleSurfaces=readingVisibility(readingView,sidebarOpen,metadataOpen),shownPane=readingPane(readingView,mobilePane);
+  const [shared,setShared]=useState<Record<string,SharedEdit>>({}),[sharedError,setSharedError]=useState(''),[manuscriptMode,setManuscriptMode]=useState<'pdf'|'body'>('pdf');
+  const originalNotes:Obj[]=data?.notes||[];
+  const effectiveShared=useMemo(()=>effectiveManuscriptEdits(manuscript,originalNotes as {id:string;text:string}[],shared),[data,shared]);
+  const manuscriptViewChosen=useRef(false);
+  useEffect(()=>{if(data)setManuscriptMode(current=>manuscriptModeAfterRefresh(current,manuscriptViewChosen.current,Object.keys(effectiveShared).length));},[data,effectiveShared]);
+  const [paragraphId,setParagraphId]=useState(''),[proposalId,setProposalId]=useState(''),[revisionQuery,setRevisionQuery]=useState('');
+  const [sharedExport,setSharedExport]=useState<PreparedSharedExport|null>(null),[exportingShared,setExportingShared]=useState<'json'|'csv'|null>(null);
+  const exportRequest=useRef(0);
+  useEffect(()=>()=>{exportRequest.current++;},[]);
+  useEffect(()=>()=>sharedExport?.dispose(),[sharedExport]);
+  const savedChanges=useMemo(()=>Object.values(shared).map(edit=>{
+    const original=edit.kind==='paragraph'?manuscript.find(p=>p.id===edit.targetId):originalNotes.find(n=>n.id===edit.targetId);
+    return {edit,page:original?.page,originalText:original?.text||'',label:edit.kind==='paragraph'?'본문 '+edit.targetId:'각주 '+Number(edit.targetId.slice(3))};
+  }).sort((a,b)=>BigInt(a.edit.id)>BigInt(b.edit.id)?-1:1),[shared,data]);
+  const [bibliographyId,setBibliographyId]=useState('');
+  const bibliography=bibliographyLinks[bibliographyId];
+  const paragraph=manuscript.find(p=>p.id===paragraphId),proposal=proposals.find(p=>p.id===(proposalId||paragraphId));
+  const sharedGeneration=useRef(0),sharedRequest=useRef(0),sharedSnapshot=useRef(0n);
+  async function refreshShared(){const generation=sharedGeneration.current,request=++sharedRequest.current;try{const result=await loadSharedEdits();if(generation!==sharedGeneration.current||request!==sharedRequest.current||BigInt(result.snapshotId)<sharedSnapshot.current)return;sharedSnapshot.current=BigInt(result.snapshotId);setShared(Object.fromEntries(result.overrides.map(e=>[e.targetId,e])));setSharedError('');}catch{if(generation===sharedGeneration.current&&request===sharedRequest.current)setSharedError('공통 수정 내용을 불러오지 못했습니다. 다시 연결해 주세요.');}}
+  useEffect(()=>{void refreshShared();const tick=setInterval(()=>{if(!document.hidden)void refreshShared();},10000);const wake=()=>{if(!document.hidden)void refreshShared();};window.addEventListener('focus',wake);document.addEventListener('visibilitychange',wake);return()=>{clearInterval(tick);window.removeEventListener('focus',wake);document.removeEventListener('visibilitychange',wake);};},[]);
+  function sharedSaved(edit:SharedEdit){sharedGeneration.current++;if(BigInt(edit.id)>sharedSnapshot.current)sharedSnapshot.current=BigInt(edit.id);manuscriptViewChosen.current=true;setShared(old=>({...old,[edit.targetId]:edit}));if(edit.kind==='paragraph')setParagraphId(edit.targetId);setSharedError('');}
+  function openParagraph(id:string){const p=manuscript.find(p=>p.id===id);if(!p)return;setBibliographyId('');setMetadataVisibility(true);setParagraphId(id);setProposalId(id);setTab('revision');setMobilePane('metadata');}
+  function selectProposal(id:string,jump=true){const item=proposals.find(p=>p.id===id);if(!item)return;setMetadataVisibility(true);if(/^FN\d+$/.test(id)){openNote('fn-'+id.slice(2).padStart(3,'0'),jump);setMobilePane('metadata');return;}setProposalId(id);setParagraphId(manuscript.some(p=>p.id===id)?id:'');if(jump)setPage(item.page);setTab('revision');setMobilePane('metadata');}
+  function openSavedChange(edit:SharedEdit){
+    if(edit.kind==='paragraph'){const p=manuscript.find(p=>p.id===edit.targetId);if(p)setPage(p.page);openParagraph(edit.targetId);}
+    else{setParagraphId('');setProposalId('');openNote(edit.targetId,true);setMetadataVisibility(true);setMobilePane('metadata');}
+  }
+  async function downloadShared(format:'json'|'csv'){
+    if(exportingShared)return;const request=++exportRequest.current;setExportingShared(format);setSharedExport(null);setError('');
+    try{const prepared=await prepareSharedEditsExport(format);if(request!==exportRequest.current){prepared.dispose();return;}setSharedExport(prepared);}
+    catch(e:any){if(request===exportRequest.current)setError(e.message);}
+    finally{if(request===exportRequest.current)setExportingShared(null);}
+  }
+
+  useEffect(()=>{setTextTranslation('');},[active]);
+  const splitRef=useRef<HTMLDivElement>(null);
+  useDocumentAlignment(splitRef,!compact&&manuscriptMode==='pdf'&&!!data);
+  const refreshMemos=()=>api('/api/notes').then(d=>{setMemos(d.notes);setMemoError(d.truncated?'메모가 5,000개를 넘어 화면에는 일부만 표시됩니다. 전체 내보내기를 이용해 주세요.':'');}).catch(e=>setMemoError('메모를 불러오지 못했습니다. 문서는 계속 열람할 수 있습니다. '+e.message));
+  async function connectSession(){
+    setSessionReady(false);setSessionConnecting(true);setMemoError('');
+    try{const d=await initializeReviewSession();setReviewer({name:d.user?.displayName||'방문자',mode:d.user?.mode==='account'?'account':'guest'});setSessionReady(true);await refreshMemos();}
+    catch{await refreshMemos();setMemoError('개인 메모 연결을 준비하지 못했습니다. 문서와 공유 메모는 계속 열람할 수 있습니다. 다시 연결한 뒤 저장해 주세요.');}
+    finally{setSessionConnecting(false);}
+  }
+  useEffect(()=>{api('/api/manifest').then(setData).catch(e=>setLoadError(e?.message||'심사 자료를 불러오지 못했습니다.'));api('/api/profile').then(setProfile).catch(e=>setError(e.message));void connectSession();},[]);
+  useEffect(()=>{try{const stored=localStorage.getItem('paper-sidebar-width');if(stored!==null)setSidebarWidth(clampPaneSize(Number(stored),176,440));}catch{}},[]);
+  useEffect(()=>{try{savePaneLayout(window.localStorage,paneCuts,collapsedSplit);}catch{}},[paneCuts,collapsedSplit]);
+  useEffect(()=>{try{localStorage.setItem('paper-sidebar-width',String(sidebarWidth));}catch{}},[sidebarWidth]);
+  useEffect(()=>{const media=window.matchMedia('(max-width:1199px)');const update=()=>setCompact(media.matches);update();media.addEventListener('change',update);return()=>media.removeEventListener('change',update);},[]);
+  useEffect(()=>{const media=window.matchMedia('(max-width:1199px) and (max-height:500px)');const update=()=>{setShortScreen(media.matches);if(!media.matches)setShortReadingView(null);};update();media.addEventListener('change',update);return()=>media.removeEventListener('change',update);},[]);
+  useEffect(()=>{const viewport=window.visualViewport;const update=()=>{document.documentElement.style.setProperty('--visible-height',(viewport?.height||window.innerHeight)+'px');document.documentElement.style.setProperty('--visible-top',(viewport?.offsetTop||0)+'px');document.documentElement.style.setProperty('--app-viewport-height',((viewport&&viewport.scale<=1.01?viewport.height:window.innerHeight))+'px');};update();viewport?.addEventListener('resize',update);viewport?.addEventListener('scroll',update);window.addEventListener('resize',update);return()=>{viewport?.removeEventListener('resize',update);viewport?.removeEventListener('scroll',update);window.removeEventListener('resize',update);};},[]);
+  const notes:Obj[]=useMemo(()=>originalNotes.map(n=>shared[n.id]?{...n,text:shared[n.id].text}:n),[data,shared]),sources:Obj[]=data?.sources||[],note=notes.find(n=>n.id===active),originalNote=originalNotes.find(n=>n.id===active),source=sources.find(s=>s.id===sourceId);
+  const sourceHref=source&&source.available!==false&&(source.protectedImages||source.kind!=='pdf')?'/?source='+encodeURIComponent(source.id):sourceDocumentUrl(source,assetUrl),externalSourceHref=sourceExternalUrl(source);
+  const paragraphCaseSources=sources.filter(s=>s.verifiedParagraphIds?.includes(paragraphId));
+  const sourceChoices=useRef<Record<string,string>>({});
+  const noteProposal=proposals.find(p=>p.id==='FN'+Number(active.slice(3)));
+  const paragraphTargets:PdfTarget[]=useMemo(()=>manuscript.flatMap(p=>p.rects.map(r=>({page:r.page,rect:r.rect as [number,number,number,number],noteId:p.id,number:p.order,kind:'paragraph'}))),[data]);
+  const sourceRefs=note?citedSourceRefs({id:note.id,sourceRefs:note.sourceRefs},citationPageMap,sources.map(s=>({id:s.id}))):[],ref=sourceRefs.find(r=>r.sourceId===sourceId);
+  const citationEntry=citationPageMap[active]?.[sourceId],sourceCitedPages=citedPages(citationEntry,source?.pages);
+  const relatedRef=(note?.relatedSources||[]).find((r:Obj)=>r.sourceId===sourceId),evidence=ref||relatedRef;
+  useEffect(()=>{if(note&&!sourceId){const r=preferredSourceRef({id:note.id,sourceRefs:note.sourceRefs},citationPageMap,sources);if(r){setSourceId(r.sourceId);setSourcePage(citationStartPage(citationPageMap[note.id]?.[r.sourceId],sources.find(s=>s.id===r.sourceId)?.pages));}}},[data]);
+  useEffect(()=>{const controller=new AbortController();setTextSource('');if(source&&source.available!==false&&source.kind!=='pdf'){protectedReferenceText(source.id,controller.signal).then(t=>{if(!controller.signal.aborted)setTextSource(t);}).catch(()=>{if(!controller.signal.aborted)setTextSource('자료를 불러오지 못했습니다.');});}return()=>controller.abort();},[sourceId,source?.kind]);
+  const onPage=notes.filter(n=>[...(n.clickTargets||[]),...(n.noteHighlights||[])].some((t:Obj)=>t.page===page));
+  const targets=useMemo(()=>[...footnoteTargets(originalNotes.map(n=>({id:n.id,number:n.number,clickTargets:n.clickTargets,noteHighlights:n.noteHighlights}))),...paragraphTargets],[data,paragraphTargets]);
+  const highlights=note?.noteHighlights||[];
+  const sourceHighlights=citationHighlights(source?{id:source.id,pages:source.pages,highlights:source.highlights}:undefined,active,citationEntry);
+  const citationExplanation=(citationExplanations as Record<string,Record<string,string>>)[active]?.[sourceId];
+  const noteEdited=citationContextWasEdited(active,manuscript,effectiveShared);
+  function goToThesis(targetPage:number){setPage(targetPage);setMobilePane('thesis');if(window.innerWidth<1200)setSidebarOpen(false);}
+  function showNavigation(){setSidebarVisibility(true);setMobilePane('contents');}
+  function toggleNavigation(){setSidebarVisibility(compact?shownPane!=='contents':!visibleSurfaces.sidebar);}
+  function setSidebarVisibility(show:boolean){if(readingView.focus)setReadingView(old=>withReadingSurface(old,'sidebar',show));else setSidebarOpen(show);if(compact)setMobilePane(show?'contents':'thesis');}
+  function setMetadataVisibility(show:boolean){if(readingView.focus)setReadingView(old=>withReadingSurface(old,'metadata',show));else setMetadataOpen(show);if(compact)setMobilePane(show?'metadata':'source');}
+  function hideNavigation(){setSidebarVisibility(false);setMobilePane('thesis');}
+  function equalizeDocuments(){setPaneCuts(equalDocumentCuts);setCollapsedSplit(DEFAULT_COLLAPSED_SPLIT);}
+  function openMetadata(){setMetadataVisibility(true);setMobilePane('metadata');}
+  function closeMetadata(){setMetadataVisibility(false);setMobilePane('source');requestAnimationFrame(()=>{const target=metadataOpener.current?.offsetParent?metadataOpener.current:document.querySelector<HTMLButtonElement>('.reading-view-trigger');target?.focus({preventScroll:true});});}
+  function openNote(id:string,jump=false){setTextTranslation('');const n=notes.find(n=>n.id===id);if(!n)return;setBibliographyId('');setActive(id);setTab('source');setMobilePane('source');const r=preferredSourceRef({id:n.id,sourceRefs:n.sourceRefs},citationPageMap,sources,sourceChoices.current[id]||(id===active?sourceId:undefined));setSourceId(r?.sourceId||'');if(id!==active||r?.sourceId!==sourceId)setSourcePage(citationStartPage(r?citationPageMap[id]?.[r.sourceId]:undefined,sources.find(s=>s.id===r?.sourceId)?.pages));if(jump)setPage(n.page);}
+  function openLibrarySource(id:string){setBibliographyId('');setTextTranslation('');setActive('');setSourceId(id);setSourcePage(1);setTab('source');setMobilePane('source');setMetadataVisibility(true);setMobilePane('source');}
+  function openBibliography(id:string){const entry=bibliographyLinks[id];if(!entry)return;setBibliographyId(id);setParagraphId(id);setTextTranslation('');setActive('');const linked=entry.sourceIds.map(sourceId=>sources.find(s=>s.id===sourceId)).find(Boolean);setSourceId(linked?.id||'');setSourcePage(1);setTab('source');setMetadataVisibility(true);setMobilePane(linked?.available!==false&&linked?'source':'metadata');}
+  function openManuscriptTarget(id:string){if(bibliographyLinks[id])openBibliography(id);else if(id.startsWith('P'))openParagraph(id);else openNote(id);}
+  function openSource(id:string){if(active)sourceChoices.current[active]=id;setTextTranslation('');setSourceId(id);setMobilePane('source');const related=(note?.relatedSources||[]).find((r:Obj)=>r.sourceId===id);setSourcePage(citationStartPage(citationPageMap[active]?.[id],sources.find(s=>s.id===id)?.pages,related?.targetPage||1));}
+  function openRelatedSource(id:string){const n=notes.find(n=>n.relatedSources?.some((r:Obj)=>r.sourceId===id));if(!n)return;const r=n.relatedSources.find((r:Obj)=>r.sourceId===id);setActive(n.id);setTab('source');setMobilePane('source');setPage(n.page);setSourceId(id);setSourcePage(r.targetPage||1);}
+  function newMemo(anchorType:string,extra:Obj={}){setComposerError('');setComposer({anchorType,page:anchorType==='general'?null:anchorType==='footnote'?note?.page:anchorType==='source'?(source?.available!==false&&source?.kind==='pdf'?sourcePage:null):page,noteId:anchorType==='footnote'||anchorType==='source'?(active||null):null,sourceId:anchorType==='source'?sourceId:null,text:'',quote:window.getSelection()?.toString().slice(0,4000)||'',visibility:'private',status:'open',...extra});setPlacing(false);}
+  async function saveMemo(){if(saving||!composer?.text?.trim())return;if(!sessionReady){setComposerError('메모 저장 전에 이용 정보를 연결해 주세요.');return;}setSaving(true);setComposerError('');try{const {id,revision,anchorType,page,noteId,sourceId,x,y,quote,text,visibility,status}=composer;await api(id?'/api/notes/'+id:'/api/notes',{method:id?'PATCH':'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(id?{revision,text,quote,visibility,status}:{anchorType,page,noteId,sourceId,x,y,quote,text,visibility,status})});setComposer(null);await refreshMemos();}catch(e:any){setComposerError(e?.message||'메모를 저장하지 못했습니다. 입력 내용은 유지됩니다.');}finally{setSaving(false);}}
+  async function removeMemo(m:Obj){if(saving||!window.confirm('이 메모를 삭제할까요?'))return;setSaving(true);setComposerError('');try{await api('/api/notes/'+m.id,{method:'DELETE',headers:{'Content-Type':'application/json'},body:JSON.stringify({revision:m.revision})});setComposer(null);await refreshMemos();}catch(e:any){setComposerError(e?.message||'메모를 삭제하지 못했습니다.');}finally{setSaving(false);}}
+  const filteredNotes=useMemo(()=>notes.filter(n=>!query||[n.text,n.number,...(n.bodyContexts||[]).map((b:Obj)=>b.text)].join(' ').toLowerCase().includes(query.toLowerCase())),[notes,query]);
+  const supplementalSources=sources.filter(s=>s.supplemental),filteredSupplemental=supplementalSources.filter(s=>!query||[s.title,s.reviewSummary].join(' ').toLowerCase().includes(query.toLowerCase()));
+  const filteredSources=sources.filter(s=>!query||[s.title,s.reviewSummary,s.displayNotice].join(' ').toLowerCase().includes(query.toLowerCase()));
+  const filteredMemos=memos.filter(m=>(filter==='all'||m.status===filter)&&(!query||[m.text,m.quote,m.displayName].join(' ').includes(query)));
+  const selectMemo=(m:Memo)=>{setComposerError('');if(m.noteId)openNote(m.noteId,m.anchorType!=='source');if(m.anchorType==='source'&&m.sourceId){setBibliographyId('');if(!m.noteId)setActive('');setTab('source');setSourceId(m.sourceId);setSourcePage(m.page||1);}else if(m.page)setPage(m.page);setComposer({...m});};
+  return <div className={"review-app four-pane-app mobile-show-"+shownPane+(visibleSurfaces.metadata?" metadata-open":" metadata-collapsed")+(readingView.focus?" reading-focus":"")+(!visibleSurfaces.header?" view-hide-header":"")+(!visibleSurfaces.tools?" view-hide-tools":"")+(!visibleSurfaces.footnotes?" view-hide-footnotes":"")}>
+    <header id="workspace-header" className="app-header"><button className="sidebar-toggle" aria-label={(compact?shownPane==='contents':visibleSurfaces.sidebar)?"탐색 메뉴 닫기":"탐색 메뉴 열기"} aria-expanded={compact?shownPane==='contents':visibleSurfaces.sidebar} aria-controls="workspace-navigation" onClick={toggleNavigation}>☰</button><a className="law-logo" href="https://lawschool.korea.ac.kr/" target="_blank" rel="noreferrer" aria-label="고려대학교 법학전문대학원 홈페이지"><img src="./korea-law-logo.svg" alt="고대법대 KU Law" width="244" height="100"/></a><div className="brand"><b>여성곤</b><span>박사논문 심사실</span></div><div className="header-title"><span>고려대학교 일반대학원 · 법학과</span><h1>민사신탁의 법리에 관한 연구</h1></div><span className="access-badge">논문 심사·교정</span><span className="visitor-label" >LAWINUS</span></header>
+    <div id="workspace-basis" className="basis-bar"><span className="edition-summary"><b>11.21 최신 수정본</b><a className="previous-edition" href="/">원전 대조 열람기</a><a className="previous-edition" href="/editions/20261024/">10.24 이전 제출본</a><a className="previous-edition" href="/editions/20261023/" title="기존 메모와 수정 이력을 포함한 2026년 10월 23일 제출본 열기">10.23 이전 제출본</a><span className="edition-details"><i/> 여성곤 · 민법 · 지도교수 김제완</span></span><TextSizeControl/></div>
+    <ReadingControls mobile={compact} pane={shownPane} view={readingView} onChange={next=>{if(next.focus&&!readingView.focus)setPlacing(false);setReadingView(next);}} sidebar={sidebarOpen} metadata={metadataOpen} onSidebar={setSidebarVisibility} onMetadata={setMetadataVisibility} document={shownPane==='source'?'source':'thesis'} onDocument={setMobilePane} onEqualWidth={equalizeDocuments}/>
+    {error&&<div className="app-error" role="alert">{error}<button onClick={()=>setError('')} aria-label="오류 안내 닫기">×</button></div>}
+    {!data?<div className="loading-screen"><div className="law-logo"><img src="./korea-law-logo.svg" alt="고대법대 KU Law" width="244" height="100"/></div><h2>{loadError?'심사 자료를 불러오지 못했습니다.':'심사 자료를 준비하고 있습니다.'}</h2><p>{loadError}</p><button onClick={()=>location.reload()}>다시 불러오기</button></div>:<div className={'review-body'+(visibleSurfaces.sidebar?' sidebar-open':' sidebar-collapsed')} style={{'--sidebar-width':sidebarWidth+'px'} as React.CSSProperties}>
+      {visibleSurfaces.sidebar&&<button className="sidebar-backdrop" aria-label="탐색 메뉴 닫기" onClick={hideNavigation}/>}
+      <aside className="workspace-sidebar" id="workspace-navigation" aria-label="논문 탐색">
+        <div className="sidebar-heading"><b>논문 심사실</b><button aria-label="탐색 메뉴 접기" onClick={hideNavigation}>‹</button></div>
+        <nav className="sidebar-menu" aria-label="검토 메뉴">{[['source','↔','원전 대조'],['revision','✎','수정안'],['memos','▧','검토 메모'],['library','≡','자료 목록'],['profile','○','여성곤 소개']].map(([id,icon,label])=><button key={id} className={tab===id?'active':''} aria-current={tab===id?'page':undefined} onClick={()=>{setTab(id);if(id!=='source')setMetadataVisibility(true);setMobilePane(id==='source'?'source':'metadata');setQuery('');if(window.innerWidth<1200)setSidebarOpen(false);}}><span aria-hidden="true">{icon}</span>{label}{id==='memos'&&<small>{memos.length}</small>}</button>)}</nav>
+        <button className="sidebar-outline-toggle" aria-expanded={outline} onClick={()=>setOutline(!outline)}>논문 목차 <span aria-hidden="true">{outline?'−':'＋'}</span></button>
+        {outline&&<ThesisContents page={page} pdfSha256={data.meta.pdfSha256} onNavigate={goToThesis}/>}
+      </aside>
+      {visibleSurfaces.sidebar&&<PaneResizer className="sidebar-divider" label="목차 화면 너비 조절" value={sidebarWidth} min={176} max={440} step={16} unit="픽셀" onChange={setSidebarWidth}/>}
+      <div className="split-workspace four-pane-workspace" ref={splitRef} style={{'--document-columns':visibleSurfaces.metadata?fourPaneColumns(paneCuts):collapsedPaneColumns(collapsedSplit)} as React.CSSProperties}>
+      <section className="thesis-pane" aria-label="박사논문"><div className="pane-toolbar"><div className="manuscript-view-buttons"><button className={manuscriptMode==='pdf'?'selected':''} onClick={()=>{manuscriptViewChosen.current=true;setManuscriptMode('pdf');}}>원본 PDF</button><button className={manuscriptMode==='body'?'selected':''} onClick={()=>{manuscriptViewChosen.current=true;setManuscriptMode('body');}}>본문</button></div><button className={outline?'selected':''} onClick={()=>{showNavigation();setOutline(true);}} title="목차">☰ <span>목차</span></button><Pager page={page} total={data.meta.pageCount} onChange={setPage}/><div className="toolbar-spacer"/><button onClick={()=>setZoom(Math.max(.7,zoom-.15))} aria-label="축소">−</button><button onClick={()=>setZoom(1)} title="너비에 맞추기">{Math.round(zoom*100)}%</button><button onClick={()=>setZoom(Math.min(2,zoom+.15))} aria-label="확대">＋</button><button className={placing==='thesis'?'selected':'memo-tool'} onClick={()=>{if(manuscriptMode==='body')newMemo('thesis');else setPlacing(placing==='thesis'?false:'thesis');}}>▧ 메모</button></div>
+        {placing==='thesis'&&<div className="placement-hint">문서에서 메모를 붙일 위치를 눌러 주세요.<button onClick={()=>setPlacing(false)}>취소</button></div>}
+        
+        {sharedError&&<div className="shared-edit-status" role="status">{sharedError}<button onClick={()=>void refreshShared()}>다시 연결</button></div>}
+        {manuscriptMode==='body'?<WebManuscript paragraphs={manuscript} overrides={effectiveShared} notes={originalNotes as any} page={page} zoom={zoom} selected={paragraphId} onPageChange={setPage} onParagraph={openManuscriptTarget} bibliographyIds={bibliographyIds} onNote={id=>openNote(id)} proposalIndicators={proposalIndicators} onProposal={id=>selectProposal(id,false)}/>:<PdfPane id="thesis" page={page} total={data.meta.pageCount} pageSizes={data.pages} onPageChange={setPage} zoom={zoom} onZoomChange={setZoom} quickTools={compact||!visibleSurfaces.tools} highlights={highlights} targets={targets} proposalIndicators={proposalIndicators} onProposal={id=>selectProposal(id,false)} onTarget={openManuscriptTarget} bibliographyIds={bibliographyIds} pins={memos.filter(m=>m.anchorType==='thesis')} onPin={selectMemo} placing={placing==='thesis'} onPlace={(x,y,placedPage)=>newMemo('thesis',{x,y,page:placedPage})} label="박사논문"/>}
+        <div className="page-footnotes"><span>이 쪽의 각주</span>{onPage.map(n=><button className={n.id===active?'selected':''} key={n.id} onClick={()=>openNote(n.id)}>{n.number}{n.humanCorrection&&<sup>•</sup>}</button>)}{!onPage.length&&<span className="muted">연결된 각주 없음</span>}<div className="toolbar-spacer"/><span className="muted">PDF {page}쪽</span></div>
+      </section>
+      <PaneResizer className="split-divider thesis-source-divider" label="논문과 원전 화면 경계 조절" value={visibleSurfaces.metadata?paneCuts.thesis:collapsedSplit} min={visibleSurfaces.metadata?22:28} max={visibleSurfaces.metadata?paneCuts.sourceEnd-20:72} onChange={value=>visibleSurfaces.metadata?setPaneCuts(old=>moveFourPaneBoundary(old,'thesis',value)):setCollapsedSplit(normalizeCollapsedSplit(value))} unitsPerPixel={()=>100/Math.max(1,(splitRef.current?.getBoundingClientRect().width||1)-(visibleSurfaces.metadata?12:6))}/>
+      <section className="source-viewer-pane" aria-label="참고문헌 원전"><div className="pane-region-heading"><span>참고문헌 원전</span><div className="source-heading-actions"><button className="equal-width-control" onClick={equalizeDocuments} aria-label="논문과 참고문헌 화면 너비를 같게 맞추기" title="논문과 참고문헌 화면 너비를 같게 맞추기">같은 폭</button><button ref={metadataOpener} aria-controls="reference-metadata" aria-expanded={visibleSurfaces.metadata} onClick={()=>{setTab('source');openMetadata();}}>각주 상세정보</button></div></div><div className="source-reader-body">
+
+        {textTranslation?<ParallelSourceReader sourceId={textTranslation} page={1} onPageChange={()=>{}}/>:source?<>
+          {source.displayNotice&&<div className="evidence-label">{source.displayNotice}{source.officialCase&&externalSourceHref&&<> · <a href={externalSourceHref} target="_blank" rel="noopener noreferrer">{source.officialCase.provenance==='mirror'?'보존 사본 출처 열기 ↗':'공식 출처 열기 ↗'}</a></>}</div>}{source.available===false?<div className="empty-state"><h3>{source.title}</h3><p>{source.unavailableCase?'판결문 전문을 확보하지 못했습니다.':'보유 원문 파일이 없는 자료입니다.'}</p>{externalSourceHref&&<a href={externalSourceHref} target="_blank" rel="noopener noreferrer">{source.unavailableCase?'공식 사이트에서 판례 검색 ↗':'자료 제공·검색 페이지 열기 ↗'}</a>}</div>:source.kind==='pdf'?<><div className="pane-toolbar source-toolbar"><Pager page={sourcePage} total={source.pages||1} onChange={setSourcePage}/><div className="toolbar-spacer"/><button aria-label="참고문헌 축소" onClick={()=>setSourceZoom(Math.max(.7,sourceZoom-.15))}>−</button><button title="참고문헌 너비에 맞추기" onClick={()=>setSourceZoom(1)}>{Math.round(sourceZoom*100)}%</button><button aria-label="참고문헌 확대" onClick={()=>setSourceZoom(Math.min(2,sourceZoom+.15))}>＋</button><button className={placing==='source'?'selected':''} onClick={()=>setPlacing(placing==='source'?false:'source')}>▧ 원전 메모</button></div>{source.displayMode==='excerpt'&&<div className="evidence-label">{excerptPageLabel(source,sourcePage)}</div>}{placing==='source'&&<div className="placement-hint">원전에서 메모 위치를 눌러 주세요.<button onClick={()=>setPlacing(false)}>취소</button></div>}<ParallelSourceReader sourceId={sourceId} page={sourcePage} onPageChange={setSourcePage}><PdfPane id={sourceId} protectedImages={source.protectedImages===true} page={sourcePage} total={source.pages||1} zoom={sourceZoom} onZoomChange={setSourceZoom} quickTools={compact||!visibleSurfaces.tools} onPageChange={setSourcePage} highlights={sourceHighlights} pins={memos.filter(m=>m.anchorType==='source'&&m.sourceId===sourceId)} onPin={selectMemo} placing={placing==='source'} onPlace={(x,y,placedPage)=>newMemo('source',{x,y,page:placedPage})} label="참고문헌"/></ParallelSourceReader></>:<div className="text-source"><button onClick={()=>newMemo('source')}>＋ 자료 메모</button><CitedTextSource key={active+'-'+sourceId} text={textSource||'자료를 불러오는 중…'} sections={citationEntry?.textSections}/></div>}</>:null}
+      {!source&&!textTranslation&&<div className="empty-state">{bibliography?<><h3>참고문헌 원전</h3><p>{bibliography.text}</p><p>{bibliography.status==='candidate'?'제목이 다른 연결 후보가 있습니다. 상세정보에서 서지를 확인해 주세요.':'이 참고문헌의 원문 파일을 확보하지 못했습니다.'}</p><button onClick={openMetadata}>참고문헌 상세정보</button></>:'각주에서 참고문헌을 선택해 주세요.'}</div>}
+      </div></section>
+      {visibleSurfaces.metadata&&<PaneResizer className="split-divider source-metadata-divider" label="원전과 정보·수정 화면 경계 조절" value={paneCuts.sourceEnd} min={paneCuts.thesis+20} max={80} onChange={value=>setPaneCuts(old=>moveFourPaneBoundary(old,'source',value))} unitsPerPixel={()=>100/Math.max(1,(splitRef.current?.getBoundingClientRect().width||1)-12)}/>}
+      <section id="reference-metadata" className="reference-pane metadata-pane" aria-label="참고문헌 정보와 논문 수정"><div className="reference-heading"><span>{({source:"각주 상세정보",revision:"본문 수정안",memos:"검토 메모",library:"자료 목록",profile:"여성곤 소개"} as Record<string,string>)[tab]}</span><div className="metadata-heading-actions"><button className="panel-navigation" onClick={showNavigation} aria-label="다른 검토 메뉴 열기">☰</button><button className="metadata-collapse" onClick={closeMetadata} aria-label="각주 상세정보 접기">각주 상세정보 접기</button></div></div>
+      {tab==='revision'&&<div className="revision-panel">
+        {paragraph||proposal?<><div className="revision-summary"><button onClick={()=>{setParagraphId('');setProposalId('');}}>‹ 수정안 목록</button><span>PDF {paragraph?.page||proposal?.page}쪽</span>{proposal&&<span>{proposal.priority}</span>}</div>
+          {!paragraph&&proposal&&<><RevisionComparison before={proposal.before} after={proposal.after} reason={proposal.reason}/>{proposal.applyUnsupportedReason&&<p className="revision-context-note">{proposal.applyUnsupportedReason}</p>}</>}
+          {!!paragraphCaseSources.length&&<div className="citation-card"><b>이 문단의 연결 판례</b><div className="source-chips">{paragraphCaseSources.map(s=><button key={s.id} onClick={()=>openLibrarySource(s.id)}>{s.title}{s.available===false?' · 전문 미확보':s.officialCase?.coverage==='partial'?' · 일부 수록':''}</button>)}</div></div>}
+          {paragraph&&<SharedEditEditor key={paragraph.id} kind="paragraph" targetId={paragraph.id} originalText={paragraph.text} proposalBeforeText={proposal?.before} proposalDisplayText={proposal?.after} proposalReason={proposal?.reason} proposalApplyText={proposal?.applyText} proposalUnsupportedReason={proposal?.applyUnsupportedReason} current={shared[paragraph.id]} onSaved={sharedSaved} onMemo={draft=>newMemo('thesis',{page:paragraph.page,quote:draft})}/>}
+        </>:<><h3>수정안</h3><input className="revision-list-filter" placeholder="본문·각주·수정내용·이유 검색" value={revisionQuery} onChange={e=>setRevisionQuery(e.target.value)}/>{!proposals.length&&!savedChanges.length&&<p className="empty-state">아직 저장된 수정이 없습니다. 본문의 문단이나 각주를 선택해 수정할 수 있습니다.</p>}
+          {savedChanges.length>0&&<><h3>저장된 공통 수정 · {savedChanges.length}건</h3><div className="revision-list saved-revisions">{savedChanges.filter(({edit,originalText,label})=>!revisionQuery||[label,edit.targetId,originalText,edit.text,edit.reason].join(' ').includes(revisionQuery)).map(({edit,page,label})=><button key={edit.kind+'/'+edit.targetId} data-saved-target={edit.targetId} onClick={()=>openSavedChange(edit)}><small>{label}{page?` · PDF ${page}쪽`:''} · 수정 {edit.revision}{edit.action==='restore'?' · 원문 복원':''}</small>{edit.text?edit.text.slice(0,120)+(edit.text.length>120?'…':''):'(삭제한 문안)'}{edit.reason&&<span className="saved-revision-reason">{edit.reason}</span>}</button>)}</div></>}
+          {proposals.length>0&&<><h3>등록된 수정 제안</h3><div className="revision-list">{proposals.filter(p=>!revisionQuery||[p.before,p.after,p.reason].join(' ').includes(revisionQuery)).map(p=><button key={p.id} onClick={()=>selectProposal(p.id)}><small>PDF {p.page}{p.page_end>p.page?`~${p.page_end}`:''}쪽 · {p.priority}</small>{p.before.slice(0,120)}{p.before.length>120?'…':''}</button>)}</div></>}
+        </>}
+        <div className="shared-export-actions"><button className="shared-export-button" disabled={!!exportingShared} onClick={()=>void downloadShared('json')}>수정 이력 JSON</button><button className="shared-export-button" disabled={!!exportingShared} onClick={()=>void downloadShared('csv')}>수정 이력 CSV</button>{exportingShared&&<span role="status">전체 수정 이력을 준비하는 중…</span>}{sharedExport&&<a className="shared-export-download" href={sharedExport.url} download={sharedExport.fileName}>{sharedExport.format.toUpperCase()} 파일 저장 · 이력 {sharedExport.count}건</a>}</div>
+      </div>}
+      {tab==='source'&&<div className="source-panel" key={active}>{bibliography&&<div className="citation-card bibliography-card"><span className="section-eyebrow">논문 참고문헌 · PDF {bibliography.page}쪽</span><p className="citation-text">{effectiveShared[bibliographyId]?.text??bibliography.text}</p>{effectiveShared[bibliographyId]&&<p>원문에 기재된 참고문헌을 기준으로 연결한 자료입니다.</p>}{bibliography.status==='candidate'?<><p>목록에 제목이 일부 다른 자료가 있습니다. 동일 문헌인지는 확인이 필요합니다.</p><div className="source-chips">{bibliography.candidateSourceIds.map(id=>sources.find(s=>s.id===id)).filter(Boolean).map(s=><button key={s!.id} onClick={()=>{setSourceId(s!.id);setSourcePage(1);setMobilePane(s!.available===false?'metadata':'source');}}>연결 후보: {s!.title}{s!.available===false?' · 원문 미확보':''}</button>)}</div></>:bibliography.sourceIds.length===0?<p>이 참고문헌의 원문 파일을 확보하지 못했습니다.</p>:source?.available===false?<p>서지 정보는 연결되어 있으나 보유 원문 파일은 없습니다.</p>:<p>아래에 연결한 보유 자료를 원전 창에서 볼 수 있습니다. 발췌본 여부는 자료 안내를 확인해 주세요.</p>}<button onClick={()=>openParagraph(bibliographyId)}>참고문헌 문안 수정</button></div>}{note?<>
+        {!textTranslation&&source&&<><div className="source-caption"><div><span className="section-eyebrow">{effectiveShared[active]?'원문 연결자료':source.supplemental?'관련 자료':source.displayMode==='excerpt'?'인용면 발췌':'참고문헌'}</span><h2>{sourceHref&&source.available!==false?<a href={sourceHref} target="_blank" rel="noopener noreferrer" title="원문 별도 창에서 열기">{source.title}</a>:source.title}</h2></div>{sourceHref&&<a href={sourceHref} target="_blank" rel="noopener noreferrer" title={source.available===false?"자료 제공·검색 페이지 열기":"별도 창에서 원전 열기"}>↗</a>}</div>{source.kind==='pdf'&&<><div className="source-locators">{sourceCitedPages.map((l,i)=><button className={l.page===sourcePage?'selected':''} key={l.page} onClick={()=>{setSourcePage(l.page);setMobilePane('source');}}>{citedPageLabel(l.printed)}</button>)}</div>{sourceCitedPages.length>0&&<div className="citation-highlight-key"><span><i/>인용면</span>{sourceHighlights.some(h=>h.kind==='exact-passage')&&<span><i className="exact"/>확인 문구</span>}</div>}</>}</>}
+        {translationEntries.filter(t=>t.kind==='text'&&t.noteIds?.includes(active)).map(t=><div className="source-chips translation-supplement-link" key={t.sourceId}><button className={textTranslation===t.sourceId?'selected':''} onClick={()=>{setTextTranslation(textTranslation===t.sourceId?'':t.sourceId);setMobilePane('source');}}>{t.title} · 원전·번역</button></div>)}
+        <div className="citation-card"><div className="section-eyebrow"><b>각주 {note.number}</b><button onClick={()=>goToThesis(note.page)}>논문 PDF {note.page}쪽 ↗</button><button className="push-right" onClick={()=>newMemo('footnote')}>＋ 각주 메모</button></div><p className="citation-text">{note.text}</p>
+          {note.humanCorrection&&<details className="correction"><summary>각주 수정 제안</summary><p>{note.humanCorrection.reason}</p><p><b>수정 제안</b> {note.humanCorrection.proposedText}</p></details>}
+          <details className="rationale" key={active+'-'+sourceId} open><summary>{noteEdited?'원문 인용 내용':relatedRef?'관련 본문':'이 각주가 뒷받침하는 내용'}</summary><blockquote>{note.supportedClaim||note.bodyContexts?.[0]?.text}</blockquote>{citationExplanation&&<><h3>{relatedRef?'관련 쟁점':'인용 취지'}</h3><p>{citationExplanation}</p></>}</details>
+          {!!note.missingSources?.length&&<div className="correction"><b>원문 미연결 자료</b><p>{asText(note.missingSources)}</p></div>}
+          <div className="source-chips">{sourceRefs.map((r:Obj,i:number)=><button key={r.sourceId+i} className={sourceId===r.sourceId?'selected':''} onClick={()=>openSource(r.sourceId)} title={sources.find(s=>s.id===r.sourceId)?.title}>{i+1}. {sources.find(s=>s.id===r.sourceId)?.title||'연결 자료'}{r.unavailableCaseReference?' · 전문 미확보':''}</button>)}</div>
+          {!!note.relatedSources?.length&&<div className="supplemental-materials"><b>관련 자료</b><div className="source-chips">{note.relatedSources.map((r:Obj)=><button key={r.sourceId} className={sourceId===r.sourceId?'selected':''} onClick={()=>openSource(r.sourceId)}>{sources.find(s=>s.id===r.sourceId)?.title||'추가 검토자료'}</button>)}</div></div>}
+        </div>
+        <div className="footnote-edit-box"><SharedEditEditor key={active} kind="footnote" targetId={active} originalText={originalNote?.text||''} proposalBeforeText={noteProposal?.before} proposalDisplayText={noteProposal?.after} proposalReason={noteProposal?.reason} proposalApplyText={noteProposal?.applyText} proposalUnsupportedReason={noteProposal?.applyUnsupportedReason} current={shared[active]} onSaved={sharedSaved} onMemo={draft=>newMemo('footnote',{quote:draft})}/></div>
+</>:source?<div className="citation-card"><span className="section-eyebrow">참고자료</span><h2>{sourceHref&&source.available!==false?<a href={sourceHref} target="_blank" rel="noopener noreferrer" title="원문 별도 창에서 열기">{source.title}</a>:source.title}</h2><p>{source.displayNotice}</p>{sourceHref&&<a href={sourceHref} target="_blank" rel="noopener noreferrer">{source.available===false?"자료 제공·검색 페이지 열기 ↗":"원문 별도 창에서 열기 ↗"}</a>}<p>{bibliography?'논문 참고문헌에서 선택한 자료입니다.':'자료 목록에서 직접 연 참고자료입니다.'}</p><button onClick={()=>newMemo('source')}>＋ 자료 메모</button></div>:!bibliography?<div className="empty-state">논문의 각주를 누르면 인용 내용과 수정안을 확인할 수 있습니다.</div>:null}</div>}
+      {tab==='library'&&<div className="scroll-panel"><div className="panel-heading"><span className="section-eyebrow">CITATION INDEX</span><h2>각주와 참고자료</h2><p>각주 {notes.length}개 · 참고자료 {sources.length}개</p></div><input className="search-input" placeholder="각주 번호, 저자, 사건번호, 본문 설명 검색" value={query} onChange={e=>setQuery(e.target.value)}/><section className="supplemental-library"><h3>전체 참고자료</h3>{filteredSources.map(s=><button className="library-row" key={s.id} onClick={()=>openLibrarySource(s.id)}><span className="index-number">{s.kind==='pdf'?'PDF':s.available===false?'↗':'문서'}</span><span>{s.title}<small>{s.available===false?(s.unavailableCase?'공식 검색 · 판결문 전문 미확보':sourceExternalUrl(s)?'자료 제공·검색 링크':'원문 미확보'):s.kind==='pdf'?`${s.pages||1}쪽`:s.displayNotice||'본문 텍스트'}</small></span><span>↗</span></button>)}</section><h3>각주별 자료</h3>{filteredNotes.map(n=><button className="library-row" key={n.id} onClick={()=>openNote(n.id,true)}><span className="index-number">{n.number}</span><span>{n.text}<small>PDF {n.page}쪽 · {citedSourceRefs({id:n.id,sourceRefs:n.sourceRefs},citationPageMap,sources.map(s=>({id:s.id}))).length+translationEntries.filter(t=>t.kind==='text'&&t.noteIds?.includes(n.id)).length}개 자료{n.humanCorrection?' · 수정 제안 있음':''}{n.missingSources?.length?' · 미확보 포함':''}</small></span><span>↗</span></button>)}</div>}
+      {tab==='memos'&&<div className="scroll-panel"><div className="panel-heading"><span className="section-eyebrow">REVIEW NOTES</span><h2>검토 메모</h2></div><div className="memo-identity-note"><b>{reviewer.name}</b><p>개인 메모는 현재 브라우저에서만 열립니다. 브라우저 데이터를 지우기 전에 내보내기로 보관해 주세요.</p></div>{memoError&&<div className="memo-error" role="status">{memoError}<button onClick={connectSession} disabled={sessionConnecting}>{sessionConnecting?'연결 중…':'다시 연결'}</button></div>}<div className="memo-actions"><button className="primary" onClick={()=>newMemo('general')}>＋ 새 메모</button><NotesExportControls/><button onClick={connectSession} disabled={sessionConnecting} aria-label="메모 다시 연결">↻</button></div><input className="search-input" placeholder="메모 내용·선택 구절·작성자 검색" value={query} onChange={e=>setQuery(e.target.value)}/><div className="filter-buttons">{[['all','전체'],['open','미해결'],['resolved','해결']].map(([id,label])=><button key={id} className={filter===id?'selected':''} onClick={()=>setFilter(id)}>{label}</button>)}</div>{filteredMemos.map(m=><button key={m.id} className={'memo-card '+m.status} onClick={()=>selectMemo(m)}><div className="section-eyebrow"><span>{m.noteId?`각주 ${Number(m.noteId.slice(3))}`:m.anchorType==='source'?'참고자료':m.anchorType==='general'?'전체 의견':'논문 원문'}{m.page?` · PDF ${m.page}쪽`:''}</span><span>{m.visibility==='private'?'나만 보기':'링크 방문자 공유'}</span></div>{m.quote&&<blockquote>{m.quote}</blockquote>}<p>{m.text}</p><small>{m.displayName} · {m.status==='resolved'?'해결':'미해결'}{m.editable?' · 수정 가능':''}</small></button>)}{!filteredMemos.length&&<div className="empty-state"><span>▧</span><h3>아직 메모가 없습니다.</h3></div>}</div>}
+      {tab==='profile'&&<div className="scroll-panel profile-panel"><span className="section-eyebrow">여성곤 소개</span><h2>{profile?.name||'여성곤'}</h2><p className="profile-headline">{profile?.headline}</p><p>{profile?.summary}</p><ProfileSections profile={profile}/></div>}
+      </section>
+    </div></div>}
+    {data&&<nav className="mobile-navigation" aria-label="심사 화면 전환">
+      <button className={mobilePane==='contents'?'active':''} aria-current={mobilePane==='contents'?'page':undefined} onClick={()=>{showNavigation();setOutline(true);}}><span aria-hidden="true">☰</span>목차</button>
+      <button className={mobilePane==='thesis'?'active':''} aria-current={mobilePane==='thesis'?'page':undefined} onClick={()=>setMobilePane('thesis')}><span aria-hidden="true">▤</span>논문</button>
+      <button className={mobilePane==='source'?'active':''} aria-current={mobilePane==='source'?'page':undefined} onClick={()=>setMobilePane('source')}><span aria-hidden="true">↔</span>원전</button>
+      <button className={mobilePane==='metadata'?'active':''} aria-current={mobilePane==='metadata'?'page':undefined} onClick={openMetadata}><span aria-hidden="true">✎</span>정보·수정</button>
+    </nav>}
+    {composer&&<MemoDialog draft={composer} saving={saving} sessionReady={sessionReady} sessionConnecting={sessionConnecting} error={composerError} onChange={setComposer} onClose={()=>setComposer(null)} onSave={saveMemo} onDelete={()=>void removeMemo(composer)} onReconnect={()=>void connectSession()}/> }
+  </div>;
+}
+
+
+
+

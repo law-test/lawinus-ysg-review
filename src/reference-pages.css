@@ -1,0 +1,34 @@
+.reference-pages{position:relative;min-width:0}
+.reference-page-controls{position:sticky;z-index:3;display:flex;align-items:center;flex-wrap:wrap;gap:6px;padding:7px 0;background:#fff;border-bottom:1px solid #d9cdd1;box-shadow:0 2px 3px #00000008;font-size:13px}
+.reference-page-controls form{display:flex;align-items:center;gap:5px;min-width:0}
+.reference-page-controls label{display:flex;align-items:center;gap:4px}
+.reference-page-controls input{width:4.2em;min-width:0;text-align:center;padding:4px;border:1px solid #bfb6b9;border-radius:4px}
+.reference-page-controls button{padding:5px 8px;white-space:nowrap}
+.reference-page-guide,.reference-page-message{font-size:13px;line-height:1.55;color:#66555c}
+.reference-citation-pages{display:flex;align-items:center;gap:5px;flex:0 0 100%;min-width:0;overflow-x:auto;overscroll-behavior-x:contain;font-size:13px}.reference-citation-pages>span{flex:none;color:#66555c}.reference-citation-pages button{flex:none}.reference-citation-pages button[aria-pressed=true]{background:#f4e9ed;border-color:#8a3850;color:#671f36}.reference-page-controls .reference-page-message{flex:0 0 100%;margin:0}.reference-page-message button{margin:0 0 0 4px}
+.reference-page-stack{min-width:0}
+.reference-page{margin:0 0 14px;scroll-margin-top:100px}
+.reference-page figcaption{padding:6px 2px;font-size:12px;color:#66555c}
+.reference-page .source-image{min-height:0;width:100%;background:#fff;box-shadow:0 0 0 1px #e4dedf;overflow:hidden}
+.reference-page .source-image img{position:absolute;inset:0;width:100%;height:100%}
+.reference-page-placeholder{position:absolute;inset:0;background:#faf9f8}
+@media(max-width:760px){.source-dialog.has-reference-pages>h2{position:static}.reference-page-controls{font-size:12px;gap:5px}.reference-page-controls button{padding:4px 6px}.reference-page-guide{font-size:12px}}
+
+/* The small bottom edge remains reachable with the title and page tools folded. */
+.reference-page-controls:not(.has-fold-control) :is(.reference-control-clip,.reference-control-body){display:contents}
+.reference-page-controls.has-fold-control{display:block;padding:0;border:0}
+.reference-control-body{display:flex;align-items:center;flex-wrap:wrap;gap:6px;padding:6px 0}
+.reference-chrome-bar{height:22px;display:flex;align-items:stretch;gap:6px;border-block:1px solid #dfd6d7;background:#fff}
+.reference-chrome-handle{flex:1;display:grid;place-items:center;min-width:32px;cursor:ns-resize;touch-action:none;user-select:none}
+.reference-chrome-handle span{width:34px;height:3px;border-radius:4px;background:#b4a0a6}
+.reference-page-controls .reference-chrome-toggle{padding:0 6px;border:0;background:white;color:#6a414c;font-size:12px;line-height:1}
+.reference-chrome-handle:focus-visible,.reference-chrome-toggle:focus-visible{outline:2px solid #84384e;outline-offset:-2px}
+.reference-pane[data-reference-chrome] .source-dialog{overflow-anchor:none}
+.reference-pane[data-reference-chrome=dragging]>.reference-toolbar{height:var(--ref-toolbar);min-height:0;padding-block:0;overflow:clip}
+.reference-pane[data-reference-chrome=dragging]>.source-dialog>h2{height:var(--ref-title);margin-block:0;padding-block:0;overflow:clip}
+.reference-pane[data-reference-chrome=dragging] .reference-control-clip{height:var(--ref-controls);overflow:clip}
+.reference-pane[data-reference-chrome=hidden]>.reference-toolbar,.reference-pane[data-reference-chrome=hidden]>.source-dialog>h2,.reference-pane[data-reference-chrome=hidden] .reference-control-clip{display:none}
+@media(max-width:760px){.reference-chrome-bar{height:26px}.reference-control-body{gap:5px;padding:4px 0}}
+.reference-original-text {line-height:1.9;white-space:pre-wrap;overflow-wrap:anywhere;padding:0 12px 24px;}
+.reference-original-text p {margin:0 0 1em;}
+.reference-text-navigation{position:sticky;top:-16px;z-index:2;background:white;padding:6px 0;border-bottom:1px solid #e1d9da;margin-bottom:12px}.reference-cited-text{background:#fff2ac;border-left:3px solid #9a2c47;padding-left:10px}
