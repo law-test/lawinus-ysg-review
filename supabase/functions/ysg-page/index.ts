@@ -3,7 +3,7 @@ const mode:string='page';
 const project=Deno.env.get('SUPABASE_URL')!;
 const service=Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
 const serviceHeaders={apikey:service,Authorization:'Bearer '+service};
-const origins=new Set(['https://ysg.lawinus.org','http://127.0.0.1:4188','http://localhost:4188']);
+const origins=new Set(['https://ysg.lawinus.org']);
 const edition='ysg-20261121';
 const prefix='ysg-20261121';
 const bucket='ysg-reader-media';
@@ -71,4 +71,5 @@ Deno.serve(async req=>{
  return new Response(object.body,{headers:{...headers,'Content-Type':type,'Content-Disposition':'inline'}});
  }catch{return response(503,'요청을 처리하지 못했습니다. 다시 시도해 주세요.');}
 });
+
 

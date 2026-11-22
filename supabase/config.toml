@@ -1,0 +1,13 @@
+# Production edge authentication settings. The reader uses its own scoped session.
+
+[functions.ysg-visit]
+verify_jwt = false
+
+[functions.ysg-page]
+verify_jwt = false
+
+[functions.ysg-notes]
+verify_jwt = false
+
+[functions.ysg-import-sign]
+verify_jwt = true
