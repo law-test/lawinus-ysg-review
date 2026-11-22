@@ -6,6 +6,7 @@ import PdfQuickControls from './pdf-quick-controls';
 import {pageProposalMarkers,placeProposalMarkers,proposalLabel,type ProposalIndicator} from './proposal-indicators';
 import './proposal-indicators.css';
 import {drawProtectedThesisPage} from './protected-thesis';
+import {copyProtectedSelection,COPY_EDITION} from './protected-copy';
 type Obj=Record<string,any>;
 type Pin={id:string;page:number|null;x:number|null;y:number|null;text:string;status:string;[key:string]:any};
 const NO_BIBLIOGRAPHY_IDS:ReadonlySet<string>=new Set();
@@ -142,6 +143,7 @@ export default function PdfPane({id,protectedImages=false,page,total,zoom=1,onZo
     <div className="pdf-reading-tools"><span>연속 보기</span><div><button className={hand?'selected':''} aria-pressed={hand} onClick={()=>setHand(true)} title="문서를 잡고 위아래로 이동">✋ 이동</button><button className={!hand?'selected':''} aria-pressed={!hand} onClick={()=>setHand(false)} title="글자를 드래그하여 선택·복사">Ⅰ 글자 선택</button>{highlights.length>0&&<button aria-pressed={showHighlights} onClick={()=>setShowHighlights(!showHighlights)}>{showHighlights?'강조 숨기기':'강조 보기'}</button>}</div><span className="pdf-reading-page">{page} / {doc?.numPages||total}</span></div>
     {Object.keys(proposalIndicators).length>0&&<div className="pdf-proposal-legend"><b>수정제안 있음</b><span className="proposal-required">필수 · 반드시 수정</span><span className="proposal-recommended">권고 · 강하게 권고</span><span className="proposal-optional">선택 · 선택적</span>{currentProposals.length>0&&<button onClick={()=>{const first=currentProposals[0];if(onProposal)onProposal(first.indicator.primaryProposalId);else onTarget?.(first.target.noteId);}}>현재 쪽 {currentProposals.length}건 보기</button>}</div>}
     <div className={'pdf-stage continuous-pdf'+(hand?' hand-mode':' selection-mode')+(dragging?' is-dragging':'')+(placing?' placing':'')} ref={host} tabIndex={0} aria-label={`${label} 연속 스크롤`}
+      data-copy-edition={!protectedImages&&(id==='thesis'||id==='human')?COPY_EDITION:undefined} onCopy={copyProtectedSelection}
       onScroll={e=>{const size=viewportSize(e.currentTarget);if(hidden.current||resumeScroll.current||!size||pendingPdfReflow(previousLayout.current?.layout,layoutRef.current,renderedWidth.current,size.width))return;savedScroll.current={top:e.currentTarget.scrollTop,left:e.currentTarget.scrollLeft};cancelAnimationFrame(frame.current);frame.current=requestAnimationFrame(updateViewport);}}
       onPointerDown={e=>{if(!hand||placing||e.pointerType!=='mouse'||e.button!==0||(e.target as HTMLElement).closest('button,a,input,textarea'))return;e.preventDefault();drag.current={pointerId:e.pointerId,x:e.clientX,y:e.clientY,top:e.currentTarget.scrollTop,left:e.currentTarget.scrollLeft,moved:false};}}
       onPointerMove={e=>{const d=drag.current;if(!d||d.pointerId!==e.pointerId)return;if(!d.moved&&movedPointer(d,e.clientX,e.clientY)){d.moved=true;e.currentTarget.setPointerCapture(e.pointerId);setDragging(true);}if(d.moved){e.currentTarget.scrollTop=d.top-(e.clientY-d.y);e.currentTarget.scrollLeft=d.left-(e.clientX-d.x);}}}

@@ -1,6 +1,7 @@
-import {privateResource,readSession,storeSession,visit,ReaderError,type Session} from './reader-api.ts';
+import {privateResource,readSession,storeSession,visit,ReaderError,READER_EDITION,type Session} from './reader-api.ts';
+import {protectedCopyLine,COPY_EDITION} from './protected-copy.ts';
 
-type Line={text:string;x:number;y:number;w:number;h:number};
+type Line={text:string;x:number;y:number;w:number;h:number;index?:number};
 type Page={width:number;height:number;lines:Line[]};
 const manifests=new Map<string,Promise<{pages:({page:number}&Page)[]}>>();
 let connecting:Promise<Session>|undefined;
@@ -45,10 +46,12 @@ export async function drawProtectedThesisPage(page:number,width:number,canvas:HT
     canvas.getContext('2d')!.drawImage(bitmap,0,0);
     textLayer.replaceChildren();textLayer.style.width=width+'px';textLayer.style.height=height+'px';
     const measure=document.createElement('canvas').getContext('2d')!;
-    for(const line of data.lines){
+    for(const [position,line] of data.lines.entries()){
       const span=document.createElement('span'),fontSize=line.h*height*.9;
       const font='Arial,"Malgun Gothic",sans-serif';measure.font=fontSize+'px '+font;
-      span.textContent=line.text;span.style.cssText=`position:absolute;left:${line.x*100}%;top:${line.y*100}%;height:${line.h*height}px;font-size:${fontSize}px;line-height:${line.h*height}px;font-family:${font};transform-origin:left top;transform:scaleX(${line.w*width/Math.max(1,measure.measureText(line.text).width)});white-space:pre;color:transparent;`;
+      const restored=protectedCopyLine(line.text,page,line.index??position,READER_EDITION,sourceId);
+      span.textContent=restored.text;span.style.cssText=`position:absolute;left:${line.x*100}%;top:${line.y*100}%;height:${line.h*height}px;font-size:${fontSize}px;line-height:${line.h*height}px;font-family:${font};transform-origin:left top;transform:scaleX(${line.w*width/Math.max(1,measure.measureText(restored.text).width)});white-space:pre;color:transparent;`;
+      if(!sourceId&&READER_EDITION===COPY_EDITION){span.className='protected-copy-line';span.dataset.copyEdition=COPY_EDITION;span.dataset.joinBefore=restored.joinBefore??'\n';}
       textLayer.appendChild(span);
     }
     return {width:data.width,height:data.height};

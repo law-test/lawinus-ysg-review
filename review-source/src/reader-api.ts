@@ -1,5 +1,6 @@
 const base='https://cefaekvclooytgjkcqum.supabase.co/functions/v1/';
 const storageKey='ysg-reader-session';
+export const READER_EDITION='ysg-20261121';
 export type Session={token:string;expiresAt:string|number};
 declare global {interface Window {__paperReaderSession?:Session|null}}
 export type Toc={title:string;page:number;level:number};
@@ -78,6 +79,6 @@ export async function visit():Promise<Session>{
   return {token:result.token,expiresAt:result.expiresAt};
 }
 export function privateResource(session:Session,query:URLSearchParams,signal:AbortSignal){
-  query.set('edition','ysg-20261121');
+  query.set('edition',READER_EDITION);
   return checked('ysg-page?'+query.toString(),{signal,headers:{Authorization:'Bearer '+session.token}},true);
 }
