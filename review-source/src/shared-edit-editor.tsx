@@ -8,6 +8,7 @@ import {RevisionCopyButton} from './revision-copy';
 import {formatRevisionComparison,parseRevisionComparison} from './revision-composite';
 
 export type SharedEditEditorProps = {
+ editionId?:string;
  kind:SharedEditKind; targetId:string; originalText:string; proposalBeforeText?:string; proposalDisplayText?:string; proposalReason?:string; proposalApplyText?:string; proposalUnsupportedReason?:string;
  current:SharedEdit|undefined; onSaved:(edit:SharedEdit)=>void; onMemo?:(draft:string)=>void;
 };
@@ -32,16 +33,24 @@ export function sharedMobileInputHeight(visibleHeight:number,bodyHeight?:number,
 }
 
 type DraftStorage = Pick<Storage,'getItem'|'setItem'|'removeItem'>;
-export function sharedDraftKey(kind:SharedEditKind,targetId:string){
- return `lawinus.shared-edit-draft.v1:${kind}:${targetId}`;
+export function sharedDraftKey(kind:SharedEditKind,targetId:string,editionId='ysg-20261121'){
+ return `lawinus.shared-edit-draft.v2:${encodeURIComponent(editionId)}:${kind}:${targetId}`;
 }
-
-export function readSharedEditorDraft(storage:DraftStorage,kind:SharedEditKind,targetId:string,originalText:string,current?:SharedEdit){
+function originalDraftHash(text:string){let hash=2166136261;for(let i=0;i<text.length;i++)hash=Math.imul(hash^text.charCodeAt(i),16777619);return (hash>>>0).toString(16);}
+type DraftLoad={state:EditorState;recovered:boolean;failed:boolean;legacyDraft?:EditorState};
+export function readSharedEditorDraft(storage:DraftStorage,kind:SharedEditKind,targetId:string,originalText:string,current?:SharedEdit,editionId='ysg-20261121'):DraftLoad{
  const fallback={state:initialSharedEditorState(originalText,current),recovered:false,failed:false};
  try{
-  const raw=storage.getItem(sharedDraftKey(kind,targetId));if(!raw)return fallback;
+  const raw=storage.getItem(sharedDraftKey(kind,targetId,editionId));
+  if(!raw){
+   const legacy=storage.getItem(`lawinus.shared-edit-draft.v1:${kind}:${targetId}`);
+   if(!legacy)return fallback;
+   const data=JSON.parse(legacy),state=data?.state;
+   if(data.schema===1&&data.kind===kind&&data.targetId===targetId&&data.originalText===originalText&&state&&typeof state.draft==='string'&&state.draft!==state.baseText)return {...fallback,legacyDraft:state};
+   return fallback;
+  }
   const data=JSON.parse(raw);const state=data?.state;
-  if(data.schema!==1||data.kind!==kind||data.targetId!==targetId||data.originalText!==originalText||!state||
+  if(data.schema!==2||data.editionId!==editionId||data.originalHash!==originalDraftHash(originalText)||data.kind!==kind||data.targetId!==targetId||data.originalText!==originalText||!state||
    !['draft','reason','baseText'].every(key=>typeof state[key]==='string')||
    !Number.isSafeInteger(state.revision)||state.revision<0||typeof state.conflict!=='boolean'||typeof state.confirmOverwrite!=='boolean')return fallback;
   if(state.draft===state.baseText&&!state.reason&&!state.comparisonEdited)return fallback;
@@ -50,10 +59,10 @@ export function readSharedEditorDraft(storage:DraftStorage,kind:SharedEditKind,t
  }catch{return {...fallback,failed:true};}
 }
 
-export function writeSharedEditorDraft(storage:DraftStorage,kind:SharedEditKind,targetId:string,originalText:string,state:EditorState){
- const key=sharedDraftKey(kind,targetId);
+export function writeSharedEditorDraft(storage:DraftStorage,kind:SharedEditKind,targetId:string,originalText:string,state:EditorState,editionId='ysg-20261121'){
+ const key=sharedDraftKey(kind,targetId,editionId);
  if((state.draft===state.baseText||state.autoProposal)&&!state.reason&&!state.comparisonEdited){storage.removeItem(key);return;}
- storage.setItem(key,JSON.stringify({schema:1,kind,targetId,originalText,state}));
+ storage.setItem(key,JSON.stringify({schema:2,editionId,kind,targetId,originalText,originalHash:originalDraftHash(originalText),state}));
 }
 
 export function initialSharedEditorState(originalText:string,current?:SharedEdit):EditorState {
@@ -117,14 +126,14 @@ function revisionDate(value:string):string {
 
 /** A new target gets its own draft and pending-request lifetime. */
 export function SharedEditEditor(props:SharedEditEditorProps){
- return <SharedEditEditorSession key={`${props.kind}:${props.targetId}`} {...props}/>;
+ return <SharedEditEditorSession key={`${props.editionId||'ysg-20261121'}:${props.kind}:${props.targetId}`} {...props}/>;
 }
 
-function SharedEditEditorSession({kind,targetId,originalText,proposalBeforeText,proposalDisplayText,proposalReason,proposalApplyText,proposalUnsupportedReason,current,onSaved,onMemo}:SharedEditEditorProps){
+function SharedEditEditorSession({editionId='ysg-20261121',kind,targetId,originalText,proposalBeforeText,proposalDisplayText,proposalReason,proposalApplyText,proposalUnsupportedReason,current,onSaved,onMemo}:SharedEditEditorProps){
  const validCurrent=current?.kind===kind&&current.targetId===targetId?current:undefined;
  const [boot]=useState(()=>{
-  let restored:{state:EditorState;recovered:boolean;failed:boolean};
-  try{restored=typeof window==='undefined'?{state:initialSharedEditorState(originalText,validCurrent),recovered:false,failed:false}:readSharedEditorDraft(window.sessionStorage,kind,targetId,originalText,validCurrent);}
+  let restored:DraftLoad;
+  try{restored=typeof window==='undefined'?{state:initialSharedEditorState(originalText,validCurrent),recovered:false,failed:false}:readSharedEditorDraft(window.sessionStorage,kind,targetId,originalText,validCurrent,editionId);}
   catch{restored={state:initialSharedEditorState(originalText,validCurrent),recovered:false,failed:true};}
   const state={...restored.state};
   if(state.comparison===undefined){
@@ -211,9 +220,9 @@ function SharedEditEditorSession({kind,targetId,originalText,proposalBeforeText,
   if(validCurrent)dispatch({type:'incoming',revision:validCurrent.revision,text:validCurrent.text});
  },[validCurrent?.revision,validCurrent?.text]);
  useEffect(()=>{
-  try{writeSharedEditorDraft(window.sessionStorage,kind,targetId,originalText,state);setStorageFailed(false);}
+  try{writeSharedEditorDraft(window.sessionStorage,kind,targetId,originalText,state,editionId);setStorageFailed(false);}
   catch{setStorageFailed(true);}
- },[kind,targetId,originalText,state]);
+ },[editionId,kind,targetId,originalText,state]);
  useEffect(()=>{
   if((!dirty||state.autoProposal)&&!state.reason&&!state.comparisonEdited)return;
   const warn=(event:BeforeUnloadEvent)=>{event.preventDefault();event.returnValue='';};
@@ -273,7 +282,7 @@ function SharedEditEditorSession({kind,targetId,originalText,proposalBeforeText,
  function acceptSaved(edit:SharedEdit){
   epoch.current++;
   setResetUndo(null);
-  try{window.sessionStorage.removeItem(sharedDraftKey(kind,targetId));setStorageFailed(false);}catch{setStorageFailed(true);}
+  try{window.sessionStorage.removeItem(sharedDraftKey(kind,targetId,editionId));setStorageFailed(false);}catch{setStorageFailed(true);}
   dispatch({type:'saved',edit,comparison:formatRevisionComparison({...(parsedComparison.ok?parsedComparison.parts:{before:proposalBeforeText??originalText,reason:proposalReason??''}),after:edit.text})});setShowLatest(false);setError('');
   setHistory(previous=>previous?{
    ...previous,currentRevision:edit.revision,
@@ -329,6 +338,7 @@ function SharedEditEditorSession({kind,targetId,originalText,proposalBeforeText,
   {proposalApplyText===undefined&&proposalUnsupportedReason&&<p className="shared-edit-proposal-note">{proposalUnsupportedReason}</p>}
   {state.manualLocked&&<div className="shared-edit-proposal-note"><p>이 수정안은 여러 문단·각주 또는 조판을 함께 다뤄야 하므로 그대로 반영할 수 없습니다.</p><button type="button" disabled={busy||historyBusy} onClick={()=>putText(state.baseText)}>원문으로 직접 편집 시작</button></div>}
   <label className="shared-edit-label" htmlFor={bodyId}>수정할 문안</label>
+  {boot.legacyDraft&&<details className="shared-edit-proposal-note"><summary>판본을 확인할 수 없는 이전 초안 보기</summary><p>현재 문안에는 자동으로 넣지 않았습니다. 필요한 부분을 확인한 뒤 입력창에 옮겨 주세요.</p><pre>{boot.legacyDraft.draft}</pre><RevisionCopyButton text={boot.legacyDraft.draft} label="이전 초안 복사"/></details>}
   <p className="shared-edit-proposal-note">After 부분만 본문에 반영됩니다. Before와 상세이유는 함께 확인할 내용입니다.</p>
   <textarea ref={comparisonInput} id={bodyId} className="shared-edit-body shared-edit-comparison" value={state.comparison??''} disabled={busy} onFocus={expandEditor} onChange={event=>{setResetUndo(null);dispatch({type:'comparison',value:event.target.value});}} spellCheck={false}/>
   {comparisonInvalid&&<p className="shared-edit-error" role="alert">{parsedComparison.message}</p>}

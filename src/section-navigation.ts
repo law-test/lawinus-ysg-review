@@ -28,6 +28,7 @@ export function useSectionNavigation(host:RefObject<HTMLDivElement|null>,start:n
     const bounds=item.getBoundingClientRect();
     pane.scrollTop=item.offsetTop+bounds.height*where.y-(where.heading?12:0);
     pane.scrollLeft=bounds.width*where.x;
+    pane.dispatchEvent(new Event('reader:position-changed'));
     onPage(where.page);
     setHeading(where.heading?where:undefined);
     if(focus)item.focus({preventScroll:true});

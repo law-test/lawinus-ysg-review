@@ -3,3 +3,5 @@
 .citation-highlight-key span{display:inline-flex;align-items:center;gap:5px}
 .citation-highlight-key i{display:inline-block;width:13px;height:10px;background:#fff4ba;border:1px solid #e8d273}
 .citation-highlight-key i.exact{background:#ffdf40;border-color:#b8a125}
+.citation-text .inline-source-citation{display:inline;border:0;border-bottom:1px dotted currentColor;border-radius:0;padding:0 2px;margin:0;background:transparent;color:#1b658b;font:inherit;text-align:inherit;white-space:normal;cursor:pointer}
+.citation-text .inline-source-citation:focus-visible{outline:2px solid #1b658b;outline-offset:2px}

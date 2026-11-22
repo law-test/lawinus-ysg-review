@@ -15,7 +15,7 @@ export async function copyRevisionText(text:string,clipboard:Pick<Clipboard,'wri
  await clipboard.writeText(text);
 }
 
-export function RevisionCopyButton({text,label}:{text:string;label:'Before 복사'|'After 복사'|'입력한 After 복사'}){
+export function RevisionCopyButton({text,label}:{text:string;label:'Before 복사'|'After 복사'|'입력한 After 복사'|'이전 초안 복사'}){
  const [status,setStatus]=useState<'idle'|'busy'|'copied'|'failed'>('idle');
  const fallback=useRef<HTMLTextAreaElement>(null),generation=useRef(0),id=useId();
  useEffect(()=>{generation.current++;setStatus('idle');return()=>{generation.current++;};},[text]);

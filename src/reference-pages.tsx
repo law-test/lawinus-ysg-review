@@ -4,6 +4,9 @@ import {alternateFolios,citationGroups,citedEdition,labelKey,lookupLabels,pageDe
 import ReferenceChrome from './reference-chrome';
 import './reference-pages.css';
 import type {CaseOriginal,CasePart} from './footnote-cases';
+import type {PageTarget} from './page-text';
+import {commentaryLocation,commentaryLawTarget,commentaryParagraphCount} from './commentary-locations';
+import {preserveReadingPosition} from './reading-position';
 
 export type ReferencePage={page:number;width:number;height:number;label?:string;spread?:string[];alternate?:AlternateFolio};
 export type ReferenceManifest={sourceId:string;pageCount:number;pages:ReferencePage[];availability:'complete'|'excerpt'};
@@ -21,6 +24,7 @@ export type ReferencePagesProps={
   highlightPage?:number;
   highlights?:ReferenceHighlight[];
   focusCitation:boolean;
+  onLawTarget?:(target:PageTarget)=>void;
   focusKey?:string|number;
   renderPage:(page:number,canonicalId:string,onReady:()=>void)=>React.ReactNode;
 };
@@ -268,19 +272,32 @@ function ReferenceDocument({manifest,initialPage,explicitPage,caseOriginal,caseP
   </div>;
 }
 
-function ReferenceTextDocument({data,initialPage,explicitPage,focusKey}:{data:ReferenceText;initialPage:number;explicitPage?:number;focusKey?:string|number}){
+function ReferenceTextDocument({data,initialPage,explicitPage,focusKey,noteNumber,onLawTarget}:{data:ReferenceText;initialPage:number;explicitPage?:number;focusKey?:string|number;noteNumber?:number;onLawTarget?:(target:PageTarget)=>void}){
   const host=useRef<HTMLElement>(null);
-  const position=Math.max(1,Math.min(data.content.length,explicitPage??initialPage));
-  const returnToCitation=useCallback(()=>{
-    const element=host.current?.querySelector<HTMLElement>('[data-text-index="'+position+'"]');
+  const location=data.content.length===commentaryParagraphCount?commentaryLocation(data.sourceId,noteNumber):undefined;
+  const sections=location?.sections||[];
+  const position=Math.max(1,Math.min(data.content.length,explicitPage??location?.position??initialPage));
+  const [selected,setSelected]=useState(position);
+  const jumpTo=useCallback((index:number)=>{
+    const element=host.current?.querySelector<HTMLElement>('[data-text-index="'+index+'"]');
     const scroll=host.current?.closest<HTMLElement>('.source-dialog,.case-pane');
-    if(element&&scroll){const offset=element.getBoundingClientRect().top-scroll.getBoundingClientRect().top;scroll.scrollTop=Math.max(0,scroll.scrollTop+offset-64);}
-  },[position]);
-  useLayoutEffect(()=>{if(data.available!==false&&position>1)returnToCitation();},[data.sourceId,focusKey,position,returnToCitation,data.available]);
+    if(element&&scroll){const offset=element.getBoundingClientRect().top-scroll.getBoundingClientRect().top;const inset=(host.current?.querySelector<HTMLElement>('.reference-text-navigation')?.getBoundingClientRect().height||64)+20;scroll.scrollTop=Math.max(0,scroll.scrollTop+offset-inset);scroll.dispatchEvent(new Event('reader:position-changed'));setSelected(index);}
+  },[]);
+  useLayoutEffect(()=>{setSelected(position);if(data.available!==false&&position>1)jumpTo(position);},[data.sourceId,focusKey,position,jumpTo,data.available]);
+  useLayoutEffect(()=>{
+    const scroll=host.current?.closest<HTMLElement>('.source-dialog,.case-pane');
+    if(!scroll||data.available===false)return;
+    const readingPosition=preserveReadingPosition(scroll,'.reference-original-text [data-text-index]',()=>(host.current?.querySelector<HTMLElement>('.reference-text-navigation')?.getBoundingClientRect().height||64)+20);
+    return()=>readingPosition.disconnect();
+  },[data.sourceId,data.available]);
+  const articleIds=[...new Set(sections.flatMap(section=>section.articleId?[section.articleId]:[]))];
   return <section className="reference-original-text" ref={host} aria-label="참고문헌 원문 텍스트">{data.available===false?<p className="reference-page-guide" role="status">{data.scope||'이 판본의 원전을 아직 확보하지 못했습니다.'}</p>:<>
-    {position>1&&<div className="reference-text-navigation"><button type="button" onClick={returnToCitation}>인용 위치로 돌아가기</button></div>}
+    {(position>1||sections.length>0)&&<div className="reference-text-navigation"><button type="button" onClick={()=>jumpTo(position)}>인용 위치로 돌아가기</button>
+      {sections.length>0&&<div className="reference-text-locations" aria-label="주석의 인용 부분">{sections.map(section=><button key={section.start} type="button" aria-pressed={selected===section.start} onClick={()=>jumpTo(section.start)}>주석 {section.label}</button>)}</div>}
+      {onLawTarget&&articleIds.length>0&&<div className="reference-text-statutes" aria-label="주석과 구별되는 법령 원문"><small>법령 원문:</small>{articleIds.map(article=><button key={article} type="button" onClick={()=>onLawTarget(commentaryLawTarget(article))}>신탁법 제{article}조</button>)}</div>}
+    </div>}
     <p className="reference-page-guide">{data.scope||'확보 원문을 텍스트로 표시합니다. 인쇄 지면의 배치는 재현하지 않습니다.'}</p>
-    {data.content.map((p,i)=><p key={i} data-text-index={i+1} className={position>1&&i+1===position?'reference-cited-text':undefined}>{p}</p>)}
+    {data.content.map((p,i)=><p key={i} data-text-index={i+1} className={(sections.length?sections.some(section=>i+1>=section.start&&i+1<section.end):position>1&&i+1===position)?'reference-cited-text':undefined}>{p}</p>)}
   </>}</section>;
 }
 
@@ -289,7 +306,7 @@ export default function ReferencePages(props:ReferencePagesProps){
   const {data,error,waiting,retry}=useReferenceManifest(props.session,edition);
   if(error)return <p className="reference-page-message" role="status">{error} {!waiting&&<button type="button" onClick={retry}>다시 시도</button>}</p>;
   if(!data)return <p className="reference-page-message" role="status">원전 쪽 정보를 불러오는 중…</p>;
-  if('format' in data&&data.format==='text')return <ReferenceTextDocument key={data.sourceId} data={data} initialPage={props.initialPage} explicitPage={props.explicitPage} focusKey={props.focusKey}/>;
+  if('format' in data&&data.format==='text')return <ReferenceTextDocument key={data.sourceId} data={data} initialPage={props.initialPage} explicitPage={props.explicitPage} focusKey={props.focusKey} noteNumber={props.noteNumber} onLawTarget={props.onLawTarget}/>;
   const pages=data as ReferenceManifest;
   // A reflowed author copy has different page breaks and highlight coordinates
   // from the published edition. Only the latter's citation map can position it.

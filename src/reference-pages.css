@@ -32,3 +32,9 @@
 .reference-original-text {line-height:1.9;white-space:pre-wrap;overflow-wrap:anywhere;padding:0 12px 24px;}
 .reference-original-text p {margin:0 0 1em;}
 .reference-text-navigation{position:sticky;top:-16px;z-index:2;background:white;padding:6px 0;border-bottom:1px solid #e1d9da;margin-bottom:12px}.reference-cited-text{background:#fff2ac;border-left:3px solid #9a2c47;padding-left:10px}
+
+.reference-text-navigation{white-space:normal}
+.reference-text-locations,.reference-text-statutes{display:flex;flex-wrap:wrap;align-items:center;gap:4px;margin-top:5px}
+.reference-text-navigation button{font-size:13px;padding:4px 6px}
+.reference-text-statutes{border-top:1px solid #eee;padding-top:5px}
+@media(max-width:760px){.reference-text-navigation{top:-10px}.reference-text-locations,.reference-text-statutes{gap:3px}}

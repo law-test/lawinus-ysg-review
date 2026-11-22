@@ -14,6 +14,8 @@ import LawPane from './law-pane';
 import {useSectionNavigation} from './section-navigation';
 import {folioLabel,folioDescription,lastPrintedFolio,sheetForFolio} from './thesis-folios';
 import './reader.css';
+import {commentaryLocation} from './commentary-locations';
+import {preserveReadingPosition} from './reading-position';
 
 function Photo({session,query,label,active=true,onReady}:{session:Session;query:string;label:string;active?:boolean;onReady?:()=>void}){
   const [picture,setPicture]=useState<{query:string;url:string;token:string}|null>(null),[error,setError]=useState(''),[retry,setRetry]=useState(0);
@@ -54,7 +56,7 @@ function DocumentPane({session,start,count,notes,onPage,onTarget,compactFolio,fo
     pageSize.observe(scroll);
     pageSize.observe(last);
     sizeEndMargin();
-    const jump=(page:number)=>{const item=items[Math.max(0,Math.min(count-1,page-1))];if(item){scroll.scrollTop=item.offsetTop;onPage(Number(item.dataset.page));}};
+    const jump=(page:number)=>{const item=items[Math.max(0,Math.min(count-1,page-1))];if(item){scroll.scrollTop=item.offsetTop;scroll.dispatchEvent(new Event('reader:position-changed'));onPage(Number(item.dataset.page));}};
     const navigate=(event:Event)=>{const page=Number((event as CustomEvent).detail?.page);if(Number.isInteger(page))jump(page);};
     const update=()=>{
       const top=scroll.scrollTop+Math.min(120,scroll.clientHeight*.18);
@@ -69,8 +71,9 @@ function DocumentPane({session,start,count,notes,onPage,onTarget,compactFolio,fo
       setReading(prev=>{const next=new Set(prev);for(const entry of entries){const page=Number((entry.target as HTMLElement).dataset.page);if(entry.isIntersecting)next.add(page);else next.delete(page);}return [...next];});
     },{root:scroll});
     for(const item of items){observer.observe(item);textObserver.observe(item);}
+    const readingPosition=preserveReadingPosition(scroll,'.paper-page',()=>0,update);
     jump(start);scroll.addEventListener('scroll',update,{passive:true});window.addEventListener('paper:navigate',navigate);
-    return()=>{observer.disconnect();textObserver.disconnect();pageSize.disconnect();scroll.removeEventListener('scroll',update);window.removeEventListener('paper:navigate',navigate);};
+    return()=>{readingPosition.disconnect();observer.disconnect();textObserver.disconnect();pageSize.disconnect();scroll.removeEventListener('scroll',update);window.removeEventListener('paper:navigate',navigate);};
   },[count,start,onPage]);
   const sections=useSectionNavigation(host,start,onPage);
   return <main className="manuscript-pane" data-native-text="true" aria-label="논문 본문"><div className="paper-actions"><strong>논문</strong><div className="paper-menu-tools">{compactFolio}</div><button type="button" className="section-back" hidden={!sections.canReturn} aria-label="이전 읽던 위치로 돌아가기" title="이전 읽던 위치로 돌아가기" onClick={sections.back}>←</button><label>확대 <select value={zoom} onChange={e=>setZoom(Number(e.target.value))}>{[85,100,125,150,200].map(v=><option key={v} value={v}>{v}%</option>)}</select></label></div>
@@ -99,7 +102,8 @@ function Workspace({session,catalog,notes:originalNotes}:{session:Session;catalo
   },[]);
   const [page,setPage]=useState(initial),[pageInput,setPageInput]=useState(folioLabel(initial)),[toc,setToc]=useState(false),[query,setQuery]=useState(''),[list,setList]=useState(false),[own,setOwn]=useState<{page:number;number?:number;id?:string;group?:string;sourcePage?:number;showNote?:boolean;noteOnly?:boolean;citationTitle?:string;unavailableCitation?:string}|null>(()=>{const id=new URLSearchParams(location.search).get('source');return id&&catalog.sources.some(s=>s.id===id)?{page:initial,id}:null;});
   const sources=useMemo(()=>new Map(catalog.sources.map(s=>[s.id,s])),[catalog]);
-  const notes=useMemo(()=>originalNotes.map(note=>{
+  const notes=useMemo(()=>originalNotes.map(original=>{
+    const note={...original,sources:original.sources.map(source=>{const location=commentaryLocation(source.id,original.number);return location?{...source,page:location.position}:source;})};
     const additions=extraCitationSources(note.number).filter(c=>sources.has(c.id)&&!note.sources.some(source=>source.id===c.id));
     return additions.length?{...note,sources:[...note.sources,...additions]}:note;
   }),[originalNotes,sources]);
@@ -246,7 +250,7 @@ function Workspace({session,catalog,notes:originalNotes}:{session:Session;catalo
         value={pageInput} onChange={e=>{setPageInput(e.target.value);setFolioError('');}} autoComplete="off" autoCapitalize="none" spellCheck={false} enterKeyHint="go"/></label>
         {!menusCollapsed&&<span>/ {lastPrintedFolio}쪽</span>}<button>이동</button></form>);
   const folioNotice=folioError&&<small id="folio-error" role="status">{folioError}</small>;
-  return <div className="examiner-app"><div id="reading-menus" className="reading-menus"><div className="reading-menus-content"><header className="examiner-header"><KuBrand/><div className="paper-heading"><small>박사학위논문 · {catalog.author}</small><h1>{catalog.title}</h1>{catalog.subtitle&&<p>{catalog.subtitle}</p>}</div><nav><span className="reader-tools-slot"/><a className="review-edition-link" href="/review/">본문·각주 수정</a><details className="edition-menu"><summary>이전 제출본</summary><a href="/editions/20261024/">10.24 제출본</a><a href="/editions/20261023/">10.23 제출본</a></details><button type="button" onClick={()=>setToc(v=>!v)} aria-expanded={toc}>목차·검색</button><button type="button" onClick={()=>{setLegal(null);setCaseTarget(null);setList(v=>!v);}} aria-expanded={list}>참고문헌</button></nav></header>
+  return <div className="examiner-app"><div id="reading-menus" className="reading-menus"><div className="reading-menus-content"><header className="examiner-header"><KuBrand/><div className="paper-heading"><small>박사학위논문 · {catalog.author}</small><h1>{catalog.title}</h1>{catalog.subtitle&&<p>{catalog.subtitle}</p>}</div><nav><span className="reader-tools-slot"/><button type="button" onClick={()=>setToc(v=>!v)} aria-expanded={toc}>목차·검색</button><button type="button" onClick={()=>{setLegal(null);setCaseTarget(null);setList(v=>!v);}} aria-expanded={list}>참고문헌</button><details className="edition-menu"><summary>편집·이전판</summary><div className="edition-menu-options"><a href="/review/">본문·각주 수정</a><a href="/editions/20261024/">10.24 제출본</a><a href="/editions/20261023/">10.23 제출본</a></div></details></nav></header>
     <section className="page-controls" data-current-sheet={page}><button disabled={page===1} onClick={()=>jump(page-1)}>이전</button>{!menusCollapsed&&folioForm}<button disabled={page===catalog.pageCount} onClick={()=>jump(page+1)}>다음</button>{!menusCollapsed&&folioNotice}</section>
     </div></div>
     <div className="reader-layout">{toc&&<ContentsSearch session={session} catalog={catalog} notes={catalog.searchEnabled===true?notes:pageNotes} go={(p,n)=>{setToc(false);jump(p);if(n)openNote(n,p);}}/>}
@@ -275,7 +279,7 @@ function Workspace({session,catalog,notes:originalNotes}:{session:Session;catalo
         {citation?.label&&citation.label!==source?.title&&<p className="citation-location">{citation.label}</p>}
         {citation?.excerpt&&<blockquote>{citation.verified?<mark>{citation.excerpt}</mark>:citation.excerpt}</blockquote>}
         {listedCase&&!chosen?.noteOnly&&<CasePane session={session} number={listedCase} focusKey={referenceFocus} focusJudgment={focusListedCase} renderReference={renderCasePages}/>}
-        {(previewPage||source?.format==='text')&&sourceId&&!chosen?.noteOnly&&<ReferencePages key={sourceId} session={session} sourceId={sourceId} initialPage={previewPage||1} explicitPage={preview} noteNumber={selectedNote?.number} citationPages={previews} highlightPage={citation?.page} highlights={citation?.highlights} focusCitation={true} focusKey={selectedNote?.number+'/'+previewPage+'/'+referenceFocus} renderPage={(p,canonicalId,onReady)=><Photo session={session} label={'참고문헌 PDF '+p+'쪽'} query={new URLSearchParams({source:canonicalId,page:String(p)}).toString()} onReady={onReady}/>}/>}
+        {(previewPage||source?.format==='text')&&sourceId&&!chosen?.noteOnly&&<ReferencePages key={sourceId} session={session} sourceId={sourceId} onLawTarget={t=>{setCaseTarget(null);setLegal(t);setList(false);}} initialPage={previewPage||1} explicitPage={preview} noteNumber={selectedNote?.number} citationPages={previews} highlightPage={citation?.page} highlights={citation?.highlights} focusCitation={true} focusKey={selectedNote?.number+'/'+previewPage+'/'+referenceFocus} renderPage={(p,canonicalId,onReady)=><Photo session={session} label={'참고문헌 PDF '+p+'쪽'} query={new URLSearchParams({source:canonicalId,page:String(p)}).toString()} onReady={onReady}/>}/>}
         {!source&&!selectedNote&&<p>이 쪽에 연결된 인용자료가 없습니다.</p>}
         {source&&source.format!=='text'&&!listedCase&&(!citation||(!citation.excerpt&&!previewPage))&&<p>현재 자료의 서지와 연결 각주를 표시합니다.</p>}
       </section>}

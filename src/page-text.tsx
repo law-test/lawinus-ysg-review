@@ -11,10 +11,15 @@ import {footnoteCaseTargets,docketInTitle} from './footnote-cases';
 import sourceSpanData from './footnote-source-spans.json';
 import crossrefData from './footnote-source-crossrefs.json';
 import caseSpanData from './case-citation-spans.json';
+import {commentaryTargets} from './commentary-locations';
+import {repairCitationBoundaries,sourceTargetAtPoint} from './citation-boundaries';
+import copySpaceMap from './copy-space-map.json';
+import {restoreCopySpacing,type CopySpacing} from './copy-spacing';
+const copySpaces=copySpaceMap as Record<string,Record<string,CopySpacing>>;
 
 export type Rect={x:number;y:number;w:number;h:number};
 export type TextLine=Rect&{text:string;size?:number;index?:number};
-export type PageTarget=Rect&{kind:'law'|'case'|'note'|'cross'|'external'|'section';number?:number;targetPage?:number;targetY?:number;noteNumber?:number;noteStart?:number;noteEnd?:number;sourceId?:string;sourcePage?:number;sourceGroup?:string;caseGroup?:string;firstPage?:number;rects?:Rect[];line?:number;caseNumber?:string;lawKey?:string;articleId?:string;title?:string;label?:string;url?:string;status?:string;articleText?:string;start?:number;end?:number};
+export type PageTarget=Rect&{commentaryToken?:boolean;kind:'law'|'case'|'note'|'cross'|'external'|'section';number?:number;targetPage?:number;targetY?:number;noteNumber?:number;noteStart?:number;noteEnd?:number;sourceId?:string;sourcePage?:number;sourceGroup?:string;caseGroup?:string;firstPage?:number;rects?:Rect[];line?:number;caseNumber?:string;lawKey?:string;articleId?:string;title?:string;label?:string;url?:string;status?:string;articleText?:string;start?:number;end?:number};
 const sectionTargets=sectionData as Record<string,PageTarget[]>;
 type SourceSpan={number:number;id:string;sourceId?:string;sourcePage?:number;label:string;noteStart:number;noteEnd:number;rects:(Rect&{line:number})[]};
 const sourceSpans=sourceSpanData as Record<string,SourceSpan[]>;
@@ -94,7 +99,7 @@ const openMetadata=pageCache<PageMetadata>(12,2*1024*1024,async response=>{
 
 function mergedTargets(page:number,targets:PageTarget[]){
   const repaired=footnoteCaseTargets(page,repairCitationTargets(page,repairLawTargets(page,targets)));
-  const all=[...repaired,...bundledPage(page).targets].filter(box);
+  const all=commentaryTargets(repairCitationBoundaries(page,[...repaired,...bundledPage(page).targets].filter(box)));
   const unique=all.filter((t,i)=>!all.slice(0,i).some(p=>p.kind===t.kind&&p.number===t.number&&p.sourceId===t.sourceId&&p.sourceGroup===t.sourceGroup&&p.caseNumber===t.caseNumber&&p.lawKey===t.lawKey&&p.articleId===t.articleId&&Math.abs(p.x-t.x)<.001&&Math.abs(p.y-t.y)<.001));
   registerWorks(page,unique);
   return unique;
@@ -221,10 +226,12 @@ export function PageLayer({session,query,active=true,fallback=[],label,onTarget,
     const r=host.current!.getBoundingClientRect();if(!r.width||!r.height)return;
     const p={x:(e.clientX-r.left)/r.width,y:(e.clientY-r.top)/r.height};
     // An explicitly linked provision or case inside a title keeps its own action.
+    const commentary=targets.find(t=>t.commentaryToken&&(t.rects||[t]).some(r=>within(p,r)));
+    if(commentary)return commentary;
     const citation=targets.find(t=>t.caseGroup&&t.rects?.some(r=>within(p,r)));
     if(citation)return citation;
     const direct=directTargets.find(t=>within(p,t));
-    const source=targets.find(t=>t.sourceGroup&&t.rects?.some(r=>within(p,r)));
+    const source=sourceTargetAtPoint(targets,p);
     if(direct&&(!source||direct.kind!=='note'))return direct;
     if(source)return source;
     // Printed superscripts are narrower than a fingertip. Pick the nearest marker only.
@@ -271,7 +278,9 @@ export function PageLayer({session,query,active=true,fallback=[],label,onTarget,
       if(t)activate(t);
     }}>
     {data?.lines.map((line,i)=>{
-      const sep=order[line.index??i];return <TextRun key={i} line={line} width={size.w} height={size.h} joinBefore={sep==='C'?'':sep==='S'?' ':'\n'}/>;
+      const index=line.index??i,sep=order[index];
+      const restored=restoreCopySpacing(line.text,copySpaces[page]?.[index]);
+      return <TextRun key={i} line={{...line,text:restored.text}} width={size.w} height={size.h} joinBefore={restored.joinBefore??(sep==='C'?'':sep==='S'?' ':'\n')}/>;
     })}
     <span ref={hover} className="page-target-hover" aria-hidden="true" hidden/>
     {onTarget&&targets.map((t,i)=>{
@@ -381,7 +390,7 @@ export function inlineLinks(text:string,noteNumber:number,targets:PageTarget[]):
     other.target.kind!==link.target.kind||other.target.url!==link.target.url||other.target.number!==link.target.number||other.target.sourceId!==link.target.sourceId
   )));
   const individual=distinct.filter(link=>!Array.from(sources.values()).some(s=>
-    link.target.kind==='note'&&link.target.sourceId&&
+    link.target.kind==='note'&&link.target.sourceId&&!link.target.commentaryToken&&
     s.start<=link.start&&s.end>=link.end)).sort((a,b)=>a.start-b.start);
   // A title may itself cite a judgment or a provision. Keep the verified link at
   // those characters and use the bibliographic source for the rest of its span.
